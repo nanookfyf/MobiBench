@@ -1,0 +1,253 @@
+{
+  "version": "1.0",
+  "total_traces": 4,
+  "traces": [
+    {
+      "app_name": "美团",
+      "task_type": "type1",
+      "task_description": "帮我搜三米粥铺",
+      "num_states": 7,
+      "states": [
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/1.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(87, 252, 826, 345)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/2.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "START"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/2.jpg",
+          "map_info": {
+            "click": {},
+            "swipe": {},
+            "input": {
+              "三米粥铺": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg"
+            },
+            "wait": {}
+          },
+          "cluster_class": "unlabeled"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(1010, 2310, 1190, 2475)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/6.jpg",
+              "TUPLE:(0, 273, 1200, 405)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/6.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "inputpage"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/6.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(26, 659, 1174, 1408)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/7.jpg",
+              "TUPLE:(26, 536, 1174, 1285)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/6.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "outputpage"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/7.jpg",
+          "map_info": {
+            "click": {},
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "DONE"
+        }
+      ]
+    },
+    {
+      "app_name": "美团",
+      "task_type": "type1",
+      "task_description": "帮我搜三米粥屋",
+      "num_states": 6,
+      "states": [
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/1.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(87, 252, 826, 345)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/3.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "START"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/3.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(951, 146, 1139, 237)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/5.jpg",
+              "TUPLE:(1011, 2310, 1190, 2474)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/2/5.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "page1"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/5.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(26, 536, 1174, 1285)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/6.jpg",
+              "TUPLE:(26, 659, 1174, 1408)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/2/6.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "outputpage"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/6.jpg",
+          "map_info": {
+            "click": {},
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "DONE"
+        }
+      ]
+    },
+    {
+      "app_name": "美团",
+      "task_type": "type1",
+      "task_description": "帮我搜三米粥铺",
+      "num_states": 6,
+      "states": [
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/2/1.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(87, 252, 826, 345)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/2/3.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "START"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/2/3.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(1011, 2310, 1190, 2474)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/2/5.jpg",
+              "TUPLE:(951, 146, 1139, 237)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/5.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "page1"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/2/5.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(26, 659, 1174, 1408)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/2/6.jpg",
+              "TUPLE:(26, 536, 1174, 1285)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/3/6.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "outputpage"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/2/6.jpg",
+          "map_info": {
+            "click": {},
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "DONE"
+        }
+      ]
+    },
+    {
+      "app_name": "美团",
+      "task_type": "type1",
+      "task_description": "帮我搜三米粥屋",
+      "num_states": 7,
+      "states": [
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/1.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(87, 252, 826, 345)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/3.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "START"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/3.jpg",
+          "map_info": {
+            "click": {},
+            "swipe": {},
+            "input": {
+              "三米粥屋": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/5.jpg"
+            },
+            "wait": {}
+          },
+          "cluster_class": "inpage"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/5.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(0, 273, 1200, 405)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/6.jpg",
+              "TUPLE:(1010, 2310, 1190, 2475)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/6.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "inputpage"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/6.jpg",
+          "map_info": {
+            "click": {
+              "TUPLE:(26, 659, 1174, 1408)": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/7.jpg"
+            },
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "unlabeled"
+        },
+        {
+          "img_path": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/5/7.jpg",
+          "map_info": {
+            "click": {},
+            "swipe": {},
+            "input": {},
+            "wait": {}
+          },
+          "cluster_class": "DONE"
+        }
+      ]
+    }
+  ]
+}

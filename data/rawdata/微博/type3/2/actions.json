@@ -1,0 +1,116 @@
+{
+    "app_name": "微博",
+    "task_type": "type3",
+    "task_description": "在罗永浩的十字路口这位博主的主页第一条微博下面评论KKSK",
+    "action_count": 17,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 593,
+            "position_y": 2532,
+            "bounds": [
+                480,
+                2465,
+                720,
+                2608
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "search"
+        },
+        {
+            "type": "click",
+            "position_x": 707,
+            "position_y": 190,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "罗永浩的十字路口"
+        },
+        {
+            "type": "click",
+            "position_x": 1093,
+            "position_y": 2389,
+            "bounds": [
+                0,
+                0,
+                1200,
+                2670
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 830,
+            "position_y": 553,
+            "bounds": [
+                39,
+                433,
+                1174,
+                739
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 604,
+            "press_position_y": 2199,
+            "release_position_x": 642,
+            "release_position_y": 1358,
+            "direction": "up"
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "click",
+            "position_x": 613,
+            "position_y": 2043,
+            "bounds": [
+                39,
+                1978,
+                1161,
+                2076
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input3"
+        },
+        {
+            "type": "input",
+            "text": "KKSK"
+        },
+        {
+            "type": "tag",
+            "label": "input4"
+        },
+        {
+            "type": "click",
+            "position_x": 1102,
+            "position_y": 2392,
+            "bounds": [
+                0,
+                0,
+                1200,
+                2670
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

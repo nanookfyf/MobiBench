@@ -1,0 +1,51 @@
+{
+    "app_name": "美团",
+    "task_type": "type1",
+    "task_description": "帮我搜三米粥铺",
+    "action_count": 7,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 669,
+            "position_y": 331,
+            "bounds": [
+                87,
+                252,
+                826,
+                345
+            ]
+        },
+        {
+            "type": "input",
+            "text": "三米粥铺"
+        },
+        {
+            "type": "tag",
+            "label": "inputpage"
+        },
+        {
+            "type": "click",
+            "position_x": 1108,
+            "position_y": 2389,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "outputpage"
+        },
+        {
+            "type": "click",
+            "position_x": 812,
+            "position_y": 749,
+            "bounds": [
+                26,
+                659,
+                1174,
+                1408
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

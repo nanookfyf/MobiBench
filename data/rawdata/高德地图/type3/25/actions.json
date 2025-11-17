@@ -1,0 +1,110 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type3",
+    "task_description": "从大零号湾打车到龙湖上海闵行天街",
+    "action_count": 12,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 535,
+            "position_y": 1592,
+            "bounds": [
+                448,
+                1499,
+                628,
+                1679
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "call_init"
+        },
+        {
+            "type": "click",
+            "position_x": 644,
+            "position_y": 1610,
+            "bounds": [
+                69,
+                1470,
+                1011,
+                1650
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 309,
+            "position_y": 859,
+            "bounds": [
+                132,
+                826,
+                1020,
+                886
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 879,
+            "position_y": 132,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 670,
+            "position_y": 232,
+            "bounds": [
+                168,
+                147,
+                1020,
+                279
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "input",
+            "text": "大零号湾"
+        },
+        {
+            "type": "click",
+            "position_x": 1008,
+            "position_y": 2182,
+            "bounds": [
+                24,
+                541,
+                1056,
+                2400
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 249,
+            "position_y": 742,
+            "bounds": [
+                132,
+                697,
+                1020,
+                757
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 945,
+            "position_y": 1770,
+            "bounds": [
+                802,
+                1739,
+                1018,
+                1823
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

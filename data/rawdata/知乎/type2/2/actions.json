@@ -1,0 +1,51 @@
+{
+    "app_name": "知乎",
+    "task_type": "type1",
+    "task_description": "搜索flashattention，并点入第一条搜索内容查看",
+    "action_count": 7,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 768,
+            "position_y": 243,
+            "bounds": [
+                68,
+                143,
+                930,
+                267
+            ]
+        },
+        {
+            "type": "input",
+            "text": "flashattention"
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 1090,
+            "position_y": 2389,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 572,
+            "position_y": 969,
+            "bounds": [
+                0,
+                733,
+                1200,
+                1063
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

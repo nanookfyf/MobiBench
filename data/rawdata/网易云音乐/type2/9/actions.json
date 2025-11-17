@@ -1,0 +1,67 @@
+{
+    "app_name": "网易云音乐",
+    "task_type": "type2",
+    "task_description": "帮我搜索邓紫棋，并播放她的第一首歌曲",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 461,
+            "position_y": 198,
+            "bounds": [
+                156,
+                133,
+                996,
+                238
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 146,
+            "position_y": 567,
+            "bounds": [
+                48,
+                483,
+                258,
+                600
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result"
+        },
+        {
+            "type": "click",
+            "position_x": 240,
+            "position_y": 329,
+            "bounds": [
+                168,
+                258,
+                312,
+                342
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "song"
+        },
+        {
+            "type": "click",
+            "position_x": 348,
+            "position_y": 604,
+            "bounds": [
+                0,
+                510,
+                1152,
+                752
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

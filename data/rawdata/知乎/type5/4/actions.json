@@ -1,0 +1,67 @@
+{
+    "app_name": "知乎",
+    "task_type": "tpye5",
+    "task_description": "找一下我关注的用户岁月静好",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 702,
+            "position_y": 215,
+            "bounds": [
+                63,
+                132,
+                895,
+                246
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 705,
+            "position_y": 439,
+            "bounds": [
+                595,
+                405,
+                1104,
+                474
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result"
+        },
+        {
+            "type": "click",
+            "position_x": 365,
+            "position_y": 301,
+            "bounds": [
+                300,
+                254,
+                450,
+                350
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "search1"
+        },
+        {
+            "type": "click",
+            "position_x": 594,
+            "position_y": 502,
+            "bounds": [
+                0,
+                360,
+                1152,
+                716
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

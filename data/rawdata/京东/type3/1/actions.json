@@ -1,0 +1,78 @@
+{
+    "app_name": "京东",
+    "task_type": "type3",
+    "task_description": "帮我将影石Insta360 Go3S 拇指相机 加入购物车",
+    "action_count": 9,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 584,
+            "position_y": 299,
+            "bounds": [
+                26,
+                262,
+                1174,
+                382
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 522,
+            "position_y": 501,
+            "bounds": [
+                52,
+                425,
+                698,
+                538
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 739,
+            "position_y": 1033,
+            "bounds": [
+                0,
+                788,
+                1200,
+                1334
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 578,
+            "position_y": 2538,
+            "bounds": [
+                440,
+                2439,
+                807,
+                2569
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 648,
+            "position_y": 2529,
+            "bounds": [
+                26,
+                2443,
+                1174,
+                2572
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

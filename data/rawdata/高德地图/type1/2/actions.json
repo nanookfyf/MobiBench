@@ -1,0 +1,79 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type1",
+    "task_description": "导航到上海龙湖闵行天街",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 515,
+            "position_y": 1421,
+            "bounds": [
+                24,
+                1333,
+                1056,
+                1495
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 361,
+            "position_y": 979,
+            "bounds": [
+                126,
+                943,
+                582,
+                1003
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 888,
+            "position_y": 2291,
+            "bounds": [
+                807,
+                2255,
+                1019,
+                2375
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 143,
+            "position_y": 389,
+            "bounds": [
+                27,
+                328,
+                210,
+                466
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        
+        {
+            "type": "click",
+            "position_x": 796,
+            "position_y": 2291,
+            "bounds": [
+                606,
+                2271,
+                996,
+                2333
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

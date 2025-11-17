@@ -1,0 +1,103 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type3",
+    "task_description": "从大零号湾打车到龙湖上海闵行天街",
+    "action_count": 12,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 530,
+            "position_y": 1621,
+            "bounds": [
+                448,
+                1499,
+                628,
+                1679
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "call_init"
+        },
+        {
+            "type": "click",
+            "position_x": 535,
+            "position_y": 1564,
+            "bounds": [
+                69,
+                1470,
+                1011,
+                1650
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 384,
+            "position_y": 1011,
+            "bounds": [
+                132,
+                990,
+                1020,
+                1050
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 931,
+            "position_y": 129,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 733,
+            "position_y": 206,
+            "bounds": [
+                168,
+                147,
+                1020,
+                279
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "大零号湾"
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 206,
+            "position_y": 725,
+            "bounds": [
+                132,
+                697,
+                1020,
+                757
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 939,
+            "position_y": 1801,
+            "bounds": [
+                802,
+                1739,
+                1018,
+                1823
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

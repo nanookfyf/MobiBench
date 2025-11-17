@@ -1,0 +1,52 @@
+{
+    "app_name": "美团",
+    "task_type": "type3",
+    "task_description": "新增收获地址",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1068,
+            "position_y": 2582,
+            "bounds": [
+                950,
+                2449,
+                1184,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "info1"
+        },
+        {
+            "type": "click",
+            "position_x": 1117,
+            "position_y": 227,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "info2"
+        },
+        {
+            "type": "click",
+            "position_x": 728,
+            "position_y": 545,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "info3"
+        },
+        {
+            "type": "click",
+            "position_x": 1023,
+            "position_y": 208,
+            "bounds": null
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

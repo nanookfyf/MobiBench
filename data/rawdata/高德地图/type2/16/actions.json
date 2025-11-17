@@ -1,0 +1,66 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type2",
+    "task_description": "打车从默认地点到大零号湾",
+    "action_count": 9,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 461,
+            "position_y": 1443,
+            "bounds": [
+                24,
+                1333,
+                1056,
+                1495
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "大零号湾"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 994,
+            "position_y": 2168,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 492,
+            "position_y": 1312,
+            "bounds": [
+                360,
+                1269,
+                924,
+                1335
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 922,
+            "position_y": 2303,
+            "bounds": [
+                852,
+                2273,
+                1020,
+                2400
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

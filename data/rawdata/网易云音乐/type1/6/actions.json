@@ -1,0 +1,37 @@
+{
+    "app_name": "网易云音乐",
+    "task_type": "type1",
+    "task_description": "搜索邓紫棋",
+    "action_count": 4,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 644,
+            "position_y": 2157,
+            "bounds": [
+                48,
+                2104,
+                984,
+                2238
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 593,
+            "position_y": 206,
+            "bounds": [
+                408,
+                163,
+                671,
+                215
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

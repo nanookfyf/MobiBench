@@ -1,0 +1,60 @@
+{
+    "app_name": "小红书",
+    "task_type": "type3",
+    "task_description": "搜索博主影视飓风，查看ta第一个笔记",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 979,
+            "position_y": 178,
+            "bounds": [
+                945,
+                123,
+                1053,
+                231
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "影视飓风"
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 988,
+            "position_y": 189,
+            "bounds": [
+                942,
+                111,
+                1032,
+                243
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result"
+        },
+        {
+            "type": "click",
+            "position_x": 146,
+            "position_y": 982,
+            "bounds": [
+                47,
+                716,
+                365,
+                1140
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

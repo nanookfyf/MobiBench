@@ -1,0 +1,95 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type3",
+    "task_description": "从大零号湾打车到龙湖上海闵行天街",
+    "action_count": 10,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 550,
+            "position_y": 1578,
+            "bounds": [
+                448,
+                1499,
+                628,
+                1679
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "call_init"
+        },
+        {
+            "type": "click",
+            "position_x": 681,
+            "position_y": 1615,
+            "bounds": [
+                69,
+                1470,
+                1011,
+                1650
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 427,
+            "position_y": 856,
+            "bounds": [
+                132,
+                826,
+                1020,
+                886
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 922,
+            "position_y": 135,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 733,
+            "position_y": 246,
+            "bounds": [
+                168,
+                147,
+                1020,
+                279
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 217,
+            "position_y": 876,
+            "bounds": [
+                132,
+                846,
+                1020,
+                906
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 905,
+            "position_y": 1779,
+            "bounds": [
+                802,
+                1739,
+                1018,
+                1823
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

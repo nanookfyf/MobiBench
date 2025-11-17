@@ -1,0 +1,56 @@
+{
+    "app_name": "饿了么",
+    "task_type": "type1",
+    "task_description": "帮我搜索麦当劳",
+    "action_count": 7,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 157,
+            "position_y": 499,
+            "bounds": [
+                24,
+                354,
+                245,
+                598
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 472,
+            "position_y": 332,
+            "bounds": [
+                48,
+                255,
+                1104,
+                357
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "麦当劳"
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 1031,
+            "position_y": 170,
+            "bounds": [
+                990,
+                142,
+                1086,
+                199
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

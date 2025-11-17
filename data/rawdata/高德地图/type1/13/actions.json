@@ -1,0 +1,37 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type1",
+    "task_description": "帮我导航去龙湖闵行天街。",
+    "action_count": 3,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 902,
+            "position_y": 2031,
+            "bounds": [
+                816,
+                1988,
+                996,
+                2072
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 762,
+            "position_y": 2268,
+            "bounds": [
+                570,
+                2235,
+                1032,
+                2369
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

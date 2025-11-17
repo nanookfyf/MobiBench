@@ -1,0 +1,144 @@
+{
+    "app_name": "bilibili",
+    "task_type": "type9",
+    "task_description": "在up主小潮院长的垃圾人视频下评论赞",
+    "action_count": 18,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 504,
+            "position_y": 198,
+            "bounds": [
+                213,
+                144,
+                768,
+                246
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "小潮院长"
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 131,
+            "position_y": 513,
+            "bounds": [
+                0,
+                396,
+                1080,
+                531
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result0"
+        },
+        {
+            "type": "click",
+            "position_x": 590,
+            "position_y": 349,
+            "bounds": [
+                492,
+                261,
+                654,
+                381
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 300,
+            "position_y": 590,
+            "bounds": [
+                0,
+                501,
+                1080,
+                741
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 891,
+            "position_y": 203,
+            "bounds": [
+                840,
+                150,
+                930,
+                240
+            ]
+        },
+        {
+            "type": "input",
+            "text": "垃圾人"
+        },
+        {
+            "type": "click",
+            "position_x": 1002,
+            "position_y": 2154,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "result"
+        },
+        {
+            "type": "click",
+            "position_x": 653,
+            "position_y": 475,
+            "bounds": [
+                0,
+                356,
+                1080,
+                623
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 298,
+            "position_y": 768,
+            "bounds": [
+                162,
+                719,
+                474,
+                833
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 495,
+            "position_y": 2360,
+            "bounds": [
+                36,
+                2289,
+                936,
+                2379
+            ]
+        },
+        {
+            "type": "input",
+            "text": "赞"
+        },
+        {
+            "type": "click",
+            "position_x": 934,
+            "position_y": 1432,
+            "bounds": [
+                876,
+                1344,
+                1044,
+                1488
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

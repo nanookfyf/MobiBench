@@ -1,0 +1,75 @@
+{
+    "app_name": "小红书",
+    "task_type": "type1",
+    "task_description": "关注博主 影视飓风",
+    "action_count": 10,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1002,
+            "position_y": 183,
+            "bounds": [
+                945,
+                123,
+                1053,
+                231
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "影视飓风"
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 997,
+            "position_y": 166,
+            "bounds": [
+                942,
+                111,
+                1032,
+                243
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result"
+        },
+        {
+            "type": "click",
+            "position_x": 332,
+            "position_y": 321,
+            "bounds": [
+                240,
+                243,
+                408,
+                375
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "target"
+        },
+        {
+            "type": "click",
+            "position_x": 916,
+            "position_y": 521,
+            "bounds": [
+                843,
+                472,
+                1032,
+                544
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

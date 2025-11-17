@@ -1,0 +1,45 @@
+{
+    "app_name": "京东",
+    "task_type": "type2",
+    "task_description": "搜索影石Insta360 Go3S 拇指相机",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 701,
+            "position_y": 366,
+            "bounds": [
+                26,
+                262,
+                1174,
+                382
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "影石Insta360 Go3S拇指相机"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 961,
+            "position_y": 395,
+            "bounds": [
+                0,
+                285,
+                1200,
+                431
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

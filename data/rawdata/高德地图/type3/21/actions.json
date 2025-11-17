@@ -1,0 +1,88 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type3",
+    "task_description": "从大零号湾打车到龙湖上海闵行天街",
+    "action_count": 11,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 541,
+            "position_y": 1432,
+            "bounds": [
+                24,
+                1333,
+                1056,
+                1495
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 859,
+            "position_y": 1080,
+            "bounds": [
+                826,
+                1050,
+                886,
+                1110
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 916,
+            "position_y": 132,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 713,
+            "position_y": 221,
+            "bounds": [
+                168,
+                147,
+                1020,
+                279
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "大零号湾"
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 312,
+            "position_y": 722,
+            "bounds": [
+                132,
+                697,
+                1020,
+                757
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 931,
+            "position_y": 1787,
+            "bounds": [
+                802,
+                1739,
+                1018,
+                1823
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}
