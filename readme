@@ -1,0 +1,37 @@
+## Project Structure
+
+- `agent_rr/` - 
+- `collect/` - 
+- `runner/` -
+- `MobiFlow/` -
+- `app/` - 
+- `deployment/` - 
+
+## Quick Start
+
+#### Environment Setup
+
+Create virtual environment, e.g., using conda:
+
+```bash
+conda create -n MobiMind python=3.10.18
+conda activate MobiMind
+```
+
+```bash
+pip install -r requirements.txt
+
+modelscope download --model AI-ModelScope/OmniParser-v2.0 --local_dir ./utils/models/weights/OmniParser-v2.0
+
+modelscope download --model sentence-transformers/paraphrase-MiniLM-L6-v2  --local_dir ./utils/models/weights/paraphrase-MiniLM-L6-v2
+
+
+modelscope download --model AI-ModelScope/GroundingDINO --local_dir ./utils/models/weights/GroundingDINO 
+
+python -m MobiBench.agents.UI_TARS.ui_tars_adapter
+
+python -m MobiBench.agents.MobiMind.bench
+
+python -m MobiBench.agents.Mobileagentv3.run_mobileagentv3
+```
+
