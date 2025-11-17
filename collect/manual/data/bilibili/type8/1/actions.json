@@ -1,0 +1,85 @@
+{
+    "app_name": "bilibili",
+    "task_type": "type8",
+    "task_description": "罗永浩视频下评论“kksk”",
+    "action_count": 9,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 654,
+            "position_y": 231,
+            "bounds": [
+                231,
+                156,
+                861,
+                266
+            ]
+        },
+        {
+            "type": "input",
+            "text": "罗永浩"
+        },
+        {
+            "type": "click",
+            "position_x": 906,
+            "position_y": 425,
+            "bounds": [
+                0,
+                283,
+                1200,
+                429
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 660,
+            "position_y": 1309,
+            "bounds": [
+                0,
+                1178,
+                1200,
+                1571
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 420,
+            "position_y": 893,
+            "bounds": [
+                174,
+                795,
+                512,
+                919
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 396,
+            "position_y": 2541,
+            "bounds": [
+                39,
+                2496,
+                1044,
+                2596
+            ]
+        },
+        {
+            "type": "input",
+            "text": "kksk"
+        },
+        {
+            "type": "click",
+            "position_x": 1108,
+            "position_y": 1578,
+            "bounds": [
+                979,
+                1470,
+                1161,
+                1626
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "app_name": "微博",
+    "task_type": "type1",
+    "task_description": "微博搜索罗永浩",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 628,
+            "position_y": 2527,
+            "bounds": [
+                480,
+                2465,
+                720,
+                2608
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "search"
+        },
+        {
+            "type": "click",
+            "position_x": 812,
+            "position_y": 179,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "罗永浩"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 756,
+            "position_y": 547,
+            "bounds": [
+                0,
+                470,
+                1200,
+                613
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

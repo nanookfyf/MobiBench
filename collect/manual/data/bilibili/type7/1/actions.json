@@ -1,0 +1,48 @@
+{
+    "app_name": "bilibili",
+    "task_type": "type7",
+    "task_description": "关注罗永浩的十字路口",
+    "action_count": 5,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 540,
+            "position_y": 246,
+            "bounds": [
+                231,
+                156,
+                861,
+                266
+            ]
+        },
+        {
+            "type": "input",
+            "text": "罗永浩的十字路口"
+        },
+        {
+            "type": "click",
+            "position_x": 680,
+            "position_y": 386,
+            "bounds": [
+                0,
+                283,
+                1200,
+                429
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 993,
+            "position_y": 501,
+            "bounds": [
+                933,
+                460,
+                1161,
+                538
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

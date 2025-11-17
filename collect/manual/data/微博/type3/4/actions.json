@@ -1,0 +1,143 @@
+{
+    "app_name": "微博",
+    "task_type": "type3",
+    "task_description": "在罗永浩的十字路口这位博主的主页第一条微博下面评论KKSK",
+    "action_count": 19,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 674,
+            "position_y": 2497,
+            "bounds": [
+                480,
+                2465,
+                720,
+                2608
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "search"
+        },
+        {
+            "type": "click",
+            "position_x": 771,
+            "position_y": 190,
+            "bounds": [
+                79,
+                130,
+                1121,
+                254
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "罗永浩的十字路口"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 970,
+            "position_y": 975,
+            "bounds": [
+                0,
+                905,
+                1200,
+                1093
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 414,
+            "position_y": 2518,
+            "bounds": [
+                265,
+                2442,
+                488,
+                2618
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 60,
+            "position_y": 199,
+            "bounds": [
+                0,
+                120,
+                276,
+                261
+            ]
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 590,
+            "press_position_y": 2140,
+            "release_position_x": 625,
+            "release_position_y": 1651,
+            "direction": "up"
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "click",
+            "position_x": 677,
+            "position_y": 2213,
+            "bounds": [
+                400,
+                2185,
+                800,
+                2302
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result4"
+        },
+        {
+            "type": "click",
+            "position_x": 648,
+            "position_y": 2538,
+            "bounds": [
+                413,
+                2442,
+                787,
+                2618
+            ]
+        },
+        {
+            "type": "input",
+            "text": "KKSK"
+        },
+        {
+            "type": "tag",
+            "label": "input4"
+        },
+        {
+            "type": "click",
+            "position_x": 1105,
+            "position_y": 1414,
+            "bounds": [
+                953,
+                1345,
+                1161,
+                1449
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

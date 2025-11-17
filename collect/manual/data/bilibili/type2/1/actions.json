@@ -1,0 +1,81 @@
+{
+    "app_name": "bilibili",
+    "task_type": "type2",
+    "task_description": "B站搜索影视飓风最新视频",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 399,
+            "position_y": 2512,
+            "bounds": [
+                240,
+                2462,
+                480,
+                2618
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 1125,
+            "position_y": 457,
+            "bounds": [
+                812,
+                426,
+                1200,
+                478
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 882,
+            "position_y": 366,
+            "bounds": [
+                150,
+                322,
+                1141,
+                420
+            ]
+        },
+        {
+            "type": "input",
+            "text": "影视飓风"
+        },
+        {
+            "type": "click",
+            "position_x": 885,
+            "position_y": 594,
+            "bounds": [
+                0,
+                439,
+                1200,
+                634
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 625,
+            "position_y": 1481,
+            "bounds": [
+                480,
+                1374,
+                720,
+                1504
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 590,
+            "position_y": 1903,
+            "bounds": [
+                0,
+                1737,
+                1200,
+                2037
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

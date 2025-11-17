@@ -1,0 +1,419 @@
+from openai import OpenAI
+import base64
+from PIL import Image
+import json
+import logging
+import os
+import argparse
+import cv2
+from MobiBench.agents.MobiMind.env_engine import StaticMobiAgentWorker
+from datetime import datetime
+from MobiBench.utils.task_get import get_tasks
+import time 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+MAX_STEPS = 50
+
+
+
+decider_client = None
+grounder_client = None
+planner_client = None
+
+def init(service_ip, decider_port, grounder_port, planner_port):
+    global decider_client, grounder_client, planner_client, general_client, general_model, apps
+    decider_client = OpenAI(
+        api_key = "0",
+        base_url = f"http://{service_ip}:{decider_port}/v1",
+    )
+    grounder_client = OpenAI(
+        api_key = "0",
+        base_url = f"http://{service_ip}:{grounder_port}/v1",
+    )
+    planner_client = OpenAI(
+        api_key = "sk-441155ebf2764ac78b36195e8a9978da",
+        base_url = "https://api.deepseek.com",
+    )
+
+decider_prompt_template = """
+You are a phone-use AI agent. Now your task is "{task}".
+Your action history is:
+{history}
+Please provide the next action based on the screenshot and your action history. You should do careful reasoning before providing the action.
+Your action space includes:
+- Name: click, Parameters: target_element (a high-level description of the UI element to click).
+- Name: swipe, Parameters: direction (one of UP, DOWN, LEFT, RIGHT).
+- Name: input, Parameters: text (the text to input).
+- Name: wait, Parameters: (no parameters, will wait for 1 second).
+- Name: done, Parameters: (no parameters).
+Your output should be a JSON object with the following format:
+{{"reasoning": "Your reasoning here", "action": "The next action (one of click, input, swipe, done)", "parameters": {{"param1": "value1", ...}}}}"""
+
+grounder_prompt_template_no_bbox = '''
+Based on the screenshot, user's intent and the description of the target UI element, provide the coordinates of the element using **absolute coordinates**.
+User's intent: {reasoning}
+Target element's description: {description}
+Your output should be a JSON object with the following format:
+{{"coordinates": [x, y]}}'''
+
+grounder_prompt_template_bbox = '''
+Based on the screenshot, user's intent and the description of the target UI element, provide the bounding box of the element using **absolute coordinates**.
+User's intent: {reasoning}
+Target element's description: {description}
+Your output should be a JSON object with the following format:
+{{"bbox": [x1, y1, x2, y2]}}'''
+
+decider_prompt_template_zh = """
+你是一个手机使用AI代理。现在你的任务是“{task}”。
+你的操作历史如下：
+{history}
+请根据截图和你的操作历史提供下一步操作。在提供操作之前，你需要进行仔细的推理。
+你的操作范围包括：
+- 名称：点击（click），参数：目标元素（target_element，对要点击的UI元素的高级描述）。
+- 名称：滑动（swipe），参数：方向（direction，UP、DOWN、LEFT、RIGHT中的一个）。
+- 名称：输入（input），参数：文本（text，要输入的文本）。
+- 名称：等待（wait），参数：（无参数，将等待1秒）。
+- 名称：完成（done），参数：（无参数）。
+你的输出应该是一个如下格式的JSON对象：
+{{"reasoning": "你的推理分析过程在此", "action": "下一步操作（click、input、swipe、done中的一个）", "parameters": {{"param1": "value1", ...}}}}"""
+
+grounder_prompt_template_no_bbox_zh = """
+根据截图、用户意图和目标UI元素的描述，使用**绝对坐标**提供该元素的坐标。
+用户意图：{reasoning}
+目标元素描述：{description}
+你的输出应该是一个如下格式的JSON对象：
+{{"coordinates": [x, y]}}"""
+
+grounder_prompt_template_bbox_zh = """"
+根据截图、用户意图和目标UI元素的描述，使用**绝对坐标**提供该元素的边界框。
+用户意图：{reasoning}
+目标元素描述：{description}
+你的输出应该是一个如下格式的JSON对象：
+{{"bbox": [x1, y1, x2, y2]}}"""
+
+screenshot_path = "screenshot.jpg"
+factor = 0.5
+prices = {}
+
+class BenchEnv:
+    def __init__(self, *, worker, task, decider, grounder, planner,
+                 max_steps: int = MAX_STEPS, record_dir: str = "record",
+                 run_root: str = "runs"):
+        self.worker = worker
+        self.task = task
+        self.decider = decider
+        self.grounder = grounder
+        self.planner = planner
+        self.max_steps = max_steps
+        self.record_dir = record_dir
+
+        # 运行期状态
+        self.history: list[str] = []
+        self.actions: list[dict] = []
+        self.reacts: list[dict] = []
+        self.is_done = False
+
+        # 目录与文件
+        os.makedirs(self.record_dir, exist_ok=True)
+
+        # 本次运行独立目录：runs/<YYYYmmdd-HHMMSS>-<task_slug>/
+        ts = datetime.now().strftime("%Y%m%d-%H%M%S")
+        task_slug = "".join(ch if ch.isalnum() else "_" for ch in self.task)[:40]
+        self.run_dir = os.path.join(run_root, f"{ts}-{task_slug}")
+        os.makedirs(self.run_dir, exist_ok=True)
+
+        # 常用输出文件（全部 UTF-8）
+        self.file_prompts = os.path.join(self.run_dir, "prompts.txt")          # 逐步写入的 Decider prompt
+        self.file_responses = os.path.join(self.run_dir, "decider_responses.jsonl")  # 原始响应（JSONL）
+        self.file_trace = os.path.join(self.run_dir, "trace.jsonl")            # 规范化后的轨迹（JSONL）
+        self.file_history = os.path.join(self.run_dir, "history.txt")          # 简洁历史（人读友好）
+        self.file_summary = os.path.join(self.run_dir, "result.json")          # 最终汇总
+        self.file_actions = os.path.join(self.run_dir, "actions.json")         # 全部规范化动作（JSON）
+
+
+        # 运行元信息
+        with open(os.path.join(self.run_dir, "meta.json"), "w", encoding="utf-8") as f:
+            json.dump({
+                "task": self.task,
+                "max_steps": self.max_steps,
+                "record_dir": self.record_dir,
+            }, f, ensure_ascii=False, indent=2)
+
+    # 小工具：追加文本/JSONL
+    def _append_text(self, path: str, text: str):
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(text + ("\n" if not text.endswith("\n") else ""))
+
+    def _append_jsonl(self, path: str, obj: dict):
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(obj, ensure_ascii=False) + "\n")
+
+    def _history_str(self) -> str:
+
+        if not self.actions:
+            return "(No history)"
+        tail = self.actions[:]
+        lines = []
+        for i, a in enumerate(tail, 1):
+            lines.append(f"{i}. " + json.dumps(a, ensure_ascii=False))
+        return "\n".join(lines)
+
+    def _save_current_img(self, step_index: int):
+        """把当前状态对应截图复制到 record 里，维持原有 1.jpg, 2.jpg... 的命名"""
+        img_path = self.worker.cur_state.img_path
+        img = Image.open(img_path)
+        save_path = os.path.join(os.getcwd(), self.record_dir, f"{step_index}.jpg")
+        img.save(save_path)
+
+    def _call_decider(self, obs_bgr_base64: str) -> dict:
+        decider_prompt = decider_prompt_template.format(
+            task=self.task,
+            history=self._history_str()
+        )
+        logging.info("Decider prompt:\n%s", decider_prompt)
+        self._append_text(self.file_prompts, f"--- step {len(self.actions)+1} ---\n{decider_prompt}\n")
+
+        resp = self.decider.chat.completions.create(
+            model="",
+            messages=[{
+                "role": "user",
+                "content": [
+                    {"type": "image_url",
+                    "image_url": {"url": f"data:image/jpeg;base64,{obs_bgr_base64}"}},
+                    {"type": "text", "text": decider_prompt},
+                ]
+            }],
+            temperature=0
+        ).choices[0].message.content
+        logging.info(f"Decider response:\n{resp}")
+        
+
+        try:
+            self._append_jsonl(self.file_responses, json.loads(resp))
+        except Exception:
+            self._append_jsonl(self.file_responses, {"raw": resp})
+        print(f"Decider response:\n{resp}")
+
+        try:
+            resp = json.loads(resp)
+            return resp
+        except:
+            return False
+
+
+    def _normalize_decision(self, dec: dict) -> dict:
+        import re
+        # 1) 规范 action：去掉括号说明 -> 小写 -> 中英映射
+        a_raw = (dec.get("action") or "").strip()
+        a_no_paren = re.sub(r"[（(].*?[）)]", "", a_raw)   # 删 () / （）中的内容
+        a_norm = a_no_paren.strip().lower()
+        action_map = {
+            "点击": "click", "单击": "click", "click": "click",
+            "输入": "input", "input": "input",
+            "滑动": "swipe", "上滑": "swipe", "下滑": "swipe", "左滑": "swipe", "右滑": "swipe", "swipe": "swipe",
+            "等待": "wait", "wait": "wait",
+            "完成": "done", "结束": "done", "done": "done", "停止": "done"
+        }
+        action = action_map.get(a_norm, a_norm)
+
+        # 2) 规范参数键名
+        p = dec.get("parameters", {}) or {}
+        key_map = {
+            "目标元素": "target_element", "元素": "target_element",
+            "文本": "text", "内容": "text",
+            "方向": "direction",
+            "起点": "start", "终点": "end",
+            "坐标": "coords",
+            "横坐标": "x", "纵坐标": "y",
+            "X": "x", "Y": "y"
+        }
+        norm = {key_map.get(k, k): v for k, v in p.items()}
+
+        # 3) 方向值统一
+        if isinstance(norm.get("direction"), str):
+            d = norm["direction"].strip()
+            dir_map = {"上": "UP", "下": "DOWN", "左": "LEFT", "右": "RIGHT",
+                    "up": "UP", "down": "DOWN", "left": "LEFT", "right": "RIGHT"}
+            norm["direction"] = dir_map.get(d, d)
+
+        return {"reasoning": dec.get("reasoning", ""), "action": action, "parameters": norm}
+
+    def _valid_decision(self, dec: dict) -> bool:
+        a = dec.get("action")
+        p = dec.get("parameters", {}) or {}
+        need = {
+            "click": ["target_element"],
+            "input": ["text"],       
+            "swipe": ["direction"],
+            "wait": [],
+            "done": [],
+        }
+        must = need.get(a, [])
+        for k in must:
+            if k not in p or p[k] in (None, ""):
+                logging.warning("[decider] missing key for action=%s: %s in %s", a, k, p)
+                return False
+        return True
+
+    def bench(self) -> dict:
+        """
+        执行完整基准流程：
+        - 每步：取观测、存截图、问 decider、worker.step、更新历史
+        - 终止：done==True 或达到 max_steps
+        返回：结果字典（actions/reacts/history/胜负标志等）
+        """
+        step = 0
+        won = 0
+        is_filed = False
+        while step < self.max_steps and not self.is_done and not is_filed:
+            # 1) 取观测
+            obs_rgb = self.worker._get_obs()        
+            # 转成 base64 给 decider
+            _, buf = cv2.imencode(".jpg", obs_rgb[:, :, ::-1])  
+            obs_b64 = base64.b64encode(buf).decode("utf-8")
+
+            # 2) 保存当前环境截图（和旧脚本一致：1.jpg, 2.jpg,...）
+            self._save_current_img(step + 1)
+
+           
+            # 3) 调 decider + 规范化
+            dec_raw = self._call_decider(obs_b64)
+            if dec_raw is False:
+                print("!![decoder err break]!!")
+                break
+            #print(dec_raw)
+            dec = self._normalize_decision(dec_raw)
+            self.actions.append(dec)
+            
+            self._append_jsonl(self.file_trace, {
+            "step": step + 1,
+            "dec": dec,
+            "phase": "pre_exec"
+            })
+            # 新增：简单 schema 校验，缺关键参数就跳过该步
+            if not self._valid_decision(dec):
+                # 记录一条“跳过”的历史，避免下一轮模型完全不知道刚才发生了啥
+                self.history.append(f"skip -> invalid decision for action={dec.get('action')}")
+                step += 1
+                continue
+
+
+            # 若是 done，直接结束（不要再丢给 worker）
+            
+                #self.is_done = True
+                #won = 1  # 如果你的定义里 done=成功；不需要就改为 0
+                #break
+
+            # 4) 兼容 reacts 结构（保留原有格式）
+            converted = {
+                "reasoning": dec["reasoning"],
+                "function": {"name": dec["action"], "parameters": dec["parameters"]}
+            }
+            self.reacts.append(converted)
+
+            # 5) 真正执行一步
+            obs_next, reward, done, info,is_filed = self.worker.step(dec)
+
+            self.is_done = bool(done)
+            won = info.get("won", 0)
+            if dec["action"] == "done":
+                self.history.append("done")
+                is_filed = True
+
+            # 6) 更新文字历史（给下一轮 prompt 用）
+            a = dec["action"]
+            p = dec.get("parameters", {})
+            if a == "click":
+                self.history.append(f'click -> {p.get("target_element","")}')
+            elif a == "input":
+                self.history.append(f'input -> "{p.get("text","")}"')
+            elif a == "swipe":
+                self.history.append(f'swipe -> {p.get("direction","")}')
+            elif a == "wait":
+                self.history.append("wait")
+
+            self._append_text(self.file_history, self.history[-1])
+            step += 1
+
+        summary = {
+        "steps": step,
+        "won": won,
+        "done": self.is_done,
+        "run_dir": self.run_dir,
+        }
+        with open(self.file_summary, "w", encoding="utf-8") as f:
+            json.dump(summary, f, ensure_ascii=False, indent=2)
+
+        with open(self.file_actions, "w", encoding="utf-8") as f:
+            json.dump(self.actions, f, ensure_ascii=False, indent=2)
+        #score = self.worker.fsm.get_score()
+        print("finished state",self.worker.fsm.cur_state.img_path)
+        return {**summary, "actions": self.actions, "reacts": self.reacts, "history": self.history}
+    
+
+
+
+def planner_handle(task,task2app):
+    app = task2app[0]
+    tasktype = task2app[1]
+    return app,tasktype,task
+
+
+if __name__ == "__main__":
+    # 解析命令行参数
+    parser = argparse.ArgumentParser(description="MobiMind Agent")
+    parser.add_argument("--service_ip", type=str, default="123.60.91.241", help="Ip for the services (default: localhost)")
+    parser.add_argument("--decider_port", type=int, default=9002, help="Port for decider service (default: 8000)")
+    parser.add_argument("--grounder_port", type=int, default=9002, help="Port for grounder service (default: 8001)")
+    parser.add_argument("--planner_port", type=int, default=8000, help="Port for planner service (default: 8002)")
+    parser.add_argument("--datapath", type=str, default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="path to data")
+    args = parser.parse_args()
+
+    # 使用命令行参数初始化
+    init(args.service_ip, args.decider_port, args.grounder_port, args.planner_port)
+
+    #device = AndroidDevice()
+    #print(f"connect to device")
+
+    data_base_dir = os.path.join(os.path.dirname(__file__), 'data')
+    if not os.path.exists(data_base_dir):
+        os.makedirs(data_base_dir)
+
+    # 读取任务列表
+    task_json_path = os.path.join(os.path.dirname(__file__), "task.json")
+
+#    with open(task_json_path, "r", encoding="utf-8") as f:
+#        task_list = json.load(f)
+
+    
+    #tasklist = ["导航到龙湖上海闵行天街"]
+    app_list = ["小红书"]
+    type_list = ["type1","type3","type5"]
+    datapath = args.datapath
+    for app in app_list:
+        for tasktype in type_list:
+            tasklist = get_tasks(app,tasktype)
+            envengine = StaticMobiAgentWorker(app,tasktype,datapath,grounder_client)
+            for task in tasklist:
+                print(f"任务: {task}，应用: {app}，类型: {tasktype}")
+                envengine.reset()
+                runner = BenchEnv(
+                        worker=envengine,
+                        task=task,
+                        decider=decider_client,
+                        grounder=grounder_client,
+                        planner=planner_client,
+                        max_steps=MAX_STEPS,
+                        record_dir="record",  
+                    )
+                start = time.time()
+                result = runner.bench()
+                end = time.time()
+                from MobiBench.utils.score_proc import save_result
+                save_result(md="MobiMind",app=app,task=tasktype,inst=task,fsm=envengine.fsm,time_use=end-start,savepath="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev")
+                print(f"Bench result: steps={result['steps']}, won={result['won']}, done={result['done']}")
+    
+    # print(task_list)
+
+   
