@@ -16,7 +16,7 @@ from MobiBench.agents.Mobileagentv3.utils.mobile_agent_e import (
 )
 import MobiBench.agents.Mobileagentv3.utils.controller as controller
 from MobiBench.agents.Mobileagentv3.utils.call_mobile_agent_e import GUIOwlWrapper
-
+from MobiBench.utils.score_proc import save_result,dict2csv
 def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_type, if_notetaker, max_step=25, log_path="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/Mobileagentv3/logs"):
     controller = ctl 
     now = datetime.now()
@@ -40,7 +40,19 @@ def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_typ
     message_manager, message_operator, message_reflector, message_notekeeper = None, None, None, None
     info_pool.instruction = instruction
 
-    for step in range(controller.fsm.max_op_times):
+    step = 1
+    manage_num_toks = 0
+    operator_num_toks = 0
+    reflector_num_toks = 0
+
+    manage_num_p_toks = 0
+    operator_num_p_toks = 0
+    reflector_num_p_toks = 0
+
+    manage_num_d_toks = 0
+    operator_num_d_toks = 0
+    reflector_num_d_toks = 0
+    while step <= controller.fsm.max_op_times:
 
         if step == max_step:
             task_result_path = os.path.join(save_path, "task_result.json")
@@ -51,7 +63,7 @@ def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_typ
                 json.dump(task_result_data, json_file, ensure_ascii=False, indent=4)
             break
         
-        if step == 0:
+        if step == 1:
             current_time = datetime.now()
             formatted_time = current_time.strftime(f'%Y-%m-%d-{current_time.hour * 3600 + current_time.minute * 60 + current_time.second}-{str(uuid.uuid4().hex[:8])}')
             local_image_dir = os.path.join(image_save_path, f"screenshot_{formatted_time}.png")
@@ -93,6 +105,9 @@ def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_typ
                 prompt_planning,
                 [local_image_dir]
             )
+            manage_num_toks += raw_response.usage.total_tokens
+            manage_num_p_toks += raw_response.usage.prompt_tokens
+            manage_num_d_toks += raw_response.usage.completion_tokens
         
         message_save_path = os.path.join(save_path, f"step_{step+1}")
         os.mkdir(message_save_path)
@@ -137,6 +152,11 @@ def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_typ
                 [local_image_dir],
             )
             
+            #operator_num_toks += raw_response.usage.total_tokens
+            operator_num_toks += raw_response.usage.total_tokens
+            operator_num_p_toks += raw_response.usage.prompt_tokens
+            operator_num_d_toks += raw_response.usage.completion_tokens
+
             if not raw_response:
                 raise RuntimeError('Error calling LLM in operator phase.')
             parsed_result_action = executor.parse_response(output_action)
@@ -221,7 +241,7 @@ def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_typ
 
         info_pool.last_action = json.loads(action_object_str)
         
-        if step == 0:
+        if step == 1:
             time.sleep(8) # maybe a pop-up when first open an app
         time.sleep(2)
         
@@ -246,7 +266,11 @@ def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_typ
                 local_image_dir2,
             ],
         )
-        
+        #reflector_num_toks += raw_response.usage.total_tokens
+        reflector_num_toks += raw_response.usage.total_tokens
+        reflector_num_p_toks += raw_response.usage.prompt_tokens
+        reflector_num_d_toks += raw_response.usage.completion_tokens
+    
         message_file = os.path.join(message_save_path, "reflector.json")
         message_data = {"name": "reflector", "messages": message_reflector, "response": output_action_reflect, "step_id": step+1}
         with open(message_file, 'w', encoding='utf-8') as json_file:
@@ -296,6 +320,23 @@ def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_typ
             info_pool.important_notes = important_notes
 
             print('Important notes: ' + important_notes, "\n")
+        step += 1
+    print(f"avg manager toks{manage_num_toks/step} | avg operator toks {operator_num_toks/step} | avg reflector toks {reflector_num_toks/step}")
+    dict_data = {
+        "avg_manager_toks":[manage_num_toks/step],
+        "avg_manager_p_toks":[manage_num_p_toks/step],
+        "avg_manager_d_toks":[manage_num_d_toks/step],
+        "avg_operator_toks":[operator_num_toks/step],
+        "avg_operator_p_toks":[operator_num_p_toks/step],
+        "avg_operator_d_toks":[operator_num_d_toks/step],
+        "avg_reflector_toks":[reflector_num_toks/step],
+        "avg_reflector_p_toks":[reflector_num_p_toks/step],
+        "avg_reflector_d_toks":[reflector_num_d_toks/step]
+
+    }
+    dict2csv(dict_data,"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/v3toks.csv")
+
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
@@ -318,8 +359,14 @@ if __name__ == '__main__':
     import logging
     from MobiBench.utils.task_get import get_tasks
     import time
-    app_list = ["微博"]
-    type_list = ["type1"]
+    #app_list = [ "高德","京东", "美团","淘宝","网易云音乐","微博","小红书"]
+    #type_list = ["type1","type2","type3","type4","type5","type6","type7"]
+    #type_list = ["type4"]
+    type_list = ["type1","type2","type3","type4","type5","type6","type7"]
+    app_list = [ "知乎"]
+    type_list_hash = {
+        "微博" : ["type3"]
+    }
     datapath = args.datapath
     for app in app_list:
         for tasktype in type_list:
@@ -333,7 +380,7 @@ if __name__ == '__main__':
                 run_instruction(ctl, args.api_key,args.base_url, args.model, task, args.add_info, args.coor_type, args.notetaker)
                 print("finished state",fsm.cur_state.img_path)
                 end = time.time()
-                from MobiBench.utils.score_proc import save_result
+                
                 save_result(md="MobiAgentv3",app=app,task=tasktype,inst=task,fsm=ctl.fsm,time_use=end-start,savepath="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev")
  
 

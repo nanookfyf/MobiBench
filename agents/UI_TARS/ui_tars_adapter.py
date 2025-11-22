@@ -25,7 +25,7 @@ from MobiBench.agents.UI_TARS.ui_tars_automation.action_parser import (
     IMAGE_FACTOR,
     linear_resize,
 )
-
+from MobiBench.utils.score_proc import save_result,dict2csv
 logger = logging.getLogger(__name__)
 
 
@@ -103,8 +103,11 @@ def call_model(
         temperature=temperature,
     )
     text = resp.choices[0].message.content
+    prefill_toks = resp.usage.prompt_tokens
+    decode_toks = resp.usage.completion_tokens
+    num_toks = resp.usage.total_tokens
     logger.info("模型输出（前 200 字）：%s", text.replace("\n", "\\n")[:200])
-    return text
+    return text,num_toks,prefill_toks,decode_toks
 
 
 def parse_thought_action(text: str) -> Dict[str, str]:
@@ -235,8 +238,11 @@ def run(fsm,args,app,task,instruction):
     trace_log: List[Dict[str, Any]] = []
 
     done_flag = False
-
-    for step in range(1, fsm.max_op_times+1):
+    all_tokens = 0
+    all_p_tokens = 0
+    all_d_tokens = 0
+    step = 1
+    while step <= fsm.max_op_times:
         if fsm.cur_state is None:
             # 第一次调用时，fsm.action 里会自己随机选一个 START；这里先给个空动作触发
             logger.info("FSM 当前无状态，先随机初始化。")
@@ -255,7 +261,14 @@ def run(fsm,args,app,task,instruction):
             history=history_ta,
             image_data_url=img_b64,
         )
-        raw_output = call_model(client, args.model_name, messages)
+
+        raw_output,num_toks,p_toks,d_toks = call_model(client, args.model_name, messages)
+        print(f"num toks {num_toks}. ||. p toks {p_toks}.  || d toks {d_toks}")
+
+        all_tokens += num_toks
+        all_d_tokens += d_toks
+        all_p_tokens += p_toks
+
 
         # 4. 提取 Thought + Action 文本
         ta = parse_thought_action(raw_output)
@@ -308,6 +321,8 @@ def run(fsm,args,app,task,instruction):
             logger.info("到达 DONE 状态，任务完成！")
             done_flag = True
             break
+        
+        step += 1
 
     result = {
         "instruction": instruction,
@@ -323,9 +338,21 @@ def run(fsm,args,app,task,instruction):
     print()
     print(f"评估结束，success = {done_flag}，总步数 = {len(trace_log)}")
     print(f"详细轨迹已保存到: {os.path.abspath(args.output_json)}")
+    
     if trace_log:
         print("起点截图:", trace_log[0]["prev_img"])
         print("终点截图:", trace_log[-1]["new_img"])
+    
+    avg_toks = all_tokens / step
+    avg_p_toks = all_p_tokens /step
+    avg_d_toks = all_d_tokens / step
+    tokens_dict = {
+        "avg_tokens":[avg_toks],
+        "avg_p_tokens":[avg_p_toks],
+        "avg_d_tokens":[avg_d_toks]
+    }
+    dict2csv(tokens_dict,"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/ui_toks.csv")
+    return avg_toks
 
 
 
@@ -351,9 +378,10 @@ def main():
     args = parser.parse_args()
     setup_logging()
 
-    app_list = ["小红书"]
-    type_list = ["type1","type3","type5"]
-
+    #app_list = [ "美团","淘宝","网易云音乐","微博","小红书"]
+    #type_list = ["type1","type2","type3","type4","type5","type6","type7"]
+    type_list = ["type1","type2","type3","type4","type5","type6","type7"]
+    app_list = [ "知乎"]
     datapath = args.data_root
     for app in app_list:
         for tasktype in type_list:
@@ -365,9 +393,11 @@ def main():
                 print(f"任务: {task}，应用: {app}，类型: {tasktype}")
                 fsm._reset()
                 start = time.time()
-                run(fsm=fsm,args=args,app=app,task=tasktype,instruction=task)
+                avg_toks = run(fsm=fsm,args=args,app=app,task=tasktype,instruction=task)
+                print()
+                print(f" avg tokens {avg_toks}")
                 end = time.time()
-                from MobiBench.utils.score_proc import save_result
+                
                 save_result(md="UI-TARS",app=app,task=tasktype,inst=task,fsm=fsm,time_use=end-start,savepath="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev")
                 #print(f"Bench result: steps={result['steps']}, won={result['won']}, done={result['done']}")
     

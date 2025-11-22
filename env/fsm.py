@@ -153,7 +153,7 @@ class AppFSM:
         self.is_failed = False
 
         # 参数与计数
-        self.max_op_times = 50
+        self.max_op_times = 30
         self.max_undefine_op_times = 5
         self.undefine_op_times = 0
         self.op_times = 0
@@ -385,7 +385,7 @@ class AppFSM:
                 if k == act.parameters.get("text"):
                     self.undefine_op_times = 0
                     return self.hash_map.get(v, self.cur_state)
-                elif  semantic_similarity(k,act.parameters.get("text"))['cosine_similarity']>0.8:
+                elif  semantic_similarity(k,act.parameters.get("text"))['cosine_similarity']>0.7:
                     self.undefine_op_times = 0
                     return self.hash_map.get(v, self.cur_state)
 

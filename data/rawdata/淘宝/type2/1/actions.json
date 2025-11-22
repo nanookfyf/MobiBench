@@ -1,0 +1,37 @@
+{
+    "app_name": "淘宝",
+    "task_type": "type2",
+    "task_description": "打开淘宝，查看我关注的店铺",
+    "action_count": 4,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1098,
+            "position_y": 2527,
+            "bounds": [
+                960,
+                2436,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "my"
+        },
+        {
+            "type": "click",
+            "position_x": 796,
+            "position_y": 1369,
+            "bounds": [
+                600,
+                1308,
+                887,
+                1727
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

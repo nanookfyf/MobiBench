@@ -46,3 +46,20 @@ def save_result(md, app, task, inst, fsm, time_use,savepath):
 
 # 使用示例
 # save_result('Mobile-Agent-v2', '微信', '发送消息', '给张三发送你好', fsm_instance, './results/evaluation_results.csv')
+
+def dict2csv(data,path):
+
+    import pandas as pd
+    import os
+
+
+    df = pd.DataFrame(data)
+
+    # 追加到CSV文件
+    csv_file = path
+    if os.path.exists(csv_file):
+        # 如果文件存在，追加模式，不写入列名
+        df.to_csv(csv_file, mode='a', header=False, index=False)
+    else:
+        # 如果文件不存在，新建文件，写入列名
+        df.to_csv(csv_file, mode='w', header=True, index=False)

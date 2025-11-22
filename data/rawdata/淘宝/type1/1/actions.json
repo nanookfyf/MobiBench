@@ -1,0 +1,45 @@
+{
+    "app_name": "淘宝",
+    "task_type": "type1",
+    "task_description": "打开淘宝，搜索小米眼镜",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 605,
+            "position_y": 302,
+            "bounds": [
+                205,
+                253,
+                840,
+                355
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "小米眼镜"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1133,
+            "position_y": 341,
+            "bounds": [
+                975,
+                293,
+                1161,
+                389
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

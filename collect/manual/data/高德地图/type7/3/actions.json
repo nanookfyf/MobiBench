@@ -1,0 +1,37 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type7",
+    "task_description": "打开高德地图，设置家庭地址为 “上海交通大学徐汇校区”",
+    "action_count": 4,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 60,
+            "position_y": 2397,
+            "bounds": [
+                46,
+                2101,
+                1154,
+                2413
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 66,
+            "position_y": 1343,
+            "bounds": [
+                65,
+                1212,
+                1135,
+                1371
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

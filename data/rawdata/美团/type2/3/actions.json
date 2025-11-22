@@ -1,0 +1,52 @@
+{
+    "app_name": "美团",
+    "task_type": "type3",
+    "task_description": "帮我点三米粥铺的鸡汤小馄饨",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 399,
+            "position_y": 269,
+            "bounds": [
+                87,
+                252,
+                826,
+                345
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "inputpage1"
+        },
+        {
+            "type": "click",
+            "position_x": 1055,
+            "position_y": 199,
+            "bounds": [
+                951,
+                146,
+                1139,
+                237
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 540,
+            "position_y": 220,
+            "bounds": [
+                498,
+                143,
+                596,
+                241
+            ]
+        },
+        {
+            "type": "input",
+            "text": "鸡汤小馄饨"
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

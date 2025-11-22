@@ -1,0 +1,70 @@
+{
+    "app_name": "淘宝",
+    "task_type": "type3",
+    "task_description": "打开淘宝， 关注 影视飓风官方旗舰店，",
+    "action_count": 10,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 712,
+            "position_y": 298,
+            "bounds": [
+                205,
+                253,
+                840,
+                355
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "影视飓风"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1107,
+            "position_y": 2397,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 1091,
+            "position_y": 892,
+            "bounds": [
+                958,
+                867,
+                1137,
+                968
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 1072,
+            "position_y": 367,
+            "bounds": [
+                976,
+                279,
+                1149,
+                375
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "app_name": "微博",
+    "task_type": "type3",
+    "task_description": "打开微博，在罗永浩的十字路口这位博主的主页第一条微博下面评论：“KKSK”",
+    "action_count": 13,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 621,
+            "position_y": 2527,
+            "bounds": [
+                480,
+                2465,
+                720,
+                2608
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "search"
+        },
+        {
+            "type": "click",
+            "position_x": 663,
+            "position_y": 214,
+            "bounds": [
+                79,
+                130,
+                1121,
+                254
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 235,
+            "position_y": 723,
+            "bounds": [
+                46,
+                665,
+                394,
+                769
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 854,
+            "position_y": 555,
+            "bounds": [
+                39,
+                433,
+                1174,
+                739
+            ]
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 650,
+            "press_position_y": 2047,
+            "release_position_x": 673,
+            "release_position_y": 1223,
+            "direction": "up"
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "click",
+            "position_x": 553,
+            "position_y": 1022,
+            "bounds": [
+                400,
+                976,
+                800,
+                1093
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 670,
+            "position_y": 2540,
+            "bounds": [
+                413,
+                2442,
+                787,
+                2618
+            ]
+        },
+        {
+            "type": "input",
+            "text": "kksk"
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

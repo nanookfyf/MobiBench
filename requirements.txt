@@ -39,4 +39,5 @@ requests
 ui-tars
 
 modelscope 
+pandas
 sentence-transformers

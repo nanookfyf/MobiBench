@@ -8,6 +8,7 @@ models = {
 model = SentenceTransformer(models['mini'])
 
 def semantic_similarity(text1, text2):
+    print("checking similarity....")
     # 编码句子
     embeddings = model.encode([text1, text2])
     

@@ -1,0 +1,141 @@
+{
+    "app_name": "携程",
+    "task_type": "type9",
+    "task_description": "请帮我预订一下2025年12月24日至2025年12月25日的上海东方明珠塔附近的全季酒店大床房，要带早饭。",
+    "action_count": 16,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 541,
+            "position_y": 836,
+            "bounds": [
+                156,
+                801,
+                726,
+                858
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input"
+        },
+        {
+            "type": "click",
+            "position_x": 369,
+            "position_y": 550,
+            "bounds": [
+                36,
+                500,
+                553,
+                588
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "target"
+        },
+        {
+            "type": "click",
+            "position_x": 292,
+            "position_y": 172,
+            "bounds": [
+                245,
+                128,
+                341,
+                220
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 352,
+            "position_y": 524,
+            "bounds": [
+                0,
+                461,
+                1080,
+                596
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "date1"
+        },
+        {
+            "type": "click",
+            "position_x": 547,
+            "position_y": 2125,
+            "bounds": [
+                15,
+                2083,
+                1065,
+                2220
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 699,
+            "position_y": 2142,
+            "bounds": [
+                15,
+                2083,
+                1065,
+                2220
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 696,
+            "position_y": 2326,
+            "bounds": [
+                42,
+                2244,
+                1038,
+                2376
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 561,
+            "position_y": 785,
+            "bounds": [
+                0,
+                720,
+                1080,
+                869
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "datefill"
+        },
+        {
+            "type": "click",
+            "position_x": 593,
+            "position_y": 684,
+            "bounds": [
+                0,
+                602,
+                1080,
+                1285
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "hotel1"
+        },
+        {
+            "type": "click",
+            "position_x": 862,
+            "position_y": 2194,
+            "bounds": [
+                772,
+                2107,
+                1022,
+                2228
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

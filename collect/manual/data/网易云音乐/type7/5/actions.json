@@ -1,0 +1,70 @@
+{
+    "app_name": "网易云音乐",
+    "task_type": "type7",
+    "task_description": "打开网易云音乐，查看官方热歌榜，并播放其中的第一首歌",
+    "action_count": 10,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1133,
+            "position_y": 208,
+            "bounds": [
+                1070,
+                165,
+                1148,
+                243
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "热歌榜"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1098,
+            "position_y": 2391,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 770,
+            "position_y": 1697,
+            "bounds": [
+                0,
+                1553,
+                1200,
+                1778
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "3"
+        },
+        {
+            "type": "click",
+            "position_x": 624,
+            "position_y": 1233,
+            "bounds": [
+                0,
+                1191,
+                1200,
+                1386
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

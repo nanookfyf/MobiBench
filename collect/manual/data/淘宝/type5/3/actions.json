@@ -1,0 +1,97 @@
+{
+    "app_name": "淘宝",
+    "task_type": "type5",
+    "task_description": "打开淘宝，帮我购买 一个 内存128G 标配的大疆Osmo Nano拇指相机",
+    "action_count": 12,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 335,
+            "position_y": 302,
+            "bounds": [
+                205,
+                253,
+                840,
+                355
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 332,
+            "position_y": 610,
+            "bounds": [
+                29,
+                563,
+                596,
+                657
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 715,
+            "position_y": 1547,
+            "bounds": [
+                0,
+                1377,
+                1200,
+                1871
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 1030,
+            "position_y": 2501,
+            "bounds": [
+                807,
+                2449,
+                1173,
+                2592
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "click",
+            "position_x": 533,
+            "position_y": 2303,
+            "bounds": [
+                0,
+                120,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result4"
+        },
+        {
+            "type": "click",
+            "position_x": 926,
+            "position_y": 2527,
+            "bounds": [
+                0,
+                120,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

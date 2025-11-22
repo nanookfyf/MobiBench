@@ -1,0 +1,52 @@
+{
+    "app_name": "京东",
+    "task_type": "type1",
+    "task_description": "打开京东，查看我的购物车，选中第一个物品 并结算",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 822,
+            "position_y": 2582,
+            "bounds": [
+                720,
+                2455,
+                960,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 167,
+            "position_y": 1106,
+            "bounds": [
+                0,
+                1100,
+                1200,
+                1477
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 274,
+            "position_y": 2394,
+            "bounds": [
+                0,
+                2292,
+                1200,
+                2455
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

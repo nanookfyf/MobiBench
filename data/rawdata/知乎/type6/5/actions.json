@@ -1,0 +1,105 @@
+{
+    "app_name": "知乎",
+    "task_type": "type3",
+    "task_description": "打开知乎，在用户“杜自牧”主页第一个帖子下面评论：“KKSK”",
+    "action_count": 14,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1075,
+            "position_y": 2573,
+            "bounds": [
+                960,
+                2429,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1.1"
+        },
+        {
+            "type": "click",
+            "position_x": 228,
+            "position_y": 642,
+            "bounds": [
+                52,
+                579,
+                238,
+                673
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2.1"
+        },
+        {
+            "type": "click",
+            "position_x": 1026,
+            "position_y": 373,
+            "bounds": [
+                936,
+                302,
+                1170,
+                458
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result3.1"
+        },
+        {
+            "type": "click",
+            "position_x": 780,
+            "position_y": 652,
+            "bounds": [
+                0,
+                458,
+                1200,
+                680
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 958,
+            "position_y": 1901,
+            "bounds": [
+                0,
+                1707,
+                1200,
+                2355
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "click",
+            "position_x": 968,
+            "position_y": 2543,
+            "bounds": [
+                911,
+                2482,
+                1058,
+                2599
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input3"
+        },
+        {
+            "type": "input",
+            "text": "KKSk"
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+{
+    "app_name": "京东",
+    "task_type": "type5",
+    "task_description": "打开京东，帮我购买 一个 内存128G 标配的大疆0smo Nano拇指相机",
+    "action_count": 16,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 563,
+            "position_y": 341,
+            "bounds": [
+                26,
+                262,
+                1174,
+                382
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "大疆Osmo Nano拇指相机"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1052,
+            "position_y": 195,
+            "bounds": [
+                982,
+                154,
+                1138,
+                245
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 780,
+            "position_y": 1041,
+            "bounds": [
+                0,
+                788,
+                1200,
+                1263
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 981,
+            "position_y": 2511,
+            "bounds": [
+                807,
+                2439,
+                1174,
+                2569
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 686,
+            "press_position_y": 1470,
+            "release_position_x": 686,
+            "release_position_y": 1058,
+            "direction": "up"
+        },
+        {
+            "type": "tag",
+            "label": "result4"
+        },
+        {
+            "type": "click",
+            "position_x": 400,
+            "position_y": 2024,
+            "bounds": [
+                283,
+                1950,
+                491,
+                2077
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result5"
+        },
+        {
+            "type": "click",
+            "position_x": 884,
+            "position_y": 2508,
+            "bounds": [
+                26,
+                2443,
+                1174,
+                2572
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

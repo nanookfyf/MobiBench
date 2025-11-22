@@ -1,0 +1,97 @@
+{
+    "app_name": "美团",
+    "task_type": "type10",
+    "task_description": "打开美团，帮我在酒店名宿 查找一下2025年12月24日至2025年12月25日的上海酒店",
+    "action_count": 12,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 676,
+            "position_y": 552,
+            "bounds": [
+                484,
+                377,
+                716,
+                624
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 796,
+            "position_y": 821,
+            "bounds": [
+                58,
+                742,
+                1142,
+                852
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "select1"
+        },
+        {
+            "type": "click",
+            "position_x": 540,
+            "position_y": 1810,
+            "bounds": [
+                515,
+                1782,
+                685,
+                1980
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "select2"
+        },
+        {
+            "type": "click",
+            "position_x": 770,
+            "position_y": 1849,
+            "bounds": [
+                685,
+                1782,
+                854,
+                1980
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "select3"
+        },
+        {
+            "type": "click",
+            "position_x": 511,
+            "position_y": 2560,
+            "bounds": [
+                0,
+                2427,
+                1200,
+                2581
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 900,
+            "position_y": 1171,
+            "bounds": [
+                58,
+                1096,
+                1142,
+                1249
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

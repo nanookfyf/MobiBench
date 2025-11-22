@@ -1,0 +1,45 @@
+{
+    "app_name": "知乎",
+    "task_type": "type4",
+    "task_description": "打开知乎，发表问题，“上海有哪些好玩的地方”",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 634,
+            "position_y": 2514,
+            "bounds": [
+                480,
+                2429,
+                720,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "click",
+            "position_x": 452,
+            "position_y": 921,
+            "bounds": [
+                0,
+                876,
+                1200,
+                2670
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海有哪些好玩的地方"
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

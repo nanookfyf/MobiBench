@@ -1,0 +1,108 @@
+{
+    "app_name": "bilibili",
+    "task_type": "type4",
+    "task_description": "\"打开b站，关注搜索up主影视飓风，并且关注，然后给他发私信消息“KKSK”",
+    "action_count": 16,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 683,
+            "position_y": 214,
+            "bounds": [
+                231,
+                156,
+                861,
+                266
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "影视飓风"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1104,
+            "position_y": 2381,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 1059,
+            "position_y": 600,
+            "bounds": [
+                933,
+                589,
+                1161,
+                667
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 796,
+            "position_y": 668,
+            "bounds": [
+                0,
+                543,
+                1200,
+                791
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "click",
+            "position_x": 877,
+            "position_y": 234,
+            "bounds": [
+                802,
+                162,
+                900,
+                260
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result4"
+        },
+        {
+            "type": "click",
+            "position_x": 563,
+            "position_y": 2556,
+            "bounds": [
+                169,
+                2481,
+                849,
+                2585
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input3"
+        },
+        {
+            "type": "input",
+            "text": "kksk"
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

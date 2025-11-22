@@ -1,0 +1,70 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type4",
+    "task_description": "打开高德，查看前往上海交通大学徐汇校区的路线 ，并查看周边的美食",
+    "action_count": 10,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 673,
+            "position_y": 1570,
+            "bounds": [
+                26,
+                1462,
+                1174,
+                1638
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海交通大学徐汇校区"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1078,
+            "position_y": 2410,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 387,
+            "position_y": 2073,
+            "bounds": [
+                0,
+                2042,
+                1200,
+                2382
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 21,
+            "position_y": 2472,
+            "bounds": [
+                0,
+                2435,
+                1200,
+                2617
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

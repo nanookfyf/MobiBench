@@ -1,0 +1,108 @@
+{
+    "app_name": "bilibili",
+    "task_type": "type4",
+    "task_description": "开b站，关注搜索up主影视飓风，并且关注，然后给他发私信消息“KKSK”",
+    "action_count": 13,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 731,
+            "position_y": 243,
+            "bounds": [
+                231,
+                156,
+                861,
+                266
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 1130,
+            "position_y": 224,
+            "bounds": [
+                992,
+                146,
+                1200,
+                257
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result"
+        },
+        {
+            "type": "click",
+            "position_x": 760,
+            "position_y": 798,
+            "bounds": [
+                0,
+                683,
+                1200,
+                931
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2.1"
+        },
+        {
+            "type": "click",
+            "position_x": 884,
+            "position_y": 227,
+            "bounds": [
+                802,
+                162,
+                900,
+                260
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input3.1"
+        },
+        {
+            "type": "click",
+            "position_x": 569,
+            "position_y": 2534,
+            "bounds": [
+                169,
+                2481,
+                849,
+                2585
+            ]
+        },
+        {
+            "type": "input",
+            "text": "kksk"
+        },
+        {
+            "type": "click",
+            "position_x": 131,
+            "position_y": 185,
+            "bounds": [
+                0,
+                120,
+                182,
+                302
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 1043,
+            "position_y": 714,
+            "bounds": [
+                794,
+                654,
+                1161,
+                752
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -383,13 +383,10 @@ if __name__ == "__main__":
     # 读取任务列表
     task_json_path = os.path.join(os.path.dirname(__file__), "task.json")
 
-#    with open(task_json_path, "r", encoding="utf-8") as f:
-#        task_list = json.load(f)
-
-    
-    #tasklist = ["导航到龙湖上海闵行天街"]
-    app_list = ["小红书"]
-    type_list = ["type1","type3","type5"]
+    #app_list = [  "美团","淘宝","网易云音乐","微博","小红书"]
+    type_list = ["type1","type2","type3","type4","type5","type6","type7"]
+    app_list = [ "知乎"]
+    #type_list = ["type7"]
     datapath = args.datapath
     for app in app_list:
         for tasktype in type_list:

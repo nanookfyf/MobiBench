@@ -1,0 +1,71 @@
+{
+    "app_name": "网易云音乐",
+    "task_type": "type5",
+    "task_description": "打开网易云音乐，在 我的 页面下 我喜欢的音乐中 搜索 曲目 “love story” 并播放",
+    "action_count": 9,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1017,
+            "position_y": 2576,
+            "bounds": [
+                900,
+                2442,
+                1200,
+                2607
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "my"
+        },
+        {
+            "type": "click",
+            "position_x": 563,
+            "position_y": 1719,
+            "bounds": [
+                0,
+                1557,
+                1200,
+                1775
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 991,
+            "position_y": 224,
+            "bounds": [
+                914,
+                146,
+                1057,
+                237
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input3"
+        },
+        {
+            "type": "input",
+            "text": "lovestory"
+        },
+        {
+            "type": "tag",
+            "label": "input4"
+        },
+        {
+            "type": "click",
+            "position_x": 861,
+            "position_y": 373,
+            "bounds": [
+                0,
+                263,
+                1200,
+                458
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

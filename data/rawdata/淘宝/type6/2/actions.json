@@ -1,0 +1,95 @@
+{
+    "app_name": "淘宝",
+    "task_type": "type6",
+    "task_description": "打开淘宝， 进入影视飓风官方旗舰店，并搜索连帽卫衣",
+    "action_count": 14,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 699,
+            "position_y": 354,
+            "bounds": [
+                205,
+                253,
+                840,
+                355
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "影视飓风官方店铺"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1117,
+            "position_y": 2401,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "result1.1"
+        },
+        {
+            "type": "click",
+            "position_x": 751,
+            "position_y": 350,
+            "bounds": [
+                709,
+                282,
+                801,
+                388
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2.1"
+        },
+        {
+            "type": "click",
+            "position_x": 1117,
+            "position_y": 1194,
+            "bounds": [
+                26,
+                1153,
+                1174,
+                1281
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 786,
+            "position_y": 211,
+            "bounds": [
+                136,
+                132,
+                924,
+                247
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input3"
+        },
+        {
+            "type": "click",
+            "position_x": 1013,
+            "position_y": 178,
+            "bounds": null
+        },
+        {
+            "type": "done"
+        }
+    ]
+}
