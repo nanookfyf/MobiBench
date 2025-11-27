@@ -1,0 +1,55 @@
+{
+    "app_name": "同城",
+    "task_type": "type9",
+    "task_description": "打开同城旅行，向程心AI 询问 “上海外滩附近低价酒店推荐”",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1117,
+            "position_y": 224,
+            "bounds": [
+                1025,
+                159,
+                1168,
+                269
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "click",
+            "position_x": 621,
+            "position_y": 2479,
+            "bounds": [
+                221,
+                2424,
+                903,
+                2557
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海外滩附近低价酒店推荐"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1072,
+            "position_y": 1492,
+            "bounds": null
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

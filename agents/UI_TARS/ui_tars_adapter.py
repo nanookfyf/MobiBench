@@ -186,6 +186,31 @@ def to_fsm_action(
 
     elif a_type in ("scroll", "drag"):
         # swipe：FSM 里叫 "swipe"，我们只需要 direction，距离目前在 _transition 里其实没用上
+        start_box_str_ = inputs.get("start_box")
+        end_box_str_ = inputs.get("end_box")
+        if start_box_str_ and end_box_str_:
+            try:
+                box0 = eval(start_box_str_)
+                box1 = eval(end_box_str_)
+                if (
+                    isinstance(box0, (list, tuple))
+                    and len(box0) >= 2
+                    and isinstance(box1, (list, tuple))
+                    and len(box1) >= 2
+                ):
+                    x0n, y0n = float(box0[0]), float(box0[1])
+                    x1n, y1n = float(box1[0]), float(box1[1])
+                    x0 = int(x0n * width) if x0n <= 2 else int(x0n)
+                    y0 = int(y0n * height) if y0n <= 2 else int(y0n)
+                    x1 = int(x1n * width) if x1n <= 2 else int(x1n)
+                    y1 = int(y1n * height) if y1n <= 2 else int(y1n)
+                    if abs(x1 - x0) > abs(y1 - y0):
+                        direction = "right" if x1 > x0 else "left"
+                    else:
+                        direction = "down" if y1 > y0 else "up"
+            except Exception:
+                pass
+
         direction = inputs.get("direction", "down").lower()
         params["direction"] = direction
         act_type = "swipe"
@@ -379,9 +404,12 @@ def main():
     setup_logging()
 
     #app_list = [ "美团","淘宝","网易云音乐","微博","小红书"]
-    #type_list = ["type1","type2","type3","type4","type5","type6","type7"]
-    type_list = ["type1","type2","type3","type4","type5","type6","type7"]
-    app_list = [ "知乎"]
+    app_list = [ "同城"]
+    type_list = ["type4","type5","type6","type7","type8","type9","type10"]
+    #type_list = ["type8","type9","type10"]
+    #type_list = ["type4"]
+    #type_list = ["type6","type7"]
+    
     datapath = args.data_root
     for app in app_list:
         for tasktype in type_list:

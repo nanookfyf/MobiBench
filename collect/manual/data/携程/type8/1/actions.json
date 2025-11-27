@@ -1,0 +1,148 @@
+{
+    "app_name": "携程",
+    "task_type": "type8",
+    "task_description": "打开携程，帮我订一间在上海嘉善路附近的酒店，日期选择12月24日至12月25日，价格选择400-500，评分最好是4.9以上，含早餐的大床房",
+    "action_count": 21,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 112,
+            "position_y": 334,
+            "bounds": [
+                39,
+                288,
+                249,
+                473
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "hotel"
+        },
+        {
+            "type": "click",
+            "position_x": 828,
+            "position_y": 879,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海嘉善路"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1068,
+            "position_y": 201,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 472,
+            "position_y": 1090,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "select"
+        },
+        {
+            "type": "click",
+            "position_x": 614,
+            "position_y": 1888,
+            "bounds": [
+                16,
+                1830,
+                1184,
+                2034
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 725,
+            "position_y": 1908,
+            "bounds": [
+                16,
+                1830,
+                1184,
+                2034
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 809,
+            "position_y": 1278,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 264,
+            "position_y": 1577,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 854,
+            "position_y": 2540,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 563,
+            "position_y": 1625,
+            "bounds": null
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 553,
+            "press_position_y": 2453,
+            "release_position_x": 653,
+            "release_position_y": 1580,
+            "direction": "up"
+        },
+        {
+            "type": "tag",
+            "label": "result"
+        },
+        {
+            "type": "click",
+            "position_x": 871,
+            "position_y": 2002,
+            "bounds": [
+                0,
+                1674,
+                1200,
+                2316
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 627,
+            "position_y": 1729,
+            "bounds": [
+                485,
+                1680,
+                675,
+                1776
+            ]
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 663,
+            "press_position_y": 1476,
+            "release_position_x": 673,
+            "release_position_y": 1041,
+            "direction": "up"
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "app_name": "知乎",
+    "task_type": "type9",
+    "task_description": "打开知乎，查看消息中邀请回答的推荐的第一条，并写回答",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 825,
+            "position_y": 2566,
+            "bounds": [
+                720,
+                2429,
+                960,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "click",
+            "position_x": 978,
+            "position_y": 714,
+            "bounds": [
+                0,
+                595,
+                1200,
+                809
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "2"
+        },
+        {
+            "type": "click",
+            "position_x": 1033,
+            "position_y": 678,
+            "bounds": [
+                877,
+                608,
+                1148,
+                706
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -360,13 +360,15 @@ if __name__ == '__main__':
     from MobiBench.utils.task_get import get_tasks
     import time
     #app_list = [ "高德","京东", "美团","淘宝","网易云音乐","微博","小红书"]
-    #type_list = ["type1","type2","type3","type4","type5","type6","type7"]
+    #type_list = ["type8","type9","type10"]
     #type_list = ["type4"]
-    type_list = ["type1","type2","type3","type4","type5","type6","type7"]
-    app_list = [ "知乎"]
+    #type_list = ["type6","type7"]
+    #app_list = [ "淘宝","美团","微博"]
     type_list_hash = {
         "微博" : ["type3"]
     }
+    app_list = [ "同城"]
+    type_list = ["type5"]
     datapath = args.datapath
     for app in app_list:
         for tasktype in type_list:

@@ -1,0 +1,105 @@
+{
+    "app_name": "饿了么",
+    "task_type": "type3",
+    "task_description": "打开饿了吗，新增收获地址上海交通大学徐汇校区（4号门）",
+    "action_count": 14,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1062,
+            "position_y": 2576,
+            "bounds": [
+                960,
+                2455,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "my"
+        },
+        {
+            "type": "click",
+            "position_x": 160,
+            "position_y": 2200,
+            "bounds": [
+                26,
+                2066,
+                307,
+                2246
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "click",
+            "position_x": 1036,
+            "position_y": 253,
+            "bounds": [
+                896,
+                120,
+                1200,
+                282
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "2"
+        },
+        {
+            "type": "click",
+            "position_x": 1065,
+            "position_y": 879,
+            "bounds": [
+                302,
+                779,
+                1109,
+                969
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "3"
+        },
+        {
+            "type": "click",
+            "position_x": 780,
+            "position_y": 376,
+            "bounds": [
+                304,
+                331,
+                1122,
+                392
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海交通大学徐汇校区 （4号门）"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 747,
+            "position_y": 753,
+            "bounds": [
+                0,
+                658,
+                1200,
+                875
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

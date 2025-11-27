@@ -170,8 +170,13 @@ class StaticMobiAgentWorker:
                     info["won"] = 1
                     
             elif action_type == "wait":
-                time.sleep(1)
                 
+                stdact = Action(act_type="wait", parameters={})
+                self.cur_state = self.fsm.action(stdact)
+                if self.cur_state.cluster_class=="DONE":
+                    done = True
+                    info["won"] = 1
+
             elif action_type == "done":
                 pass 
             else:

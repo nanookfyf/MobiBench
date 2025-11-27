@@ -1,0 +1,54 @@
+{
+    "app_name": "美团",
+    "task_type": "type8",
+    "task_description": "打开美团，在看病买药中，购买治疗感冒发烧的999感冒灵颗粒",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 225,
+            "position_y": 422,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "2"
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 183,
+            "press_position_y": 1775,
+            "release_position_x": 430,
+            "release_position_y": 1804,
+            "direction": "right"
+        },
+        {
+            "type": "tag",
+            "label": "3"
+        },
+        {
+            "type": "click",
+            "position_x": 524,
+            "position_y": 331,
+            "bounds": [
+                26,
+                276,
+                1174,
+                387
+            ]
+        },
+        {
+            "type": "input",
+            "text": "input3"
+        },
+        {
+            "type": "click",
+            "position_x": 514,
+            "position_y": 853,
+            "bounds": null
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "app_name": "携程",
+    "task_type": "type7",
+    "task_description": "打开携程，帮我查询一下上海东方明珠附近的12月24日至12月25日的名宿 要求 2人 / 2床 / 2居",
+    "action_count": 11,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 222,
+            "position_y": 558,
+            "bounds": [
+                39,
+                488,
+                249,
+                650
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 815,
+            "position_y": 652,
+            "bounds": [
+                328,
+                601,
+                931,
+                708
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海外滩"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1137,
+            "position_y": 2407,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 511,
+            "position_y": 983,
+            "bounds": [
+                97,
+                967,
+                1102,
+                1037
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 835,
+            "position_y": 2492,
+            "bounds": [
+                468,
+                2446,
+                1148,
+                2586
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 559,
+            "position_y": 1343,
+            "bounds": [
+                45,
+                1244,
+                1154,
+                1397
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

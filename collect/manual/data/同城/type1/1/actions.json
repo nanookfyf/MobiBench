@@ -1,0 +1,37 @@
+{
+    "app_name": "同城",
+    "task_type": "type1",
+    "task_description": "打开同城旅行，查看我的订单",
+    "action_count": 4,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 572,
+            "position_y": 2355,
+            "bounds": [
+                36,
+                1834,
+                1163,
+                2584
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "click",
+            "position_x": 783,
+            "position_y": 2540,
+            "bounds": [
+                600,
+                2446,
+                900,
+                2618
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

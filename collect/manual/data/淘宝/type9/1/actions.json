@@ -1,0 +1,48 @@
+{
+    "app_name": "淘宝",
+    "task_type": "type9",
+    "task_description": "打开淘宝，将我购物车的第一件商品下单",
+    "action_count": 5,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1124,
+            "position_y": 1022,
+            "bounds": [
+                0,
+                0,
+                1200,
+                2670
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 1137,
+            "position_y": 2112,
+            "bounds": [
+                1079,
+                2072,
+                1173,
+                2167
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 89,
+            "position_y": 759,
+            "bounds": [
+                0,
+                0,
+                1200,
+                2462
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "2"
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

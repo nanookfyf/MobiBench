@@ -1,0 +1,22 @@
+{
+    "app_name": "饿了么",
+    "task_type": "type2",
+    "task_description": "打开饿了吗，查看购物车中的商品",
+    "action_count": 2,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 757,
+            "position_y": 2566,
+            "bounds": [
+                720,
+                2455,
+                960,
+                2618
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

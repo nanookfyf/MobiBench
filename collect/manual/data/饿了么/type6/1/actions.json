@@ -1,0 +1,146 @@
+{
+    "app_name": "饿了么",
+    "task_type": "type6",
+    "task_description": "打开饿了吗，帮我在汉堡王中点 两份 “果木风味鸡腿堡套餐” 小食 选“薯霸王（大） ”   饮品选 “无糖可乐（中）”",
+    "action_count": 17,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 563,
+            "position_y": 341,
+            "bounds": [
+                0,
+                257,
+                1200,
+                377
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "汉堡王"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1137,
+            "position_y": 208,
+            "bounds": [
+                976,
+                146,
+                1158,
+                237
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 757,
+            "position_y": 490,
+            "bounds": [
+                0,
+                397,
+                1200,
+                688
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 1055,
+            "position_y": 928,
+            "bounds": [
+                241,
+                672,
+                1200,
+                1144
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "click",
+            "position_x": 1036,
+            "position_y": 1710,
+            "bounds": [
+                832,
+                1636,
+                1129,
+                1727
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 1000,
+            "position_y": 2008,
+            "bounds": [
+                806,
+                1830,
+                1161,
+                2402
+            ]
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 683,
+            "press_position_y": 1758,
+            "release_position_x": 715,
+            "release_position_y": 1110,
+            "direction": "up"
+        },
+        {
+            "type": "click",
+            "position_x": 952,
+            "position_y": 1427,
+            "bounds": [
+                806,
+                1106,
+                1161,
+                1679
+            ]
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 624,
+            "press_position_y": 1771,
+            "release_position_x": 637,
+            "release_position_y": 1440,
+            "direction": "up"
+        },
+        {
+            "type": "click",
+            "position_x": 1124,
+            "position_y": 2342,
+            "bounds": [
+                1079,
+                2327,
+                1161,
+                2408
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 906,
+            "position_y": 2482,
+            "bounds": [
+                39,
+                2455,
+                1161,
+                2586
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

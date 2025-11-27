@@ -1,0 +1,89 @@
+{
+    "app_name": "携程",
+    "task_type": "type1",
+    "task_description": "搜索上海到北京的机票",
+    "action_count": 10,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 524,
+            "position_y": 372,
+            "bounds": [
+                444,
+                265,
+                633,
+                431
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "target"
+        },
+        {
+            "type": "click",
+            "position_x": 257,
+            "position_y": 859,
+            "bounds": [
+                96,
+                767,
+                456,
+                911
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "departure"
+        },
+        {
+            "type": "click",
+            "position_x": 647,
+            "position_y": 991,
+            "bounds": [
+                543,
+                916,
+                768,
+                1024
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 911,
+            "position_y": 868,
+            "bounds": [
+                624,
+                767,
+                984,
+                911
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "destination"
+        },
+        {
+            "type": "click",
+            "position_x": 679,
+            "position_y": 979,
+            "bounds": [
+                543,
+                916,
+                768,
+                1024
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 596,
+            "position_y": 1315,
+            "bounds": [
+                96,
+                1251,
+                984,
+                1383
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

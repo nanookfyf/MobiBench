@@ -1,0 +1,61 @@
+{
+    "app_name": "同城",
+    "task_type": "type3",
+    "task_description": "打开同城旅行，查看从上海前往北京的在12月23日的火车票",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 721,
+            "position_y": 175,
+            "bounds": [
+                39,
+                152,
+                992,
+                276
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海到北京的火车票"
+        },
+        {
+            "type": "click",
+            "position_x": 961,
+            "position_y": 331,
+            "bounds": [
+                0,
+                263,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 1107,
+            "position_y": 318,
+            "bounds": null
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 575,
+            "press_position_y": 2232,
+            "release_position_x": 572,
+            "release_position_y": 1719,
+            "direction": "up"
+        },
+        {
+            "type": "click",
+            "position_x": 439,
+            "position_y": 2209,
+            "bounds": null
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

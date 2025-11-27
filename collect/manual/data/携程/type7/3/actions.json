@@ -1,0 +1,80 @@
+{
+    "app_name": "携程",
+    "task_type": "type7",
+    "task_description": "打开携程，帮我查询一下上海外滩珠附近的12月24日至12月25日的名宿 要求 2人 / 2床 / 2居",
+    "action_count": 12,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 177,
+            "position_y": 386,
+            "bounds": [
+                39,
+                288,
+                249,
+                473
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result0"
+        },
+        {
+            "type": "click",
+            "position_x": 971,
+            "position_y": 613,
+            "bounds": [
+                0,
+                1,
+                1199,
+                654
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 546,
+            "position_y": 749,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海外滩"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 335,
+            "position_y": 409,
+            "bounds": [
+                0,
+                284,
+                1200,
+                473
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "click",
+            "position_x": 569,
+            "position_y": 1502,
+            "bounds": null
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

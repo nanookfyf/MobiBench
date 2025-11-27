@@ -502,9 +502,8 @@ def parsing_response_to_pyautogui_code(responses,
                     end_box)  # Assuming box is in [x1, y1, x2, y2]
                 ex = round(float((x1 + x2) / 2) * image_width, 3)
                 ey = round(float((y1 + y2) / 2) * image_height, 3)
-                pyautogui_code += (
-                    f"\npyautogui.moveTo({sx}, {sy})\n"
-                    f"\npyautogui.dragTo({ex}, {ey}, duration=1.0)\n")
+                
+
 
         elif action_type == "scroll":
             # Parsing scroll action
@@ -520,6 +519,7 @@ def parsing_response_to_pyautogui_code(responses,
             else:
                 x = None
                 y = None
+            
             direction = action_inputs.get("direction", "")
 
             if x == None:

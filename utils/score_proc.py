@@ -10,12 +10,13 @@ def save_result(md, app, task, inst, fsm, time_use,savepath):
     # 获取得分
     score = fsm.get_score()
     savepath = os.path.join(savepath,f"{md}.csv")
+    
     # 创建结果字典
     result_data = {
         'app': [app],
         'task_type': [task],
         'instruction': [inst],
-        'score': [score],
+        'score': [round(score, 4)],
         'timeuse':[ round(time_use,4) ],
         'op_times':[ fsm.op_times ],
     }

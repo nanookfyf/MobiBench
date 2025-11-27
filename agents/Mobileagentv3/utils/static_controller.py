@@ -27,7 +27,12 @@ class StaticController(Controller):
         
 
     def slide(self, x1, y1, x2, y2):
-        std_action = Action(act_type="swipe", parameters={"start_x": x1, "start_y": y1, "end_x": x2, "end_y": y2})
+        if abs(x2 - x1) > abs(y2 - y1):
+            direction = "right" if x2 > x1 else "left"
+        else:
+            direction = "down" if y2 > y1 else "up"
+        dir_ = direction.lower()
+        std_action = Action(act_type="swipe", parameters={"direction":dir_,"start_x": x1, "start_y": y1, "end_x": x2, "end_y": y2})
         self.cur_state = self.fsm.action(std_action)
     
     def type(self, text):

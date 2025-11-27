@@ -1,0 +1,37 @@
+{
+    "app_name": "饿了么",
+    "task_type": "type7",
+    "task_description": "打开饿了吗，查看全部我的订单",
+    "action_count": 4,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1036,
+            "position_y": 2530,
+            "bounds": [
+                960,
+                2455,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "my"
+        },
+        {
+            "type": "click",
+            "position_x": 157,
+            "position_y": 1080,
+            "bounds": [
+                28,
+                941,
+                304,
+                1126
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "app_name": "知乎",
+    "task_type": "type8",
+    "task_description": "打开知乎，在直答中提问 “有哪些好的双边策略”",
+    "action_count": 10,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 355,
+            "position_y": 2482,
+            "bounds": [
+                240,
+                2429,
+                480,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "2"
+        },
+        {
+            "type": "click",
+            "position_x": 485,
+            "position_y": 2287,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "有哪些好的双边策略"
+        },
+        {
+            "type": "tag",
+            "label": "done"
+        },
+        {
+            "type": "click",
+            "position_x": 1104,
+            "position_y": 2388,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 1088,
+            "position_y": 2385,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 1088,
+            "position_y": 2385,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 1111,
+            "position_y": 1431,
+            "bounds": [
+                1047,
+                1389,
+                1125,
+                1467
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

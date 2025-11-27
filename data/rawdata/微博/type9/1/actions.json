@@ -1,0 +1,55 @@
+{
+    "app_name": "微博",
+    "task_type": "type9",
+    "task_description": "查看微博第一条热搜内容",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1062,
+            "position_y": 2508,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 663,
+            "position_y": 2527,
+            "bounds": [
+                480,
+                2465,
+                720,
+                2608
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 631,
+            "press_position_y": 2505,
+            "release_position_x": 614,
+            "release_position_y": 2131,
+            "direction": "up"
+        },
+        {
+            "type": "tag",
+            "label": "2"
+        },
+        {
+            "type": "click",
+            "position_x": 563,
+            "position_y": 584,
+            "bounds": [
+                0,
+                428,
+                1200,
+                1018
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

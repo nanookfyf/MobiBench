@@ -363,12 +363,6 @@ class AppFSM:
                 if not (isinstance(k, (list, tuple)) and len(k) == 2):
                     continue
                 dir_ = act.parameters.get("direction")
-                #dis = 0
-                #if dir_ in ("up", "down"):
-                #    dis = abs(act.parameters.get("press_position_y", 0) - act.parameters.get("release_position_y", 0))
-                #elif dir_ in ("left", "right"):
-                #    dis = abs(act.parameters.get("press_position_x", 0) - act.parameters.get("release_position_x", 0))
-                # k: (direction, distance_value)
                 if k[0] == dir_ :
                     self.undefine_op_times = 0
                     return self.hash_map.get(v, self.cur_state)
@@ -394,8 +388,8 @@ class AppFSM:
         
         elif act.act_type == "home":
             self.undefine_op_times = 0
-            self.cur_state = self.init_state  # home 回退到初始状态
-            self.history_states = [self.init_state]
+            self.cur_state = random_choice_from_list(self.app_states["START"])  # home 回退到初始状态
+            self.history_states = [self.cur_state]
             
             return self.cur_state
         
@@ -404,7 +398,18 @@ class AppFSM:
                 self.history_states.pop()  # 弹出当前状态
                 self.cur_state = self.history_states[-1]  # 回到上一个状态
                 self.undefine_op_times = 0
+            if len(self.history_states)<=1:
+                self.cur_state = random_choice_from_list(self.app_states["START"])
+                self.history_states = [self.cur_state]
                 return self.cur_state
+            
+        elif act.act_type == "wait":
+            for k, v in self.cur_state.map_info.get("wait", {}).items():
+                print ("Checking wait ",k)  
+                self.undefine_op_times += 1
+                return self.hash_map.get(v, self.cur_state)
+            self.undefine_op_times += 1
+            return self.cur_state
         else:
             # 其它动作（如 wait、unknown 等），当前未定义具体转移：保持不变
             self.undefine_op_times += 1
@@ -416,8 +421,8 @@ class AppFSM:
         """
 
         if "START" in self.app_states and self.app_states["START"]:
-            self.cur_state = random_choice_from_list(self.app_states["START"])
-            self.init_state = self.cur_state
+            self.cur_state = self.app_states["START"][0]
+            self.init_state = random_choice_from_list(self.app_states["START"])
 
         self.history_states = []
         self.history_states.append(self.cur_state)
@@ -435,7 +440,7 @@ class AppFSM:
         if self.cur_state is None:
             # 优先用 START 簇作为起点；否则任选一个簇
             if "START" in self.app_states and self.app_states["START"]:
-                self.cur_state = random_choice_from_list(self.app_states["START"])
+                self.cur_state = self.app_states["START"][0]
             else:
                 any_list = next(iter(self.app_states.values()))
                 self.cur_state = random_choice_from_list(any_list)
@@ -509,9 +514,6 @@ if __name__ == "__main__":
 
     fsm = build_AppFSM(app, task, data_path)
     fsm.save_traces()
-    #fsm.save_pickle()
-    #fsm1 = quick_build_appfsm(app, task, data_path)
-    # 自动挑一条轨迹进行“回放验证”（可选）
     import glob
     cands = glob.glob(os.path.join(data_path, app, task, "*", "actions.json"))
     actions_path = sorted(cands)[0] if cands else None

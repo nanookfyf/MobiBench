@@ -1,18 +1,18 @@
 {
     "app_name": "饿了么",
     "task_type": "type6",
-    "task_description": "帮我点一杯霸王茶姬的大杯桂馥兰香（桂花乌龙），要去冰标准糖，其他选项按默认",
-    "action_count": 15,
+    "task_description": "打开饿了吗，帮我在汉堡王中点 两份 “果木风味鸡腿堡套餐” 小食 选“薯霸王（大） ”   饮品选 “无糖可乐（中）”",
+    "action_count": 17,
     "actions": [
         {
             "type": "click",
-            "position_x": 421,
-            "position_y": 289,
+            "position_x": 563,
+            "position_y": 341,
             "bounds": [
                 0,
-                237,
-                1080,
-                348
+                257,
+                1200,
+                377
             ]
         },
         {
@@ -21,7 +21,22 @@
         },
         {
             "type": "input",
-            "text": "霸王茶姬"
+            "text": "汉堡王"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1137,
+            "position_y": 208,
+            "bounds": [
+                976,
+                146,
+                1158,
+                237
+            ]
         },
         {
             "type": "tag",
@@ -29,91 +44,103 @@
         },
         {
             "type": "click",
-            "position_x": 956,
-            "position_y": 180,
+            "position_x": 757,
+            "position_y": 490,
             "bounds": [
-                873,
-                135,
-                1041,
-                219
+                0,
+                397,
+                1200,
+                688
             ]
         },
         {
             "type": "tag",
-            "label": "result"
+            "label": "result2"
         },
         {
             "type": "click",
-            "position_x": 547,
-            "position_y": 567,
+            "position_x": 1055,
+            "position_y": 928,
             "bounds": [
-                24,
-                255,
-                1056,
-                987
+                241,
+                672,
+                1200,
+                1144
             ]
         },
         {
             "type": "tag",
-            "label": "order"
+            "label": "result3"
         },
         {
             "type": "click",
-            "position_x": 939,
-            "position_y": 1833,
+            "position_x": 1036,
+            "position_y": 1710,
             "bounds": [
-                870,
-                1797,
-                1026,
-                1863
-            ]
-        },
-        {
-            "type": "tag",
-            "label": "choice"
-        },
-        {
-            "type": "click",
-            "position_x": 555,
-            "position_y": 1220,
-            "bounds": [
-                379,
-                1146,
-                700,
-                1266
+                832,
+                1636,
+                1129,
+                1727
             ]
         },
         {
             "type": "click",
-            "position_x": 194,
-            "position_y": 1698,
+            "position_x": 1000,
+            "position_y": 2008,
             "bounds": [
-                36,
-                1614,
-                356,
-                1734
+                806,
+                1830,
+                1161,
+                2402
+            ]
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 683,
+            "press_position_y": 1758,
+            "release_position_x": 715,
+            "release_position_y": 1110,
+            "direction": "up"
+        },
+        {
+            "type": "click",
+            "position_x": 952,
+            "position_y": 1427,
+            "bounds": [
+                806,
+                1106,
+                1161,
+                1679
+            ]
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 624,
+            "press_position_y": 1771,
+            "release_position_x": 637,
+            "release_position_y": 1440,
+            "direction": "up"
+        },
+        {
+            "type": "click",
+            "position_x": 1124,
+            "position_y": 2342,
+            "bounds": [
+                1079,
+                2327,
+                1161,
+                2408
             ]
         },
         {
             "type": "click",
-            "position_x": 770,
-            "position_y": 2337,
+            "position_x": 906,
+            "position_y": 2482,
             "bounds": [
-                36,
-                2250,
-                1044,
-                2370
-            ]
-        },
-        {
-            "type": "click",
-            "position_x": 885,
-            "position_y": 2326,
-            "bounds": [
-                720,
-                2254,
-                1050,
-                2374
+                39,
+                2455,
+                1161,
+                2586
             ]
         },
         {

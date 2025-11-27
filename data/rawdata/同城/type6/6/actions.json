@@ -1,0 +1,42 @@
+{
+    "app_name": "同城",
+    "task_type": "type6",
+    "task_description": "打开同城旅行，查看11月28日从北京前往上海的机票",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 559,
+            "position_y": 201,
+            "bounds": [
+                39,
+                152,
+                992,
+                276
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "click",
+            "position_x": 219,
+            "position_y": 603,
+            "bounds": null
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 439,
+            "position_y": 350,
+            "bounds": null
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "app_name": "携程",
+    "task_type": "type2",
+    "task_description": "打开携程，搜索上海宝格丽酒店",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 605,
+            "position_y": 921,
+            "bounds": [
+                170,
+                881,
+                818,
+                942
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海宝格丽酒店"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1091,
+            "position_y": 2397,
+            "bounds": null
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -384,9 +384,14 @@ if __name__ == "__main__":
     task_json_path = os.path.join(os.path.dirname(__file__), "task.json")
 
     #app_list = [  "美团","淘宝","网易云音乐","微博","小红书"]
-    type_list = ["type1","type2","type3","type4","type5","type6","type7"]
+    #type_list = ["type1","type2","type3","type4","type5","type6","type7"]
+    #type_list = ["type8","type9","type10"]
+    #type_list = ["type4"]
+    #type_list = ["type6","type7"]
+    #app_list = [ "淘宝","美团","微博"]
+    type_list = ["type8","type9"]
     app_list = [ "知乎"]
-    #type_list = ["type7"]
+    #type_list = ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"]
     datapath = args.datapath
     for app in app_list:
         for tasktype in type_list:

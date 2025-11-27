@@ -1,0 +1,45 @@
+{
+    "app_name": "饿了么",
+    "task_type": "type2",
+    "task_description": "打开饿了吗，查看购物车中的商品",
+    "action_count": 5,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1065,
+            "position_y": 2582,
+            "bounds": [
+                960,
+                2455,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 530,
+            "press_position_y": 1963,
+            "release_position_x": 514,
+            "release_position_y": 1742,
+            "direction": "up"
+        },
+        {
+            "type": "click",
+            "position_x": 877,
+            "position_y": 2582,
+            "bounds": [
+                720,
+                2455,
+                960,
+                2618
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

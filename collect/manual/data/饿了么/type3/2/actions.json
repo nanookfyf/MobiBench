@@ -1,0 +1,126 @@
+{
+    "app_name": "饿了么",
+    "task_type": "type3",
+    "task_description": "打开饿了吗，新增收获地址上海交通大学徐汇校区（4号门）",
+    "action_count": 17,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1098,
+            "position_y": 2576,
+            "bounds": [
+                960,
+                2455,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "my"
+        },
+        {
+            "type": "click",
+            "position_x": 1111,
+            "position_y": 208,
+            "bounds": [
+                1029,
+                190,
+                1161,
+                269
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1.1"
+        },
+        {
+            "type": "click",
+            "position_x": 981,
+            "position_y": 668,
+            "bounds": [
+                0,
+                551,
+                1200,
+                714
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "click",
+            "position_x": 984,
+            "position_y": 191,
+            "bounds": [
+                896,
+                120,
+                1200,
+                282
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "2"
+        },
+        {
+            "type": "click",
+            "position_x": 877,
+            "position_y": 860,
+            "bounds": [
+                302,
+                779,
+                1109,
+                875
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "3"
+        },
+        {
+            "type": "click",
+            "position_x": 1043,
+            "position_y": 370,
+            "bounds": [
+                304,
+                331,
+                1122,
+                392
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "上海交通大学徐汇校区（4号门）"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1101,
+            "position_y": 2397,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 1026,
+            "position_y": 746,
+            "bounds": [
+                0,
+                658,
+                1200,
+                875
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

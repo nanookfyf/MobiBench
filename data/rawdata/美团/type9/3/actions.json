@@ -1,0 +1,85 @@
+{
+    "app_name": "美团",
+    "task_type": "type9",
+    "task_description": "打开美团，在酒店名宿当中查看12月24日至12月25日的酒店，在上海外滩附近",
+    "action_count": 9,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 647,
+            "position_y": 487,
+            "bounds": [
+                484,
+                377,
+                716,
+                624
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "click",
+            "position_x": 786,
+            "position_y": 805,
+            "bounds": [
+                58,
+                742,
+                1142,
+                852
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 644,
+            "position_y": 1609,
+            "bounds": [
+                515,
+                1552,
+                685,
+                1751
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 747,
+            "position_y": 1609,
+            "bounds": [
+                685,
+                1552,
+                854,
+                1751
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 637,
+            "position_y": 2524,
+            "bounds": [
+                528,
+                2458,
+                672,
+                2554
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "end"
+        },
+        {
+            "type": "click",
+            "position_x": 939,
+            "position_y": 1142,
+            "bounds": [
+                58,
+                1096,
+                1142,
+                1249
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}
