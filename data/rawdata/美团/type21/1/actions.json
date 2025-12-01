@@ -1,0 +1,55 @@
+{
+    "app_name": "美团",
+    "task_type": "type21",
+    "task_description": "打开美团，点击电影演出，点击上边左侧的“电影/影院”，选择“巨幕影城（光谷广场资本大厦店），购买今天（12月1日），12:10分的疯狂动物城2的电影票”",
+    "action_count": 5,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1043,
+            "position_y": 704,
+            "bounds": [
+                948,
+                627,
+                1180,
+                812
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 154,
+            "position_y": 577,
+            "bounds": [
+                30,
+                463,
+                186,
+                619
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 764,
+            "position_y": 548,
+            "bounds": [
+                0,
+                410,
+                1200,
+                751
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 929,
+            "position_y": 2089,
+            "bounds": [
+                0,
+                1942,
+                1200,
+                2176
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

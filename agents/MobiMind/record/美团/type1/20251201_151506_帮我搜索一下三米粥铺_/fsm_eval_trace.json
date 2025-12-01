@@ -1,0 +1,102 @@
+{
+  "instruction": "帮我搜索一下三米粥铺。",
+  "app": "美团",
+  "task": "type1",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "美团应用已打开，我需要在外卖入口中搜索“三米粥铺”。因此，我首先点击“外卖”图标以进入外卖服务页面。",
+      "raw_output": {
+        "reasoning": "美团应用已打开，我需要在外卖入口中搜索“三米粥铺”。因此，我首先点击“外卖”图标以进入外卖服务页面。",
+        "action": "click",
+        "parameters": {
+          "target_element": "外卖图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 122,
+        "position_y": 488
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "进入外卖页面后，我需要点击搜索框来输入我想找的店铺名称。",
+      "raw_output": {
+        "reasoning": "进入外卖页面后，我需要点击搜索框来输入我想找的店铺名称。",
+        "action": "click",
+        "parameters": {
+          "target_element": "带有“良品粥铺”文本的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 530,
+        "position_y": 302
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "搜索框已被激活，现在我需要输入我想搜索的店铺名称“三米粥铺”。",
+      "raw_output": {
+        "reasoning": "搜索框已被激活，现在我需要输入我想搜索的店铺名称“三米粥铺”。",
+        "action": "input",
+        "parameters": {
+          "text": "三米粥铺"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "三米粥铺"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "new_label": "inputpage"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "prev_label": "inputpage",
+      "thought": "我已经输入了店铺名称“三米粥铺”，现在我需要点击搜索按钮来查看搜索结果。",
+      "raw_output": {
+        "reasoning": "我已经输入了店铺名称“三米粥铺”，现在我需要点击搜索按钮来查看搜索结果。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1042,
+        "position_y": 192
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/4/6.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/4/6.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已经成功搜索了“三米粥铺”，并且搜索结果已经显示在当前页面。任务已完成。",
+      "raw_output": {
+        "reasoning": "我已经成功搜索了“三米粥铺”，并且搜索结果已经显示在当前页面。任务已完成。",
+        "action": "done",
+        "parameters": {}
+      },
+      "action_type": "done",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/4/6.jpg",
+      "new_label": "unlabeled"
+    }
+  ]
+}

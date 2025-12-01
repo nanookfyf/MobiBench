@@ -134,7 +134,7 @@ class StaticMobiAgentWorker:
         info = {"status": "ok", "won": 0}
         done = False
         #print("Current image path:", self.cur_state.img_path," Cluster class:", self.cur_state.cluster_class,"\n")
-
+        stdact = None
         try:
             action_type = action["action"]
             parameters = action["parameters"]
@@ -178,7 +178,7 @@ class StaticMobiAgentWorker:
                     info["won"] = 1
 
             elif action_type == "done":
-                pass 
+                stdact = Action(act_type="done", parameters={})
             else:
                 logging.info(f"Unknown action type, skipping execution: {action_type}")  
             obs = self._get_obs()
@@ -188,13 +188,14 @@ class StaticMobiAgentWorker:
         except Exception as e:
             reward = -1.0
             done = True
+            stdact = None
             obs = None
             info = {"status": "error", "error": traceback.format_exc(), "won": 0}
             logging.error(f"Error during action execution: {e}\n{traceback.format_exc()}")
         
 
        
-        return obs, reward, done, info, self.fsm.is_failed  
+        return obs, reward, done, info, self.fsm.is_failed ,stdact 
         
     def reset(self):
         self.cur_state = self.fsm._reset()

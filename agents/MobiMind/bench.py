@@ -1,6 +1,7 @@
 from openai import OpenAI
 import base64
 from PIL import Image
+from typing import List, Dict, Any, Optional
 import json
 import logging
 import os
@@ -10,8 +11,28 @@ from MobiBench.agents.MobiMind.env_engine import StaticMobiAgentWorker
 from datetime import datetime
 from MobiBench.utils.task_get import get_tasks
 import time 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+from MobiBench.env.fsm import build_AppFSM,point_in_rectangle
+from MobiBench.utils.models.text_match import semantic_similarity
+from MobiBench.env.type_spaces import Action
 
+logger = logging.getLogger(__name__)
+
+
+# ---------- 一些小工具 ----------
+def setup_logging():
+    logging.basicConfig(
+        level=logging.INFO,          # 日志级别
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'  # 日志格式
+    )
+def encode_image_to_data_url(path: str) -> str:
+    with open(path, "rb") as f:
+        b64 = base64.b64encode(f.read()).decode("utf-8")
+    return f"data:image/jpeg;base64,{b64}"
+
+def _safe_name(text: str, max_len: int = 50) -> str:
+    safe = "".join(c if c.isalnum() or c in ("_", "-", " ") else "_" for c in text)
+    safe = "_".join(safe.split())  # 把空格压缩成单个下划线
+    return safe[:max_len] or "task"
 
 MAX_STEPS = 50
 
@@ -97,7 +118,7 @@ factor = 0.5
 prices = {}
 
 class BenchEnv:
-    def __init__(self, *, worker, task, decider, grounder, planner,
+    def __init__(self, *,app,task_type, worker, task, decider, grounder, planner,
                  max_steps: int = MAX_STEPS, record_dir: str = "record",
                  run_root: str = "runs"):
         self.worker = worker
@@ -107,6 +128,8 @@ class BenchEnv:
         self.planner = planner
         self.max_steps = max_steps
         self.record_dir = record_dir
+        self.app = app
+        self.task_type = task_type
 
         # 运行期状态
         self.history: list[str] = []
@@ -132,13 +155,9 @@ class BenchEnv:
         self.file_actions = os.path.join(self.run_dir, "actions.json")         # 全部规范化动作（JSON）
 
 
-        # 运行元信息
-        with open(os.path.join(self.run_dir, "meta.json"), "w", encoding="utf-8") as f:
-            json.dump({
-                "task": self.task,
-                "max_steps": self.max_steps,
-                "record_dir": self.record_dir,
-            }, f, ensure_ascii=False, indent=2)
+       
+       
+
 
     # 小工具：追加文本/JSONL
     def _append_text(self, path: str, text: str):
@@ -263,10 +282,12 @@ class BenchEnv:
         - 终止：done==True 或达到 max_steps
         返回：结果字典（actions/reacts/history/胜负标志等）
         """
-        step = 0
+        step = 1
         won = 0
         is_filed = False
-        while step < self.max_steps and not self.is_done and not is_filed:
+        trace_log = []
+
+        while step <= self.max_steps and not self.is_done and not is_filed:
             # 1) 取观测
             obs_rgb = self.worker._get_obs()        
             # 转成 base64 给 decider
@@ -274,7 +295,7 @@ class BenchEnv:
             obs_b64 = base64.b64encode(buf).decode("utf-8")
 
             # 2) 保存当前环境截图（和旧脚本一致：1.jpg, 2.jpg,...）
-            self._save_current_img(step + 1)
+            #self._save_current_img(step + 1)
 
            
             # 3) 调 decider + 规范化
@@ -313,7 +334,23 @@ class BenchEnv:
             self.reacts.append(converted)
 
             # 5) 真正执行一步
-            obs_next, reward, done, info,is_filed = self.worker.step(dec)
+            prev_state = self.worker.fsm.cur_state
+            obs_next, reward, done, info,is_filed,stdact = self.worker.step(dec)
+            new_state = self.worker.fsm.cur_state
+
+            trace_log.append(
+            {
+                "step": step,
+                "prev_img": prev_state.img_path,
+                "prev_label": prev_state.cluster_class,
+                "thought": dec["reasoning"],
+                "raw_output": dec_raw,
+                "action_type": stdact.act_type,
+                "action_params": stdact.parameters,
+                "new_img": new_state.img_path,
+                "new_label": new_state.cluster_class,
+            }
+            )
 
             self.is_done = bool(done)
             won = info.get("won", 0)
@@ -336,36 +373,75 @@ class BenchEnv:
             self._append_text(self.file_history, self.history[-1])
             step += 1
 
-        summary = {
-        "steps": step,
-        "won": won,
-        "done": self.is_done,
-        "run_dir": self.run_dir,
-        }
-        with open(self.file_summary, "w", encoding="utf-8") as f:
-            json.dump(summary, f, ensure_ascii=False, indent=2)
-
-        with open(self.file_actions, "w", encoding="utf-8") as f:
-            json.dump(self.actions, f, ensure_ascii=False, indent=2)
-        #score = self.worker.fsm.get_score()
+        
         print("finished state",self.worker.fsm.cur_state.img_path)
-        return {**summary, "actions": self.actions, "reacts": self.reacts, "history": self.history}
+        result = {
+            "instruction": self.task,
+            "app": self.app,
+            "task": self.task_type,
+            "success": done,
+            "steps": trace_log,
+        }
+
+        # ========= NEW: 把结果写到 runs_dir/app/task/时间戳_指令/ 下 =========
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        safe_inst = _safe_name(self.task)
+        run_dir = os.path.join(self.record_dir, self.app, self.task_type, f"{timestamp}_{safe_inst}")
+        os.makedirs(run_dir, exist_ok=True)
+
+        # 主 JSON（全量信息）
+        output_name = os.path.basename("fsm_eval_trace.json") 
+        output_path = os.path.join(run_dir, output_name)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+
+        # 精简版 actions.json：只保留一步一步的动作要素 + 图像路径
+        simple_actions = []
+        for s in trace_log:
+            simple_actions.append(
+                {
+                    "step": s["step"],
+                    "action_type": s["action_type"],
+                    "action_params": s["action_params"],
+                    "prev_img": s["prev_img"],
+                    "new_img": s["new_img"],
+                }
+            )
+        with open(os.path.join(run_dir, "actions.json"), "w", encoding="utf-8") as f:
+            json.dump(simple_actions, f, ensure_ascii=False, indent=2)
+
+        # clicks.json：专门导出点击坐标，便于分析
+        click_actions = [
+            {
+                "step": s["step"],
+                "position_x": s["action_params"].get("position_x"),
+                "position_y": s["action_params"].get("position_y"),
+                "prev_img": s["prev_img"],
+                "new_img": s["new_img"],
+            }
+            for s in trace_log
+            if s["action_type"] == "click"
+        ]
+        if click_actions:
+            with open(os.path.join(run_dir, "clicks.json"), "w", encoding="utf-8") as f:
+                json.dump(click_actions, f, ensure_ascii=False, indent=2)
+
+        # 控制台打印总结
+        print()
+        print(f"评估结束，success = {self.is_done}，总步数 = {len(trace_log)}")
+        print(f"详细轨迹已保存到: {os.path.abspath(output_path)}")
+        print(f"本次运行目录: {os.path.abspath(run_dir)}")
+        if trace_log:
+            print("起点截图:", trace_log[0]["prev_img"])
+            print("终点截图:", trace_log[-1]["new_img"])
+            
     
-
-
-
-def planner_handle(task,task2app):
-    app = task2app[0]
-    tasktype = task2app[1]
-    return app,tasktype,task
-
-
 if __name__ == "__main__":
     # 解析命令行参数
     parser = argparse.ArgumentParser(description="MobiMind Agent")
-    parser.add_argument("--service_ip", type=str, default="123.60.91.241", help="Ip for the services (default: localhost)")
-    parser.add_argument("--decider_port", type=int, default=9002, help="Port for decider service (default: 8000)")
-    parser.add_argument("--grounder_port", type=int, default=9002, help="Port for grounder service (default: 8001)")
+    parser.add_argument("--service_ip", type=str, default="166.111.53.96", help="Ip for the services (default: localhost)")
+    parser.add_argument("--decider_port", type=int, default=7011, help="Port for decider service (default: 8000)")
+    parser.add_argument("--grounder_port", type=int, default=7013, help="Port for grounder service (default: 8001)")
     parser.add_argument("--planner_port", type=int, default=8000, help="Port for planner service (default: 8002)")
     parser.add_argument("--datapath", type=str, default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="path to data")
     args = parser.parse_args()
@@ -389,32 +465,36 @@ if __name__ == "__main__":
     #type_list = ["type4"]
     #type_list = ["type6","type7"]
     #app_list = [ "淘宝","美团","微博"]
-    type_list = ["type8","type9"]
-    app_list = [ "知乎"]
+    #type_list = ["type1","type2","type3","type4"]
+    #app_list = [ "QQ"]
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/alldata.json', 'r', encoding='utf-8') as f:
+        alldata = json.load(f)
     #type_list = ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"]
     datapath = args.datapath
-    for app in app_list:
-        for tasktype in type_list:
+    for app in alldata.keys():
+        for tasktype in alldata[app]:
             tasklist = get_tasks(app,tasktype)
             envengine = StaticMobiAgentWorker(app,tasktype,datapath,grounder_client)
             for task in tasklist:
                 print(f"任务: {task}，应用: {app}，类型: {tasktype}")
                 envengine.reset()
                 runner = BenchEnv(
+                        app=app,
+                        task_type=tasktype,
                         worker=envengine,
                         task=task,
                         decider=decider_client,
                         grounder=grounder_client,
                         planner=planner_client,
                         max_steps=MAX_STEPS,
-                        record_dir="record",  
+                        record_dir="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobiMind/record",  
                     )
                 start = time.time()
                 result = runner.bench()
                 end = time.time()
                 from MobiBench.utils.score_proc import save_result
                 save_result(md="MobiMind",app=app,task=tasktype,inst=task,fsm=envengine.fsm,time_use=end-start,savepath="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev")
-                print(f"Bench result: steps={result['steps']}, won={result['won']}, done={result['done']}")
+                # dprint(f"Bench result: steps={result['steps']}, won={result['won']}, done={result['done']}")
     
     # print(task_list)
 

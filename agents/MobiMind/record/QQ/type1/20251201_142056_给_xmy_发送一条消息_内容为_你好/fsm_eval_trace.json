@@ -1,0 +1,126 @@
+{
+  "instruction": "给 xmy 发送一条消息，内容为：你好",
+  "app": "QQ",
+  "task": "type1",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "为了给xmy发送消息，我需要先找到这个联系人。最直接的方法是在聊天列表中使用搜索功能。因此，我将点击屏幕顶部的搜索框。",
+      "raw_output": {
+        "reasoning": "为了给xmy发送消息，我需要先找到这个联系人。最直接的方法是在聊天列表中使用搜索功能。因此，我将点击屏幕顶部的搜索框。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕顶部的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 530,
+        "position_y": 312
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/2/3.jpg",
+      "new_label": "search"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/2/3.jpg",
+      "prev_label": "search",
+      "thought": "我已经进入了搜索页面，现在我需要在搜索框中输入联系人的名字“xmy”。",
+      "raw_output": {
+        "reasoning": "我已经进入了搜索页面，现在我需要在搜索框中输入联系人的名字“xmy”。",
+        "action": "input",
+        "parameters": {
+          "text": "xmy"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "xmy"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/3/5.jpg",
+      "new_label": "result0"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/3/5.jpg",
+      "prev_label": "result0",
+      "thought": "输入“xmy”后，搜索结果中出现了联系人“xmy”。我需要点击这个联系人进入聊天界面。",
+      "raw_output": {
+        "reasoning": "输入“xmy”后，搜索结果中出现了联系人“xmy”。我需要点击这个联系人进入聊天界面。",
+        "action": "click",
+        "parameters": {
+          "target_element": "联系人xmy"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 220,
+        "position_y": 430
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/3/8.jpg",
+      "new_label": "target"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/3/8.jpg",
+      "prev_label": "target",
+      "thought": "我已经进入了与xmy的聊天界面。现在我需要点击底部的文本输入框，准备输入消息内容。",
+      "raw_output": {
+        "reasoning": "我已经进入了与xmy的聊天界面。现在我需要点击底部的文本输入框，准备输入消息内容。",
+        "action": "click",
+        "parameters": {
+          "target_element": "文本输入框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 432,
+        "position_y": 2198
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/3/10.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/3/10.jpg",
+      "prev_label": "input1",
+      "thought": "我已经点击了输入框，现在我需要输入消息内容“你好”。",
+      "raw_output": {
+        "reasoning": "我已经点击了输入框，现在我需要输入消息内容“你好”。",
+        "action": "input",
+        "parameters": {
+          "text": "你好"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "你好"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/3/12.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/3/12.jpg",
+      "prev_label": "result1",
+      "thought": "我已经输入了消息“你好”，现在我需要点击“发送”按钮来发送这条消息。",
+      "raw_output": {
+        "reasoning": "我已经输入了消息“你好”，现在我需要点击“发送”按钮来发送这条消息。",
+        "action": "click",
+        "parameters": {
+          "target_element": "发送按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 938,
+        "position_y": 1440
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type1/3/13.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

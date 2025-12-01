@@ -20,6 +20,7 @@ class State:
     })
     
     cluster_class : str = None # 状态簇类别
+    score : float = 0.0  # 状态评分
     
     def to_dict(self):
         data = asdict(self)

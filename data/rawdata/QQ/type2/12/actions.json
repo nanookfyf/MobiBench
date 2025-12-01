@@ -1,0 +1,125 @@
+{
+    "app_name": "QQ",
+    "task_type": "type2",
+    "task_description": "查找SJTU正版软件授权交流群的聊天记录里的文件，和vpn内容相关的文件",
+    "action_count": 18,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 555,
+            "position_y": 326,
+            "bounds": [
+                0,
+                236,
+                1080,
+                398
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "SJTU正版软件授权交流群"
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 515,
+            "position_y": 490,
+            "bounds": [
+                0,
+                367,
+                1080,
+                549
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "targetq"
+        },
+        {
+            "type": "click",
+            "position_x": 1008,
+            "position_y": 200,
+            "bounds": [
+                972,
+                147,
+                1037,
+                212
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "target0"
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 469,
+            "press_position_y": 2085,
+            "release_position_x": 541,
+            "release_position_y": 1266,
+            "direction": "up"
+        },
+        {
+            "type": "tag",
+            "label": "target1"
+        },
+        {
+            "type": "click",
+            "position_x": 384,
+            "position_y": 1856,
+            "bounds": [
+                43,
+                1796,
+                1037,
+                1947
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "search"
+        },
+        {
+            "type": "click",
+            "position_x": 550,
+            "position_y": 836,
+            "bounds": [
+                482,
+                745,
+                596,
+                901
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "file"
+        },
+        {
+            "type": "click",
+            "position_x": 484,
+            "position_y": 478,
+            "bounds": [
+                0,
+                371,
+                1080,
+                533
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "searchfile"
+        },
+        {
+            "type": "input",
+            "text": "vpn"
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

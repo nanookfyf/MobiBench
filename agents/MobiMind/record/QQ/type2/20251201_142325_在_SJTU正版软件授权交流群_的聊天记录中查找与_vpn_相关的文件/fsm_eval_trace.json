@@ -1,0 +1,144 @@
+{
+  "instruction": "在 SJTU正版软件授权交流群 的聊天记录中查找与 vpn 相关的文件",
+  "app": "QQ",
+  "task": "type2",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/1.jpg",
+      "prev_label": "START",
+      "thought": "进入聊天列表后，为了快速找到目标群聊，我将使用搜索功能。我点击聊天列表上方的搜索框。",
+      "raw_output": {
+        "reasoning": "进入聊天列表后，为了快速找到目标群聊，我将使用搜索功能。我点击聊天列表上方的搜索框。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 406,
+        "position_y": 314
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "prev_label": "input1",
+      "thought": "在搜索框中，我输入“vpn”来查找包含此关键词的消息。",
+      "raw_output": {
+        "reasoning": "在搜索框中，我输入“vpn”来查找包含此关键词的消息。",
+        "action": "input",
+        "parameters": {
+          "text": "vpn"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "vpn"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "prev_label": "input1",
+      "thought": "上一次输入似乎未生效，当前页面搜索框已激活且键盘可见，我将再次输入“vpn”进行搜索。",
+      "raw_output": {
+        "reasoning": "上一次输入似乎未生效，当前页面搜索框已激活且键盘可见，我将再次输入“vpn”进行搜索。",
+        "action": "input",
+        "parameters": {
+          "text": "vpn"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "vpn"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "prev_label": "input1",
+      "thought": "输入“vpn”后，我需要点击键盘上的“搜索”按钮来执行搜索。",
+      "raw_output": {
+        "reasoning": "输入“vpn”后，我需要点击键盘上的“搜索”按钮来执行搜索。",
+        "action": "click",
+        "parameters": {
+          "target_element": "键盘上的“搜索”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 986,
+        "position_y": 2320
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "prev_label": "input1",
+      "thought": "上一次输入似乎未生效，当前页面搜索框已激活且键盘可见，我将再次输入“vpn”进行搜索。",
+      "raw_output": {
+        "reasoning": "上一次输入似乎未生效，当前页面搜索框已激活且键盘可见，我将再次输入“vpn”进行搜索。",
+        "action": "input",
+        "parameters": {
+          "text": "vpn"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "vpn"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "prev_label": "input1",
+      "thought": "输入“vpn”后，我需要点击键盘上的“搜索”按钮来执行搜索。",
+      "raw_output": {
+        "reasoning": "输入“vpn”后，我需要点击键盘上的“搜索”按钮来执行搜索。",
+        "action": "click",
+        "parameters": {
+          "target_element": "键盘右下角的“搜索”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 986,
+        "position_y": 2306
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "prev_label": "input1",
+      "thought": "上一次点击搜索按钮似乎未生效。当前页面搜索框已激活，键盘可见，我将再次输入“vpn”进行搜索。",
+      "raw_output": {
+        "reasoning": "上一次点击搜索按钮似乎未生效。当前页面搜索框已激活，键盘可见，我将再次输入“vpn”进行搜索。",
+        "action": "input",
+        "parameters": {
+          "text": "vpn"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "vpn"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+      "new_label": "input1"
+    }
+  ]
+}

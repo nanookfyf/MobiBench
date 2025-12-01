@@ -1,0 +1,77 @@
+{
+  "instruction": "帮我规划一条去龙湖闵行天街的路线。",
+  "app": "高德",
+  "task": "type1",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步当然是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。",
+      "raw_output": "Thought: 我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步当然是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。\nAction: click(start_box='(417,1421)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 412,
+        "position_y": 1416
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/3.jpg",
+      "prev_label": "input1",
+      "thought": "搜索框已经准备就绪了，我看到光标在闪烁，现在只需要输入\"龙湖闵行天街\"这几个字。输入完成后，系统应该会自动为我搜索这个地点，这样我就能看到具体的路线规划了。",
+      "raw_output": "Thought: 搜索框已经准备就绪了，我看到光标在闪烁，现在只需要输入\"龙湖闵行天街\"这几个字。输入完成后，系统应该会自动为我搜索这个地点，这样我就能看到具体的路线规划了。\nAction: type(content='龙湖闵行天街')",
+      "action_type": "input",
+      "action_params": {
+        "text": "龙湖闵行天街"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/5.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/5.jpg",
+      "prev_label": "input2",
+      "thought": "搜索结果已经出来了，我看到第一个选项就是\"龙湖上海闵行天街\"，这正是我们要找的目的地。它位于闵行区剑川路1000号，评分4.8分，有610个评价。为了继续规划路线，我需要点击这个选项来查看更详细的导航信息。",
+      "raw_output": "Thought: 搜索结果已经出来了，我看到第一个选项就是\"龙湖上海闵行天街\"，这正是我们要找的目的地。它位于闵行区剑川路1000号，评分4.8分，有610个评价。为了继续规划路线，我需要点击这个选项来查看更详细的导航信息。\nAction: click(start_box='(316,340)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 312,
+        "position_y": 338
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/7.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/7.jpg",
+      "prev_label": "result1",
+      "thought": "好了，目的地已经选好了，现在就差规划路线了。我看到界面底部有个蓝色的\"路线\"按钮，点击它就能看到具体的导航方案了。让我们开始规划这条前往龙湖闵行天街的路线吧。",
+      "raw_output": "Thought: 好了，目的地已经选好了，现在就差规划路线了。我看到界面底部有个蓝色的\"路线\"按钮，点击它就能看到具体的导航方案了。让我们开始规划这条前往龙湖闵行天街的路线吧。\nAction: click(start_box='(912,2311)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 901,
+        "position_y": 2303
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/9.jpg",
+      "new_label": "result2"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/9.jpg",
+      "prev_label": "result2",
+      "thought": "看来路线规划已经完成了，地图上清晰地显示了从当前位置到龙湖闵行天街的路线。现在我只需要点击界面底部那个蓝色的\"开始导航\"按钮，就能启动导航系统，开始前往目的地了。",
+      "raw_output": "Thought: 看来路线规划已经完成了，地图上清晰地显示了从当前位置到龙湖闵行天街的路线。现在我只需要点击界面底部那个蓝色的\"开始导航\"按钮，就能启动导航系统，开始前往目的地了。\nAction: click(start_box='(764,2287)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 755,
+        "position_y": 2279
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/10.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

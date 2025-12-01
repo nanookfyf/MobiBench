@@ -1,0 +1,119 @@
+{
+  "instruction": "从大零号湾出发，打车前往龙湖上海闵行天街。",
+  "app": "高德",
+  "task": "type3",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/20/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面底部有个\"打车\"的选项，这正是我需要的。要从大零号湾打车到龙湖上海闵行天街，第一步就是点击这个打车功能。让我先点击它，进入打车服务的界面。",
+      "raw_output": "Thought: 我看到页面底部有个\"打车\"的选项，这正是我需要的。要从大零号湾打车到龙湖上海闵行天街，第一步就是点击这个打车功能。让我先点击它，进入打车服务的界面。\nAction: click(start_box='(546,1620)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 1614
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/25/3.jpg",
+      "new_label": "call_init"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/25/3.jpg",
+      "prev_label": "call_init",
+      "thought": "我看到页面上有个\"你要去哪儿\"的输入框，这正是设置目的地的地方。要完成打车任务，我得先点击这个输入框，这样才能输入龙湖上海闵行天街的具体位置信息。",
+      "raw_output": "Thought: 我看到页面上有个\"你要去哪儿\"的输入框，这正是设置目的地的地方。要完成打车任务，我得先点击这个输入框，这样才能输入龙湖上海闵行天街的具体位置信息。\nAction: click(start_box='(546,1565)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 1559
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/25/5.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/25/5.jpg",
+      "prev_label": "input1",
+      "thought": "看到输入框已经激活了，我得把目的地\"龙湖上海闵行天街\"输进去。这个位置应该不难找到，毕竟它就在页面上显示出来了。输入完这个地址，就能开始规划从大零号湾到这里的路线了。",
+      "raw_output": "Thought: 看到输入框已经激活了，我得把目的地\"龙湖上海闵行天街\"输进去。这个位置应该不难找到，毕竟它就在页面上显示出来了。输入完这个地址，就能开始规划从大零号湾到这里的路线了。\nAction: type(content='龙湖上海闵行天街')",
+      "action_type": "input",
+      "action_params": {
+        "text": "龙湖上海闵行天街"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/9.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/9.jpg",
+      "prev_label": "result1",
+      "thought": "我看到搜索结果已经出来了，第一个选项就是\"大零号湾\"，位置信息显示在闵行区，正是我们要找的出发点。为了继续规划路线，我需要点击这个选项来确定起点位置。",
+      "raw_output": "Thought: 我看到搜索结果已经出来了，第一个选项就是\"大零号湾\"，位置信息显示在闵行区，正是我们要找的出发点。为了继续规划路线，我需要点击这个选项来确定起点位置。\nAction: click(start_box='(546,720)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 717
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/10.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/10.jpg",
+      "prev_label": "unlabeled",
+      "thought": "搜索结果已经出来了，我看到第一个选项就是\"大零号湾\"，位置信息显示在闵行区，正是我们要找的出发点。为了继续规划路线，我需要点击这个选项来确定起点位置。",
+      "raw_output": "Thought: 搜索结果已经出来了，我看到第一个选项就是\"大零号湾\"，位置信息显示在闵行区，正是我们要找的出发点。为了继续规划路线，我需要点击这个选项来确定起点位置。\nAction: click(start_box='(546,720)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 717
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/11.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/11.jpg",
+      "prev_label": "unlabeled",
+      "thought": "嗯，地图上显示了几个可选的上车点。我注意到\"上海剑川路610号37幢\"这个位置比较合适，正好在大零号湾附近。为了确保打车顺利，我需要点击这个位置来设定具体的上车点。",
+      "raw_output": "Thought: 嗯，地图上显示了几个可选的上车点。我注意到\"上海剑川路610号37幢\"这个位置比较合适，正好在大零号湾附近。为了确保打车顺利，我需要点击这个位置来设定具体的上车点。\nAction: click(start_box='(546,1972)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 1965
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/11.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/11.jpg",
+      "prev_label": "unlabeled",
+      "thought": "好的，我看到地图上显示了几个可选的上车点。\"上海剑川路610号37幢\"这个位置最合适，就在大零号湾附近。为了确保打车顺利，我需要点击这个位置来确定具体的上车点。这样系统就能准确定位我们的出发位置了。",
+      "raw_output": "Thought: 好的，我看到地图上显示了几个可选的上车点。\"上海剑川路610号37幢\"这个位置最合适，就在大零号湾附近。为了确保打车顺利，我需要点击这个位置来确定具体的上车点。这样系统就能准确定位我们的出发位置了。\nAction: click(start_box='(546,1972)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 1965
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/11.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 8,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/11.jpg",
+      "prev_label": "unlabeled",
+      "thought": "好了，出发点已经选好了，我看到页面底部有个绿色的\"在这上车\"按钮，点击它就能完成上车点的确认了。这样系统就能知道我们在大零号湾的具体上车位置，为后续的打车服务做好准备。",
+      "raw_output": "Thought: 好了，出发点已经选好了，我看到页面底部有个绿色的\"在这上车\"按钮，点击它就能完成上车点的确认了。这样系统就能知道我们在大零号湾的具体上车位置，为后续的打车服务做好准备。\nAction: click(start_box='(912,1781)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 901,
+        "position_y": 1775
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/22/12.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

@@ -4,8 +4,8 @@ import re
 import json
 import random
 from typing import List, Dict, Optional
-from type_spaces import *          # 依赖: State, Action 等
-from parsedata2link import *       # 依赖: TraceParser, TraceLink, merge_info
+from MobiBench.env.type_spaces import *          # 依赖: State, Action 等
+from MobiBench.env.parsedata2link import *       # 依赖: TraceParser, TraceLink, merge_info ,set_scores
 from MobiBench.utils.models.text_match import semantic_similarity
 
 # ----------------------------
@@ -269,8 +269,10 @@ class AppFSM:
                 self.cluster_level = reassign_values(self.cluster_level)
                 # 4) 将帧级转移写入各状态 map_info（使用我们刚挂上的 trace_link.actions）
                 merge_info(trace_link)
+                # 5) 根据link为每一个state的score属性给值
+                set_scores(trace_link)
 
-                # 5) 纳入全局
+                # 6) 纳入全局
                 trace_links.append(trace_link)
 
                 # 解析器应当维护 states_map: img_path -> State
@@ -344,6 +346,7 @@ class AppFSM:
         if act.act_type == "click":
             for k, v in self.cur_state.map_info.get("click", {}).items():
                 print("Checking click area:",k,"-->",v)
+
                 if k == "unknown":
                     continue
                 # k 可能是 tuple(x1,y1,x2,y2)；若不是，跳过
@@ -360,8 +363,7 @@ class AppFSM:
         elif act.act_type == "swipe":
 
             for k, v in self.cur_state.map_info.get("swipe", {}).items():
-                if not (isinstance(k, (list, tuple)) and len(k) == 2):
-                    continue
+                print("Checking swipe ",k)
                 dir_ = act.parameters.get("direction")
                 if k[0] == dir_ :
                     self.undefine_op_times = 0
@@ -375,18 +377,17 @@ class AppFSM:
 
             for k, v in self.cur_state.map_info.get("input", {}).items():
                 print("Checking input text:",k)
-
                 if k == act.parameters.get("text"):
                     self.undefine_op_times = 0
                     return self.hash_map.get(v, self.cur_state)
                 elif  semantic_similarity(k,act.parameters.get("text"))['cosine_similarity']>0.7:
                     self.undefine_op_times = 0
                     return self.hash_map.get(v, self.cur_state)
-
             self.undefine_op_times += 1
             return self.cur_state
         
         elif act.act_type == "home":
+            print("Going home...")
             self.undefine_op_times = 0
             self.cur_state = random_choice_from_list(self.app_states["START"])  # home 回退到初始状态
             self.history_states = [self.cur_state]
@@ -394,6 +395,7 @@ class AppFSM:
             return self.cur_state
         
         elif act.act_type == "back":
+            print("Going back...")
             if len(self.history_states) >= 2:
                 self.history_states.pop()  # 弹出当前状态
                 self.cur_state = self.history_states[-1]  # 回到上一个状态
@@ -404,6 +406,7 @@ class AppFSM:
                 return self.cur_state
             
         elif act.act_type == "wait":
+            print("Waiting...")
             for k, v in self.cur_state.map_info.get("wait", {}).items():
                 print ("Checking wait ",k)  
                 self.undefine_op_times += 1
@@ -450,8 +453,8 @@ class AppFSM:
 
         # 记录操作历史
         if not self.is_failed:
-            print("cur state img",self.cur_state.img_path,"class:",self.cur_state.cluster_class)
-            print("cur action",act)
+            print("Cur state img",self.cur_state.img_path,"  Class:",self.cur_state.cluster_class)
+            print("\n Cur action ",act)
             self.cur_state = self._transition(act)
             if act.act_type not in ("back","home"):
                 self.history_states.append(self.cur_state)
@@ -459,14 +462,11 @@ class AppFSM:
         if self.op_times > self.max_op_times or self.undefine_op_times > self.max_undefine_op_times:
             self.is_failed = True 
         
-        if self.cur_state.cluster_class in self.cluster_level.keys():
-            self.score = _cal_level_score(self.cluster_level,self.cur_state.cluster_class)
-
+        self.score  = max(self.cur_state.score,self.score)
         return self.cur_state
+    
     def get_score(self):
         
-        if self.cur_state.cluster_class.lower() == "done" and not self._lock :
-            self.score += ScoreDeclare.done_score
         if self.op_times > self.max_trace_step and not self._lock :
             self.score -= max((self.op_times - self.max_trace_step) / (self.max_op_times - self.max_trace_step) * ScoreDeclare.op_times_penalty,0)
         self._lock = True

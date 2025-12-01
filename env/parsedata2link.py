@@ -182,6 +182,13 @@ def add_transition(start_state:State, action:Action, target_state:State):
     elif action.act_type == "wait":
         start_state.map_info["wait"][action.parameters["duration"]] = target_state.img_path
         
+def set_scores(trace:TraceLink):
+    """为TraceLink中的每个State设置评分"""
+    state_count = len(trace.states)
+    for i, state in enumerate(trace.states):
+        # 简单评分策略：根据状态在轨迹中的位置评分
+        state.score = i/(state_count - 1)*100 
+    
 def merge_info(tl):
     actions = getattr(tl, "actions", []) or []
     linkable = [a for a in actions if getattr(a, "act_type", None) in ("click","swipe","input","wait")]
@@ -208,6 +215,7 @@ def merge_info(tl):
                 if x is not None and y is not None:
 
                     # 使用视觉模型确定点击位置对应的元素边界框
+                    print("Using Icon Detection to find clicked element... for", src.img_path)
                     all_bounds = extract_all_bounds(src.img_path)
                     # 找到最小覆盖边框
                     clicked_bounds = find_clicked_element(all_bounds, x, y)
@@ -239,7 +247,7 @@ def merge_info(tl):
 
 
 #test
-if __name__ == "__main__":
+if __name__ == "__main__": 
     parser = TraceParser()
     trace = parser.parse_trace_directory("C:/Users/32089/Desktop/AIinfra/MobiAgent/collect/manual/data/bilibili/type1/4")
     print(f"App Name: {trace.app_name}")

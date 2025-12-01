@@ -1,0 +1,107 @@
+{
+  "instruction": "打开高德地图，设置家庭地址为 “上海交通大学徐汇校区”",
+  "app": "高德",
+  "task": "type7",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/1/1.jpg",
+      "prev_label": "START",
+      "thought": "为了设置家庭地址，我需要先找到“设置家庭地址”功能。我将点击页面下方的“设置家”按钮来进入家庭地址设置界面。",
+      "raw_output": {
+        "reasoning": "为了设置家庭地址，我需要先找到“设置家庭地址”功能。我将点击页面下方的“设置家”按钮来进入家庭地址设置界面。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于页面底部的“设置家”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 212,
+        "position_y": 2408
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/3/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/3/3.jpg",
+      "prev_label": "input1",
+      "thought": "我已经进入了“设置家庭地址”页面，现在需要在输入框中输入地址。我将点击输入框来激活键盘。",
+      "raw_output": {
+        "reasoning": "我已经进入了“设置家庭地址”页面，现在需要在输入框中输入地址。我将点击输入框来激活键盘。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“请输入家庭住址”输入框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 598,
+        "position_y": 800
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/3/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/3/3.jpg",
+      "prev_label": "input1",
+      "thought": "键盘已经激活，我将根据任务要求，在输入框中输入“上海交通大学徐汇校区”。",
+      "raw_output": {
+        "reasoning": "键盘已经激活，我将根据任务要求，在输入框中输入“上海交通大学徐汇校区”。",
+        "action": "input",
+        "parameters": {
+          "text": "上海交通大学徐汇校区"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "上海交通大学徐汇校区"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/2/13.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/2/13.jpg",
+      "prev_label": "input2",
+      "thought": "输入地址后，我需要点击“搜索”按钮来查找该地址。",
+      "raw_output": {
+        "reasoning": "输入地址后，我需要点击“搜索”按钮来查找该地址。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1066,
+        "position_y": 216
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/2/13.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/2/13.jpg",
+      "prev_label": "input2",
+      "thought": "搜索结果已经显示出来，第一个结果“上海交通大学徐汇校区”就是我想要设置的家庭地址。我将点击这个结果。",
+      "raw_output": {
+        "reasoning": "搜索结果已经显示出来，第一个结果“上海交通大学徐汇校区”就是我想要设置的家庭地址。我将点击这个结果。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索结果列表中的“上海交通大学徐汇校区”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 606,
+        "position_y": 546
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/2/14.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

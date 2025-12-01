@@ -1,0 +1,58 @@
+[
+  {
+    "step": 1,
+    "position_x": 534,
+    "position_y": 1610,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/20/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/25/3.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 536,
+    "position_y": 1400,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/25/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/5.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 542,
+    "position_y": 722,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/8.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 540,
+    "position_y": 424,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/8.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/8.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 538,
+    "position_y": 698,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/8.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/9.jpg"
+  },
+  {
+    "step": 8,
+    "position_x": 730,
+    "position_y": 1808,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/9.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/9.jpg"
+  },
+  {
+    "step": 9,
+    "position_x": 538,
+    "position_y": 1558,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/9.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/10.jpg"
+  },
+  {
+    "step": 10,
+    "position_x": 540,
+    "position_y": 438,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/10.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/14/10.jpg"
+  }
+]

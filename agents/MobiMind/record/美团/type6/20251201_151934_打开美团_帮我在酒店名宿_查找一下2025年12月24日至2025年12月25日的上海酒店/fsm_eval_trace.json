@@ -1,0 +1,186 @@
+{
+  "instruction": "打开美团，帮我在酒店名宿 查找一下2025年12月24日至2025年12月25日的上海酒店",
+  "app": "美团",
+  "task": "type6",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我需要进入美团应用，根据任务要求，我需要点击“酒店民宿”图标。",
+      "raw_output": {
+        "reasoning": "我需要进入美团应用，根据任务要求，我需要点击“酒店民宿”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "酒店民宿图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 598,
+        "position_y": 508
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/3.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/3.jpg",
+      "prev_label": "result1",
+      "thought": "我已经进入酒店预订页面，现在需要设置入住和离店日期。我将点击日期区域以打开日历选择器。",
+      "raw_output": {
+        "reasoning": "我已经进入酒店预订页面，现在需要设置入住和离店日期。我将点击日期区域以打开日历选择器。",
+        "action": "click",
+        "parameters": {
+          "target_element": "日期选择区域，当前显示为11月19日"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 302,
+        "position_y": 818
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg",
+      "new_label": "select1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg",
+      "prev_label": "select1",
+      "thought": "我已打开日期选择器，当前显示的是11月。为了找到12月24日，我需要向上滑动日历以查看后续月份。",
+      "raw_output": {
+        "reasoning": "我已打开日期选择器，当前显示的是11月。为了找到12月24日，我需要向上滑动日历以查看后续月份。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/6.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/6.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已滑动到12月，现在需要选择12月24日作为入住日期。",
+      "raw_output": {
+        "reasoning": "我已滑动到12月，现在需要选择12月24日作为入住日期。",
+        "action": "click",
+        "parameters": {
+          "target_element": "日期24"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 598,
+        "position_y": 2086
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/8.jpg",
+      "new_label": "select3"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/8.jpg",
+      "prev_label": "select3",
+      "thought": "我已经选择了12月24日作为入住日期，现在需要选择12月25日作为离店日期。",
+      "raw_output": {
+        "reasoning": "我已经选择了12月24日作为入住日期，现在需要选择12月25日作为离店日期。",
+        "action": "click",
+        "parameters": {
+          "target_element": "日期25"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 764,
+        "position_y": 2102
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/10.jpg",
+      "new_label": "select4"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/10.jpg",
+      "prev_label": "select4",
+      "thought": "我已经选择了入住和离店日期，现在需要点击“确认”按钮来确定日期选择。",
+      "raw_output": {
+        "reasoning": "我已经选择了入住和离店日期，现在需要点击“确认”按钮来确定日期选择。",
+        "action": "click",
+        "parameters": {
+          "target_element": "确认 1 晚按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 600,
+        "position_y": 2514
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/12.jpg",
+      "new_label": "result2"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/12.jpg",
+      "prev_label": "result2",
+      "thought": "日期已设置完成，现在我需要输入目的地。我将点击“位置/品牌/酒店”输入框，准备输入“上海”。",
+      "raw_output": {
+        "reasoning": "日期已设置完成，现在我需要输入目的地。我将点击“位置/品牌/酒店”输入框，准备输入“上海”。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位置/品牌/酒店输入框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 350,
+        "position_y": 962
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/4/12.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 8,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/4/12.jpg",
+      "prev_label": "input1",
+      "thought": "我已经激活了搜索框，现在需要输入目的地“上海”。",
+      "raw_output": {
+        "reasoning": "我已经激活了搜索框，现在需要输入目的地“上海”。",
+        "action": "input",
+        "parameters": {
+          "text": "上海"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "上海"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/4/14.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 9,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/4/14.jpg",
+      "prev_label": "input2",
+      "thought": "我已经输入了“上海”，现在需要点击键盘上的“搜索”按钮来执行搜索。",
+      "raw_output": {
+        "reasoning": "我已经输入了“上海”，现在需要点击键盘上的“搜索”按钮来执行搜索。",
+        "action": "click",
+        "parameters": {
+          "target_element": "键盘上的搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1092,
+        "position_y": 2376
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/4/15.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

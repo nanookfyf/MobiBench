@@ -13,19 +13,21 @@ import base64
 import argparse
 import logging
 from typing import List, Dict, Any, Optional
-import time
+from datetime import datetime  # ==== NEW: 用于生成时间戳目录 ====
+
 from openai import OpenAI
 from PIL import Image
 from MobiBench.utils.task_get import get_tasks
 from MobiBench.env.fsm import build_AppFSM
 from MobiBench.env.type_spaces import Action
 from MobiBench.agents.UI_TARS.ui_tars_automation.config import MOBILE_PROMPT_TEMPLATE
+import time
 from MobiBench.agents.UI_TARS.ui_tars_automation.action_parser import (
     parse_action_to_structure_output,
     IMAGE_FACTOR,
     linear_resize,
 )
-from MobiBench.utils.score_proc import save_result,dict2csv
+
 logger = logging.getLogger(__name__)
 
 
@@ -95,19 +97,18 @@ def call_model(
     model_name: str,
     messages: List[Dict[str, Any]],
     temperature: float = 0.0,
+    max_tokens: int = 512,
 ) -> str:
     logger.info("调用模型中…")
     resp = client.chat.completions.create(
         model=model_name,
         messages=messages,
         temperature=temperature,
+        max_tokens=max_tokens,
     )
     text = resp.choices[0].message.content
-    prefill_toks = resp.usage.prompt_tokens
-    decode_toks = resp.usage.completion_tokens
-    num_toks = resp.usage.total_tokens
     logger.info("模型输出（前 200 字）：%s", text.replace("\n", "\\n")[:200])
-    return text,num_toks,prefill_toks,decode_toks
+    return text
 
 
 def parse_thought_action(text: str) -> Dict[str, str]:
@@ -176,6 +177,7 @@ def to_fsm_action(
                 box = eval(start_box_str)
                 if isinstance(box, (list, tuple)) and len(box) >= 2:
                     xn, yn = float(box[0]), float(box[1])
+                    # Qwen2.5VL 这里可能是归一化坐标（0~1 或 0~2），做一下判断
                     x = int(xn * width) if xn <= 2 else int(xn)
                     y = int(yn * height) if yn <= 2 else int(yn)
                     params["position_x"] = x
@@ -185,34 +187,37 @@ def to_fsm_action(
         act_type = "click"
 
     elif a_type in ("scroll", "drag"):
-        # swipe：FSM 里叫 "swipe"，我们只需要 direction，距离目前在 _transition 里其实没用上
-        start_box_str_ = inputs.get("start_box")
-        end_box_str_ = inputs.get("end_box")
-        if start_box_str_ and end_box_str_:
-            try:
-                box0 = eval(start_box_str_)
-                box1 = eval(end_box_str_)
-                if (
-                    isinstance(box0, (list, tuple))
-                    and len(box0) >= 2
-                    and isinstance(box1, (list, tuple))
-                    and len(box1) >= 2
-                ):
-                    x0n, y0n = float(box0[0]), float(box0[1])
-                    x1n, y1n = float(box1[0]), float(box1[1])
-                    x0 = int(x0n * width) if x0n <= 2 else int(x0n)
-                    y0 = int(y0n * height) if y0n <= 2 else int(y0n)
-                    x1 = int(x1n * width) if x1n <= 2 else int(x1n)
-                    y1 = int(y1n * height) if y1n <= 2 else int(y1n)
-                    if abs(x1 - x0) > abs(y1 - y0):
-                        direction = "right" if x1 > x0 else "left"
-                    else:
-                        direction = "down" if y1 > y0 else "up"
-            except Exception:
-                pass
+        start_box_raw = inputs.get("start_box")
+        end_box_raw = inputs.get("end_box")
+        calc_direction = None
 
-        direction = inputs.get("direction", "down").lower()
-        params["direction"] = direction
+        if start_box_raw and end_box_raw:
+            try:
+                s_box = eval(start_box_raw) if isinstance(start_box_raw, str) else start_box_raw
+                e_box = eval(end_box_raw) if isinstance(end_box_raw, str) else end_box_raw
+
+                sx = (s_box[0] + s_box[2]) / 2
+                sy = (s_box[1] + s_box[3]) / 2
+                ex = (e_box[0] + e_box[2]) / 2
+                ey = (e_box[1] + e_box[3]) / 2
+
+                dx = ex - sx
+                dy = ey - sy
+
+                if abs(dx) > abs(dy):
+                    calc_direction = "right" if dx > 0 else "left"
+                else:
+                    calc_direction = "down" if dy > 0 else "up"
+                
+                logger.info(f"根据坐标计算滑动方向: ({sx:.2f},{sy:.2f}) -> ({ex:.2f},{ey:.2f}) = {calc_direction}")
+
+            except Exception as e:
+                logger.warning(f"坐标计算滑动方向失败，回退到默认逻辑: {e}")
+
+        
+        final_direction = calc_direction if calc_direction else inputs.get("direction", "down")
+        
+        params["direction"] = final_direction.lower()
         act_type = "swipe"
 
     elif a_type == "type":
@@ -234,7 +239,21 @@ def to_fsm_action(
     return Action(act_type=act_type, parameters=params)
 
 
-def run(fsm,args,app,task,instruction):
+# ==== NEW: 一个简单的名字清洗函数，用于生成安全的目录名 ====
+def _safe_name(text: str, max_len: int = 50) -> str:
+    safe = "".join(c if c.isalnum() or c in ("_", "-", " ") else "_" for c in text)
+    safe = "_".join(safe.split())  # 把空格压缩成单个下划线
+    return safe[:max_len] or "task"
+
+
+def run(
+    fsm,
+    args,
+    app: str,
+    task: str,
+    instruction: str,
+    runs_dir: str,
+):
 
     if args.start_img_suffix:
         suffix = args.start_img_suffix.replace("\\", "/")
@@ -263,11 +282,12 @@ def run(fsm,args,app,task,instruction):
     trace_log: List[Dict[str, Any]] = []
 
     done_flag = False
-    all_tokens = 0
-    all_p_tokens = 0
-    all_d_tokens = 0
-    step = 1
-    while step <= fsm.max_op_times:
+
+    # ==== NEW: 用 CLI 里的 max_steps 控制，而不是 fsm 内部默认值 ====
+    max_steps = getattr(args, "max_steps", None) or getattr(fsm, "max_op_times", 20)
+    fsm.max_op_times = max_steps
+
+    for step in range(1, max_steps + 1):
         if fsm.cur_state is None:
             # 第一次调用时，fsm.action 里会自己随机选一个 START；这里先给个空动作触发
             logger.info("FSM 当前无状态，先随机初始化。")
@@ -280,20 +300,15 @@ def run(fsm,args,app,task,instruction):
 
         # 3. 构造 prompt + 调模型
         img_b64 = encode_image_to_data_url(img_path)
+        MAX_HISTORY_STEPS = 10
+        short_history = history_ta[-MAX_HISTORY_STEPS:]
         messages = build_messages(
             instruction=instruction,
             language=args.language,
-            history=history_ta,
+            history=short_history,
             image_data_url=img_b64,
         )
-
-        raw_output,num_toks,p_toks,d_toks = call_model(client, args.model_name, messages)
-        print(f"num toks {num_toks}. ||. p toks {p_toks}.  || d toks {d_toks}")
-
-        all_tokens += num_toks
-        all_d_tokens += d_toks
-        all_p_tokens += p_toks
-
+        raw_output = call_model(client, args.model_name, messages)
 
         # 4. 提取 Thought + Action 文本
         ta = parse_thought_action(raw_output)
@@ -311,15 +326,8 @@ def run(fsm,args,app,task,instruction):
         # 6. 终止判断：模型自己说 finished(...)
         if fsm_act.act_type == "done":
             logger.info("模型输出 finished(...)，结束交互。")
-            #done_flag = cur.cluster_class in ("DONE", "Done", "done")
+            # 这里不强制打断，由 FSM 状态来判断是否真正完成
             break
-
-        if fsm.is_failed:
-            logger.info("fsm env failed ，结束交互。")
-            #done_flag = cur.cluster_class in ("DONE", "Done", "done")
-            break
-
-
 
         # 7. 在 FSM 上执行动作
         prev_state = fsm.cur_state
@@ -346,8 +354,10 @@ def run(fsm,args,app,task,instruction):
             logger.info("到达 DONE 状态，任务完成！")
             done_flag = True
             break
-        
-        step += 1
+
+        if fsm.is_failed:
+            logger.info("到达 FAILED 状态，任务失败！")
+            break
 
     result = {
         "instruction": instruction,
@@ -356,84 +366,148 @@ def run(fsm,args,app,task,instruction):
         "success": done_flag,
         "steps": trace_log,
     }
-    print("finished state",fsm.cur_state.img_path)
-    with open(args.output_json, "w", encoding="utf-8") as f:
+
+    # ========= NEW: 把结果写到 runs_dir/app/task/时间戳_指令/ 下 =========
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    safe_inst = _safe_name(instruction)
+    run_dir = os.path.join(runs_dir, app, task, f"{timestamp}_{safe_inst}")
+    os.makedirs(run_dir, exist_ok=True)
+
+    # 主 JSON（全量信息）
+    output_name = os.path.basename(args.output_json) if args.output_json else "fsm_eval_trace.json"
+    output_path = os.path.join(run_dir, output_name)
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
+    # 精简版 actions.json：只保留一步一步的动作要素 + 图像路径
+    simple_actions = []
+    for s in trace_log:
+        simple_actions.append(
+            {
+                "step": s["step"],
+                "action_type": s["action_type"],
+                "action_params": s["action_params"],
+                "prev_img": s["prev_img"],
+                "new_img": s["new_img"],
+            }
+        )
+    with open(os.path.join(run_dir, "actions.json"), "w", encoding="utf-8") as f:
+        json.dump(simple_actions, f, ensure_ascii=False, indent=2)
+
+    # clicks.json：专门导出点击坐标，便于分析
+    click_actions = [
+        {
+            "step": s["step"],
+            "position_x": s["action_params"].get("position_x"),
+            "position_y": s["action_params"].get("position_y"),
+            "prev_img": s["prev_img"],
+            "new_img": s["new_img"],
+        }
+        for s in trace_log
+        if s["action_type"] == "click"
+    ]
+    if click_actions:
+        with open(os.path.join(run_dir, "clicks.json"), "w", encoding="utf-8") as f:
+            json.dump(click_actions, f, ensure_ascii=False, indent=2)
+
+    # 控制台打印总结
     print()
     print(f"评估结束，success = {done_flag}，总步数 = {len(trace_log)}")
-    print(f"详细轨迹已保存到: {os.path.abspath(args.output_json)}")
-    
+    print(f"详细轨迹已保存到: {os.path.abspath(output_path)}")
+    print(f"本次运行目录: {os.path.abspath(run_dir)}")
     if trace_log:
         print("起点截图:", trace_log[0]["prev_img"])
         print("终点截图:", trace_log[-1]["new_img"])
-    
-    avg_toks = all_tokens / step
-    avg_p_toks = all_p_tokens /step
-    avg_d_toks = all_d_tokens / step
-    tokens_dict = {
-        "avg_tokens":[avg_toks],
-        "avg_p_tokens":[avg_p_toks],
-        "avg_d_tokens":[avg_d_toks]
-    }
-    dict2csv(tokens_dict,"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/ui_toks.csv")
-    return avg_toks
-
 
 
 # ---------- 主流程 ----------
+
 def main():
     parser = argparse.ArgumentParser(description="Offline FSM evaluation with UI-TARS model")
     parser.add_argument("--data_root", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="MobiBench data 根目录（包含 rawdata/）")
-    parser.add_argument("--dev",default=True,help="确定是否是开发模式")
-    #parser.add_argument("--app", required=True, help="应用名称，例如 高德地图")
-    #parser.add_argument("--task", required=True, help="任务名称，例如 type1")
-    #parser.add_argument("--instruction", required=True, help="任务描述文本")
+    # parser.add_argument("--app", required=True, help="应用名称，例如 高德地图")
+    # parser.add_argument("--task", required=True, help="任务名称，例如 type1")
+    # parser.add_argument("--instruction", required=True, help="任务描述文本")
     parser.add_argument("--language", default="Chinese", help="Thought 使用语言")
-    parser.add_argument("--service_ip",default="123.60.91.241" , help="模型服务 IP，例如 123.60.91.241")
-    parser.add_argument("--port", type=int, default=9001, help="模型服务端口，例如 9001")
+    parser.add_argument("--service_ip",default="123.60.91.241",  help="模型服务 IP，例如 123.60.91.241")
+    parser.add_argument("--port", type=int,default=9001, help="模型服务端口，例如 9001")
     parser.add_argument("--model_name", default="", help="模型名称")
     parser.add_argument("--max_steps", type=int, default=20, help="最多交互步数")
-    parser.add_argument("--start_img_suffix", default=None,
-                        help="指定起始状态的截图后缀，例如 '高德地图/type1/1/1.jpg' 或 '1/1.jpg'；"
-                             "留空则随机从 START 簇里选一个。")
-    parser.add_argument("--output_json", default="fsm_eval_trace.json",
-                        help="保存整条交互轨迹的 JSON 路径")
+    parser.add_argument(
+        "--start_img_suffix",
+        default=None,
+        help="指定起始状态的截图后缀，例如 '高德地图/type1/1/1.jpg' 或 '1/1.jpg'；"
+             "留空则随机从 START 簇里选一个。",
+    )
+    parser.add_argument(
+        "--output_json",
+        default="fsm_eval_trace.json",
+        help="单次运行的轨迹文件名（会写在每个 run 子目录中）",
+    )
+    parser.add_argument(
+        "--runs_dir",
+        default=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/UI_TARS/runs",  # ==== NEW: 所有运行结果的根目录 ====
+        help="所有运行结果的根目录，用于保存轨迹和坐标",
+    )
 
     args = parser.parse_args()
     setup_logging()
 
-    #app_list = [ "美团","淘宝","网易云音乐","微博","小红书"]
-    app_list = [ "同城"]
-    type_list = ["type4","type5","type6","type7","type8","type9","type10"]
-    #type_list = ["type8","type9","type10"]
-    #type_list = ["type4"]
-    #type_list = ["type6","type7"]
-    
+    # 确保 runs_dir 存在
+    os.makedirs(args.runs_dir, exist_ok=True)
+
+    app_list = ["bilibili"]
+    type_list = ["type2"]
+    app2tasklist = {
+        "饿了么":["type1","type2","type3","type4","type5","type6","type7"],
+        "高德": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"],
+        "京东": ["type1","type2","type3","type4","type5","type6","type7"],
+        "美团": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"],
+        "同城": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"],
+        "网易云音乐": ["type1","type2","type3","type4","type5","type6","type7"],
+        "微博": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"],
+        "小红书": ["type1","type2","type3","type4","type5","type6","type7"],
+        "携程": ["type1","type2","type3","type4","type5","type6","type7","type8"],
+        "知乎": ["type1","type2","type3","type4","type5","type6","type7","type8","type9"],
+        "bilibili": ["type1","type2","type3","type4","type5","type6","type7"],
+        "QQ":["type1","type2","type3","type4"],
+    }
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/alldata.json', 'r', encoding='utf-8') as f:
+        alldata = json.load(f)
+
     datapath = args.data_root
-    for app in app_list:
-        for tasktype in type_list:
-            tasklist = get_tasks(app,tasktype)
-            #envengine = StaticMobiAgentWorker(app,tasktype,datapath,grounder_client)
+    for app in alldata.keys():
+        for tasktype in alldata[app]:
+            tasklist = get_tasks(app, tasktype)
             logger.info("构建 FSM 中…")
             fsm = build_AppFSM(app=app, task=tasktype, data_path=datapath)
+            # 让 FSM 内部的 max_op_times 和 CLI 一致
+            fsm.max_op_times = args.max_steps
+
             for task in tasklist:
                 print(f"任务: {task}，应用: {app}，类型: {tasktype}")
                 fsm._reset()
                 start = time.time()
-                avg_toks = run(fsm=fsm,args=args,app=app,task=tasktype,instruction=task)
-                print()
-                print(f" avg tokens {avg_toks}")
+                run(
+                    fsm=fsm,
+                    args=args,
+                    app=app,
+                    task=tasktype,
+                    instruction=task,
+                    runs_dir=args.runs_dir,  # ==== NEW: 传入 runs 根目录 ====
+                )
                 end = time.time()
-                
-                save_result(md="UI-TARS",app=app,task=tasktype,inst=task,fsm=fsm,time_use=end-start,savepath="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev")
-                #print(f"Bench result: steps={result['steps']}, won={result['won']}, done={result['done']}")
-    
-    # 1. 构建 AppFSM（会把该 app+task 的所有轨迹都吃进去）
-    
-    
-    # 强制设置起始 state（如果指定了 start_img_suffix）
- 
+                from MobiBench.utils.score_proc import save_result
+                save_result(
+                    md="UI-TARS",
+                    app=app,
+                    task=tasktype,
+                    inst=task,
+                    fsm=fsm,
+                    time_use=end-start,
+                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/runs/dev/UI-TARS.csv",
+                )
+                # print(f"Bench result: steps={result['steps']}, won={result['won']}, done={result['done']}")
 
 
 if __name__ == "__main__":

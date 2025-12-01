@@ -1,0 +1,147 @@
+{
+  "instruction": "打开京东，帮我购买 一个 内存128G 标配的大疆0smo Nano拇指相机",
+  "app": "京东",
+  "task": "type5",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/6/1.jpg",
+      "prev_label": "START",
+      "thought": "进入京东首页后，我需要搜索目标商品。我将点击顶部的搜索框来输入商品名称。",
+      "raw_output": {
+        "reasoning": "进入京东首页后，我需要搜索目标商品。我将点击顶部的搜索框来输入商品名称。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索框，当前内容为“大疆拇指相机”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 536,
+        "position_y": 320
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/6/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/6/3.jpg",
+      "prev_label": "input1",
+      "thought": "在搜索框中输入完整的商品名称“大疆osmo nano拇指相机”。",
+      "raw_output": {
+        "reasoning": "在搜索框中输入完整的商品名称“大疆osmo nano拇指相机”。",
+        "action": "input",
+        "parameters": {
+          "text": "大疆osmo nano拇指相机"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "大疆osmo nano拇指相机"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/1/5.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/1/5.jpg",
+      "prev_label": "input2",
+      "thought": "输入完搜索关键词后，我需要点击搜索按钮来执行搜索操作。",
+      "raw_output": {
+        "reasoning": "输入完搜索关键词后，我需要点击搜索按钮来执行搜索操作。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1056,
+        "position_y": 198
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/1/7.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/1/7.jpg",
+      "prev_label": "result1",
+      "thought": "搜索结果页列出了多个大疆Osmo Nano相关的商品。我将选择第一个商品“DJI 大疆【新品】DJI Osmo Nano标准套装”来查看详情。",
+      "raw_output": {
+        "reasoning": "搜索结果页列出了多个大疆Osmo Nano相关的商品。我将选择第一个商品“DJI 大疆【新品】DJI Osmo Nano标准套装”来查看详情。",
+        "action": "click",
+        "parameters": {
+          "target_element": "DJI 大疆【新品】DJI Osmo Nano标准套装(64GB)商品列表项"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 600,
+        "position_y": 1020
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/1/9.jpg",
+      "new_label": "result2"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/1/9.jpg",
+      "prev_label": "result2",
+      "thought": "在商品详情页，我需要添加商品到购物车。我将点击页面底部的“加入购物车”按钮。",
+      "raw_output": {
+        "reasoning": "在商品详情页，我需要添加商品到购物车。我将点击页面底部的“加入购物车”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "加入购物车按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 598,
+        "position_y": 2500
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/6/9.jpg",
+      "new_label": "result3"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/6/9.jpg",
+      "prev_label": "result3",
+      "thought": "点击“加入购物车”后，弹出了商品规格选择窗口。根据任务要求，我需要选择“128G 内存卡”，因此我将点击对应的选项。",
+      "raw_output": {
+        "reasoning": "点击“加入购物车”后，弹出了商品规格选择窗口。根据任务要求，我需要选择“128G 内存卡”，因此我将点击对应的选项。",
+        "action": "click",
+        "parameters": {
+          "target_element": "版本选项中的“128G 内存卡 (80元)”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 762,
+        "position_y": 1684
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/6/11.jpg",
+      "new_label": "result5"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/6/11.jpg",
+      "prev_label": "result5",
+      "thought": "我已经选择了128G内存卡，现在需要确认我的选择并关闭规格选择窗口，所以我将点击底部的“确定”按钮。",
+      "raw_output": {
+        "reasoning": "我已经选择了128G内存卡，现在需要确认我的选择并关闭规格选择窗口，所以我将点击底部的“确定”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "确定按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 600,
+        "position_y": 2508
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type5/6/12.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

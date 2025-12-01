@@ -1,0 +1,98 @@
+{
+    "app_name": "QQ",
+    "task_type": "type2",
+    "task_description": "查找SJTU正版软件授权交流群的聊天记录里的文件，和vpn内容相关的文件",
+    "action_count": 13,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 424,
+            "position_y": 682,
+            "bounds": [
+                0,
+                592,
+                1080,
+                786
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "targetq"
+        },
+        {
+            "type": "click",
+            "position_x": 1008,
+            "position_y": 186,
+            "bounds": [
+                972,
+                147,
+                1037,
+                212
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "target0"
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 498,
+            "press_position_y": 2056,
+            "release_position_x": 544,
+            "release_position_y": 1214,
+            "direction": "up"
+        },
+        {
+            "type": "tag",
+            "label": "target1"
+        },
+        {
+            "type": "click",
+            "position_x": 143,
+            "position_y": 1312,
+            "bounds": [
+                43,
+                1189,
+                241,
+                1410
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "file"
+        },
+        {
+            "type": "click",
+            "position_x": 447,
+            "position_y": 335,
+            "bounds": [
+                0,
+                246,
+                1080,
+                408
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "searchfile"
+        },
+        {
+            "type": "input",
+            "text": "vpn"
+        },
+        {
+            "type": "click",
+            "position_x": 991,
+            "position_y": 2314,
+            "bounds": [
+                0,
+                273,
+                1080,
+                2400
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

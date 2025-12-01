@@ -1,0 +1,60 @@
+{
+    "app_name": "QQ",
+    "task_type": "type1",
+    "task_description": "给xmy发消息：你好",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 521,
+            "position_y": 1627,
+            "bounds": [
+                0,
+                1498,
+                1080,
+                1692
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "target"
+        },
+        {
+            "type": "click",
+            "position_x": 515,
+            "position_y": 2208,
+            "bounds": [
+                43,
+                2153,
+                811,
+                2266
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "你好"
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 934,
+            "position_y": 1446,
+            "bounds": [
+                843,
+                1385,
+                1037,
+                1498
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

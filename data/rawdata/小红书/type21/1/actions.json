@@ -1,0 +1,44 @@
+{
+    "app_name": "小红书",
+    "task_type": "type21",
+    "task_description": "打开小红书，点击市集，点击潮玩，选择专注力游戏并点击",
+    "action_count": 4,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 387,
+            "position_y": 2547,
+            "bounds": [
+                240,
+                2472,
+                480,
+                2618
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 935,
+            "position_y": 363,
+            "bounds": [
+                863,
+                263,
+                1033,
+                406
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 199,
+            "position_y": 597,
+            "bounds": [
+                65,
+                447,
+                234,
+                682
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

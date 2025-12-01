@@ -1,0 +1,134 @@
+{
+  "instruction": "帮我在霸王茶姬点一杯大杯的桂馥兰香（桂花乌龙），去冰、标准糖，其他选项按默认",
+  "app": "饿了么",
+  "task": "type5",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/7/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面顶部有个搜索框，显示着\"霸王茶姬 | 板烧鸡腿堡\"。要找到霸王茶姬的门店，第一步当然是要搜索它。我需要点击这个搜索框，把光标定位进去，这样才能输入\"霸王茶姬\"。",
+      "raw_output": "Thought: 我看到页面顶部有个搜索框，显示着\"霸王茶姬 | 板烧鸡腿堡\"。要找到霸王茶姬的门店，第一步当然是要搜索它。我需要点击这个搜索框，把光标定位进去，这样才能输入\"霸王茶姬\"。\nAction: click(start_box='(546,294)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 293
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/7/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/7/3.jpg",
+      "prev_label": "input1",
+      "thought": "好了，搜索框已经输入完毕，现在我只需要点击右边那个橙色的搜索按钮，就能找到霸王茶姬的门店了。这个按钮就在搜索框的右侧，非常显眼。",
+      "raw_output": "Thought: 好了，搜索框已经输入完毕，现在我只需要点击右边那个橙色的搜索按钮，就能找到霸王茶姬的门店了。这个按钮就在搜索框的右侧，非常显眼。\nAction: click(start_box='(960,178)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 949,
+        "position_y": 177
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/5.jpg",
+      "new_label": "result"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/5.jpg",
+      "prev_label": "result",
+      "thought": "我看到页面上显示了几家霸王茶姬的门店，其中上海满天星广场店评分5.0分，看起来很不错。为了点到一杯桂花乌龙，我得先进入这家店的菜单页面。让我点击这个评分最高的门店，看看他们的饮品都有什么。",
+      "raw_output": "Thought: 我看到页面上显示了几家霸王茶姬的门店，其中上海满天星广场店评分5.0分，看起来很不错。为了点到一杯桂花乌龙，我得先进入这家店的菜单页面。让我点击这个评分最高的门店，看看他们的饮品都有什么。\nAction: click(start_box='(546,650)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 647
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/7.jpg",
+      "new_label": "order"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/7.jpg",
+      "prev_label": "order",
+      "thought": "啊，找到了！在菜单页面上我一眼就看到了\"桂馥兰香（桂花乌龙）\"这款饮品。它就在\"原叶鲜奶茶\"分类下面，月售300+，好评率100%，看起来很受欢迎。我得赶紧点击右边的\"选规格\"按钮，开始设置具体的饮品规格。",
+      "raw_output": "Thought: 啊，找到了！在菜单页面上我一眼就看到了\"桂馥兰香（桂花乌龙）\"这款饮品。它就在\"原叶鲜奶茶\"分类下面，月售300+，好评率100%，看起来很受欢迎。我得赶紧点击右边的\"选规格\"按钮，开始设置具体的饮品规格。\nAction: click(start_box='(950,1830)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 939,
+        "position_y": 1823
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/9.jpg",
+      "new_label": "choice"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/9.jpg",
+      "prev_label": "choice",
+      "thought": "我看到规格选择界面已经打开了，现在需要调整饮品的大小。任务要求是大杯，而当前显示的是中杯，所以我得点击\"大杯 ¥22\"这个选项来升级杯型。这样饮品的规格就能符合要求了。",
+      "raw_output": "Thought: 我看到规格选择界面已经打开了，现在需要调整饮品的大小。任务要求是大杯，而当前显示的是中杯，所以我得点击\"大杯 ¥22\"这个选项来升级杯型。这样饮品的规格就能符合要求了。\nAction: click(start_box='(546,1204)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 1200
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/10.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/10.jpg",
+      "prev_label": "unlabeled",
+      "thought": "好的，我已经把大杯选好了，现在要调整饮品的温度。我看到界面上有\"热\"、\"标准冰\"和\"少冰\"三个选项，根据任务要求是要去冰的，所以我需要点击\"去冰\"这个选项。这样饮品就不会太热，也不会太冰，正好符合要求。",
+      "raw_output": "Thought: 好的，我已经把大杯选好了，现在要调整饮品的温度。我看到界面上有\"热\"、\"标准冰\"和\"少冰\"三个选项，根据任务要求是要去冰的，所以我需要点击\"去冰\"这个选项。这样饮品就不会太热，也不会太冰，正好符合要求。\nAction: click(start_box='(204,1682)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 201,
+        "position_y": 1676
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/11.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/11.jpg",
+      "prev_label": "unlabeled",
+      "thought": "好了，大杯和去冰已经选好了，现在就差调整甜度了。我看到界面上有\"标准糖\"、\"少糖\"、\"半糖\"等选项，根据任务要求是要标准糖的。让我点击\"标准糖\"这个选项，这样就能完成所有规格的设置了。",
+      "raw_output": "Thought: 好了，大杯和去冰已经选好了，现在就差调整甜度了。我看到界面上有\"标准糖\"、\"少糖\"、\"半糖\"等选项，根据任务要求是要标准糖的。让我点击\"标准糖\"这个选项，这样就能完成所有规格的设置了。\nAction: click(start_box='(546,1991)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 1984
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/11.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 8,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/11.jpg",
+      "prev_label": "unlabeled",
+      "thought": "好了，我已经把大杯、去冰和标准糖都设置好了。现在我需要点击底部那个红色的\"选好了\"按钮，这样就能确认这些设置并进入下一步了。让我们继续完成点单流程吧。",
+      "raw_output": "Thought: 好了，我已经把大杯、去冰和标准糖都设置好了。现在我需要点击底部那个红色的\"选好了\"按钮，这样就能确认这些设置并进入下一步了。让我们继续完成点单流程吧。\nAction: click(start_box='(546,2287)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 2279
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/12.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 9,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/12.jpg",
+      "prev_label": "unlabeled",
+      "thought": "太好了，我已经把饮品规格都设置完毕了。现在我看到页面底部有个红色的\"去结算\"按钮，点击它就能进入支付环节了。让我们继续完成这次点单吧。",
+      "raw_output": "Thought: 太好了，我已经把饮品规格都设置完毕了。现在我看到页面底部有个红色的\"去结算\"按钮，点击它就能进入支付环节了。让我们继续完成这次点单吧。\nAction: click(start_box='(895,2287)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 885,
+        "position_y": 2279
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type5/4/13.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

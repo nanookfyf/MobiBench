@@ -1,0 +1,63 @@
+{
+    "app_name": "京东",
+    "task_type": "type21",
+    "task_description": "打开京东，点击 我的，点击设置，滑动找到模式切换，点击进入后选择长辈模式",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1107,
+            "position_y": 2553,
+            "bounds": [
+                960,
+                2455,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 1114,
+            "position_y": 178,
+            "bounds": [
+                1031,
+                120,
+                1181,
+                270
+            ]
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 550,
+            "press_position_y": 2041,
+            "release_position_x": 563,
+            "release_position_y": 1019,
+            "direction": "up"
+        },
+        {
+            "type": "click",
+            "position_x": 585,
+            "position_y": 1369,
+            "bounds": [
+                0,
+                1279,
+                1200,
+                1442
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 754,
+            "position_y": 1268,
+            "bounds": [
+                0,
+                890,
+                1200,
+                1475
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "step": 1,
+    "position_x": 406,
+    "position_y": 314,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 986,
+    "position_y": 2320,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 986,
+    "position_y": 2306,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type2/9/3.jpg"
+  }
+]

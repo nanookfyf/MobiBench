@@ -1,0 +1,58 @@
+{
+    "app_name": "bilibili",
+    "task_type": "type21",
+    "task_description": "打开bilibili，点击页面下方图标我的，点击关注，上滑找到影视飓风，点击进入影视飓风的主页，点击充电",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1085,
+            "position_y": 2543,
+            "bounds": [
+                960,
+                2462,
+                1200,
+                2618
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 634,
+            "position_y": 691,
+            "bounds": [
+                400,
+                588,
+                800,
+                738
+            ]
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 624,
+            "press_position_y": 1878,
+            "release_position_x": 614,
+            "release_position_y": 1191,
+            "direction": "up"
+        },
+        {
+            "type": "click",
+            "position_x": 462,
+            "position_y": 2135,
+            "bounds": null
+        },
+        {
+            "type": "click",
+            "position_x": 952,
+            "position_y": 1298,
+            "bounds": [
+                619,
+                1180,
+                1161,
+                1320
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

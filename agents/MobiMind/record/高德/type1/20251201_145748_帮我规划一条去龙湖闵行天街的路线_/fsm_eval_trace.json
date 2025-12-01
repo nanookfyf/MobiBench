@@ -1,0 +1,147 @@
+{
+  "instruction": "帮我规划一条去龙湖闵行天街的路线。",
+  "app": "高德",
+  "task": "type1",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "prev_label": "START",
+      "thought": "为了导航到龙湖闵行天街，我需要先点击搜索框，输入目的地。",
+      "raw_output": {
+        "reasoning": "为了导航到龙湖闵行天街，我需要先点击搜索框，输入目的地。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索框“查找地点、公交、地铁”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 538,
+        "position_y": 1408
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/3.jpg",
+      "prev_label": "input1",
+      "thought": "我已经点击了搜索框，现在需要输入目的地“龙湖闵行天街”。",
+      "raw_output": {
+        "reasoning": "我已经点击了搜索框，现在需要输入目的地“龙湖闵行天街”。",
+        "action": "input",
+        "parameters": {
+          "text": "龙湖闵行天街"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "龙湖闵行天街"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/5.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/5.jpg",
+      "prev_label": "input2",
+      "thought": "输入目的地后，我需要点击“搜索”按钮来查找该地点。",
+      "raw_output": {
+        "reasoning": "输入目的地后，我需要点击“搜索”按钮来查找该地点。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 964,
+        "position_y": 170
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/5/7.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/5/7.jpg",
+      "prev_label": "result1",
+      "thought": "搜索结果已经显示，我选择第一个结果“龙湖上海闵行天街”来查看详情。",
+      "raw_output": {
+        "reasoning": "搜索结果已经显示，我选择第一个结果“龙湖上海闵行天街”来查看详情。",
+        "action": "click",
+        "parameters": {
+          "target_element": "名为“龙湖上海闵行天街”的搜索结果"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 710,
+        "position_y": 1460
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/5/7.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/5/7.jpg",
+      "prev_label": "result1",
+      "thought": "为了导航到龙湖闵行天街，我需要点击搜索框中的目的地信息。",
+      "raw_output": {
+        "reasoning": "为了导航到龙湖闵行天街，我需要点击搜索框中的目的地信息。",
+        "action": "click",
+        "parameters": {
+          "target_element": "包含“龙湖上海闵行天街”和距离信息的文本区域"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 538,
+        "position_y": 1454
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/5/7.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/5/7.jpg",
+      "prev_label": "result1",
+      "thought": "我已经成功搜索并定位了“龙湖上海闵行天街”，接下来我需要点击屏幕下方的“导航”按钮来开始导航。",
+      "raw_output": {
+        "reasoning": "我已经成功搜索并定位了“龙湖上海闵行天街”，接下来我需要点击屏幕下方的“导航”按钮来开始导航。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于搜索结果下方的导航按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 992,
+        "position_y": 1300
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/3/9.jpg",
+      "new_label": "result2"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/3/9.jpg",
+      "prev_label": "result2",
+      "thought": "导航已经成功规划出来，显示了路线和预计时间和费用。我点击“开始导航”按钮，以正式开始导航。",
+      "raw_output": {
+        "reasoning": "导航已经成功规划出来，显示了路线和预计时间和费用。我点击“开始导航”按钮，以正式开始导航。",
+        "action": "click",
+        "parameters": {
+          "target_element": "开始导航按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 780,
+        "position_y": 2292
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/3/10.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

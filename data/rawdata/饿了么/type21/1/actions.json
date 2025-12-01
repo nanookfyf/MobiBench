@@ -1,0 +1,124 @@
+{
+    "app_name": "饿了么",
+    "task_type": "type21",
+    "task_description": "打开饿了么，再推荐首页点击甜品饮品，在精选中上滑找到 霸王茶姬（华中科技大学店），点击左侧 轻因专区栏 ，点击轻因·伯牙绝弦，将其加入购物车，依次选择大杯， 少冰，标准糖",
+    "action_count": 17,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 170,
+            "position_y": 753,
+            "bounds": [
+                26,
+                666,
+                256,
+                843
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "swipe",
+            "press_position_x": 644,
+            "press_position_y": 1976,
+            "release_position_x": 695,
+            "release_position_y": 1320,
+            "direction": "up"
+        },
+        {
+            "type": "tag",
+            "label": "2"
+        },
+        {
+            "type": "click",
+            "position_x": 806,
+            "position_y": 1217,
+            "bounds": [
+                0,
+                1002,
+                1200,
+                1428
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "3"
+        },
+        {
+            "type": "click",
+            "position_x": 125,
+            "position_y": 1538,
+            "bounds": [
+                0,
+                1453,
+                241,
+                1603
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "4"
+        },
+        {
+            "type": "click",
+            "position_x": 1062,
+            "position_y": 843,
+            "bounds": [
+                241,
+                672,
+                1200,
+                1108
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "5"
+        },
+        {
+            "type": "click",
+            "position_x": 984,
+            "position_y": 1771,
+            "bounds": [
+                832,
+                1739,
+                1129,
+                1830
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "6"
+        },
+        {
+            "type": "click",
+            "position_x": 644,
+            "position_y": 1090,
+            "bounds": [
+                421,
+                1034,
+                778,
+                1164
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "7"
+        },
+        {
+            "type": "click",
+            "position_x": 981,
+            "position_y": 1414,
+            "bounds": [
+                804,
+                1372,
+                1161,
+                1502
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

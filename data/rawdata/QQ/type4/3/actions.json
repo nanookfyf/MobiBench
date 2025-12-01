@@ -1,0 +1,60 @@
+{
+    "app_name": "QQ",
+    "task_type": "type4",
+    "task_description": "打开QQ，添加新好友，QQ号为12345678",
+    "action_count": 8,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 845,
+            "position_y": 367,
+            "bounds": [
+                0,
+                271,
+                1200,
+                451
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "12345678"
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 1104,
+            "position_y": 2414,
+            "bounds": [
+                0,
+                301,
+                1200,
+                2670
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 579,
+            "position_y": 1732,
+            "bounds": [
+                0,
+                1599,
+                1200,
+                1743
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

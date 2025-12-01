@@ -1,0 +1,128 @@
+{
+  "instruction": "打开高德地图，进入企业用车界面，员工登陆，邮箱为123456@qq.com",
+  "app": "高德",
+  "task": "type9",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我需要进入高德地图的“我的”页面。在当前主界面，我应该点击右下角的“我的”图标。",
+      "raw_output": {
+        "reasoning": "我需要进入高德地图的“我的”页面。在当前主界面，我应该点击右下角的“我的”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我的”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1076,
+        "position_y": 2536
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+      "raw_output": {
+        "reasoning": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我的”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1076,
+        "position_y": 2536
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+      "raw_output": {
+        "reasoning": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我的”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1076,
+        "position_y": 2536
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+      "raw_output": {
+        "reasoning": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我的”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1076,
+        "position_y": 2536
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+      "raw_output": {
+        "reasoning": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我的”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1076,
+        "position_y": 2536
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+      "raw_output": {
+        "reasoning": "我需要进入高德地图的“我的”页面。在当前界面，我应该点击右下角的“我的”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我的”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1076,
+        "position_y": 2536
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type9/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}
