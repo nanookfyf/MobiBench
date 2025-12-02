@@ -1,0 +1,67 @@
+{
+  "instruction": "打开饿了么后，帮我搜索麦当劳，并点入",
+  "app": "饿了么",
+  "task": "type1",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/1.jpg",
+      "prev_label": "START",
+      "thought": "为了搜索“麦当劳”，我需要先点击屏幕顶部的搜索框，以便输入文字。",
+      "raw_output": {
+        "reasoning": "为了搜索“麦当劳”，我需要先点击屏幕顶部的搜索框，以便输入文字。",
+        "action": "click",
+        "parameters": {
+          "target_element": "带有“美食外卖”和“小杨生煎”文字的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 574,
+        "position_y": 290
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "prev_label": "input1",
+      "thought": "点击搜索框后，键盘弹出，我需要输入要搜索的商家名称“麦当劳”。",
+      "raw_output": {
+        "reasoning": "点击搜索框后，键盘弹出，我需要输入要搜索的商家名称“麦当劳”。",
+        "action": "input",
+        "parameters": {
+          "text": "麦当劳"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "麦当劳"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/6.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/6.jpg",
+      "prev_label": "result1",
+      "thought": "输入“麦当劳”后，我需要点击“搜索”按钮来执行搜索操作。",
+      "raw_output": {
+        "reasoning": "输入“麦当劳”后，我需要点击“搜索”按钮来执行搜索操作。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1034,
+        "position_y": 168
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/7.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

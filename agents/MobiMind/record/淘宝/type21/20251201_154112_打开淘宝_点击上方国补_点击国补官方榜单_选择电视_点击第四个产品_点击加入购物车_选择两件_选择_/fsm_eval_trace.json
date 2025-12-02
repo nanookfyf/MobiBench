@@ -1,0 +1,148 @@
+{
+  "instruction": "打开淘宝，点击上方国补，点击国补官方榜单，选择电视，点击第四个产品，点击加入购物车，选择两件，选择【144Hz高刷 2+64GB大存储】REDMI AI X65",
+  "app": "淘宝",
+  "task": "type21",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "根据任务要求，我需要点击“国补”入口。在当前页面上，我找到了“国补”图标，并点击它。",
+      "raw_output": {
+        "reasoning": "根据任务要求，我需要点击“国补”入口。在当前页面上，我找到了“国补”图标，并点击它。",
+        "action": "click",
+        "parameters": {
+          "target_element": "国补图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 632,
+        "position_y": 170
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "根据任务要求，我需要点击“国补官方榜单”入口。在当前页面上，我找到了这个入口，并点击它。",
+      "raw_output": {
+        "reasoning": "根据任务要求，我需要点击“国补官方榜单”入口。在当前页面上，我找到了这个入口，并点击它。",
+        "action": "click",
+        "parameters": {
+          "target_element": "国补官方榜单"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 242,
+        "position_y": 1014
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/3.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/3.jpg",
+      "prev_label": "unlabeled",
+      "thought": "根据任务要求，我需要选择“电视”类别。在当前页面，我点击了顶部的“电视”标签来切换分类。",
+      "raw_output": {
+        "reasoning": "根据任务要求，我需要选择“电视”类别。在当前页面，我点击了顶部的“电视”标签来切换分类。",
+        "action": "click",
+        "parameters": {
+          "target_element": "电视分类标签"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 804,
+        "position_y": 394
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/4.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/4.jpg",
+      "prev_label": "unlabeled",
+      "thought": "根据任务要求，我需要选择电视品类下的第四个产品。当前页面显示了电视热卖榜，我将点击列表中的“小米 Redmi A Pro65”这款产品。",
+      "raw_output": {
+        "reasoning": "根据任务要求，我需要选择电视品类下的第四个产品。当前页面显示了电视热卖榜，我将点击列表中的“小米 Redmi A Pro65”这款产品。",
+        "action": "click",
+        "parameters": {
+          "target_element": "列表中的第四个产品，小米 Redmi A Pro65"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 600,
+        "position_y": 1582
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/5.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/5.jpg",
+      "prev_label": "unlabeled",
+      "thought": "根据任务要求，我需要点击“加入购物车”按钮。在当前页面，我看到了这个按钮位于屏幕底部，所以我将点击它。",
+      "raw_output": {
+        "reasoning": "根据任务要求，我需要点击“加入购物车”按钮。在当前页面，我看到了这个按钮位于屏幕底部，所以我将点击它。",
+        "action": "click",
+        "parameters": {
+          "target_element": "加入购物车按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 624,
+        "position_y": 2518
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/6.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/6.jpg",
+      "prev_label": "unlabeled",
+      "thought": "根据任务要求，我需要选择“144Hz高刷 2+64GB大存储”的REDMI AI X65。当前页面展示了更多版本选项，我注意到“【144Hz高刷 2+64GB大存储】REDMI AI X65”这个选项，我将点击它来选择正确的型号。",
+      "raw_output": {
+        "reasoning": "根据任务要求，我需要选择“144Hz高刷 2+64GB大存储”的REDMI AI X65。当前页面展示了更多版本选项，我注意到“【144Hz高刷 2+64GB大存储】REDMI AI X65”这个选项，我将点击它来选择正确的型号。",
+        "action": "click",
+        "parameters": {
+          "target_element": "【144Hz高刷 2+64GB大存储】REDMI AI X65"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 510,
+        "position_y": 1358
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/7.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/7.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已经选择了正确的型号，现在需要将它加入购物车。我将点击页面底部的“加入购物车”按钮。",
+      "raw_output": {
+        "reasoning": "我已经选择了正确的型号，现在需要将它加入购物车。我将点击页面底部的“加入购物车”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "加入购物车按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 594,
+        "position_y": 2504
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/8.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

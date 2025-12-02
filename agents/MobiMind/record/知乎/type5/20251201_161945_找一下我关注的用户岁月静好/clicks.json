@@ -1,0 +1,16 @@
+[
+  {
+    "step": 3,
+    "position_x": 572,
+    "position_y": 176,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type5/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type5/5/3.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 1058,
+    "position_y": 190,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type5/5/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type5/3/7.jpg"
+  }
+]

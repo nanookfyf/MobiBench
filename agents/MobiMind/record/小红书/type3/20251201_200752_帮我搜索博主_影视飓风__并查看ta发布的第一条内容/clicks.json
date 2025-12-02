@@ -1,0 +1,23 @@
+[
+  {
+    "step": 1,
+    "position_x": 996,
+    "position_y": 174,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type3/9/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type3/9/3.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 988,
+    "position_y": 176,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type3/9/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type3/5/7.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 280,
+    "position_y": 2002,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type3/5/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type3/5/7.jpg"
+  }
+]

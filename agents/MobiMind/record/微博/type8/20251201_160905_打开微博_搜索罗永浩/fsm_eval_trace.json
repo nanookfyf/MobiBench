@@ -1,0 +1,102 @@
+{
+  "instruction": "打开微博，搜索罗永浩",
+  "app": "微博",
+  "task": "type8",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示广告，因为它会自动关闭，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示广告，因为它会自动关闭，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/2/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/2/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "为了搜索“罗永浩”，我需要先点击底部的“发现”标签页，进入“发现”页面。",
+      "raw_output": {
+        "reasoning": "为了搜索“罗永浩”，我需要先点击底部的“发现”标签页，进入“发现”页面。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕底部的“发现”标签"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 598,
+        "position_y": 2520
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/2/4.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/2/4.jpg",
+      "prev_label": "1",
+      "thought": "现在我进入了“发现”页面。为了搜索“罗永浩”，我需要点击页面顶部的搜索框。",
+      "raw_output": {
+        "reasoning": "现在我进入了“发现”页面。为了搜索“罗永浩”，我需要点击页面顶部的搜索框。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于页面顶部的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 618,
+        "position_y": 212
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/2/6.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/2/6.jpg",
+      "prev_label": "input1",
+      "thought": "我已经激活了搜索框，现在我需要输入要搜索的关键词“罗永浩”。",
+      "raw_output": {
+        "reasoning": "我已经激活了搜索框，现在我需要输入要搜索的关键词“罗永浩”。",
+        "action": "input",
+        "parameters": {
+          "text": "罗永浩"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "罗永浩"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/2/8.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/2/8.jpg",
+      "prev_label": "input2",
+      "thought": "我已经输入了“罗永浩”，现在我需要点击键盘上的“搜索”按钮来执行搜索。",
+      "raw_output": {
+        "reasoning": "我已经输入了“罗永浩”，现在我需要点击键盘上的“搜索”按钮来执行搜索。",
+        "action": "click",
+        "parameters": {
+          "target_element": "键盘上的“搜索”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1096,
+        "position_y": 2392
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type8/2/9.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

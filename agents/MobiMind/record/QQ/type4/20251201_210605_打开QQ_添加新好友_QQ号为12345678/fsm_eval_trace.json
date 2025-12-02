@@ -1,0 +1,127 @@
+{
+  "instruction": "打开QQ，添加新好友，QQ号为12345678",
+  "app": "QQ",
+  "task": "type4",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/7/1.jpg",
+      "prev_label": "START",
+      "thought": "在消息列表页面，为了添加新好友，我需要点击右上角的“+”图标来访问更多选项。",
+      "raw_output": {
+        "reasoning": "在消息列表页面，为了添加新好友，我需要点击右上角的“+”图标来访问更多选项。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右上角的“+”添加按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1108,
+        "position_y": 200
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "点击“+”后弹出了一个菜单，为了添加好友，我需要选择“加好友/群”这个选项。",
+      "raw_output": {
+        "reasoning": "点击“+”后弹出了一个菜单，为了添加好友，我需要选择“加好友/群”这个选项。",
+        "action": "click",
+        "parameters": {
+          "target_element": "加好友/群 选项"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 908,
+        "position_y": 706
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/4.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/4.jpg",
+      "prev_label": "1",
+      "thought": "进入添加好友页面后，为了通过QQ号添加，我需要点击搜索框以输入相关信息。",
+      "raw_output": {
+        "reasoning": "进入添加好友页面后，为了通过QQ号添加，我需要点击搜索框以输入相关信息。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索框，提示文字为“QQ号/QID/手机号/群”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 624,
+        "position_y": 360
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/6.jpg",
+      "new_label": "input5"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/6.jpg",
+      "prev_label": "input5",
+      "thought": "点击搜索框后，键盘弹出。现在我需要输入目标好友的QQ号“12345678”。",
+      "raw_output": {
+        "reasoning": "点击搜索框后，键盘弹出。现在我需要输入目标好友的QQ号“12345678”。",
+        "action": "input",
+        "parameters": {
+          "text": "12345678"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "12345678"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/8.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/8.jpg",
+      "prev_label": "input2",
+      "thought": "输入QQ号后，我需要点击键盘上的“搜索”按钮来执行搜索操作，查找该QQ号对应的好友。",
+      "raw_output": {
+        "reasoning": "输入QQ号后，我需要点击键盘上的“搜索”按钮来执行搜索操作，查找该QQ号对应的好友。",
+        "action": "click",
+        "parameters": {
+          "target_element": "键盘上的搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1090,
+        "position_y": 2388
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/9.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/9.jpg",
+      "prev_label": "unlabeled",
+      "thought": "搜索结果页面显示了“12345678”相关的用户，我需要点击第一个结果来添加该好友。",
+      "raw_output": {
+        "reasoning": "搜索结果页面显示了“12345678”相关的用户，我需要点击第一个结果来添加该好友。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索结果中第一个名为“12345678”的用户"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 600,
+        "position_y": 394
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/QQ/type4/4/10.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

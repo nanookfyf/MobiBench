@@ -1,0 +1,7 @@
+{
+  "instruction": "给 xmy 发送一条消息，内容为：你好",
+  "app": "QQ",
+  "task": "type1",
+  "success": false,
+  "steps": []
+}

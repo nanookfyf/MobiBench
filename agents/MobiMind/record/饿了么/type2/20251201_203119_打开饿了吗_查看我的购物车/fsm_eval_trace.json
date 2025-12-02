@@ -1,0 +1,28 @@
+{
+  "instruction": "打开饿了吗，查看我的购物车",
+  "app": "饿了么",
+  "task": "type2",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "用户需要查看购物车，因此点击屏幕底部的“购物车”图标，进入购物车页面。",
+      "raw_output": {
+        "reasoning": "用户需要查看购物车，因此点击屏幕底部的“购物车”图标，进入购物车页面。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部的“购物车”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 822,
+        "position_y": 2514
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type2/1/2.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

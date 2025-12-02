@@ -1,0 +1,98 @@
+{
+  "instruction": "打开微博，搜索 老师好我叫何同学 ，给他发私信“视频真好”",
+  "app": "微博",
+  "task": "type10",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索结果，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type10/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

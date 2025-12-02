@@ -1,0 +1,126 @@
+{
+  "instruction": "打开饿了么，在推荐首页点击甜品饮品，在精选中上滑找到 霸王茶姬（中商世界里店），点击左侧 轻因专区栏 ，点击轻因·伯牙绝弦，将其加入购物车，依次选择大杯， 少冰，标准糖",
+  "app": "饿了么",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "任务是点一杯霸王茶姬的饮品。首先，我需要在饿了么首页的搜索框中搜索“霸王茶姬”。",
+      "raw_output": {
+        "reasoning": "任务是点一杯霸王茶姬的饮品。首先，我需要在饿了么首页的搜索框中搜索“霸王茶姬”。",
+        "action": "click",
+        "parameters": {
+          "target_element": "带有“霸王茶姬 | 煲珠公”文本的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 596,
+        "position_y": 318
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "搜索框已经激活，我需要点击键盘上的搜索按钮来执行搜索操作。",
+      "raw_output": {
+        "reasoning": "搜索框已经激活，我需要点击键盘上的搜索按钮来执行搜索操作。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1048,
+        "position_y": 316
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "为了找到“霸王茶姬”这家店，我需要使用首页的搜索功能。我将点击搜索框来输入店名。",
+      "raw_output": {
+        "reasoning": "为了找到“霸王茶姬”这家店，我需要使用首页的搜索功能。我将点击搜索框来输入店名。",
+        "action": "click",
+        "parameters": {
+          "target_element": "带有“霸王茶姬 | 煲珠公”文本的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 596,
+        "position_y": 316
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "搜索框已经激活，我需要输入“霸王茶姬”来查找店铺。",
+      "raw_output": {
+        "reasoning": "搜索框已经激活，我需要输入“霸王茶姬”来查找店铺。",
+        "action": "input",
+        "parameters": {
+          "text": "霸王茶姬"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "霸王茶姬"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "任务是点一杯霸王茶姬的饮品。首先，我需要在饿了么首页的搜索框中搜索“霸王茶姬”。",
+      "raw_output": {
+        "reasoning": "任务是点一杯霸王茶姬的饮品。首先，我需要在饿了么首页的搜索框中搜索“霸王茶姬”。",
+        "action": "click",
+        "parameters": {
+          "target_element": "带有“霸王茶姬 | 煲珠公”文本的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 596,
+        "position_y": 318
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "搜索框已经激活，我需要输入“霸王茶姬”来查找店铺。",
+      "raw_output": {
+        "reasoning": "搜索框已经激活，我需要输入“霸王茶姬”来查找店铺。",
+        "action": "input",
+        "parameters": {
+          "text": "霸王茶姬"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "霸王茶姬"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

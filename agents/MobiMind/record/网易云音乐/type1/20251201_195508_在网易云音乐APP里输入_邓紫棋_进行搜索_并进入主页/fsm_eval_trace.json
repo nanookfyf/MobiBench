@@ -1,0 +1,107 @@
+{
+  "instruction": "在网易云音乐APP里输入“邓紫棋”进行搜索。并进入主页",
+  "app": "网易云音乐",
+  "task": "type1",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/7/1.jpg",
+      "prev_label": "START",
+      "thought": "为了搜索“邓紫棋”，我需要先点击屏幕顶部的搜索栏。",
+      "raw_output": {
+        "reasoning": "为了搜索“邓紫棋”，我需要先点击屏幕顶部的搜索栏。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕顶部的搜索栏"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 542,
+        "position_y": 180
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/5/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/5/3.jpg",
+      "prev_label": "input1",
+      "thought": "点击搜索栏后，键盘已经弹出。我现在输入要搜索的歌手名字“邓紫棋”。",
+      "raw_output": {
+        "reasoning": "点击搜索栏后，键盘已经弹出。我现在输入要搜索的歌手名字“邓紫棋”。",
+        "action": "input",
+        "parameters": {
+          "text": "邓紫棋"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "邓紫棋"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/5/5.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/5/5.jpg",
+      "prev_label": "input2",
+      "thought": "输入“邓紫棋”后，我需要点击搜索按钮来执行搜索。",
+      "raw_output": {
+        "reasoning": "输入“邓紫棋”后，我需要点击搜索按钮来执行搜索。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 988,
+        "position_y": 178
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/3/6.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/3/6.jpg",
+      "prev_label": "unlabeled",
+      "thought": "搜索结果页面包含了综合、单曲、歌单等多种类型的结果。为了进入歌手主页，我需要点击“歌手”标签页来筛选出歌手结果。",
+      "raw_output": {
+        "reasoning": "搜索结果页面包含了综合、单曲、歌单等多种类型的结果。为了进入歌手主页，我需要点击“歌手”标签页来筛选出歌手结果。",
+        "action": "click",
+        "parameters": {
+          "target_element": "歌手标签"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 954,
+        "position_y": 304
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/3/6.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/3/6.jpg",
+      "prev_label": "unlabeled",
+      "thought": "在“歌手”标签页下，第一个结果就是“G.E.M.邓紫棋”。我将点击这个条目来查看她的详细信息。",
+      "raw_output": {
+        "reasoning": "在“歌手”标签页下，第一个结果就是“G.E.M.邓紫棋”。我将点击这个条目来查看她的详细信息。",
+        "action": "click",
+        "parameters": {
+          "target_element": "歌手: G.E.M.邓紫棋"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 480
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type1/3/7.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

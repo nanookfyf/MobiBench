@@ -1,0 +1,122 @@
+{
+  "instruction": "打开微博，在我关注的人当中查看“老师好我叫何同学”的微博",
+  "app": "微博",
+  "task": "type6",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "prev_label": "START",
+      "thought": "现在我进入了“推荐”页面，我需要找到“老师好我叫何同学”的微博。为了浏览更多微博，我向上滑动屏幕。",
+      "raw_output": {
+        "reasoning": "现在我进入了“推荐”页面，我需要找到“老师好我叫何同学”的微博。为了浏览更多微博，我向上滑动屏幕。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我还没有找到目标用户，所以继续向上滑动屏幕，浏览下面的内容。",
+      "raw_output": {
+        "reasoning": "我还没有找到目标用户，所以继续向上滑动屏幕，浏览下面的内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "prev_label": "START",
+      "thought": "仍然没有找到目标，我继续向上滑动屏幕，继续浏览微博。",
+      "raw_output": {
+        "reasoning": "仍然没有找到目标，我继续向上滑动屏幕，继续浏览微博。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我还没有找到目标用户，所以我继续向上滑动屏幕，浏览更多的微博内容。",
+      "raw_output": {
+        "reasoning": "我还没有找到目标用户，所以我继续向上滑动屏幕，浏览更多的微博内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "prev_label": "START",
+      "thought": "继续浏览微博推流，向上滑动页面以发现目标用户。",
+      "raw_output": {
+        "reasoning": "继续浏览微博推流，向上滑动页面以发现目标用户。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我还没有找到目标用户，所以我继续向上滑动屏幕，浏览更多的微博内容。",
+      "raw_output": {
+        "reasoning": "我还没有找到目标用户，所以我继续向上滑动屏幕，浏览更多的微博内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type6/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

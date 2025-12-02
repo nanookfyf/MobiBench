@@ -1,0 +1,44 @@
+[
+  {
+    "step": 1,
+    "position_x": 532,
+    "position_y": 198,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/6/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/6/3.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 1098,
+    "position_y": 222,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/2/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/1/7.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 390,
+    "position_y": 588,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/1/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/1/9.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 600,
+    "position_y": 2144,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/1/9.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/1/11.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 948,
+    "position_y": 192,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/1/11.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/1/11.jpg"
+  },
+  {
+    "step": 7,
+    "position_x": 982,
+    "position_y": 2544,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/1/11.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type6/1/13.jpg"
+  }
+]

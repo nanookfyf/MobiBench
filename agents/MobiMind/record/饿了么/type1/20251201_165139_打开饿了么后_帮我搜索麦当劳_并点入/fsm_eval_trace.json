@@ -1,0 +1,67 @@
+{
+  "instruction": "打开饿了么后，帮我搜索麦当劳，并点入",
+  "app": "饿了么",
+  "task": "type1",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/1.jpg",
+      "prev_label": "START",
+      "thought": "为了搜索麦当劳，我需要先点击屏幕顶部的搜索框来激活输入功能。",
+      "raw_output": {
+        "reasoning": "为了搜索麦当劳，我需要先点击屏幕顶部的搜索框来激活输入功能。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕顶部的搜索框，其中包含'墨竹寿司 | 小杨生煎'的文本"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 574,
+        "position_y": 290
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "prev_label": "input1",
+      "thought": "点击搜索框后，键盘已经弹出。我现在需要在输入框中输入“麦当劳”作为搜索关键词。",
+      "raw_output": {
+        "reasoning": "点击搜索框后，键盘已经弹出。我现在需要在输入框中输入“麦当劳”作为搜索关键词。",
+        "action": "input",
+        "parameters": {
+          "text": "麦当劳"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "麦当劳"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/6.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/6.jpg",
+      "prev_label": "result1",
+      "thought": "我已经输入了“麦当劳”，现在我需要点击搜索按钮来查看搜索结果。",
+      "raw_output": {
+        "reasoning": "我已经输入了“麦当劳”，现在我需要点击搜索按钮来查看搜索结果。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1032,
+        "position_y": 170
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/7.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

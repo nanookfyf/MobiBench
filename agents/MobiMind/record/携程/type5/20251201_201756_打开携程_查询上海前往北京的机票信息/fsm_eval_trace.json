@@ -1,0 +1,48 @@
+{
+  "instruction": "打开携程，查询上海前往北京的机票信息",
+  "app": "携程",
+  "task": "type5",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type5/9/1.jpg",
+      "prev_label": "START",
+      "thought": "应用加载完成后，我需要选择“机票”功能来开始查询航班。我将点击首页上的“机票”图标。",
+      "raw_output": {
+        "reasoning": "应用加载完成后，我需要选择“机票”功能来开始查询航班。我将点击首页上的“机票”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "机票图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 536,
+        "position_y": 342
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type5/13/3.jpg",
+      "new_label": "target"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type5/13/3.jpg",
+      "prev_label": "target",
+      "thought": "出发地和目的地都已设置正确。现在我将点击“查询”按钮来搜索符合条件的航班。",
+      "raw_output": {
+        "reasoning": "出发地和目的地都已设置正确。现在我将点击“查询”按钮来搜索符合条件的航班。",
+        "action": "click",
+        "parameters": {
+          "target_element": "查询按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 538,
+        "position_y": 1310
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type5/12/4.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "step": 1,
+    "position_x": 1046,
+    "position_y": 1956,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 670,
+    "position_y": 190,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 668,
+    "position_y": 190,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 598,
+    "position_y": 690,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg"
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "instruction": "帮我点三米粥铺的鸡汤小馄饨",
+  "app": "美团",
+  "task": "type2",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面顶部已经输入了\"三米粥铺\"，现在需要进入外卖功能来点餐。让我点击页面上方的\"外卖\"图标，这样就能进入外卖点餐的界面了。",
+      "raw_output": "Thought: 我看到页面顶部已经输入了\"三米粥铺\"，现在需要进入外卖功能来点餐。让我点击页面上方的\"外卖\"图标，这样就能进入外卖点餐的界面了。\nAction: click(start_box='(132,536)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 131,
+        "position_y": 538
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里已经输入了\"三米粥铺\"，接下来要进入外卖点餐界面。在页面上方的功能区里，我找到了\"外卖\"这个选项，点击它就能进入点餐页面了。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"三米粥铺\"，接下来要进入外卖点餐界面。在页面上方的功能区里，我找到了\"外卖\"这个选项，点击它就能进入点餐页面了。\nAction: click(start_box='(137,595)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 136,
+        "position_y": 597
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "好的，我已经在搜索框里输入了\"三米粥铺\"，现在要进入外卖点餐界面。我看到页面上方的功能区里有个\"外卖\"选项，点击它就能进入点餐页面了。",
+      "raw_output": "Thought: 好的，我已经在搜索框里输入了\"三米粥铺\"，现在要进入外卖点餐界面。我看到页面上方的功能区里有个\"外卖\"选项，点击它就能进入点餐页面了。\nAction: click(start_box='（136,562）')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 135,
+        "position_y": 564
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里已经输入了\"三米粥铺\"，接下来要进入外卖点餐界面。在页面上方的功能区里，我找到了\"外卖\"这个选项，点击它就能进入点餐页面了。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"三米粥铺\"，接下来要进入外卖点餐界面。在页面上方的功能区里，我找到了\"外卖\"这个选项，点击它就能进入点餐页面了。\nAction: click(start_box='（136,562）')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 135,
+        "position_y": 564
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "好了，搜索框里已经输入了\"三米粥铺\"，我得进入外卖点餐界面。看到页面上方的功能区里有个\"外卖\"选项，点击它就能进入点餐页面了。",
+      "raw_output": "Thought: 好了，搜索框里已经输入了\"三米粥铺\"，我得进入外卖点餐界面。看到页面上方的功能区里有个\"外卖\"选项，点击它就能进入点餐页面了。\nAction: click(start_box='（136,562）')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 135,
+        "position_y": 564
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "好了，搜索框里已经输入了\"三米粥铺\"，我得进入外卖点餐界面。看到页面上方的功能区里有个\"外卖\"选项，点击它就能进入点餐页面了。",
+      "raw_output": "Thought: 好了，搜索框里已经输入了\"三米粥铺\"，我得进入外卖点餐界面。看到页面上方的功能区里有个\"外卖\"选项，点击它就能进入点餐页面了。\nAction: click(start_box='（136,562）')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 135,
+        "position_y": 564
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

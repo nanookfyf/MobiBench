@@ -1,0 +1,142 @@
+{
+  "instruction": "打开淘宝，点击上方国补，点击国补官方榜单，选择电视，点击第四个产品，点击加入购物车，选择两件，选择【144Hz高刷 2+64GB大存储】REDMI AI X65",
+  "app": "淘宝",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我当前在淘宝首页，任务要求我找到“国补”入口。我看到页面顶部有“国补”标签，我将点击它。",
+      "raw_output": {
+        "reasoning": "我当前在淘宝首页，任务要求我找到“国补”入口。我看到页面顶部有“国补”标签，我将点击它。",
+        "action": "click",
+        "parameters": {
+          "target_element": "顶部导航栏中的“国补”标签"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 634,
+        "position_y": 172
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已进入“国补”页面。为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+      "raw_output": {
+        "reasoning": "我已进入“国补”页面。为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+      "raw_output": {
+        "reasoning": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+      "raw_output": {
+        "reasoning": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+      "raw_output": {
+        "reasoning": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+      "raw_output": {
+        "reasoning": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+      "raw_output": {
+        "reasoning": "我已进入“国补”页面，为了找到“电视”，我需要查看页面中的商品列表。我将向上滑动页面以加载更多内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    }
+  ]
+}

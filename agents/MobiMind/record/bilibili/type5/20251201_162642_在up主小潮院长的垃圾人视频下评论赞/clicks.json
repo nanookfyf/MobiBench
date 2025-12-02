@@ -1,0 +1,58 @@
+[
+  {
+    "step": 1,
+    "position_x": 488,
+    "position_y": 188,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/3.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 988,
+    "position_y": 188,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 540,
+    "position_y": 1452,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 626,
+    "position_y": 1268,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 540,
+    "position_y": 1376,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg"
+  },
+  {
+    "step": 7,
+    "position_x": 286,
+    "position_y": 1378,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg"
+  },
+  {
+    "step": 8,
+    "position_x": 292,
+    "position_y": 1378,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg"
+  },
+  {
+    "step": 9,
+    "position_x": 268,
+    "position_y": 2092,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/5/7.jpg"
+  }
+]

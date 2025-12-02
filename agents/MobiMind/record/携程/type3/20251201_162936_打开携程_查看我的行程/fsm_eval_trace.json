@@ -1,0 +1,148 @@
+{
+  "instruction": "打开携程，查看我的行程",
+  "app": "携程",
+  "task": "type3",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/1/1.jpg",
+      "prev_label": "START",
+      "thought": "为了查看我的行程，我需要先进入“我的”页面。因此，我将点击屏幕底部导航栏中的“我的”图标。",
+      "raw_output": {
+        "reasoning": "为了查看我的行程，我需要先进入“我的”页面。因此，我将点击屏幕底部导航栏中的“我的”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部导航栏中的“我的”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1078,
+        "position_y": 2556
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "prev_label": "1",
+      "thought": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+      "raw_output": {
+        "reasoning": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部导航栏中的“行程”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 862,
+        "position_y": 2524
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "prev_label": "1",
+      "thought": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+      "raw_output": {
+        "reasoning": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部导航栏中的“行程”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 862,
+        "position_y": 2524
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "prev_label": "1",
+      "thought": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+      "raw_output": {
+        "reasoning": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部导航栏中的“行程”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 862,
+        "position_y": 2524
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "prev_label": "1",
+      "thought": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+      "raw_output": {
+        "reasoning": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部导航栏中的“行程”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 862,
+        "position_y": 2524
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "prev_label": "1",
+      "thought": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+      "raw_output": {
+        "reasoning": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部导航栏中的“行程”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 862,
+        "position_y": 2524
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "prev_label": "1",
+      "thought": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+      "raw_output": {
+        "reasoning": "我已经进入了“我的”页面。为了查看我的行程，我需要点击“行程”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部导航栏中的“行程”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 862,
+        "position_y": 2524
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type3/2/3.jpg",
+      "new_label": "1"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "position_x": 1108,
+    "position_y": 190,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 1108,
+    "position_y": 192,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 1114,
+    "position_y": 196,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 1110,
+    "position_y": 188,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 1108,
+    "position_y": 192,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type7/1/1.jpg"
+  }
+]

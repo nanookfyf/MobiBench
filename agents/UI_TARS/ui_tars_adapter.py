@@ -472,7 +472,7 @@ def main():
         "bilibili": ["type1","type2","type3","type4","type5","type6","type7"],
         "QQ":["type1","type2","type3","type4"],
     }
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/alldata.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/follow.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
     datapath = args.data_root

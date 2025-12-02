@@ -1,0 +1,43 @@
+{
+  "instruction": "打开淘宝，查看我关注的店铺列表",
+  "app": "淘宝",
+  "task": "type2",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "任务要求是查看“关注的店铺”。在淘宝首页，我需要先点击左上角的“关注”标签页，以进入关注的店铺列表。",
+      "raw_output": {
+        "reasoning": "任务要求是查看“关注的店铺”。在淘宝首页，我需要先点击左上角的“关注”标签页，以进入关注的店铺列表。",
+        "action": "click",
+        "parameters": {
+          "target_element": "左上角的“关注”标签"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 104,
+        "position_y": 172
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type2/3/3.jpg",
+      "new_label": "my1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type2/3/3.jpg",
+      "prev_label": "my1",
+      "thought": "我已经成功进入了“关注”页面，页面上显示了我关注的店铺列表，包括“影石Insta360旗舰店”等。这完成了“查看我关注的店铺列表”的任务。",
+      "raw_output": {
+        "reasoning": "我已经成功进入了“关注”页面，页面上显示了我关注的店铺列表，包括“影石Insta360旗舰店”等。这完成了“查看我关注的店铺列表”的任务。",
+        "action": "done",
+        "parameters": {}
+      },
+      "action_type": "done",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type2/3/3.jpg",
+      "new_label": "my1"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "step": 1,
+    "position_x": 574,
+    "position_y": 178,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type2/9/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type2/9/3.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 1054,
+    "position_y": 178,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type2/14/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type2/14/7.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 226,
+    "position_y": 304,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type2/14/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type2/12/9.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 576,
+    "position_y": 628,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type2/12/9.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type2/12/10.jpg"
+  }
+]

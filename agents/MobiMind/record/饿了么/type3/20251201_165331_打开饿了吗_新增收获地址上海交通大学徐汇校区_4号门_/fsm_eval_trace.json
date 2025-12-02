@@ -1,0 +1,201 @@
+{
+  "instruction": "打开饿了吗，新增收获地址上海交通大学徐汇校区（4号门)",
+  "app": "饿了么",
+  "task": "type3",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载饿了么应用的主界面，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载饿了么应用的主界面，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我已进入饿了么应用主页。为了找到“我的”页面，我需要向上滑动页面，以显示更多菜单选项。",
+      "raw_output": {
+        "reasoning": "我已进入饿了么应用主页。为了找到“我的”页面，我需要向上滑动页面，以显示更多菜单选项。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我当前在饿了么应用的首页。为了新增收货地址，我需要进入“我的”页面。因此，我将点击屏幕底部导航栏中的“我的”图标。",
+      "raw_output": {
+        "reasoning": "我当前在饿了么应用的首页。为了新增收货地址，我需要进入“我的”页面。因此，我将点击屏幕底部导航栏中的“我的”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部的“我的”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1072,
+        "position_y": 2516
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/3.jpg",
+      "new_label": "my"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/3.jpg",
+      "prev_label": "my",
+      "thought": "我已进入“我的”页面。为了管理收货地址，我需要找到并点击“我的地址”选项。",
+      "raw_output": {
+        "reasoning": "我已进入“我的”页面。为了管理收货地址，我需要找到并点击“我的地址”选项。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“我的地址”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 170,
+        "position_y": 2144
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/5.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/5.jpg",
+      "prev_label": "1",
+      "thought": "我已进入收货地址页面，但当前没有收货地址。为了新增地址，我需要点击右上角的“新增地址”按钮。",
+      "raw_output": {
+        "reasoning": "我已进入收货地址页面，但当前没有收货地址。为了新增地址，我需要点击右上角的“新增地址”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右上角的“新增地址”文本"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1044,
+        "position_y": 198
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/7.jpg",
+      "new_label": "2"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/7.jpg",
+      "prev_label": "2",
+      "thought": "我已进入新增收货地址页面。地址信息已部分自动填充。为了准确输入目标地址，我需要点击“粘贴”按钮，准备智能识别或输入完整的地址信息。",
+      "raw_output": {
+        "reasoning": "我已进入新增收货地址页面。地址信息已部分自动填充。为了准确输入目标地址，我需要点击“粘贴”按钮，准备智能识别或输入完整的地址信息。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“粘贴文本，智能识别地址信息”输入框旁边的“粘贴”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 994,
+        "position_y": 666
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/7.jpg",
+      "new_label": "2"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/7.jpg",
+      "prev_label": "2",
+      "thought": "我已经进入地址编辑页面。根据任务要求，我需要添加“上海交通大学徐汇校区（4号门）”作为收货地址。当前“地址”字段已经预填了部分信息，我需要点击“地址”字段来激活输入，为后续输入或覆盖做准备。",
+      "raw_output": {
+        "reasoning": "我已经进入地址编辑页面。根据任务要求，我需要添加“上海交通大学徐汇校区（4号门）”作为收货地址。当前“地址”字段已经预填了部分信息，我需要点击“地址”字段来激活输入，为后续输入或覆盖做准备。",
+        "action": "click",
+        "parameters": {
+          "target_element": "地址输入框，显示“商汤科技大厦”和“上海市徐汇区漕河泾开发区”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 636,
+        "position_y": 894
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/9.jpg",
+      "new_label": "3"
+    },
+    {
+      "step": 8,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/9.jpg",
+      "prev_label": "3",
+      "thought": "我需要输入新的收货地址“上海交通大学徐汇校区（4号门）”。因此，我将点击地址输入框来激活键盘。",
+      "raw_output": {
+        "reasoning": "我需要输入新的收货地址“上海交通大学徐汇校区（4号门）”。因此，我将点击地址输入框来激活键盘。",
+        "action": "click",
+        "parameters": {
+          "target_element": "地址输入框，提示“请输入你的收货地址”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 710,
+        "position_y": 360
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/11.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 9,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/11.jpg",
+      "prev_label": "input1",
+      "thought": "我已经激活了地址输入框，现在我需要输入完整的收货地址“上海交通大学徐汇校区（4号门）”。",
+      "raw_output": {
+        "reasoning": "我已经激活了地址输入框，现在我需要输入完整的收货地址“上海交通大学徐汇校区（4号门）”。",
+        "action": "input",
+        "parameters": {
+          "text": "上海交通大学徐汇校区（4号门）"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "上海交通大学徐汇校区（4号门）"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/13.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 10,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/13.jpg",
+      "prev_label": "input2",
+      "thought": "我已经输入了地址，现在屏幕上显示了搜索结果。我需要从搜索结果中选择正确的地址，即“上海交通大学徐汇校区（4号门）”。",
+      "raw_output": {
+        "reasoning": "我已经输入了地址，现在屏幕上显示了搜索结果。我需要从搜索结果中选择正确的地址，即“上海交通大学徐汇校区（4号门）”。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索结果列表中的“上海交通大学徐汇校区（4号门）”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 598,
+        "position_y": 762
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type3/1/14.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "step": 1,
+    "position_x": 148,
+    "position_y": 1606,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/20/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/20/1.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 542,
+    "position_y": 1416,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/20/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/20/3.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 982,
+    "position_y": 2178,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/13/12.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/13/13.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 570,
+    "position_y": 594,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/13/13.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/13/13.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 578,
+    "position_y": 206,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/13/13.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/13/13.jpg"
+  },
+  {
+    "step": 7,
+    "position_x": 576,
+    "position_y": 1568,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/13/13.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type3/13/13.jpg"
+  }
+]

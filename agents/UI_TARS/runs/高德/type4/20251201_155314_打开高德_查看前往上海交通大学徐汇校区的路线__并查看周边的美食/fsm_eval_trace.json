@@ -1,0 +1,63 @@
+{
+  "instruction": "打开高德，查看前往上海交通大学徐汇校区的路线 ，并查看周边的美食",
+  "app": "高德",
+  "task": "type4",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type4/1/1.jpg",
+      "prev_label": "START",
+      "thought": "看到高德地图的主界面了，要找上海交大徐汇校区的路线，得先搜索一下。我注意到屏幕中间有个搜索框，正好可以用来输入目的地。让我先点击这个搜索框，开始输入\"上海交通大学徐汇校区\"。",
+      "raw_output": "Thought: 看到高德地图的主界面了，要找上海交大徐汇校区的路线，得先搜索一下。我注意到屏幕中间有个搜索框，正好可以用来输入目的地。让我先点击这个搜索框，开始输入\"上海交通大学徐汇校区\"。\nAction: click(start_box='(524,1545)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 522,
+        "position_y": 1550
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type4/1/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type4/1/3.jpg",
+      "prev_label": "input1",
+      "thought": "我看到搜索框已经准备就绪了，现在是输入目的地的最佳时机。让我在这里输入\"上海交通大学徐汇校区\"，这样就能找到具体位置，为后续规划路线做好准备。",
+      "raw_output": "Thought: 我看到搜索框已经准备就绪了，现在是输入目的地的最佳时机。让我在这里输入\"上海交通大学徐汇校区\"，这样就能找到具体位置，为后续规划路线做好准备。\nAction: type(content='上海交通大学徐汇校区')",
+      "action_type": "input",
+      "action_params": {
+        "text": "上海交通大学徐汇校区"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type4/1/5.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type4/1/5.jpg",
+      "prev_label": "input2",
+      "thought": "搜索结果出来了，我看到第一个选项就是\"上海交通大学徐汇校区\"，地址是985大学徐汇区华山路1954号。这正是我要找的地方，点击它就能进入导航界面了。",
+      "raw_output": "Thought: 搜索结果出来了，我看到第一个选项就是\"上海交通大学徐汇校区\"，地址是985大学徐汇区华山路1954号。这正是我要找的地方，点击它就能进入导航界面了。\nAction: click(start_box='(458,371)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 456,
+        "position_y": 372
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type4/3/7.jpg",
+      "new_label": "result2"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type4/3/7.jpg",
+      "prev_label": "result2",
+      "thought": "好了，我已经找到了上海交大徐汇校区的位置。现在我看到界面底部有几个功能按钮，其中\"路线\"按钮就在\"导航\"按钮的右边，点击它就能规划前往校区的路线了。让我先完成这一步，为后续查看周边美食做准备。",
+      "raw_output": "Thought: 好了，我已经找到了上海交大徐汇校区的位置。现在我看到界面底部有几个功能按钮，其中\"路线\"按钮就在\"导航\"按钮的右边，点击它就能规划前往校区的路线了。让我先完成这一步，为后续查看周边美食做准备。\nAction: click(start_box='(1017,2517)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1013,
+        "position_y": 2526
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type4/2/10.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

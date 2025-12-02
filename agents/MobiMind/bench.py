@@ -379,7 +379,7 @@ class BenchEnv:
             "instruction": self.task,
             "app": self.app,
             "task": self.task_type,
-            "success": done,
+            "success": self.is_done,
             "steps": trace_log,
         }
 
@@ -467,7 +467,7 @@ if __name__ == "__main__":
     #app_list = [ "淘宝","美团","微博"]
     #type_list = ["type1","type2","type3","type4"]
     #app_list = [ "QQ"]
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/alldata.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
     #type_list = ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"]
     datapath = args.datapath

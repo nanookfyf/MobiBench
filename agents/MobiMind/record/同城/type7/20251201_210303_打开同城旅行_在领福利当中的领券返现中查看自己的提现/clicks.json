@@ -1,0 +1,23 @@
+[
+  {
+    "step": 1,
+    "position_x": 148,
+    "position_y": 2542,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type7/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type7/1/1.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 1048,
+    "position_y": 2506,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type7/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type7/1/1.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 1046,
+    "position_y": 2506,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type7/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type7/1/1.jpg"
+  }
+]

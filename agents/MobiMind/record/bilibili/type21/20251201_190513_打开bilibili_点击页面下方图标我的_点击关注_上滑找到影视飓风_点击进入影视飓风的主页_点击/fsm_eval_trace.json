@@ -1,0 +1,121 @@
+{
+  "instruction": "打开bilibili，点击页面下方图标我的，点击关注，上滑找到影视飓风，点击进入影视飓风的主页，点击充电",
+  "app": "bilibili",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "为了完成任务，我需要先导航到“关注”页面。因此，我将点击屏幕底部的“关注”图标。",
+      "raw_output": {
+        "reasoning": "为了完成任务，我需要先导航到“关注”页面。因此，我将点击屏幕底部的“关注”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部的“关注”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 358,
+        "position_y": 2552
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "根据任务指示，我需要进入“影视飓风”的主页。当前页面显示正在加载推荐视频，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "根据任务指示，我需要进入“影视飓风”的主页。当前页面显示正在加载推荐视频，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "为了找到“影视飓风”这个UP主，我需要使用搜索功能。因此，我将点击屏幕顶部的搜索框来准备输入搜索关键词。",
+      "raw_output": {
+        "reasoning": "为了找到“影视飓风”这个UP主，我需要使用搜索功能。因此，我将点击屏幕顶部的搜索框来准备输入搜索关键词。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕顶部的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 542,
+        "position_y": 208
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我已经激活了搜索框，现在我需要输入任务中指定的UP主名称“影视飓风”。",
+      "raw_output": {
+        "reasoning": "我已经激活了搜索框，现在我需要输入任务中指定的UP主名称“影视飓风”。",
+        "action": "input",
+        "parameters": {
+          "text": "影视飓风"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "影视飓风"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我已经输入了UP主的名称“影视飓风”。现在我需要点击键盘上的搜索按钮来执行搜索。",
+      "raw_output": {
+        "reasoning": "我已经输入了UP主的名称“影视飓风”。现在我需要点击键盘上的搜索按钮来执行搜索。",
+        "action": "click",
+        "parameters": {
+          "target_element": "键盘右下角的搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 542,
+        "position_y": 206
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我已进入“影视飓风”的主页。根据任务要求，我需要点击“充电”按钮。这个按钮通常位于页面底部的导航栏中，所以我将向上滑动屏幕以显示下方的内容。",
+      "raw_output": {
+        "reasoning": "我已进入“影视飓风”的主页。根据任务要求，我需要点击“充电”按钮。这个按钮通常位于页面底部的导航栏中，所以我将向上滑动屏幕以显示下方的内容。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

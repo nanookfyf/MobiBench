@@ -1,0 +1,48 @@
+{
+  "instruction": "打开同城旅行，给社区第一条推荐视频点赞",
+  "app": "同城",
+  "task": "type10",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type10/1/1.jpg",
+      "prev_label": "START",
+      "thought": "为了找到社区中的视频，我需要先导航到“社区”页面。因此，我将点击屏幕底部的“社区”图标。",
+      "raw_output": {
+        "reasoning": "为了找到社区中的视频，我需要先导航到“社区”页面。因此，我将点击屏幕底部的“社区”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "屏幕底部的“社区”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 376,
+        "position_y": 2520
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type10/1/3.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type10/1/3.jpg",
+      "prev_label": "1",
+      "thought": "现在我位于社区页面，看到了推荐的视频。我的任务是给第一个视频点赞，所以我将点击视频下方的点赞图标。",
+      "raw_output": {
+        "reasoning": "现在我位于社区页面，看到了推荐的视频。我的任务是给第一个视频点赞，所以我将点击视频下方的点赞图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "视频下方的点赞图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1082,
+        "position_y": 1610
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type10/1/4.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "instruction": "打开小红书，查看我的浏览记录",
+  "app": "小红书",
+  "task": "type4",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type4/1/1.jpg",
+      "prev_label": "START",
+      "thought": "为了查看我的浏览记录，我需要先进入个人中心页面。因此，我将点击屏幕底部导航栏中的“我”按钮。",
+      "raw_output": {
+        "reasoning": "为了查看我的浏览记录，我需要先进入个人中心页面。因此，我将点击屏幕底部导航栏中的“我”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕底部的“我”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1086,
+        "position_y": 2526
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type4/2/3.jpg",
+      "new_label": "1.1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type4/2/3.jpg",
+      "prev_label": "1.1",
+      "thought": "我已经进入了“我”的个人主页。为了找到“浏览记录”，我需要点击页面右上角的“浏览记录”按钮。",
+      "raw_output": {
+        "reasoning": "我已经进入了“我”的个人主页。为了找到“浏览记录”，我需要点击页面右上角的“浏览记录”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕右侧的“浏览记录”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 972,
+        "position_y": 1080
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type4/2/4.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

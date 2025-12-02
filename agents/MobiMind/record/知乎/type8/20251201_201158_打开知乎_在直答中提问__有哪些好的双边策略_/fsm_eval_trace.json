@@ -1,0 +1,97 @@
+{
+  "instruction": "打开知乎，在直答中提问 “有哪些好的双边策略”",
+  "app": "知乎",
+  "task": "type8",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示广告，因为它会自动关闭，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示广告，因为它会自动关闭，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/3/3.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/3/3.jpg",
+      "prev_label": "1",
+      "thought": "为了在知乎的“直答”功能中提问，我需要先点击底部的“直答”按钮进入该功能页面。",
+      "raw_output": {
+        "reasoning": "为了在知乎的“直答”功能中提问，我需要先点击底部的“直答”按钮进入该功能页面。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕底部的“直答”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 366,
+        "position_y": 2518
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/3/5.jpg",
+      "new_label": "2"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/3/5.jpg",
+      "prev_label": "2",
+      "thought": "现在我已经进入了“直答”页面，我需要点击底部的搜索框来激活输入，以便输入我的问题。",
+      "raw_output": {
+        "reasoning": "现在我已经进入了“直答”页面，我需要点击底部的搜索框来激活输入，以便输入我的问题。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕底部的搜索输入框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 598,
+        "position_y": 2280
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/3/7.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/3/7.jpg",
+      "prev_label": "input1",
+      "thought": "我已经激活了输入框，现在我需要输入我的问题：“有哪些好的双边策略”。",
+      "raw_output": {
+        "reasoning": "我已经激活了输入框，现在我需要输入我的问题：“有哪些好的双边策略”。",
+        "action": "input",
+        "parameters": {
+          "text": "有哪些好的双边策略"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "有哪些好的双边策略"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/3/9.jpg",
+      "new_label": "done"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/3/9.jpg",
+      "prev_label": "done",
+      "thought": "我已经成功输入了问题“有哪些好的双边策略”，完成了在知乎“直答”中提问的任务。",
+      "raw_output": {
+        "reasoning": "我已经成功输入了问题“有哪些好的双边策略”，完成了在知乎“直答”中提问的任务。",
+        "action": "done",
+        "parameters": {}
+      },
+      "action_type": "done",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type8/3/9.jpg",
+      "new_label": "done"
+    }
+  ]
+}

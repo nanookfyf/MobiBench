@@ -1,0 +1,128 @@
+{
+  "instruction": "打开微博，清除我所有未读的消息",
+  "app": "微博",
+  "task": "type5",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "prev_label": "START",
+      "thought": "现在我进入了“消息”页面。为了找到所有未读消息的入口，我需要点击右上角的“更多”图标（三个点）。",
+      "raw_output": {
+        "reasoning": "现在我进入了“消息”页面。为了找到所有未读消息的入口，我需要点击右上角的“更多”图标（三个点）。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右上角的“更多”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 866,
+        "position_y": 188
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "prev_label": "START",
+      "thought": "现在我进入了“消息”页面。为了找到所有未读消息的入口，我需要点击右上角的“更多”图标（三个点）。",
+      "raw_output": {
+        "reasoning": "现在我进入了“消息”页面。为了找到所有未读消息的入口，我需要点击右上角的“更多”图标（三个点）。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右上角的“更多”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 866,
+        "position_y": 188
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "prev_label": "START",
+      "thought": "现在我进入了“消息”页面。为了找到所有未读消息的入口，我需要点击右上角的“更多”图标（三个点）。",
+      "raw_output": {
+        "reasoning": "现在我进入了“消息”页面。为了找到所有未读消息的入口，我需要点击右上角的“更多”图标（三个点）。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右上角的“更多”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 866,
+        "position_y": 188
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我已经打开了“消息”页面，可以看到右下角的“我”页面有未读消息。为了查看所有未读消息，我需要点击右下角的“我”图标。",
+      "raw_output": {
+        "reasoning": "我已经打开了“消息”页面，可以看到右下角的“我”页面有未读消息。为了查看所有未读消息，我需要点击右下角的“我”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1092,
+        "position_y": 2514
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我已经打开了“消息”页面，可以看到右下角的“我”页面有未读消息。为了查看所有未读消息，我需要点击右下角的“我”图标。",
+      "raw_output": {
+        "reasoning": "我已经打开了“消息”页面，可以看到右下角的“我”页面有未读消息。为了查看所有未读消息，我需要点击右下角的“我”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1096,
+        "position_y": 2514
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我已经打开了“消息”页面，可以看到右下角的“我”页面有未读消息。为了查看所有未读消息，我需要点击右下角的“我”图标。",
+      "raw_output": {
+        "reasoning": "我已经打开了“消息”页面，可以看到右下角的“我”页面有未读消息。为了查看所有未读消息，我需要点击右下角的“我”图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1096,
+        "position_y": 2514
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type5/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

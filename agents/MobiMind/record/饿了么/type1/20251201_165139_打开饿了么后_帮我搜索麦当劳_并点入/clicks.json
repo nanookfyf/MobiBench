@@ -1,0 +1,16 @@
+[
+  {
+    "step": 1,
+    "position_x": 574,
+    "position_y": 290,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 1032,
+    "position_y": 170,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/6.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/7.jpg"
+  }
+]

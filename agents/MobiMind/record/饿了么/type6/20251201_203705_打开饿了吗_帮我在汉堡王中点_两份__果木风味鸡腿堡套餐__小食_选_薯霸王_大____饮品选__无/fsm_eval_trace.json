@@ -1,0 +1,346 @@
+{
+  "instruction": "打开饿了吗，帮我在汉堡王中点 两份 “果木风味鸡腿堡套餐” 小食 选“薯霸王（大） ”   饮品选 “无糖可乐（中）”",
+  "app": "饿了么",
+  "task": "type6",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/1.jpg",
+      "prev_label": "START",
+      "thought": "为了找到“汉堡王”餐厅，我需要先在首页的搜索框中输入餐厅名称。因此，我点击屏幕顶部的搜索框。",
+      "raw_output": {
+        "reasoning": "为了找到“汉堡王”餐厅，我需要先在首页的搜索框中输入餐厅名称。因此，我点击屏幕顶部的搜索框。",
+        "action": "click",
+        "parameters": {
+          "target_element": "带有“德克士”文字的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 596,
+        "position_y": 316
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/3.jpg",
+      "prev_label": "input1",
+      "thought": "点击搜索框后，键盘弹出，我输入餐厅名称“汉堡王”。",
+      "raw_output": {
+        "reasoning": "点击搜索框后，键盘弹出，我输入餐厅名称“汉堡王”。",
+        "action": "input",
+        "parameters": {
+          "text": "汉堡王"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "汉堡王"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/5.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/5.jpg",
+      "prev_label": "input2",
+      "thought": "输入餐厅名称后，我需要点击搜索按钮来查找相关的餐厅。",
+      "raw_output": {
+        "reasoning": "输入餐厅名称后，我需要点击搜索按钮来查找相关的餐厅。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1066,
+        "position_y": 194
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/7.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/7.jpg",
+      "prev_label": "result1",
+      "thought": "搜索结果出来了，我选择第一家“汉堡王（上海漕河泾...）”进入店铺页面。",
+      "raw_output": {
+        "reasoning": "搜索结果出来了，我选择第一家“汉堡王（上海漕河泾...）”进入店铺页面。",
+        "action": "click",
+        "parameters": {
+          "target_element": "名为“汉堡王（上海漕河泾...）”的餐厅"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 602,
+        "position_y": 462
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/9.jpg",
+      "new_label": "result2"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/9.jpg",
+      "prev_label": "result2",
+      "thought": "进入店铺后，为了快速找到“果木风味鸡腿堡套餐”，我决定使用店内的搜索功能。我点击页面顶部的搜索框。",
+      "raw_output": {
+        "reasoning": "进入店铺后，为了快速找到“果木风味鸡腿堡套餐”，我决定使用店内的搜索功能。我点击页面顶部的搜索框。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 390,
+        "position_y": 204
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/4/11.jpg",
+      "new_label": "input3"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/4/11.jpg",
+      "prev_label": "input3",
+      "thought": "点击店内搜索框后，我输入想要购买的商品名称“果木风味鸡腿堡套餐”。",
+      "raw_output": {
+        "reasoning": "点击店内搜索框后，我输入想要购买的商品名称“果木风味鸡腿堡套餐”。",
+        "action": "input",
+        "parameters": {
+          "text": "果木风味鸡腿堡套餐"
+        }
+      },
+      "action_type": "input",
+      "action_params": {
+        "text": "果木风味鸡腿堡套餐"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/4/13.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/4/13.jpg",
+      "prev_label": "input2",
+      "thought": "输入商品名称后，我点击搜索按钮来查找该商品。",
+      "raw_output": {
+        "reasoning": "输入商品名称后，我点击搜索按钮来查找该商品。",
+        "action": "click",
+        "parameters": {
+          "target_element": "搜索按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1104,
+        "position_y": 212
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/7.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 8,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/7.jpg",
+      "prev_label": "result1",
+      "thought": "搜索结果显示了多家汉堡王分店。我选择列表中的第一家“汉堡王（上海漕河泾...）”进入点餐页面。",
+      "raw_output": {
+        "reasoning": "搜索结果显示了多家汉堡王分店。我选择列表中的第一家“汉堡王（上海漕河泾...）”进入点餐页面。",
+        "action": "click",
+        "parameters": {
+          "target_element": "名为“汉堡王（上海漕河泾...）”的餐厅"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 604,
+        "position_y": 462
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/9.jpg",
+      "new_label": "result2"
+    },
+    {
+      "step": 9,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/9.jpg",
+      "prev_label": "result2",
+      "thought": "我的任务是点两份“果木风味鸡腿堡套餐”。在当前页面上，我找到了这个套餐，点击旁边的“选套餐”按钮来选择其具体规格。",
+      "raw_output": {
+        "reasoning": "我的任务是点两份“果木风味鸡腿堡套餐”。在当前页面上，我找到了这个套餐，点击旁边的“选套餐”按钮来选择其具体规格。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“果木风味鸡腿堡套餐”旁边的“选套餐”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1058,
+        "position_y": 1016
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/11.jpg",
+      "new_label": "result3"
+    },
+    {
+      "step": 10,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/11.jpg",
+      "prev_label": "result3",
+      "thought": "进入套餐详情页面后，我需要将商品加入购物车。我点击“加入购物车”按钮。",
+      "raw_output": {
+        "reasoning": "进入套餐详情页面后，我需要将商品加入购物车。我点击“加入购物车”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“加入购物车”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 976,
+        "position_y": 1678
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/12.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 11,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/12.jpg",
+      "prev_label": "unlabeled",
+      "thought": "根据任务要求，我需要选择“薯霸王（大）”作为小食。因此，我点击了对应的商品选项。",
+      "raw_output": {
+        "reasoning": "根据任务要求，我需要选择“薯霸王（大）”作为小食。因此，我点击了对应的商品选项。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“薯霸王（大）”选项"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 980,
+        "position_y": 2120
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 12,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "prev_label": "unlabeled",
+      "thought": "选择了小食后，我需要确认我的选择并继续。我点击了“选好了”按钮。",
+      "raw_output": {
+        "reasoning": "选择了小食后，我需要确认我的选择并继续。我点击了“选好了”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“选好了”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 600,
+        "position_y": 2522
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 13,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "prev_label": "unlabeled",
+      "thought": "第一次添加套餐后，页面仍然显示套餐弹窗。为了完成点两份套餐的任务，我需要再次点击“选好了”按钮来添加第二份。",
+      "raw_output": {
+        "reasoning": "第一次添加套餐后，页面仍然显示套餐弹窗。为了完成点两份套餐的任务，我需要再次点击“选好了”按钮来添加第二份。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“选好了”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 600,
+        "position_y": 2524
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 14,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "prev_label": "unlabeled",
+      "thought": "在添加了第一份套餐后，我再次添加第二份套餐。我需要再次点击“选好了”按钮来确认并添加第二份套餐。",
+      "raw_output": {
+        "reasoning": "在添加了第一份套餐后，我再次添加第二份套餐。我需要再次点击“选好了”按钮来确认并添加第二份套餐。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“选好了”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 600,
+        "position_y": 2520
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 15,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已经添加了两份套餐，现在我需要关闭套餐选择弹窗，以继续后续的饮品选择。",
+      "raw_output": {
+        "reasoning": "我已经添加了两份套餐，现在我需要关闭套餐选择弹窗，以继续后续的饮品选择。",
+        "action": "click",
+        "parameters": {
+          "target_element": "关闭弹窗的X按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1106,
+        "position_y": 598
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 16,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已完成两份套餐的添加，现在需要关闭当前弹窗以进行下一步操作。我点击了弹窗右上角的“X”按钮。",
+      "raw_output": {
+        "reasoning": "我已完成两份套餐的添加，现在需要关闭当前弹窗以进行下一步操作。我点击了弹窗右上角的“X”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "关闭弹窗的X按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1102,
+        "position_y": 602
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 17,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已完成两份套餐的添加，现在需要关闭套餐选择弹窗以进行下一步操作。我点击了弹窗右上角的“X”按钮。",
+      "raw_output": {
+        "reasoning": "我已完成两份套餐的添加，现在需要关闭套餐选择弹窗以进行下一步操作。我点击了弹窗右上角的“X”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "关闭弹窗的X按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1102,
+        "position_y": 602
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type6/1/13.jpg",
+      "new_label": "unlabeled"
+    }
+  ]
+}

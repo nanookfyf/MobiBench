@@ -243,10 +243,10 @@ def parse_action_to_structure_output(text,
             # 处理start_box或者end_box参数格式 '<bbox>x1 y1 x2 y2</bbox>'
             action_inputs[param_name.strip()] = param
 
-            if "start_box" in param_name or "end_box" in param_name:
+            if "start_box" in param_name or "end_box" in param_name: 
                 ori_box = param
                 # Remove parentheses and split the string by commas
-                numbers = ori_box.replace("(", "").replace(")", "").replace(" (","").replace(") ","").split(",")
+                numbers = ori_box.replace("(", "").replace(")", "").replace(" (","").replace(" )","").replace(") ","").replace('（',"").replace('）',"").split(",")
 
                 # Convert to float and scale by 1000
                 # Qwen2.5vl output absolute coordinates, qwen2vl output relative coordinates

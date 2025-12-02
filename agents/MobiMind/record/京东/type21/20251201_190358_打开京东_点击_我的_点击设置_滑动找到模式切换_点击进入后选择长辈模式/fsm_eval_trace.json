@@ -1,0 +1,107 @@
+{
+  "instruction": "打开京东，点击 我的，点击设置，滑动找到模式切换，点击进入后选择长辈模式",
+  "app": "京东",
+  "task": "type21",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "根据任务描述，我需要点击“我的”来进入个人中心。在当前首页界面中，右下角的“我的”图标是进入个人中心的入口。",
+      "raw_output": {
+        "reasoning": "根据任务描述，我需要点击“我的”来进入个人中心。在当前首页界面中，右下角的“我的”图标是进入个人中心的入口。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右下角的“我的”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1076,
+        "position_y": 2530
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "任务要求我进入“设置”页面。在“我的”页面中，我看到了右上角的“设置”图标，我需要点击它。",
+      "raw_output": {
+        "reasoning": "任务要求我进入“设置”页面。在“我的”页面中，我看到了右上角的“设置”图标，我需要点击它。",
+        "action": "click",
+        "parameters": {
+          "target_element": "右上角的“设置”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1104,
+        "position_y": 190
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/3.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/3.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我已经进入了“设置”页面。为了找到“模式切换”选项，我需要向上滑动屏幕以浏览更多设置项。",
+      "raw_output": {
+        "reasoning": "我已经进入了“设置”页面。为了找到“模式切换”选项，我需要向上滑动屏幕以浏览更多设置项。",
+        "action": "swipe",
+        "parameters": {
+          "direction": "UP"
+        }
+      },
+      "action_type": "swipe",
+      "action_params": {
+        "direction": "up"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/4.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/4.jpg",
+      "prev_label": "unlabeled",
+      "thought": "滑动后，我找到了“模式切换”选项。根据任务描述，我需要点击它来进入模式选择页面。",
+      "raw_output": {
+        "reasoning": "滑动后，我找到了“模式切换”选项。根据任务描述，我需要点击它来进入模式选择页面。",
+        "action": "click",
+        "parameters": {
+          "target_element": "“模式切换”选项"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 258,
+        "position_y": 1358
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/5.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/5.jpg",
+      "prev_label": "unlabeled",
+      "thought": "现在我来到了模式切换页面。当前选中的是“标准模式”。任务要求我选择“长辈模式”，所以我需要点击“长辈模式”旁边的区域来切换选择。",
+      "raw_output": {
+        "reasoning": "现在我来到了模式切换页面。当前选中的是“标准模式”。任务要求我选择“长辈模式”，所以我需要点击“长辈模式”旁边的区域来切换选择。",
+        "action": "click",
+        "parameters": {
+          "target_element": "长辈模式"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 836,
+        "position_y": 1088
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type21/1/6.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

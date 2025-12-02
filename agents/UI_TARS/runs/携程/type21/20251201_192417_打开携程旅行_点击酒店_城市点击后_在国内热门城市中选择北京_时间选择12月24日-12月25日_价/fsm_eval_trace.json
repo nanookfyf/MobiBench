@@ -1,0 +1,106 @@
+{
+  "instruction": "打开携程旅行，点击酒店，城市点击后，在国内热门城市中选择北京，时间选择12月24日-12月25日，价格选择300-400后点击完成，点击查询酒店",
+  "app": "携程",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到携程旅行的主界面已经展现在眼前了。要开始预订酒店，第一步当然是要进入酒店预订界面。在页面顶部，我找到了一个醒目的红色图标，上面有白色的酒店图案，旁边写着\"酒店\"两个字。这就是我要点击的入口了。",
+      "raw_output": "Thought: 我看到携程旅行的主界面已经展现在眼前了。要开始预订酒店，第一步当然是要进入酒店预订界面。在页面顶部，我找到了一个醒目的红色图标，上面有白色的酒店图案，旁边写着\"酒店\"两个字。这就是我要点击的入口了。\nAction: click(point='(142,386)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 141,
+        "position_y": 387
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我看到页面上显示的是上海，但任务要求我们选择北京。让我先点击这个城市选择框，这样就能打开城市列表，从中找到北京了。这是完成后续预订流程的第一步。",
+      "raw_output": "Thought: 我看到页面上显示的是上海，但任务要求我们选择北京。让我先点击这个城市选择框，这样就能打开城市列表，从中找到北京了。这是完成后续预订流程的第一步。\nAction: click(start_box='(184,773)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 183,
+        "position_y": 775
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "嗯，我看到当前页面显示的是上海，但任务要求我们去北京。我得先点击这个城市选择框，打开城市列表。这样我才能从里面找到并选择北京，为后续的酒店预订做好准备。",
+      "raw_output": "Thought: 嗯，我看到当前页面显示的是上海，但任务要求我们去北京。我得先点击这个城市选择框，打开城市列表。这样我才能从里面找到并选择北京，为后续的酒店预订做好准备。\nAction: click(start_box='(184,773)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 183,
+        "position_y": 775
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我注意到当前页面显示的是上海，这和我们的目标城市不符。要完成预订北京的酒店，第一步就是修改目的地。我看到城市选择框就在页面中间偏上的位置，点击它就能打开城市列表，让我选择北京了。",
+      "raw_output": "Thought: 我注意到当前页面显示的是上海，这和我们的目标城市不符。要完成预订北京的酒店，第一步就是修改目的地。我看到城市选择框就在页面中间偏上的位置，点击它就能打开城市列表，让我选择北京了。\nAction: click(start_box='(172,773)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 171,
+        "position_y": 775
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我看到页面上显示着\"上海\"，这显然不是我们要去的地方。要完成预订北京酒店的任务，第一步就是把目的地改成北京。我注意到城市选择框就在页面中间偏上的位置，点击它就能打开城市列表，让我选择北京了。",
+      "raw_output": "Thought: 我看到页面上显示着\"上海\"，这显然不是我们要去的地方。要完成预订北京酒店的任务，第一步就是把目的地改成北京。我注意到城市选择框就在页面中间偏上的位置，点击它就能打开城市列表，让我选择北京了。\nAction: click(start_box='(184,773)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 183,
+        "position_y": 775
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我看到页面上显示着\"上海\"，这显然不是我们要去的地方。要完成预订北京酒店的任务，第一步就是把目的地改成北京。我注意到城市选择框就在页面中间偏上的位置，点击它就能打开城市列表，让我选择北京了。",
+      "raw_output": "Thought: 我看到页面上显示着\"上海\"，这显然不是我们要去的地方。要完成预订北京酒店的任务，第一步就是把目的地改成北京。我注意到城市选择框就在页面中间偏上的位置，点击它就能打开城市列表，让我选择北京了。\nAction: click(start_box='(184,773)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 183,
+        "position_y": 775
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我注意到页面顶部显示着\"上海\"，这显然不是我们想要的目的地。要完成预订北京酒店的任务，第一步就是修改目的地。我看到城市选择框就在页面中间偏上的位置，点击它就能打开城市列表，让我选择北京了。",
+      "raw_output": "Thought: 我注意到页面顶部显示着\"上海\"，这显然不是我们想要的目的地。要完成预订北京酒店的任务，第一步就是修改目的地。我看到城市选择框就在页面中间偏上的位置，点击它就能打开城市列表，让我选择北京了。\nAction: click(start_box='(184,773)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 183,
+        "position_y": 775
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    }
+  ]
+}

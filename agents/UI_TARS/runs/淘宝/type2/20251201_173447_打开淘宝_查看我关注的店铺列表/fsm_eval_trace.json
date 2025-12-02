@@ -1,0 +1,22 @@
+{
+  "instruction": "打开淘宝，查看我关注的店铺列表",
+  "app": "淘宝",
+  "task": "type2",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到淘宝首页的顶部导航栏了，要查看关注的店铺列表，得先点击\"关注\"这个选项。它就在导航栏最左边，点击它就能进入关注列表页面了。",
+      "raw_output": "Thought: 我看到淘宝首页的顶部导航栏了，要查看关注的店铺列表，得先点击\"关注\"这个选项。它就在导航栏最左边，点击它就能进入关注列表页面了。\nAction: click(point='(103,173)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 102,
+        "position_y": 173
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type2/3/3.jpg",
+      "new_label": "my1"
+    }
+  ]
+}

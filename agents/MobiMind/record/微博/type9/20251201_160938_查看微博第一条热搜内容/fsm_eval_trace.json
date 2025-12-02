@@ -1,0 +1,103 @@
+{
+  "instruction": "查看微博第一条热搜内容",
+  "app": "微博",
+  "task": "type9",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示广告，因为它会自动关闭，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示广告，因为它会自动关闭，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/2/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/2/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "为了查看微博的第一个热搜，我需要先导航到“发现”页面，该页面通常包含热搜列表。因此，我将点击底部导航栏中的“发现”按钮。",
+      "raw_output": {
+        "reasoning": "为了查看微博的第一个热搜，我需要先导航到“发现”页面，该页面通常包含热搜列表。因此，我将点击底部导航栏中的“发现”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于屏幕底部的“发现”图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 592,
+        "position_y": 2544
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/2/4.jpg",
+      "new_label": "1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/2/4.jpg",
+      "prev_label": "1",
+      "thought": "我当前位于通知中心。为了返回并继续执行任务，我需要点击关闭通知中心的按钮。",
+      "raw_output": {
+        "reasoning": "我当前位于通知中心。为了返回并继续执行任务，我需要点击关闭通知中心的按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "关闭通知中心的按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 598,
+        "position_y": 2424
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/3/6.jpg",
+      "new_label": "2"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/3/6.jpg",
+      "prev_label": "2",
+      "thought": "我已经进入了“发现”页面。为了查看热搜列表，我需要点击页面顶部的搜索框。",
+      "raw_output": {
+        "reasoning": "我已经进入了“发现”页面。为了查看热搜列表，我需要点击页面顶部的搜索框。",
+        "action": "click",
+        "parameters": {
+          "target_element": "位于页面顶部的搜索框"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 590,
+        "position_y": 208
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/3/6.jpg",
+      "new_label": "2"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/3/6.jpg",
+      "prev_label": "2",
+      "thought": "我已经进入了“微博热搜”页面。现在我需要点击第一个热搜话题“日本机场挤满回国...”来查看其详细内容。",
+      "raw_output": {
+        "reasoning": "我已经进入了“微博热搜”页面。现在我需要点击第一个热搜话题“日本机场挤满回国...”来查看其详细内容。",
+        "action": "click",
+        "parameters": {
+          "target_element": "第一个热搜话题，文本为“日本机场挤满回国...”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 282,
+        "position_y": 472
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type9/3/7.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

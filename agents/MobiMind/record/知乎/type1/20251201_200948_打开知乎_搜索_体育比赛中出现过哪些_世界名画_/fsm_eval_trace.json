@@ -1,0 +1,98 @@
+{
+  "instruction": "打开知乎，搜索：体育比赛中出现过哪些“世界名画”",
+  "app": "知乎",
+  "task": "type1",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+      "raw_output": {
+        "reasoning": "屏幕上显示正在加载搜索建议，所以我需要等待。",
+        "action": "wait",
+        "parameters": {}
+      },
+      "action_type": "wait",
+      "action_params": {},
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/知乎/type1/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

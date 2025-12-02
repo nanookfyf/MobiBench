@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "position_x": 140,
+    "position_y": 492,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 538,
+    "position_y": 300,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 462,
+    "position_y": 302,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 944,
+    "position_y": 302,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 458,
+    "position_y": 304,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type10/1/1.jpg"
+  }
+]

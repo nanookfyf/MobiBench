@@ -1,0 +1,13 @@
+{
+    "美团": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10","type21"],
+    "淘宝": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10","type21"],
+    "网易云音乐": ["type1","type2","type3","type4","type5","type6","type7","type21"],
+    "微博": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10","type21"],
+    "小红书": ["type1","type2","type3","type4","type5","type6","type7","type21"],
+    "知乎": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type21"],
+    "bilibili": ["type1","type2","type3","type4","type5","type6","type7","type21"],
+    "携程": ["type1","type2","type3","type4","type5","type6","type7","type8","type21"],
+    "饿了么":["type1","type2","type3","type4","type5","type6","type7","type21"],
+    "同城": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10","type21"],
+    "QQ":["type1","type2","type3","type4"]
+}
