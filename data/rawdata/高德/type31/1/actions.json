@@ -1,0 +1,94 @@
+{
+    "app_name": "高德地图",
+    "task_type": "type31",
+    "task_description": "打开高德地图，查找世界城广场，查看前往该地的路线图，最好是公共交通，地铁优先",
+    "action_count": 13,
+    "actions": [
+        {
+            "type": "wait",
+            "duration": 1
+        },
+        {
+            "type": "click",
+            "position_x": 721,
+            "position_y": 1596,
+            "bounds": [
+                26,
+                1462,
+                1174,
+                1638
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "世界城广场"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 144,
+            "position_y": 467,
+            "bounds": [
+                52,
+                315,
+                1148,
+                546
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 952,
+            "position_y": 2576,
+            "bounds": [
+                898,
+                2461,
+                1135,
+                2591
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 848,
+            "position_y": 461,
+            "bounds": [
+                682,
+                354,
+                969,
+                504
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result3"
+        },
+        {
+            "type": "click",
+            "position_x": 812,
+            "position_y": 594,
+            "bounds": [
+                643,
+                504,
+                884,
+                673
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

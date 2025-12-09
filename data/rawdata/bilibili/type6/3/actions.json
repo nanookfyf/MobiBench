@@ -1,0 +1,63 @@
+{
+    "app_name": "bilibili",
+    "task_type": "type6",
+    "task_description": "打开知乎，在搜索页面，查看bilibili热搜的完整榜单",
+    "action_count": 7,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 472,
+            "position_y": 399,
+            "bounds": [
+                359,
+                302,
+                531,
+                419
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1.1"
+        },
+        {
+            "type": "click",
+            "position_x": 180,
+            "position_y": 568,
+            "bounds": [
+                26,
+                458,
+                258,
+                660
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "3.1"
+        },
+        {
+            "type": "click",
+            "position_x": 1127,
+            "position_y": 217,
+            "bounds": [
+                1050,
+                136,
+                1200,
+                286
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 1107,
+            "position_y": 357,
+            "bounds": [
+                966,
+                311,
+                1200,
+                363
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

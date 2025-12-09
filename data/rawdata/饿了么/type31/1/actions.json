@@ -1,0 +1,138 @@
+{
+    "app_name": "饿了么",
+    "task_type": "type31",
+    "task_description": "打开饿了么，帮我点一份麦当劳，我想要一份安格斯厚牛堡，五块麦乐鸡，一份中杯无糖可乐",
+    "action_count": 16,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 890,
+            "position_y": 324,
+            "bounds": [
+                0,
+                257,
+                1200,
+                377
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "input1"
+        },
+        {
+            "type": "input",
+            "text": "麦当劳"
+        },
+        {
+            "type": "tag",
+            "label": "input2"
+        },
+        {
+            "type": "click",
+            "position_x": 1059,
+            "position_y": 204,
+            "bounds": [
+                976,
+                146,
+                1158,
+                237
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result1"
+        },
+        {
+            "type": "click",
+            "position_x": 812,
+            "position_y": 402,
+            "bounds": [
+                0,
+                274,
+                1200,
+                586
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "result2"
+        },
+        {
+            "type": "click",
+            "position_x": 18,
+            "position_y": 1359,
+            "bounds": [
+                0,
+                1222,
+                240,
+                1430
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 1150,
+            "position_y": 691,
+            "bounds": [
+                1092,
+                676,
+                1166,
+                750
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "click",
+            "position_x": 1140,
+            "position_y": 1638,
+            "bounds": [
+                1092,
+                1599,
+                1166,
+                1673
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "2"
+        },
+        {
+            "type": "click",
+            "position_x": 73,
+            "position_y": 1363,
+            "bounds": [
+                35,
+                1313,
+                117,
+                1368
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 1059,
+            "position_y": 1080,
+            "bounds": [
+                971,
+                1066,
+                1166,
+                1144
+            ]
+        },
+        {
+            "type": "click",
+            "position_x": 679,
+            "position_y": 2537,
+            "bounds": [
+                607,
+                2492,
+                1166,
+                2541
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}

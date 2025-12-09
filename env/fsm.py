@@ -3,10 +3,17 @@ import os
 import re
 import json
 import random
+import hashlib
+from datetime import datetime
+import pickle
 from typing import List, Dict, Optional
 from MobiBench.env.type_spaces import *          # 依赖: State, Action 等
 from MobiBench.env.parsedata2link import *       # 依赖: TraceParser, TraceLink, merge_info ,set_scores
 from MobiBench.utils.models.text_match import semantic_similarity
+
+
+
+
 
 # ----------------------------
 # 赋分机制
@@ -17,6 +24,119 @@ class ScoreDeclare:
     done_score =  10
     op_times_penalty = 5
 ScoreDeclare = ScoreDeclare()
+
+
+
+# ----------------------------
+# 缓存相关工具函数
+# ----------------------------
+
+def get_data_hash(data_path: str, app: str, task: str) -> str:
+    """
+    计算数据目录的哈希值，用于检测数据是否发生变化
+    
+    计算规则：遍历所有相关文件，计算修改时间和文件大小的哈希
+    """
+    task_path = Path(data_path) / app / task
+    if not task_path.exists():
+        return "no_data"
+    
+    file_info = []
+    
+    # 收集所有相关文件信息
+    for root, _, files in os.walk(task_path):
+        for file in files:
+            if file.endswith(('.jpg', '.json')):
+                file_path = Path(root) / file
+                try:
+                    stat = file_path.stat()
+                    file_info.append(f"{file_path}:{stat.st_mtime}:{stat.st_size}")
+                except:
+                    pass
+    
+    # 对文件信息排序，确保一致性
+    file_info.sort()
+    
+    # 计算哈希
+    hash_obj = hashlib.md5()
+    for info in file_info:
+        hash_obj.update(info.encode('utf-8'))
+    
+    return hash_obj.hexdigest()
+
+def get_cache_filename(data_path: str, app: str, task: str, cache_dir: str = None) -> str:
+    """
+    获取缓存文件名
+    """
+    if cache_dir is None:
+        cache_dir = os.path.join(data_path, "fsm_cache")
+    
+    # 创建安全的文件名
+    safe_app = re.sub(r'[^\w\-_.]', '_', app)
+    safe_task = re.sub(r'[^\w\-_.]', '_', task)
+    
+    return os.path.join(cache_dir, f"{safe_app}_{safe_task}.fsmcache")
+
+def save_fsm_cache(app_fsm, cache_file: str, data_hash: str) -> bool:
+    """
+    保存FSM缓存
+    """
+    try:
+        cache_dir = os.path.dirname(cache_file)
+        if cache_dir and not os.path.exists(cache_dir):
+            os.makedirs(cache_dir, exist_ok=True)
+        
+        # 准备缓存数据
+        cache_data = {
+            'version': '1.0',
+            'save_time': datetime.now().isoformat(),
+            'data_hash': data_hash,
+            'app': app_fsm.app,
+            'task': app_fsm.task,
+            'data_path': app_fsm.data_path,
+            'traces': [trace.to_dict() for trace in app_fsm.traces],
+            'hash_map': {k: v.to_dict() for k, v in app_fsm.hash_map.items()},
+            'app_states': {k: [state.to_dict() for state in states] 
+                          for k, states in app_fsm.app_states.items()},
+            'cluster_level': app_fsm.cluster_level,
+            'max_trace_step': app_fsm.max_trace_step,
+            'min_trace_step': app_fsm.min_trace_step
+        }
+        
+        # 保存缓存
+        with open(cache_file, 'wb') as f:
+            pickle.dump(cache_data, f, protocol=pickle.HIGHEST_PROTOCOL)
+        
+        print(f"FSM缓存已保存到: {cache_file}")
+        return True
+    except Exception as e:
+        print(f"保存FSM缓存失败: {e}")
+        return False
+
+def load_fsm_cache(cache_file: str) -> Optional[Dict]:
+    """
+    加载FSM缓存
+    """
+    try:
+        if not os.path.exists(cache_file):
+            return None
+        
+        with open(cache_file, 'rb') as f:
+            cache_data = pickle.load(f)
+        
+        # 检查缓存版本
+        if cache_data.get('version') != '1.0':
+            print(f"缓存版本不匹配: {cache_file}")
+            return None
+        
+        print(f"FSM缓存加载成功: {cache_file}")
+        return cache_data
+    except Exception as e:
+        print(f"加载FSM缓存失败: {e}")
+        return None
+
+
+
 # ----------------------------
 # 工具函数
 # ----------------------------
@@ -130,11 +250,13 @@ def _cal_level_score(cluster_level,cluster):
 
 class AppFSM:
 
-    def __init__(self, app: str, task: str, data_path: str,is_init = True) -> None:
+    def __init__(self, app: str, task: str, data_path: str,is_init = True,use_cache: bool = True, cache_dir: str = None) -> None:
         self.app = app                   # app name
         self.task = task                 # task name
         self.data_path = data_path       # 数据根路径（到 app 上一级目录）
         self.filename = os.path.join(data_path, "fsm", app, task, "fsm_traces.json")
+        self.use_cache = use_cache       # 是否使用缓存
+        self.cache_dir = cache_dir       # 缓存目录
 
         self.traces: List[TraceLink] = []      # 多条 TraceLink
         self.hash_map: Dict[str, State] = {}   # img_path -> State
@@ -162,20 +284,157 @@ class AppFSM:
         self.score = 0.0
         self._lock = False
         self.cluster_level["DONE" ] = 0 
-
-        if is_init:
-            # 入口：解析 -> 聚簇 -> 归约
+        # 计算数据哈希
+        self.data_hash = get_data_hash(data_path, app, task)
+        
+        #尝试从缓存加载
+        if use_cache and self.try_load_from_cache():
+            print(f"从缓存加载 {app}/{task} 成功")
+        else:
+            # 从原始数据构建
+            print(f"从原始数据构建 {app}/{task}")
             self._init_states()
             self._cluster()
             self._reduce_transitions()
+            self.max_trace_step = max(len(t) for t in self.traces) if self.traces else 0
+            self.min_trace_step = min(len(t) for t in self.traces) if self.traces else 0
+            
+            # 保存缓存
+            if use_cache:
+                self.save_cache()
 
-        self.max_trace_step = max( len(t) for t in self.traces)
-        self.min_trace_step = min( len(t) for t in self.traces)
+        # if is_init:
+        #     # 入口：解析 -> 聚簇 -> 归约
+        #     self._init_states()
+        #     self._cluster()
+        #     self._reduce_transitions()
+
+        # self.max_trace_step = max( len(t) for t in self.traces)
+        # self.min_trace_step = min( len(t) for t in self.traces)
 
         
         
         print("cluster class's level to Done\n",self.cluster_level)
+
+    def try_load_from_cache(self) -> bool:
+        """
+        尝试从缓存加载FSM数据
+        """
+        if not self.use_cache:
+            return False
+            
+        cache_file = get_cache_filename(self.data_path, self.app, self.task, self.cache_dir)
+        cache_data = load_fsm_cache(cache_file)
         
+        if cache_data is None:
+            return False
+            
+        # 检查数据哈希是否一致
+        if cache_data.get('data_hash') != self.data_hash:
+            print(f"数据已更新，重新构建FSM")
+            return False
+            
+        # 检查应用和任务是否匹配
+        if cache_data.get('app') != self.app or cache_data.get('task') != self.task:
+            print(f"缓存与应用/任务不匹配")
+            return False
+            
+        # 从缓存数据恢复对象
+        try:
+            # 恢复 traces
+            self.traces = []
+            for trace_dict in cache_data.get('traces', []):
+                trace = TraceLink()
+                trace.app_name = trace_dict.get('app_name', '')
+                trace.task_type = trace_dict.get('task_type', '')
+                trace.task_description = trace_dict.get('task_description', '')
+                trace.num_states = trace_dict.get('num_states', 0)
+                
+                # 恢复 states
+                states = []
+                for state_dict in trace_dict.get('states', []):
+                    state = State()
+                    state.img_path = state_dict.get('img_path')
+                    state.map_info = state_dict.get('map_info', {
+                        "click": {}, "swipe": {}, "input": {}, "wait": {}
+                    })
+                    state.cluster_class = state_dict.get('cluster_class')
+                    state.score = state_dict.get('score', 0.0)
+                    states.append(state)
+                
+                trace.states = states
+                trace.actions = []  # 注意：缓存中不保存actions，需要时重新加载
+                self.traces.append(trace)
+            
+            # 恢复 hash_map
+            self.hash_map = {}
+            for img_path, state_dict in cache_data.get('hash_map', {}).items():
+                state = State()
+                state.img_path = state_dict.get('img_path')
+                state.map_info = state_dict.get('map_info', {
+                    "click": {}, "swipe": {}, "input": {}, "wait": {}
+                })
+                state.cluster_class = state_dict.get('cluster_class')
+                state.score = state_dict.get('score', 0.0)
+                self.hash_map[img_path] = state
+            
+            # 恢复 app_states
+            self.app_states = {}
+            for cluster_key, state_dicts in cache_data.get('app_states', {}).items():
+                states_list = []
+                for state_dict in state_dicts:
+                    state = State()
+                    state.img_path = state_dict.get('img_path')
+                    state.map_info = state_dict.get('map_info', {
+                        "click": {}, "swipe": {}, "input": {}, "wait": {}
+                    })
+                    state.cluster_class = state_dict.get('cluster_class')
+                    state.score = state_dict.get('score', 0.0)
+                    states_list.append(state)
+                self.app_states[cluster_key] = states_list
+            
+            # 恢复其他属性
+            self.cluster_level = cache_data.get('cluster_level', {})
+            self.max_trace_step = cache_data.get('max_trace_step', 0)
+            self.min_trace_step = cache_data.get('min_trace_step', 0)
+            
+            # 重新建立hash_map中的State对象引用（指向app_states中的对象）
+            for cluster_key, states in self.app_states.items():
+                for state in states:
+                    if state.img_path in self.hash_map:
+                        # 更新为实际对象
+                        self.hash_map[state.img_path] = state
+            
+            return True
+            
+        except Exception as e:
+            print(f"从缓存恢复FSM失败: {e}")
+            return False
+    
+    def save_cache(self) -> bool:
+        """
+        保存FSM到缓存
+        """
+        if not self.use_cache:
+            return False
+            
+        cache_file = get_cache_filename(self.data_path, self.app, self.task, self.cache_dir)
+        return save_fsm_cache(self, cache_file, self.data_hash)
+    
+    def clear_cache(self) -> bool:
+        """
+        清除当前FSM的缓存
+        """
+        cache_file = get_cache_filename(self.data_path, self.app, self.task, self.cache_dir)
+        try:
+            if os.path.exists(cache_file):
+                os.remove(cache_file)
+                print(f"已清除缓存: {cache_file}")
+                return True
+        except Exception as e:
+            print(f"清除缓存失败: {e}")
+        return False
+
     # ---------- I/O ----------
 
     def save_traces(self):
@@ -491,14 +750,17 @@ def build_AppFSM(app: str, task: str, data_path: str) -> AppFSM:
     构建 AppFSM 的便捷函数
     """ 
     data_path = os.path.join(data_path,"rawdata")
-    fsm = AppFSM(app, task, data_path, is_init=True)
+    fsm = AppFSM(app, task, data_path, is_init=True,use_cache=False)
+    fsm.save_cache()
     return fsm  
 
-def quick_build_appfsm(app: str, task: str, data_path: str) -> AppFSM:
+def quick_build_AppFSM(app: str, task: str, data_path: str) -> AppFSM:
     """
     快速构建 AppFSM 的便捷函数（仅解析，不聚簇、不归约）
     """
-    pass
+    data_path = os.path.join(data_path,"rawdata")
+    fsm = AppFSM(app, task, data_path, is_init=True,use_cache=True)
+    return fsm  
 
 
 # ----------------------------
@@ -506,29 +768,48 @@ def quick_build_appfsm(app: str, task: str, data_path: str) -> AppFSM:
 # ----------------------------
 
 if __name__ == "__main__":
-    # 示例：改成你的实际路径
-    # data_path 指向“应用父目录”，不要把 app 拼进去
-    data_path = r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/data"
-    app = "美团"
-    task = "type1"
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
+        alldata = json.load(f)
 
-    fsm = build_AppFSM(app, task, data_path)
-    fsm.save_traces()
-    import glob
-    cands = glob.glob(os.path.join(data_path, app, task, "*", "actions.json"))
-    actions_path = sorted(cands)[0] if cands else None
+    datapath = '/Users/fengyunfei/Desktop/mobiagent/MobiBench/data'
+    for app in alldata.keys():
+        for tasktype in alldata[app]:
+            #tasklist = get_tasks(app, tasktype)
+           
+            fsm = build_AppFSM(app=app, task=tasktype, data_path=datapath)
+            from MobiBench.utils.score_proc import save_env_result
+            save_env_result(
+                app=app,
+                task=tasktype,
+                fsm=fsm,
+                savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/runs/dev/env",
+            )
+            # 让 FSM 内部的 max_op_times 和 CLI 一致
+    # fsm.save_traces() 
+    # import glob
+    # cands = glob.glob(os.path.join(data_path, app, task, "*", "actions.json"))
+    # actions_path = sorted(cands)[0] if cands else None
 
-    if actions_path and os.path.isfile(actions_path):
-        actions = loadactions(actions_path)
-        fsm.save_traces()  # 输出 fsm_traces.json（与 parsedata.py 输出结构一致）
+    # if actions_path and os.path.isfile(actions_path):
+    #     actions = loadactions(actions_path)
+            
+            # 让 FSM 内部的 max_op_times 和 CLI 一致
+    # fsm.save_traces()
+    # import glob
+    # cands = glob.glob(os.path.join(data_path, app, task, "*", "actions.json"))
+    # actions_path = sorted(cands)[0] if cands else None
 
-        for a in actions:
-            st = fsm.action(a)
-            print(f"action: {a}, state: {st.img_path} {st.cluster_class}")
-            if getattr(st, "cluster_class", None) == "Done":
-                print("task done!")
-                break
-    else:
-        # 若未指定某条轨迹，至少保存一次解析到的多条轨迹
-        fsm.save_traces()
-        print("No specific actions.json for replay; saved aggregated traces instead.")
+    # if actions_path and os.path.isfile(actions_path):
+    #     actions = loadactions(actions_path)
+    #     fsm.save_traces()  # 输出 fsm_traces.json（与 parsedata.py 输出结构一致）
+
+    #     for a in actions:
+    #         st = fsm.action(a)
+    #         print(f"action: {a}, state: {st.img_path} {st.cluster_class}")
+    #         if getattr(st, "cluster_class", None) == "Done":
+    #             print("task done!")
+    #             break
+    # else:
+    #     # 若未指定某条轨迹，至少保存一次解析到的多条轨迹
+    #     fsm.save_traces()
+    #     print("No specific actions.json for replay; saved aggregated traces instead.")
