@@ -1,0 +1,31 @@
+[
+  {
+    "step": 1,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 547,
+      "position_y": 280
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg"
+  },
+  {
+    "step": 2,
+    "action_type": "input",
+    "action_params": {
+      "text": "麦当劳"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/6.jpg"
+  },
+  {
+    "step": 3,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 1036,
+      "position_y": 2283
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/6.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/8/6.jpg"
+  }
+]

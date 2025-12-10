@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 412,
+      "position_y": 1416
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/3.jpg"
+  },
+  {
+    "step": 2,
+    "action_type": "input",
+    "action_params": {
+      "text": "龙湖闵行天街"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/5.jpg"
+  },
+  {
+    "step": 3,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 312,
+      "position_y": 338
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/7.jpg"
+  },
+  {
+    "step": 4,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 901,
+      "position_y": 2303
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/7.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/9.jpg"
+  },
+  {
+    "step": 5,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 755,
+      "position_y": 2279
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/9.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/10.jpg"
+  }
+]

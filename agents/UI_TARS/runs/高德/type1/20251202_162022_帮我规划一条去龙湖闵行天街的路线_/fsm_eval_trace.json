@@ -1,0 +1,92 @@
+{
+  "instruction": "帮我规划一条去龙湖闵行天街的路线。",
+  "app": "高德",
+  "task": "type1",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步当然是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。",
+      "raw_output": "Thought: 我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步当然是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。\nAction: click(start_box='(417,1421)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 412,
+        "position_y": 1416
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步就是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。",
+      "raw_output": "Thought: 我注意到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步就是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。\nAction: click(start_box='(417,1421)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 412,
+        "position_y": 1416
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步就是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。",
+      "raw_output": "Thought: 我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步就是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。\nAction: click(start_box='(417,1421)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 412,
+        "position_y": 1416
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步就是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。",
+      "raw_output": "Thought: 我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步就是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。\nAction: click(start_box='(417,1421)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 412,
+        "position_y": 1416
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到搜索框就在页面底部，上面写着\"查找地点、公交、地铁\"。要开始规划路线，第一步当然是要告诉系统我想去的地方。让我点击这个搜索框，输入龙湖闵行天街作为目的地。",
+      "raw_output": "Thought: 我注意到搜索框就在页面底部，上面写着\"查找地点、公交、地铁\"。要开始规划路线，第一步当然是要告诉系统我想去的地方。让我点击这个搜索框，输入龙湖闵行天街作为目的地。\nAction: click(start_box='(417,1421)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 412,
+        "position_y": 1416
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步就是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。",
+      "raw_output": "Thought: 我看到页面底部有个搜索框，上面写着\"查找地点、公交、地铁\"。要规划去龙湖闵行天街的路线，第一步就是要告诉系统我想去的地方。让我点击这个搜索框，输入目的地吧。\nAction: click(start_box='(417,1421)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 412,
+        "position_y": 1416
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type1/9/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

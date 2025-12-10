@@ -1,9 +1,0 @@
-[
-  {
-    "step": 1,
-    "action_type": "done",
-    "action_params": {},
-    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type8/1/1.jpg",
-    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type8/1/1.jpg"
-  }
-]

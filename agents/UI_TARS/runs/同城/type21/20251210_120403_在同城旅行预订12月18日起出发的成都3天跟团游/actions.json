@@ -1,0 +1,62 @@
+[
+  {
+    "step": 1,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 426,
+      "position_y": 219
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg"
+  },
+  {
+    "step": 2,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 169,
+      "position_y": 341
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg"
+  },
+  {
+    "step": 3,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 397,
+      "position_y": 219
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg"
+  },
+  {
+    "step": 4,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 426,
+      "position_y": 219
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg"
+  },
+  {
+    "step": 5,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 426,
+      "position_y": 219
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg"
+  },
+  {
+    "step": 6,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 370,
+      "position_y": 219
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg"
+  }
+]

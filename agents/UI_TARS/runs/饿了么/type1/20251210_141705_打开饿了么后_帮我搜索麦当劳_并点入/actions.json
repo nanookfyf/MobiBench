@@ -1,0 +1,42 @@
+[
+  {
+    "step": 1,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 547,
+      "position_y": 282
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg"
+  },
+  {
+    "step": 2,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 547,
+      "position_y": 170
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg"
+  },
+  {
+    "step": 3,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 547,
+      "position_y": 170
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg"
+  },
+  {
+    "step": 4,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 1033,
+      "position_y": 170
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/4.jpg"
+  }
+]

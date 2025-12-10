@@ -1,0 +1,133 @@
+{
+  "instruction": "打开美团APP，点击首页搜索框，输入三米粥铺，并点击搜索。在搜索结果中选择三米粥铺（宜山路）并点击进入商铺页面。",
+  "app": "美团",
+  "task": "type1",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里现在显示的是\"良品粥铺\"，这可不是我们要找的。要完成任务，得先把这个清掉，然后输入\"三米粥铺\"。让我点击一下搜索框，把光标放进去，准备输入新的内容。",
+      "raw_output": "Thought: 我看到搜索框里现在显示的是\"良品粥铺\"，这可不是我们要找的。要完成任务，得先把这个清掉，然后输入\"三米粥铺\"。让我点击一下搜索框，把光标放进去，准备输入新的内容。\nAction: click(start_box='(513,293)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 511,
+        "position_y": 294
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "看来搜索框里还留着\"良品粥铺\"这几个字，得先把它清掉。我注意到搜索框右边有个删除按钮，点击它就能一键清除当前内容，这样就可以为输入\"三米粥铺\"做好准备了。",
+      "raw_output": "Thought: 看来搜索框里还留着\"良品粥铺\"这几个字，得先把它清掉。我注意到搜索框右边有个删除按钮，点击它就能一键清除当前内容，这样就可以为输入\"三米粥铺\"做好准备了。\nAction: click(start_box='(1115,2199)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 2207
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "搜索框已经清空了，现在我需要输入\"三米粥铺\"。看到键盘已经弹出来了，正好可以直接开始输入。输入完成后，我就可以点击搜索按钮，开始寻找这家店了。",
+      "raw_output": "Thought: 搜索框已经清空了，现在我需要输入\"三米粥铺\"。看到键盘已经弹出来了，正好可以直接开始输入。输入完成后，我就可以点击搜索按钮，开始寻找这家店了。\nAction: type(content='三米粥铺')",
+      "action_type": "input",
+      "action_params": {
+        "text": "三米粥铺"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "new_label": "inputpage"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "prev_label": "inputpage",
+      "thought": "搜索结果已经出来了，我看到\"三米粥铺(宜山路店)\"就在列表的最上方。这正是我们要找的那家店，评分4.7分，距离825米，看起来很合适。现在我需要点击这个搜索结果，进入具体的店铺页面看看。",
+      "raw_output": "Thought: 搜索结果已经出来了，我看到\"三米粥铺(宜山路店)\"就在列表的最上方。这正是我们要找的那家店，评分4.7分，距离825米，看起来很合适。现在我需要点击这个搜索结果，进入具体的店铺页面看看。\nAction: click(start_box='(341,471)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 339,
+        "position_y": 472
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "new_label": "inputpage"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "prev_label": "inputpage",
+      "thought": "搜索结果已经展示在我面前了，我看到\"三米粥铺(宜山路店)\"就在最上方。这家店评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。",
+      "raw_output": "Thought: 搜索结果已经展示在我面前了，我看到\"三米粥铺(宜山路店)\"就在最上方。这家店评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。\nAction: click(start_box='(341,471)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 339,
+        "position_y": 472
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "new_label": "inputpage"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "prev_label": "inputpage",
+      "thought": "搜索结果已经出来了，我看到\"三米粥铺(宜山路店)\"就在最上方。评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。",
+      "raw_output": "Thought: 搜索结果已经出来了，我看到\"三米粥铺(宜山路店)\"就在最上方。评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。\nAction: click(start_box='(341,471)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 339,
+        "position_y": 472
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "new_label": "inputpage"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "prev_label": "inputpage",
+      "thought": "搜索结果已经出来了，我看到\"三米粥铺(宜山路店)\"就在最上方。评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。",
+      "raw_output": "Thought: 搜索结果已经出来了，我看到\"三米粥铺(宜山路店)\"就在最上方。评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。\nAction: click(start_box='(341,471)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 339,
+        "position_y": 472
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "new_label": "inputpage"
+    },
+    {
+      "step": 8,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "prev_label": "inputpage",
+      "thought": "搜索结果已经出来了，我看到\"三米粥铺(宜山路店)\"就在最上方。评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。",
+      "raw_output": "Thought: 搜索结果已经出来了，我看到\"三米粥铺(宜山路店)\"就在最上方。评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。\nAction: click(start_box='(341,471)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 339,
+        "position_y": 472
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "new_label": "inputpage"
+    },
+    {
+      "step": 9,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "prev_label": "inputpage",
+      "thought": "搜索结果已经展示在我面前了，我看到\"三米粥铺(宜山路店)\"就在最上方。评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。",
+      "raw_output": "Thought: 搜索结果已经展示在我面前了，我看到\"三米粥铺(宜山路店)\"就在最上方。评分4.7分，距离825米，正是我们要找的那一家。现在我只需要点击这个搜索结果，就能进入店铺的详细页面了。\nAction: click(start_box='(341,471)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 339,
+        "position_y": 472
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type1/1/4.jpg",
+      "new_label": "inputpage"
+    }
+  ]
+}

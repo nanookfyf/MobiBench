@@ -1,0 +1,91 @@
+{
+  "instruction": "在携程查找北京12月24-25日300-400元价位的酒店",
+  "app": "携程",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到携程首页的搜索栏里已经默认显示\"北京的酒店\"，这正是我们需要的起点。要开始搜索特定日期和价格区间的酒店，我得先点击这个搜索框，让它变成可编辑状态。这样我就能输入更具体的搜索条件了。",
+      "raw_output": "Thought: 我看到携程首页的搜索栏里已经默认显示\"北京的酒店\"，这正是我们需要的起点。要开始搜索特定日期和价格区间的酒店，我得先点击这个搜索框，让它变成可编辑状态。这样我就能输入更具体的搜索条件了。\nAction: click(start_box='(524,908)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 522,
+        "position_y": 911
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到搜索框里已经默认显示\"北京的酒店\"了，这正是我们开始搜索的起点。要找到特定日期和价格区间的酒店，我得先激活这个搜索框。让我点击一下搜索框，这样就能输入更详细的搜索条件了。",
+      "raw_output": "Thought: 我注意到搜索框里已经默认显示\"北京的酒店\"了，这正是我们开始搜索的起点。要找到特定日期和价格区间的酒店，我得先激活这个搜索框。让我点击一下搜索框，这样就能输入更详细的搜索条件了。\nAction: click(start_box='(524,908)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 522,
+        "position_y": 911
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里已经显示\"北京的酒店\"了，这正是我们想要的。不过要找到特定日期和价格区间的酒店，我得先点击这个搜索框，让它变成可编辑状态。这样我就能输入更详细的搜索条件了。",
+      "raw_output": "Thought: 我看到搜索框里已经显示\"北京的酒店\"了，这正是我们想要的。不过要找到特定日期和价格区间的酒店，我得先点击这个搜索框，让它变成可编辑状态。这样我就能输入更详细的搜索条件了。\nAction: click(start_box='(349,900)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 347,
+        "position_y": 903
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里已经显示\"北京的酒店\"了，这正是我们想要的。不过要找到特定日期和价格区间的酒店，我得先点击这个搜索框，让它变成可编辑状态。这样我就能输入更详细的搜索条件了。",
+      "raw_output": "Thought: 我看到搜索框里已经显示\"北京的酒店\"了，这正是我们想要的。不过要找到特定日期和价格区间的酒店，我得先点击这个搜索框，让它变成可编辑状态。这样我就能输入更详细的搜索条件了。\nAction: click(start_box='(349,900)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 347,
+        "position_y": 903
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到搜索框里已经显示\"北京的酒店\"了，这正是我们想要的。不过要找到特定日期和价格区间的酒店，我得先点击这个搜索框，让它变成可编辑状态。这样我就能输入更详细的搜索条件了。",
+      "raw_output": "Thought: 我注意到搜索框里已经显示\"北京的酒店\"了，这正是我们想要的。不过要找到特定日期和价格区间的酒店，我得先点击这个搜索框，让它变成可编辑状态。这样我就能输入更详细的搜索条件了。\nAction: click(start_box='(349,900)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 347,
+        "position_y": 903
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "看来搜索框已经准备就绪了，我得把\"北京12月24-25日300-400元\"这个搜索条件输进去。这样系统就能帮我们筛选出符合预算和时间要求的酒店了。让我开始输入吧。",
+      "raw_output": "Thought: 看来搜索框已经准备就绪了，我得把\"北京12月24-25日300-400元\"这个搜索条件输进去。这样系统就能帮我们筛选出符合预算和时间要求的酒店了。让我开始输入吧。\nAction: type(content='北京12月24-25日300-400元')",
+      "action_type": "input",
+      "action_params": {
+        "text": "北京12月24-25日300-400元"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

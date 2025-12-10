@@ -1,0 +1,92 @@
+{
+  "instruction": "在同城旅行预订12月18日起出发的成都3天跟团游",
+  "app": "同城",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面顶部有个搜索框，正好可以用来查找成都的跟团游。让我先点击一下搜索框，这样就能输入关键词了。这是开始预订旅程的第一步。",
+      "raw_output": "Thought: 我看到页面顶部有个搜索框，正好可以用来查找成都的跟团游。让我先点击一下搜索框，这样就能输入关键词了。这是开始预订旅程的第一步。\nAction: click(start_box='(428,219)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 426,
+        "position_y": 219
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到页面顶部有个\"成都跟团游\"的选项，这正是我需要的入口。点击它应该能直接带我进入成都跟团游的专门页面，这样就不用再在搜索框里输入了。让我先点击这个选项，看看里面都有什么具体的旅游产品。",
+      "raw_output": "Thought: 我注意到页面顶部有个\"成都跟团游\"的选项，这正是我需要的入口。点击它应该能直接带我进入成都跟团游的专门页面，这样就不用再在搜索框里输入了。让我先点击这个选项，看看里面都有什么具体的旅游产品。\nAction: click(start_box='(170,340)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 169,
+        "position_y": 341
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面顶部有个搜索框，正好可以用来查找成都的跟团游。让我先点击一下搜索框，这样就能输入关键词了。这是开始预订旅程的第一步。",
+      "raw_output": "Thought: 我看到页面顶部有个搜索框，正好可以用来查找成都的跟团游。让我先点击一下搜索框，这样就能输入关键词了。这是开始预订旅程的第一步。\nAction: click(start_box='(399,219)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 397,
+        "position_y": 219
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面顶部有个搜索框，正好可以用来查找成都的跟团游。让我先点击一下搜索框，这样就能输入关键词了。这是开始预订旅程的第一步。",
+      "raw_output": "Thought: 我看到页面顶部有个搜索框，正好可以用来查找成都的跟团游。让我先点击一下搜索框，这样就能输入关键词了。这是开始预订旅程的第一步。\nAction: click(start_box='(428,219)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 426,
+        "position_y": 219
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到页面顶部有个搜索框，这正是我需要的。虽然之前尝试过几次，但这次我要直接在这里输入\"成都跟团游\"，这样应该能更快地找到合适的旅游产品。让我先点击这个搜索框开始输入吧。",
+      "raw_output": "Thought: 我注意到页面顶部有个搜索框，这正是我需要的。虽然之前尝试过几次，但这次我要直接在这里输入\"成都跟团游\"，这样应该能更快地找到合适的旅游产品。让我先点击这个搜索框开始输入吧。\nAction: click(start_box='(428,219)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 426,
+        "position_y": 219
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里已经输入了\"武汉到成都的机票\"，这显然不是我想要的。要预订成都跟团游，得先把这个错误的搜索内容清掉。让我点击一下搜索框，把光标定位到文字末尾，这样就能删除现有内容，为输入正确的关键词做准备。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"武汉到成都的机票\"，这显然不是我想要的。要预订成都跟团游，得先把这个错误的搜索内容清掉。让我点击一下搜索框，把光标定位到文字末尾，这样就能删除现有内容，为输入正确的关键词做准备。\nAction: click(start_box='(372,219)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 370,
+        "position_y": 219
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/同城/type21/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

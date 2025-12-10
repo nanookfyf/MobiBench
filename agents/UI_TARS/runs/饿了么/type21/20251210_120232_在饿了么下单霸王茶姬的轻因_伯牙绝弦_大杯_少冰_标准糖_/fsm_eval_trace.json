@@ -1,0 +1,92 @@
+{
+  "instruction": "在饿了么下单霸王茶姬的轻因·伯牙绝弦（大杯，少冰，标准糖）",
+  "app": "饿了么",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面顶部有个搜索框，要找到霸王茶姬的饮品，第一步当然是要搜索了。让我点击一下这个搜索框，输入关键词，这样就能找到想要的饮品了。",
+      "raw_output": "Thought: 我看到页面顶部有个搜索框，要找到霸王茶姬的饮品，第一步当然是要搜索了。让我点击一下这个搜索框，输入关键词，这样就能找到想要的饮品了。\nAction: click(start_box='(502,317)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 500,
+        "position_y": 318
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "搜索框里已经输入了\"霸王茶姬\"，现在我需要点击右边那个橙色的搜索按钮，这样就能看到相关的饮品列表了。找到轻因·伯牙绝弦这个饮品应该不难，毕竟它是个比较特别的名字。",
+      "raw_output": "Thought: 搜索框里已经输入了\"霸王茶姬\"，现在我需要点击右边那个橙色的搜索按钮，这样就能看到相关的饮品列表了。找到轻因·伯牙绝弦这个饮品应该不难，毕竟它是个比较特别的名字。\nAction: click(start_box='(1051,317)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1047,
+        "position_y": 318
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到搜索框里已经输入了\"霸王茶姬\"，但搜索结果似乎不太理想。看来需要重新点击一下搜索框，把关键词再输入一遍，这样应该能找到我要的饮品。",
+      "raw_output": "Thought: 我注意到搜索框里已经输入了\"霸王茶姬\"，但搜索结果似乎不太理想。看来需要重新点击一下搜索框，把关键词再输入一遍，这样应该能找到我要的饮品。\nAction: click(start_box='(502,317)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 500,
+        "position_y": 318
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "搜索框里已经输入了\"霸王茶姬\"，但结果不太理想。我得重新点击一下搜索框，把关键词再输入一遍。毕竟要找到轻因·伯牙绝弦这个饮品，得先让系统知道我要找什么。",
+      "raw_output": "Thought: 搜索框里已经输入了\"霸王茶姬\"，但结果不太理想。我得重新点击一下搜索框，把关键词再输入一遍。毕竟要找到轻因·伯牙绝弦这个饮品，得先让系统知道我要找什么。\nAction: click(start_box='(502,317)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 500,
+        "position_y": 318
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "看来搜索框里已经输入了\"霸王茶姬\"，但搜索结果不太理想。我得重新点击一下搜索框，把关键词再输入一遍。毕竟要找到轻因·伯牙绝弦这个饮品，得先让系统知道我要找什么。",
+      "raw_output": "Thought: 看来搜索框里已经输入了\"霸王茶姬\"，但搜索结果不太理想。我得重新点击一下搜索框，把关键词再输入一遍。毕竟要找到轻因·伯牙绝弦这个饮品，得先让系统知道我要找什么。\nAction: click(start_box='(502,317)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 500,
+        "position_y": 318
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到搜索框里已经输入了\"霸王茶姬\"，但搜索结果不太理想。我得重新点击一下搜索框，把关键词再输入一遍。毕竟要找到轻因·伯牙绝弦这个饮品，得先让系统知道我要找什么。",
+      "raw_output": "Thought: 我注意到搜索框里已经输入了\"霸王茶姬\"，但搜索结果不太理想。我得重新点击一下搜索框，把关键词再输入一遍。毕竟要找到轻因·伯牙绝弦这个饮品，得先让系统知道我要找什么。\nAction: click(start_box='(502,317)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 500,
+        "position_y": 318
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

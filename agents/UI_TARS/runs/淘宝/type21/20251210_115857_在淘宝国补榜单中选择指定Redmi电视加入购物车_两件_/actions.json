@@ -1,0 +1,72 @@
+[
+  {
+    "step": 1,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 638,
+      "position_y": 170
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg"
+  },
+  {
+    "step": 2,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 546,
+      "position_y": 1493
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg"
+  },
+  {
+    "step": 3,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 546,
+      "position_y": 1493
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg"
+  },
+  {
+    "step": 4,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 544,
+      "position_y": 1493
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg"
+  },
+  {
+    "step": 5,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 544,
+      "position_y": 1493
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg"
+  },
+  {
+    "step": 6,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 544,
+      "position_y": 1493
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg"
+  },
+  {
+    "step": 7,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 544,
+      "position_y": 1493
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg"
+  }
+]

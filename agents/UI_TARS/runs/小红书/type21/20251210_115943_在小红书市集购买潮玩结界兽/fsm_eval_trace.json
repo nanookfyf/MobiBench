@@ -1,0 +1,50 @@
+{
+  "instruction": "在小红书市集购买潮玩结界兽",
+  "app": "小红书",
+  "task": "type21",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到底部导航栏有\"市集\"这个选项，这正是我需要的入口。要购买潮玩结界兽，得先进入市集页面看看。让我点击一下这个\"市集\"按钮，开始我的购物之旅。",
+      "raw_output": "Thought: 我看到底部导航栏有\"市集\"这个选项，这正是我需要的入口。要购买潮玩结界兽，得先进入市集页面看看。让我点击一下这个\"市集\"按钮，开始我的购物之旅。\nAction: click(start_box='(351,2535)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 349,
+        "position_y": 2544
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我看到顶部导航栏有\"潮玩\"这个分类，这正是我要找的。既然要买结界兽，那肯定得先进入这个分类页面看看。让我点击一下\"潮玩\"这个选项，开始我的搜寻之旅。",
+      "raw_output": "Thought: 我看到顶部导航栏有\"潮玩\"这个分类，这正是我要找的。既然要买结界兽，那肯定得先进入这个分类页面看看。让我点击一下\"潮玩\"这个选项，开始我的搜寻之旅。\nAction: click(start_box='(944,337)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 940,
+        "position_y": 338
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type21/1/3.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type21/1/3.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我在浏览商品列表时，发现页面顶部的分类导航栏中有个\"结界兽\"的选项。这不就是我要找的吗？既然要买这个潮玩，那我得先点击这个选项，看看都有哪些款式和价格。",
+      "raw_output": "Thought: 我在浏览商品列表时，发现页面顶部的分类导航栏中有个\"结界兽\"的选项。这不就是我要找的吗？既然要买这个潮玩，那我得先点击这个选项，看看都有哪些款式和价格。\nAction: click(start_box='(141,544)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 140,
+        "position_y": 546
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type21/1/4.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

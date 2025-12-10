@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "position_x": 534,
+    "position_y": 211,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 510,
+    "position_y": 211,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 510,
+    "position_y": 211,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 510,
+    "position_y": 211,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 510,
+    "position_y": 211,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg"
+  }
+]

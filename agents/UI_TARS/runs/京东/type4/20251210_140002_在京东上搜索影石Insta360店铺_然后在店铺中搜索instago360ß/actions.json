@@ -1,0 +1,72 @@
+[
+  {
+    "step": 1,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 1081,
+      "position_y": 326
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 2,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 1056,
+      "position_y": 203
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 3,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 1056,
+      "position_y": 203
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 4,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 1056,
+      "position_y": 203
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 5,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 1056,
+      "position_y": 203
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 6,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 500,
+      "position_y": 202
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 7,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 500,
+      "position_y": 202
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  }
+]

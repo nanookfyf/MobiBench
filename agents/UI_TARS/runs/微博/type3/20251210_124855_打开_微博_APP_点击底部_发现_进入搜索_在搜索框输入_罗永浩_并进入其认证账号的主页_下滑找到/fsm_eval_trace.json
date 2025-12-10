@@ -1,0 +1,147 @@
+{
+  "instruction": "打开“微博”APP，点击底部“发现”进入搜索，在搜索框输入“罗永浩”并进入其认证账号的主页，下滑找到他最新发布的第一条微博，点击评论图标，在输入框内输入“KKSK”并发送。",
+  "app": "微博",
+  "task": "type3",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/7/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到微博首页已经加载完成了，底部导航栏上有几个选项。要完成搜索罗永浩的任务，我得先点击\"发现\"这个选项。它就在底部导航栏中间偏左的位置，点击它就能进入搜索页面了。",
+      "raw_output": "Thought: 我看到微博首页已经加载完成了，底部导航栏上有几个选项。要完成搜索罗永浩的任务，我得先点击\"发现\"这个选项。它就在底部导航栏中间偏左的位置，点击它就能进入搜索页面了。\nAction: click(point='(602,2531)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 600,
+        "position_y": 2540
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/7/3.jpg",
+      "new_label": "search"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/7/3.jpg",
+      "prev_label": "search",
+      "thought": "我已经成功进入微博的搜索页面了。看到顶部那个搜索框了吗？就是显示\"大家正在搜\"的地方。现在我需要点击它，这样就能输入\"罗永浩\"进行搜索了。搜索框就在页面最上方，很容易找到。",
+      "raw_output": "Thought: 我已经成功进入微博的搜索页面了。看到顶部那个搜索框了吗？就是显示\"大家正在搜\"的地方。现在我需要点击它，这样就能输入\"罗永浩\"进行搜索了。搜索框就在页面最上方，很容易找到。\nAction: click(point='(524,191)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 522,
+        "position_y": 191
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/5/5.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/5/5.jpg",
+      "prev_label": "input1",
+      "thought": "看到搜索框已经激活了，光标在闪烁等待输入。接下来我要在这里输入\"罗永浩\"三个字，这样就能找到他的微博账号了。搜索框就在页面上方，输入完成后点击搜索按钮就能看到结果。",
+      "raw_output": "Thought: 看到搜索框已经激活了，光标在闪烁等待输入。接下来我要在这里输入\"罗永浩\"三个字，这样就能找到他的微博账号了。搜索框就在页面上方，输入完成后点击搜索按钮就能看到结果。\nAction: type(content='罗永浩')",
+      "action_type": "input",
+      "action_params": {
+        "text": "罗永浩"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/6.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/6.jpg",
+      "prev_label": "unlabeled",
+      "thought": "搜索结果已经出来了，我看到\"罗永浩的十字路口\"这个账号，认证标识和粉丝数都显示得很清楚。这应该就是我要找的账号了，让我点击进去看看他的主页。",
+      "raw_output": "Thought: 搜索结果已经出来了，我看到\"罗永浩的十字路口\"这个账号，认证标识和粉丝数都显示得很清楚。这应该就是我要找的账号了，让我点击进去看看他的主页。\nAction: click(start_box='(410,970)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 408,
+        "position_y": 973
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "prev_label": "result1",
+      "thought": "我已经找到了罗永浩的最新微博，现在需要进入评论区发表看法。看到这条音频内容下方有个评论图标，点击它就能打开评论框了。这样我就可以输入\"KKSK\"并发送评论了。",
+      "raw_output": "Thought: 我已经找到了罗永浩的最新微博，现在需要进入评论区发表看法。看到这条音频内容下方有个评论图标，点击它就能打开评论框了。这样我就可以输入\"KKSK\"并发送评论了。\nAction: click(start_box='(592,2145)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 590,
+        "position_y": 2153
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "prev_label": "result1",
+      "thought": "我看到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。",
+      "raw_output": "Thought: 我看到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。\nAction: click(start_box='(592,2145)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 590,
+        "position_y": 2153
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "prev_label": "result1",
+      "thought": "我看到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。",
+      "raw_output": "Thought: 我看到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。\nAction: click(start_box='(592,2145)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 590,
+        "position_y": 2153
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 8,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "prev_label": "result1",
+      "thought": "我注意到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。",
+      "raw_output": "Thought: 我注意到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。\nAction: click(start_box='(592,2145)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 590,
+        "position_y": 2153
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 9,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "prev_label": "result1",
+      "thought": "我看到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。",
+      "raw_output": "Thought: 我看到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。\nAction: click(start_box='(592,2145)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 590,
+        "position_y": 2153
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 10,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "prev_label": "result1",
+      "thought": "我看到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。",
+      "raw_output": "Thought: 我看到这条音频微博下方有77条评论，正好可以在这里发表我的看法。评论图标就在微博内容的下方，点击它就能打开评论框，让我输入\"KKSK\"了。\nAction: click(start_box='(592,2145)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 590,
+        "position_y": 2153
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+      "new_label": "result1"
+    }
+  ]
+}

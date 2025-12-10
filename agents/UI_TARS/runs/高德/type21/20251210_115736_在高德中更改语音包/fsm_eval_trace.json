@@ -1,0 +1,92 @@
+{
+  "instruction": "在高德中更改语音包",
+  "app": "高德",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到界面右下角有个\"我的\"按钮，这应该就是进入个人设置的入口了。要更改语音包的话，得先进到设置页面去，所以我现在要点击这个\"我的\"按钮。",
+      "raw_output": "Thought: 我看到界面右下角有个\"我的\"按钮，这应该就是进入个人设置的入口了。要更改语音包的话，得先进到设置页面去，所以我现在要点击这个\"我的\"按钮。\nAction: click(start_box='(1075,2534)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1071,
+        "position_y": 2543
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到界面右上角有个\"更多\"按钮，这应该就是通向设置页面的捷径。既然要更改语音包，那我得先点击这个按钮，看看里面都有哪些选项可以调整。",
+      "raw_output": "Thought: 我注意到界面右上角有个\"更多\"按钮，这应该就是通向设置页面的捷径。既然要更改语音包，那我得先点击这个按钮，看看里面都有哪些选项可以调整。\nAction: click(start_box='(1115,218)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 218
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我在主界面仔细观察了一下，发现右上角有个\"更多\"按钮，这应该就是通向设置页面的入口。要更换语音包的话，我得先点击这个按钮，看看里面都有哪些选项可以调整。",
+      "raw_output": "Thought: 我在主界面仔细观察了一下，发现右上角有个\"更多\"按钮，这应该就是通向设置页面的入口。要更换语音包的话，我得先点击这个按钮，看看里面都有哪些选项可以调整。\nAction: click(start_box='(1115,218)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 218
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我在主界面仔细观察了一下，发现右上角有个\"更多\"按钮，这应该就是通向设置页面的入口。要更换语音包的话，我得先点击这个按钮，看看里面都有哪些选项可以调整。",
+      "raw_output": "Thought: 我在主界面仔细观察了一下，发现右上角有个\"更多\"按钮，这应该就是通向设置页面的入口。要更换语音包的话，我得先点击这个按钮，看看里面都有哪些选项可以调整。\nAction: click(start_box='(1115,218)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 218
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我刚才在主界面点来点去都没找到设置入口，看来得换个思路了。既然要改语音包，那肯定得先进到设置页面才行。我注意到界面右下角有个\"我的\"按钮，这应该就是通向个人设置的入口，我得点击它试试看。",
+      "raw_output": "Thought: 我刚才在主界面点来点去都没找到设置入口，看来得换个思路了。既然要改语音包，那肯定得先进到设置页面才行。我注意到界面右下角有个\"我的\"按钮，这应该就是通向个人设置的入口，我得点击它试试看。\nAction: click(start_box='(1075,2534)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1071,
+        "position_y": 2543
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我在主界面仔细观察了一下，发现右上角有个\"更多\"按钮，这应该就是通向设置页面的入口。要更换语音包的话，我得先点击这个按钮，看看里面都有哪些选项可以调整。",
+      "raw_output": "Thought: 我在主界面仔细观察了一下，发现右上角有个\"更多\"按钮，这应该就是通向设置页面的入口。要更换语音包的话，我得先点击这个按钮，看看里面都有哪些选项可以调整。\nAction: click(start_box='(1115,218)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 218
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

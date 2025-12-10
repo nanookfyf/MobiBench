@@ -1,0 +1,49 @@
+{
+  "instruction": "打开“饿了么”APP，在首页顶部的商家搜索框内直接输入“麦当劳”并搜索，即可看到附近的门店列表。",
+  "app": "饿了么",
+  "task": "type1",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面顶部有个搜索框，里面写着\"墨竹寿司 | 小杨生煎\"。要搜索麦当劳的话，得先清空这个搜索框。让我点击一下搜索框，把里面的内容选中，这样就能直接输入新的内容了。",
+      "raw_output": "Thought: 我看到页面顶部有个搜索框，里面写着\"墨竹寿司 | 小杨生煎\"。要搜索麦当劳的话，得先清空这个搜索框。让我点击一下搜索框，把里面的内容选中，这样就能直接输入新的内容了。\nAction: click(start_box='(546,281)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 547,
+        "position_y": 280
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "prev_label": "input1",
+      "thought": "嗯，搜索框已经清空了，现在我需要输入\"麦当劳\"。看到键盘已经弹出来了，正好可以直接输入。输入完成后，只要点击右边那个蓝色的搜索按钮，就能看到附近的麦当劳门店了。",
+      "raw_output": "Thought: 嗯，搜索框已经清空了，现在我需要输入\"麦当劳\"。看到键盘已经弹出来了，正好可以直接输入。输入完成后，只要点击右边那个蓝色的搜索按钮，就能看到附近的麦当劳门店了。\nAction: type(content='麦当劳')",
+      "action_type": "input",
+      "action_params": {
+        "text": "麦当劳"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/6.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/15/6.jpg",
+      "prev_label": "result1",
+      "thought": "好了，搜索框里已经输入了\"麦当劳\"，我看到右边有个蓝色的搜索按钮，点击它就能看到附近的麦当劳门店列表了。这样就能完成任务要求的搜索操作。",
+      "raw_output": "Thought: 好了，搜索框里已经输入了\"麦当劳\"，我看到右边有个蓝色的搜索按钮，点击它就能看到附近的麦当劳门店列表了。这样就能完成任务要求的搜索操作。\nAction: click(start_box='(1033,2287)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1036,
+        "position_y": 2283
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/8/6.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

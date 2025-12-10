@@ -1,0 +1,76 @@
+[
+  {
+    "step": 1,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 585,
+      "position_y": 506
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/3.jpg"
+  },
+  {
+    "step": 2,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 585,
+      "position_y": 816
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg"
+  },
+  {
+    "step": 3,
+    "action_type": "swipe",
+    "action_params": {
+      "direction": "down"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg"
+  },
+  {
+    "step": 4,
+    "action_type": "swipe",
+    "action_params": {
+      "direction": "down"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg"
+  },
+  {
+    "step": 5,
+    "action_type": "swipe",
+    "action_params": {
+      "direction": "down"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg"
+  },
+  {
+    "step": 6,
+    "action_type": "swipe",
+    "action_params": {
+      "direction": "down"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg"
+  },
+  {
+    "step": 7,
+    "action_type": "swipe",
+    "action_params": {
+      "direction": "down"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg"
+  },
+  {
+    "step": 8,
+    "action_type": "swipe",
+    "action_params": {
+      "direction": "down"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type6/1/5.jpg"
+  }
+]

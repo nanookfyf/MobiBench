@@ -1,0 +1,106 @@
+{
+  "instruction": "打开美团APP，点击首页搜索框，输入上山喝茶(巴黎春天淮海路V店)，并点击搜索。在搜索结果中山喝茶(巴黎春天淮海路V店)并点击进入商铺页面。在商铺推荐页面中抢购一份经典拿铁三选一套餐",
+  "app": "美团",
+  "task": "type3",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里已经有\"chenle趁乐喝茶\"这个内容了，这显然不是我们要找的。要完成任务，我得先把这个清掉，然后输入\"上山喝茶(巴黎春天淮海路V店)\"。让我先点击一下搜索框，把现有内容删掉，重新开始。",
+      "raw_output": "Thought: 我看到搜索框里已经有\"chenle趁乐喝茶\"这个内容了，这显然不是我们要找的。要完成任务，我得先把这个清掉，然后输入\"上山喝茶(巴黎春天淮海路V店)\"。让我先点击一下搜索框，把现有内容删掉，重新开始。\nAction: click(start_box='(587,298)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 585,
+        "position_y": 299
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "prev_label": "input1",
+      "thought": "看来搜索框里还留着上一次的搜索内容，得先清理一下。我注意到搜索框右侧有个删除按钮，点击它就能清空当前输入，这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"了。",
+      "raw_output": "Thought: 看来搜索框里还留着上一次的搜索内容，得先清理一下。我注意到搜索框右侧有个删除按钮，点击它就能清空当前输入，这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"了。\nAction: click(start_box='(1115,2176)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 2184
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "prev_label": "input1",
+      "thought": "搜索框里还留着上一次的搜索内容，我得先把它清空。看到搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。",
+      "raw_output": "Thought: 搜索框里还留着上一次的搜索内容，我得先把它清空。看到搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。\nAction: click(start_box='(1115,2176)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 2184
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "prev_label": "input1",
+      "thought": "搜索框里还留着上一次的搜索内容，我得先把它清空。看到搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。",
+      "raw_output": "Thought: 搜索框里还留着上一次的搜索内容，我得先把它清空。看到搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。\nAction: click(start_box='(1115,2176)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 2184
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "prev_label": "input1",
+      "thought": "搜索框里还留着上一次的搜索内容，我得先把它清空。看到搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。",
+      "raw_output": "Thought: 搜索框里还留着上一次的搜索内容，我得先把它清空。看到搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。\nAction: click(start_box='(1115,2176)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 2184
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "prev_label": "input1",
+      "thought": "看来搜索框里还留着上一次的搜索内容，我得先把它清空。搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。",
+      "raw_output": "Thought: 看来搜索框里还留着上一次的搜索内容，我得先把它清空。搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。\nAction: click(start_box='(1115,2176)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 2184
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "prev_label": "input1",
+      "thought": "搜索框里还留着上一次的搜索内容，我得先把它清空。看到搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。",
+      "raw_output": "Thought: 搜索框里还留着上一次的搜索内容，我得先把它清空。看到搜索框右边有个删除按钮，点击它就能清除当前输入了。这样我就可以重新输入\"上山喝茶(巴黎春天淮海路V店)\"，继续完成任务。\nAction: click(start_box='(1115,2176)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1111,
+        "position_y": 2184
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type3/6/3.jpg",
+      "new_label": "input1"
+    }
+  ]
+}

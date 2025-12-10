@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "position_x": 1081,
+    "position_y": 326,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 1056,
+    "position_y": 203,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 1056,
+    "position_y": 203,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 1056,
+    "position_y": 203,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 1056,
+    "position_y": 203,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 500,
+    "position_y": 202,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  },
+  {
+    "step": 7,
+    "position_x": 500,
+    "position_y": 202,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4/4/3.jpg"
+  }
+]

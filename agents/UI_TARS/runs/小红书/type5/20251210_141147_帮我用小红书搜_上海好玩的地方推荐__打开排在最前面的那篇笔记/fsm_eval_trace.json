@@ -1,0 +1,50 @@
+{
+  "instruction": "帮我用小红书搜'上海好玩的地方推荐'，打开排在最前面的那篇笔记",
+  "app": "小红书",
+  "task": "type5",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type5/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面右上角有个搜索图标，这正是我需要的。要搜索上海好玩的地方，第一步当然是要点击这个搜索按钮，这样才能打开搜索界面开始输入关键词。",
+      "raw_output": "Thought: 我看到页面右上角有个搜索图标，这正是我需要的。要搜索上海好玩的地方，第一步当然是要点击这个搜索按钮，这样才能打开搜索界面开始输入关键词。\nAction: click(start_box='(1004,168)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 992,
+        "position_y": 167
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type5/1/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type5/1/3.jpg",
+      "prev_label": "input1",
+      "thought": "搜索框已经准备就绪了，我看到历史记录里正好有\"上海好玩的地方推荐\"这个关键词。与其重新输入一遍，不如直接点击历史记录中的这个选项，这样更快捷高效。",
+      "raw_output": "Thought: 搜索框已经准备就绪了，我看到历史记录里正好有\"上海好玩的地方推荐\"这个关键词。与其重新输入一遍，不如直接点击历史记录中的这个选项，这样更快捷高效。\nAction: click(start_box='(294,441)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 290,
+        "position_y": 439
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type5/1/5.jpg",
+      "new_label": "result"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type5/1/5.jpg",
+      "prev_label": "result",
+      "thought": "搜索结果已经出来了，我看到排在最前面的是一篇\"玩转上海\"的笔记，标题看起来很吸引人。这正是我要找的内容，让我点击进去看看里面的具体推荐。",
+      "raw_output": "Thought: 搜索结果已经出来了，我看到排在最前面的是一篇\"玩转上海\"的笔记，标题看起来很吸引人。这正是我要找的内容，让我点击进去看看里面的具体推荐。\nAction: click(start_box='(273,1675)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 270,
+        "position_y": 1669
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/小红书/type5/1/6.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

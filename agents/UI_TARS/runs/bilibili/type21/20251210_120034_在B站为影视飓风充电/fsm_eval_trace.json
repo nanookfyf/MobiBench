@@ -1,0 +1,91 @@
+{
+  "instruction": "在B站为影视飓风充电",
+  "app": "bilibili",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到顶部有个搜索框，正好可以用来找影视飓风。让我先点击一下搜索框，这样就能输入关键词了。毕竟要给影视飓风充电，得先找到它才行。",
+      "raw_output": "Thought: 我看到顶部有个搜索框，正好可以用来找影视飓风。让我先点击一下搜索框，这样就能输入关键词了。毕竟要给影视飓风充电，得先找到它才行。\nAction: click(start_box='(536,211)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 534,
+        "position_y": 211
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "看来搜索框已经准备就绪了，我得在这里输入\"影视飓风\"。毕竟要给这个UP主充电，第一步就是要找到他。搜索框就在眼前，我马上开始输入关键词。",
+      "raw_output": "Thought: 看来搜索框已经准备就绪了，我得在这里输入\"影视飓风\"。毕竟要给这个UP主充电，第一步就是要找到他。搜索框就在眼前，我马上开始输入关键词。\nAction: click(start_box='(512,211)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 510,
+        "position_y": 211
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我注意到搜索框里已经显示了\"知行课代表·4小时...\"，看来之前的输入没有成功。不过没关系，搜索框就在眼前，我再输入一次\"影视飓风\"就好了。毕竟要给这个UP主充电，第一步就是要确保能找到他。",
+      "raw_output": "Thought: 我注意到搜索框里已经显示了\"知行课代表·4小时...\"，看来之前的输入没有成功。不过没关系，搜索框就在眼前，我再输入一次\"影视飓风\"就好了。毕竟要给这个UP主充电，第一步就是要确保能找到他。\nAction: type(content='影视飓风')",
+      "action_type": "input",
+      "action_params": {
+        "text": "影视飓风"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "嗯，搜索框里现在显示的是\"知行课代表·4小时...\"，这显然不是我要找的内容。我得重新点击搜索框，把\"影视飓风\"输入进去，这样才能找到正确的UP主来完成充电任务。",
+      "raw_output": "Thought: 嗯，搜索框里现在显示的是\"知行课代表·4小时...\"，这显然不是我要找的内容。我得重新点击搜索框，把\"影视飓风\"输入进去，这样才能找到正确的UP主来完成充电任务。\nAction: click(start_box='(512,211)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 510,
+        "position_y": 211
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "看来搜索框里还留着\"知行课代表·4小时...\"这个内容，得先把它清掉。我先点击一下搜索框，把光标定位到那里，这样就能输入新的关键词了。毕竟要给影视飓风充电，得先找到他才行。",
+      "raw_output": "Thought: 看来搜索框里还留着\"知行课代表·4小时...\"这个内容，得先把它清掉。我先点击一下搜索框，把光标定位到那里，这样就能输入新的关键词了。毕竟要给影视飓风充电，得先找到他才行。\nAction: click(start_box='(512,211)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 510,
+        "position_y": 211
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "嗯，搜索框里还显示着\"知行课代表·4小时...\"，这可不行。我得先把这个清掉，才能输入\"影视飓风\"。让我点击一下搜索框，把光标定位到那里，这样就能开始新的搜索了。毕竟要给影视飓风充电，得先找到他不是吗？",
+      "raw_output": "Thought: 嗯，搜索框里还显示着\"知行课代表·4小时...\"，这可不行。我得先把这个清掉，才能输入\"影视飓风\"。让我点击一下搜索框，把光标定位到那里，这样就能开始新的搜索了。毕竟要给影视飓风充电，得先找到他不是吗？\nAction: click(start_box='(512,211)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 510,
+        "position_y": 211
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type21/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

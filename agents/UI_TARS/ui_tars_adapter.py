@@ -478,7 +478,7 @@ def main():
     datapath = args.data_root
     for app in alldata.keys():
         for tasktype in alldata[app]:
-            tasklist = get_tasks_1(app, tasktype)
+            tasklist = get_tasks(app, tasktype)
             logger.info("构建 FSM 中…")
             fsm = build_AppFSM(app=app, task=tasktype, data_path=datapath)
             # 让 FSM 内部的 max_op_times 和 CLI 一致

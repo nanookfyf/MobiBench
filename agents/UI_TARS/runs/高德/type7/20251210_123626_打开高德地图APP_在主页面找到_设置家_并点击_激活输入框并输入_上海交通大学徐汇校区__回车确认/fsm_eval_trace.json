@@ -1,0 +1,49 @@
+{
+  "instruction": "打开高德地图APP。在主页面找到“设置家”并点击，激活输入框并输入“上海交通大学徐汇校区”。回车确认",
+  "app": "高德",
+  "task": "type7",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到高德地图的主界面已经完全加载出来了，底部导航栏清晰可见。要完成任务的第一步，我需要找到并点击\"设置家\"这个选项。它就在左下角，带着一个房子形状的图标，很容易找到。让我先点击它进入设置界面。",
+      "raw_output": "Thought: 我看到高德地图的主界面已经完全加载出来了，底部导航栏清晰可见。要完成任务的第一步，我需要找到并点击\"设置家\"这个选项。它就在左下角，带着一个房子形状的图标，很容易找到。让我先点击它进入设置界面。\nAction: click(start_box='(188,2413)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 187,
+        "position_y": 2422
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/1/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/1/3.jpg",
+      "prev_label": "input1",
+      "thought": "我看到输入框已经准备就绪了，光标正在闪烁等待输入。现在我要把\"上海交通大学徐汇校区\"这个地址输入进去，这样就能完成地址的设置。输入框就在页面中间，显示着\"请输入家庭住址\"的提示文字。",
+      "raw_output": "Thought: 我看到输入框已经准备就绪了，光标正在闪烁等待输入。现在我要把\"上海交通大学徐汇校区\"这个地址输入进去，这样就能完成地址的设置。输入框就在页面中间，显示着\"请输入家庭住址\"的提示文字。\nAction: type(content='上海交通大学徐汇校区')",
+      "action_type": "input",
+      "action_params": {
+        "text": "上海交通大学徐汇校区"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/1/5.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/1/5.jpg",
+      "prev_label": "input2",
+      "thought": "好了，地址已经输入完毕了。我看到输入框里显示着\"上海交通大学徐汇校区\"，现在只需要轻轻按下回车键，就能确认这个地址了。这样设置就完成了，地图就会自动定位到这个位置。",
+      "raw_output": "Thought: 好了，地址已经输入完毕了。我看到输入框里显示着\"上海交通大学徐汇校区\"，现在只需要轻轻按下回车键，就能确认这个地址了。这样设置就完成了，地图就会自动定位到这个位置。\nAction: click(start_box='(1089,2358)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1085,
+        "position_y": 2366
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type7/1/6.jpg",
+      "new_label": "unlabeled"
+    }
+  ]
+}

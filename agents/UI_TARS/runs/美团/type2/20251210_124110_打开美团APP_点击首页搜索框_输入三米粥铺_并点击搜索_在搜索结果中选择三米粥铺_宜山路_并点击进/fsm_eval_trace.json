@@ -1,0 +1,92 @@
+{
+  "instruction": "打开美团APP，点击首页搜索框，输入三米粥铺，并点击搜索。在搜索结果中选择三米粥铺（宜山路）并点击进入商铺页面。在商铺页面点击上方搜索按钮，输入鸡汤小馄饨，添加一份 鸡汤小馄饨15个",
+  "app": "美团",
+  "task": "type2",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里已经输入了\"三米粥铺\"，现在就差最后一步了。搜索框右边有个黄色的搜索按钮，点击它就能看到相关的搜索结果。让我先完成这一步，看看能找到哪家三米粥铺。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"三米粥铺\"，现在就差最后一步了。搜索框右边有个黄色的搜索按钮，点击它就能看到相关的搜索结果。让我先完成这一步，看看能找到哪家三米粥铺。\nAction: click(point='(954,300)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 950,
+        "position_y": 301
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里已经输入了\"三米粥铺\"，现在就差最后一步了。搜索框右边有个黄色的搜索按钮，点击它就能看到相关的搜索结果。让我先完成这一步，看看能找到哪家三米粥铺。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"三米粥铺\"，现在就差最后一步了。搜索框右边有个黄色的搜索按钮，点击它就能看到相关的搜索结果。让我先完成这一步，看看能找到哪家三米粥铺。\nAction: click(point='(954,300)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 950,
+        "position_y": 301
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到搜索框里已经输入了\"三米粥铺\"，现在就差最后一步了。搜索框右边有个黄色的搜索按钮，点击它就能看到相关的搜索结果。让我先完成这一步，看看能找到哪家三米粥铺。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"三米粥铺\"，现在就差最后一步了。搜索框右边有个黄色的搜索按钮，点击它就能看到相关的搜索结果。让我先完成这一步，看看能找到哪家三米粥铺。\nAction: click(point='(955,300)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 951,
+        "position_y": 301
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "好了，搜索框里已经输入了\"三米粥铺\"，现在就差最后一步了。我注意到搜索框右边有个醒目的黄色搜索按钮，点击它就能看到相关的搜索结果。让我先完成这一步，看看能找到哪家三米粥铺。",
+      "raw_output": "Thought: 好了，搜索框里已经输入了\"三米粥铺\"，现在就差最后一步了。我注意到搜索框右边有个醒目的黄色搜索按钮，点击它就能看到相关的搜索结果。让我先完成这一步，看看能找到哪家三米粥铺。\nAction: click(point='(954,300)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 950,
+        "position_y": 301
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "好了，搜索框里已经输入了\"三米粥铺\"，我看到右边有个黄色的搜索按钮，点击它就能看到搜索结果了。让我先完成这一步，看看能找到哪家三米粥铺。",
+      "raw_output": "Thought: 好了，搜索框里已经输入了\"三米粥铺\"，我看到右边有个黄色的搜索按钮，点击它就能看到搜索结果了。让我先完成这一步，看看能找到哪家三米粥铺。\nAction: click(point='(954,300)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 950,
+        "position_y": 301
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "prev_label": "START",
+      "thought": "好了，搜索框里已经输入了\"三米粥铺\"，我看到右边有个醒目的黄色搜索按钮。点击它就能看到搜索结果了，这样我就能找到三米粥铺的店铺信息。让我先完成这一步，看看能找到哪家三米粥铺。",
+      "raw_output": "Thought: 好了，搜索框里已经输入了\"三米粥铺\"，我看到右边有个醒目的黄色搜索按钮。点击它就能看到搜索结果了，这样我就能找到三米粥铺的店铺信息。让我先完成这一步，看看能找到哪家三米粥铺。\nAction: click(start_box='(935,297)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 931,
+        "position_y": 298
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/美团/type2/1/1.jpg",
+      "new_label": "START"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "instruction": "打开饿了么后，帮我搜索麦当劳，并点入",
+  "app": "饿了么",
+  "task": "type1",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面顶部有个搜索框，正好可以用来搜索麦当劳。让我先点击一下搜索框，这样就能输入关键词了。这是完成任务的第一步，接下来就可以输入\"麦当劳\"了。",
+      "raw_output": "Thought: 我看到页面顶部有个搜索框，正好可以用来搜索麦当劳。让我先点击一下搜索框，这样就能输入关键词了。这是完成任务的第一步，接下来就可以输入\"麦当劳\"了。\nAction: click(start_box='(546,283)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 547,
+        "position_y": 282
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "prev_label": "input1",
+      "thought": "嗯，搜索框里现在显示的是\"墨竹寿司\"，这可不是我要找的。我得把它换成\"麦当劳\"才行。让我先清空搜索框，然后输入正确的关键词。这样应该就能找到我想要的麦当劳门店了。",
+      "raw_output": "Thought: 嗯，搜索框里现在显示的是\"墨竹寿司\"，这可不是我要找的。我得把它换成\"麦当劳\"才行。让我先清空搜索框，然后输入正确的关键词。这样应该就能找到我想要的麦当劳门店了。\nAction: click(start_box='(546,171)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 547,
+        "position_y": 170
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "prev_label": "input1",
+      "thought": "搜索框里还显示着\"墨竹寿司\"，这可不行。我得把它换成\"麦当劳\"，这样才能找到附近的麦当劳门店。让我先把这个关键词清空，然后重新输入，这样应该就能看到我想要的结果了。",
+      "raw_output": "Thought: 搜索框里还显示着\"墨竹寿司\"，这可不行。我得把它换成\"麦当劳\"，这样才能找到附近的麦当劳门店。让我先把这个关键词清空，然后重新输入，这样应该就能看到我想要的结果了。\nAction: click(start_box='(546,171)')\n\ntype(content='麦当劳')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 547,
+        "position_y": 170
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/3.jpg",
+      "prev_label": "input1",
+      "thought": "看来搜索框里还留着\"墨竹寿司\"这几个字，得先把它清掉。我注意到搜索框右边有个\"搜索\"按钮，点击它应该能触发搜索功能，这样就能把\"麦当劳\"这个关键词输进去了。",
+      "raw_output": "Thought: 看来搜索框里还留着\"墨竹寿司\"这几个字，得先把它清掉。我注意到搜索框右边有个\"搜索\"按钮，点击它应该能触发搜索功能，这样就能把\"麦当劳\"这个关键词输进去了。\nAction: click(start_box='(1030,171)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 1033,
+        "position_y": 170
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type1/18/4.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

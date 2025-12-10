@@ -1,0 +1,79 @@
+[
+  {
+    "step": 1,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 507,
+      "position_y": 198
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/3.jpg"
+  },
+  {
+    "step": 2,
+    "action_type": "input",
+    "action_params": {
+      "text": "小潮院长 垃圾人"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg"
+  },
+  {
+    "step": 3,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 516,
+      "position_y": 196
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg"
+  },
+  {
+    "step": 4,
+    "action_type": "input",
+    "action_params": {
+      "text": "垃圾人"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg"
+  },
+  {
+    "step": 5,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 835,
+      "position_y": 186
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg"
+  },
+  {
+    "step": 6,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 516,
+      "position_y": 196
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg"
+  },
+  {
+    "step": 7,
+    "action_type": "input",
+    "action_params": {
+      "text": "垃圾人"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg"
+  },
+  {
+    "step": 8,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 516,
+      "position_y": 196
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg"
+  }
+]

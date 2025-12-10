@@ -1,0 +1,44 @@
+[
+  {
+    "step": 1,
+    "position_x": 500,
+    "position_y": 318,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 1047,
+    "position_y": 318,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 500,
+    "position_y": 318,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 500,
+    "position_y": 318,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 500,
+    "position_y": 318,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 500,
+    "position_y": 318,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/饿了么/type21/1/1.jpg"
+  }
+]

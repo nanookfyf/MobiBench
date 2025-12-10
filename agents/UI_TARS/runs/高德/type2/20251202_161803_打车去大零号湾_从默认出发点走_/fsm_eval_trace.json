@@ -1,0 +1,77 @@
+{
+  "instruction": "打车去大零号湾，从默认出发点走。",
+  "app": "高德",
+  "task": "type2",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/9/1.jpg",
+      "prev_label": "START",
+      "thought": "看到页面底部的导航栏，我需要点击\"打车\"这个选项。这样就能进入打车服务的界面，开始规划去大零号湾的路线了。",
+      "raw_output": "Thought: 看到页面底部的导航栏，我需要点击\"打车\"这个选项。这样就能进入打车服务的界面，开始规划去大零号湾的路线了。\nAction: click(point='(764,2280)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 755,
+        "position_y": 2272
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/4/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/4/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我看到页面上有个\"你要去哪儿\"的输入框，这正是我需要的。要前往大零号湾，第一步当然是要告诉系统我想去的地方。让我点击这个输入框，开始输入目的地信息。",
+      "raw_output": "Thought: 我看到页面上有个\"你要去哪儿\"的输入框，这正是我需要的。要前往大零号湾，第一步当然是要告诉系统我想去的地方。让我点击这个输入框，开始输入目的地信息。\nAction: click(start_box='(546,1565)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 540,
+        "position_y": 1559
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/4/4.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/4/4.jpg",
+      "prev_label": "input1",
+      "thought": "输入框已经准备就绪，现在我要输入\"大零号湾\"作为目的地。这个输入框就在页面顶部，显示着\"请输入终点\"的提示文字。输入完成后，系统就能帮我们找到去大零号湾的路线了。",
+      "raw_output": "Thought: 输入框已经准备就绪，现在我要输入\"大零号湾\"作为目的地。这个输入框就在页面顶部，显示着\"请输入终点\"的提示文字。输入完成后，系统就能帮我们找到去大零号湾的路线了。\nAction: type(content='大零号湾')",
+      "action_type": "input",
+      "action_params": {
+        "text": "大零号湾"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/14/5.jpg",
+      "new_label": "input2"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/14/5.jpg",
+      "prev_label": "input2",
+      "thought": "搜索结果出来了，我看到几个相关的地点。嗯，第二个选项\"大零号湾\"看起来最符合我们要去的地方，它显示在工业园区的位置。这个位置离我们最近，只有972米，而且评分还不错。我应该点击这个选项来继续下一步。",
+      "raw_output": "Thought: 搜索结果出来了，我看到几个相关的地点。嗯，第二个选项\"大零号湾\"看起来最符合我们要去的地方，它显示在工业园区的位置。这个位置离我们最近，只有972米，而且评分还不错。我应该点击这个选项来继续下一步。\nAction: click(start_box='(238,505)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 235,
+        "position_y": 503
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/13/7.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/13/7.jpg",
+      "prev_label": "result1",
+      "thought": "好的，目的地已经选好了，现在我需要规划路线。看到页面底部的导航栏，我应该点击\"路线\"按钮，这样就能看到从当前位置到大零号湾的具体路线了。",
+      "raw_output": "Thought: 好的，目的地已经选好了，现在我需要规划路线。看到页面底部的导航栏，我应该点击\"路线\"按钮，这样就能看到从当前位置到大零号湾的具体路线了。\nAction: click(start_box='(912,2311)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 901,
+        "position_y": 2303
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type2/13/8.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

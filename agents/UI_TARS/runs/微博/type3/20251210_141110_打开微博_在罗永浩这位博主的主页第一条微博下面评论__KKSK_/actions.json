@@ -1,0 +1,121 @@
+[
+  {
+    "step": 1,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 599,
+      "position_y": 2520
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/7/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/7/3.jpg"
+  },
+  {
+    "step": 2,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 522,
+      "position_y": 192
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/7/3.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/5/5.jpg"
+  },
+  {
+    "step": 3,
+    "action_type": "input",
+    "action_params": {
+      "text": "罗永浩"
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/5/5.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/6.jpg"
+  },
+  {
+    "step": 4,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 412,
+      "position_y": 966
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/6.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg"
+  },
+  {
+    "step": 5,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 465,
+      "position_y": 502
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/8.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/10.jpg"
+  },
+  {
+    "step": 6,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 364,
+      "position_y": 2498
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/2/10.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg"
+  },
+  {
+    "step": 7,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 510,
+      "position_y": 2594
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg"
+  },
+  {
+    "step": 8,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 564,
+      "position_y": 2594
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg"
+  },
+  {
+    "step": 9,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 510,
+      "position_y": 2594
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg"
+  },
+  {
+    "step": 10,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 510,
+      "position_y": 2594
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg"
+  },
+  {
+    "step": 11,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 510,
+      "position_y": 2594
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg"
+  },
+  {
+    "step": 12,
+    "action_type": "click",
+    "action_params": {
+      "position_x": 564,
+      "position_y": 2594
+    },
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type3/4/10.jpg"
+  }
+]

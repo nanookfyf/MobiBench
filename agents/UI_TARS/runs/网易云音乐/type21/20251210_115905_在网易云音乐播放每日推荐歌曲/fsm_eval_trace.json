@@ -1,0 +1,22 @@
+{
+  "instruction": "在网易云音乐播放每日推荐歌曲",
+  "app": "网易云音乐",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到网易云音乐首页的推荐区域里，最显眼的就是那个\"每日推荐\"的卡片。它用大大的白色文字标注着\"今日限定好歌推荐\"，看起来就是我要找的。既然要听每日推荐的歌，那我就直接点击这个卡片开始播放吧。",
+      "raw_output": "Thought: 我看到网易云音乐首页的推荐区域里，最显眼的就是那个\"每日推荐\"的卡片。它用大大的白色文字标注着\"今日限定好歌推荐\"，看起来就是我要找的。既然要听每日推荐的歌，那我就直接点击这个卡片开始播放吧。\nAction: click(start_box='(268,616)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 267,
+        "position_y": 618
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/网易云音乐/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    }
+  ]
+}

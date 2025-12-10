@@ -1,0 +1,106 @@
+{
+  "instruction": "在淘宝国补榜单中选择指定Redmi电视加入购物车(两件)",
+  "app": "淘宝",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到页面顶部的导航栏里有\"国补\"这个选项，这正是我要找的。要找到Redmi电视，第一步得先进入国补专区。让我点击这个\"国补\"标签，看看里面都有什么商品。",
+      "raw_output": "Thought: 我看到页面顶部的导航栏里有\"国补\"这个选项，这正是我要找的。要找到Redmi电视，第一步得先进入国补专区。让我点击这个\"国补\"标签，看看里面都有什么商品。\nAction: click(point='(641,170)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 638,
+        "position_y": 170
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我注意到页面上方有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。",
+      "raw_output": "Thought: 我注意到页面上方有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。\nAction: click(start_box='(548,1488)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 546,
+        "position_y": 1493
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我看到页面上方有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。",
+      "raw_output": "Thought: 我看到页面上方有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。\nAction: click(start_box='(548,1488)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 546,
+        "position_y": 1493
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我看到页面上方有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。",
+      "raw_output": "Thought: 我看到页面上方有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。\nAction: click(start_box='(546,1488)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 544,
+        "position_y": 1493
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我注意到页面底部有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。",
+      "raw_output": "Thought: 我注意到页面底部有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。\nAction: click(start_box='(546,1488)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 544,
+        "position_y": 1493
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我看到页面顶部有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。",
+      "raw_output": "Thought: 我看到页面顶部有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。\nAction: click(start_box='(546,1488)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 544,
+        "position_y": 1493
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "我看到页面顶部有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。",
+      "raw_output": "Thought: 我看到页面顶部有个\"电视\"分类标签，这正是我需要的。既然要找Redmi电视，那就先点击这个分类标签，这样就能看到所有电视商品了。这样比在搜索框里一个个找要快得多。\nAction: click(start_box='(546,1488)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 544,
+        "position_y": 1493
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    }
+  ]
+}

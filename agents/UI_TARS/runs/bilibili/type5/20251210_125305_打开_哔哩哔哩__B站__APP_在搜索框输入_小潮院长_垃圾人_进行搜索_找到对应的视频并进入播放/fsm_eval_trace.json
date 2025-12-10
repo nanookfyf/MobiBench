@@ -1,0 +1,117 @@
+{
+  "instruction": "打开“哔哩哔哩 (B站)”APP，在搜索框输入“小潮院长 垃圾人”进行搜索，找到对应的视频并进入播放页面，然后点击评论区域输入指定内容“赞”进行评论并发送。",
+  "app": "bilibili",
+  "task": "type5",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/1.jpg",
+      "prev_label": "START",
+      "thought": "我看到B站的搜索框就在页面顶部，显示着\"SC2绝迹·21小时...\"。要完成搜索\"小潮院长 垃圾人\"的任务，第一步就是点击这个搜索框，让它变成可输入状态。这样我就能开始输入新的搜索内容了。",
+      "raw_output": "Thought: 我看到B站的搜索框就在页面顶部，显示着\"SC2绝迹·21小时...\"。要完成搜索\"小潮院长 垃圾人\"的任务，第一步就是点击这个搜索框，让它变成可输入状态。这样我就能开始输入新的搜索内容了。\nAction: click(start_box='(513,199)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 507,
+        "position_y": 198
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/3.jpg",
+      "new_label": "input1"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/3.jpg",
+      "prev_label": "input1",
+      "thought": "搜索框已经准备就绪了，我看到光标在闪烁，键盘也已经弹出。现在我要输入\"小潮院长 垃圾人\"这几个字，这样就能找到相关的视频内容了。",
+      "raw_output": "Thought: 搜索框已经准备就绪了，我看到光标在闪烁，键盘也已经弹出。现在我要输入\"小潮院长 垃圾人\"这几个字，这样就能找到相关的视频内容了。\nAction: type(content='小潮院长 垃圾人')",
+      "action_type": "input",
+      "action_params": {
+        "text": "小潮院长 垃圾人"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "prev_label": "result1",
+      "thought": "我注意到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。",
+      "raw_output": "Thought: 我注意到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。\nAction: click(start_box='(522,197)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 516,
+        "position_y": 196
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "prev_label": "result1",
+      "thought": "我看到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。\nAction: type(content='垃圾人')",
+      "action_type": "input",
+      "action_params": {
+        "text": "垃圾人"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "prev_label": "result1",
+      "thought": "我看到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。\nAction: click(start_box='(845,187)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 835,
+        "position_y": 186
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "prev_label": "result1",
+      "thought": "我注意到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。",
+      "raw_output": "Thought: 我注意到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。\nAction: click(start_box='(522,197)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 516,
+        "position_y": 196
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "prev_label": "result1",
+      "thought": "我看到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。\nAction: type(content='垃圾人')",
+      "action_type": "input",
+      "action_params": {
+        "text": "垃圾人"
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "new_label": "result1"
+    },
+    {
+      "step": 8,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "prev_label": "result1",
+      "thought": "我看到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。",
+      "raw_output": "Thought: 我看到搜索框里已经输入了\"小潮院长\"，但要完成搜索任务，还需要补充完整关键词。让我把光标移到\"小潮院长\"后面，输入\"垃圾人\"这三个字，这样就能完整地搜索到我们想要的内容了。\nAction: click(start_box='(522,197)')",
+      "action_type": "click",
+      "action_params": {
+        "position_x": 516,
+        "position_y": 196
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type5/9/5.jpg",
+      "new_label": "result1"
+    }
+  ]
+}
