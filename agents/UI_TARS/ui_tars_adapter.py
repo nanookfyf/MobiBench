@@ -17,7 +17,7 @@ from datetime import datetime  # ==== NEW: 用于生成时间戳目录 ====
 
 from openai import OpenAI
 from PIL import Image
-from MobiBench.utils.task_get import get_tasks
+from MobiBench.utils.task_get import get_tasks,get_tasks_1
 from MobiBench.env.fsm import build_AppFSM, quick_build_AppFSM
 from MobiBench.env.type_spaces import Action
 from MobiBench.agents.UI_TARS.ui_tars_automation.config import MOBILE_PROMPT_TEMPLATE
@@ -472,15 +472,15 @@ def main():
         "bilibili": ["type1","type2","type3","type4","type5","type6","type7"],
         "QQ":["type1","type2","type3","type4"],
     }
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base1.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
     datapath = args.data_root
     for app in alldata.keys():
         for tasktype in alldata[app]:
-            tasklist = get_tasks(app, tasktype)
+            tasklist = get_tasks_1(app, tasktype)
             logger.info("构建 FSM 中…")
-            fsm = quick_build_AppFSM(app=app, task=tasktype, data_path=datapath)
+            fsm = build_AppFSM(app=app, task=tasktype, data_path=datapath)
             # 让 FSM 内部的 max_op_times 和 CLI 一致
             fsm.max_op_times = args.max_steps
 

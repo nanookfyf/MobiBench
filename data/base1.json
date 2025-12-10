@@ -1,0 +1,12 @@
+{
+    "高德": ["type7"],
+    "京东": ["type4","type5"],
+    "美团": ["type1","type2","type3","type4","type6"],
+    "淘宝": ["type2","type6"],
+    "微博": ["type3"],
+    "小红书": ["type5"],
+    "知乎": ["type6"],
+    "bilibili": ["type5"],
+    "饿了么":["type1","type3","type6"]
+   
+}
