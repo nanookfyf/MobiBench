@@ -357,7 +357,7 @@ if __name__ == '__main__':
     from MobiBench.agents.Mobileagentv3.utils.static_controller import StaticController
     from MobiBench.env.fsm import build_AppFSM
     import logging
-    from MobiBench.utils.task_get import get_tasks
+    from MobiBench.utils.task_get import get_tasks,get_tasks_1
     import time
     #app_list = [ "高德","京东", "美团","淘宝","网易云音乐","微博","小红书"]
     #type_list = ["type8","type9","type10"]
@@ -369,9 +369,12 @@ if __name__ == '__main__':
     }
     #app_list = [ "同城"]
     #type_list = ["type5"]
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/follow1.json', 'r', encoding='utf-8') as f:
+        alldata = json.load(f)
+
     datapath = args.datapath
-    for app in app_list:
-        for tasktype in type_list:
+    for app in alldata.keys():
+        for tasktype in alldata[app]:
             tasklist = get_tasks(app,tasktype)
             fsm = build_AppFSM(app=app,task=tasktype,data_path=datapath)
             ctl = StaticController(fsm=fsm)

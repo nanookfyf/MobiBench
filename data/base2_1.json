@@ -1,0 +1,12 @@
+{
+    "淘宝": ["type4","type6"],
+    "网易云音乐" :["type3","type4","type7"],
+    "微博": ["type3"],
+    "小红书": ["type3","type5"],
+    "知乎": ["type5"],
+    "bilibili": ["type5"],
+    "携程":["type6","type7"],
+    "饿了么":["type1","type3","type6"],
+    "同城":["type3","type5","type6","type8","type9"]
+   
+}

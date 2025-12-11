@@ -9,7 +9,7 @@ import argparse
 import cv2
 from MobiBench.agents.MobiMind.env_engine import StaticMobiAgentWorker
 from datetime import datetime
-from MobiBench.utils.task_get import get_tasks
+from MobiBench.utils.task_get import get_tasks,get_tasks_1
 import time 
 from MobiBench.env.fsm import build_AppFSM,point_in_rectangle
 from MobiBench.utils.models.text_match import semantic_similarity
@@ -467,13 +467,13 @@ if __name__ == "__main__":
     #app_list = [ "淘宝","美团","微博"]
     #type_list = ["type1","type2","type3","type4"]
     #app_list = [ "QQ"]
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base3.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
     #type_list = ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"]
     datapath = args.datapath
     for app in alldata.keys():
         for tasktype in alldata[app]:
-            tasklist = get_tasks(app,tasktype)
+            tasklist = get_tasks_1(app,tasktype)
             envengine = StaticMobiAgentWorker(app,tasktype,datapath,grounder_client)
             for task in tasklist:
                 print(f"任务: {task}，应用: {app}，类型: {tasktype}")
