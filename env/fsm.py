@@ -298,20 +298,15 @@ class AppFSM:
             self._reduce_transitions()
             self.max_trace_step = max(len(t) for t in self.traces) if self.traces else 0
             self.min_trace_step = min(len(t) for t in self.traces) if self.traces else 0
+
+            self.visited_trace = []
+            self.visited = {k: False for k in self.hash_map.keys()}
             
+
+
             # 保存缓存
             if use_cache:
                 self.save_cache()
-
-        # if is_init:
-        #     # 入口：解析 -> 聚簇 -> 归约
-        #     self._init_states()
-        #     self._cluster()
-        #     self._reduce_transitions()
-
-        # self.max_trace_step = max( len(t) for t in self.traces)
-        # self.min_trace_step = min( len(t) for t in self.traces)
-
         
         
         print("cluster class's level to Done\n",self.cluster_level)
@@ -662,7 +657,8 @@ class AppFSM:
             if len(self.history_states)<=1:
                 self.cur_state = random_choice_from_list(self.app_states["START"])
                 self.history_states = [self.cur_state]
-                return self.cur_state
+            
+            return self.cur_state
             
         elif act.act_type == "wait":
             print("Waiting...")
@@ -688,6 +684,11 @@ class AppFSM:
 
         self.history_states = []
         self.history_states.append(self.cur_state)
+
+        self.visited_trace = []
+        self.visited_trace.append(self.cur_state.img_path)
+        self.visited = {k: False for k in self.hash_map.keys()}
+        self.visited[self.cur_state.img_path] = True
 
         self.undefine_op_times = 0
         self.op_times = 0 
@@ -717,10 +718,10 @@ class AppFSM:
             self.cur_state = self._transition(act)
             if act.act_type not in ("back","home"):
                 self.history_states.append(self.cur_state)
-
+            self.visited_trace.append(self.cur_state.img_path)
+            self.visited[self.cur_state.img_path] = True
         if self.op_times > self.max_op_times or self.undefine_op_times > self.max_undefine_op_times:
             self.is_failed = True 
-        
         self.score  = max(self.cur_state.score,self.score)
         return self.cur_state
     

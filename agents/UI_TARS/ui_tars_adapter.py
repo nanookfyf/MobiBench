@@ -472,7 +472,7 @@ def main():
         "bilibili": ["type1","type2","type3","type4","type5","type6","type7"],
         "QQ":["type1","type2","type3","type4"],
     }
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base1.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
     datapath = args.data_root
@@ -507,8 +507,14 @@ def main():
                     time_use=end-start,
                     savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/runs/dev/UI-TARS.csv",
                 )
-                # print(f"Bench result: steps={result['steps']}, won={result['won']}, done={result['done']}")
-
+                from MobiBench.utils.score_proc import save_visited_result
+                save_visited_result(
+                    md="UI-TARS",
+                    app=app,
+                    task=tasktype,
+                    fsm=fsm,
+                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/visited",
+                )
 
 if __name__ == "__main__":
     main()

@@ -369,7 +369,7 @@ if __name__ == '__main__':
     }
     #app_list = [ "同城"]
     #type_list = ["type5"]
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/follow1.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
     datapath = args.datapath
@@ -387,7 +387,15 @@ if __name__ == '__main__':
                 end = time.time()
                 
                 save_result(md="MobiAgentv3",app=app,task=tasktype,inst=task,fsm=ctl.fsm,time_use=end-start,savepath="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev")
- 
+                from MobiBench.utils.score_proc import save_visited_result
+                save_visited_result(
+                    md="MobiAgentv3",
+                    app=app,
+                    task=tasktype,
+                    fsm=fsm,
+                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/visited",
+                )
+
 
                 
 

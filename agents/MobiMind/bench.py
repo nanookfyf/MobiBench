@@ -130,6 +130,7 @@ class BenchEnv:
         self.record_dir = record_dir
         self.app = app
         self.task_type = task_type
+        
 
         # 运行期状态
         self.history: list[str] = []
@@ -153,11 +154,6 @@ class BenchEnv:
         self.file_history = os.path.join(self.run_dir, "history.txt")          # 简洁历史（人读友好）
         self.file_summary = os.path.join(self.run_dir, "result.json")          # 最终汇总
         self.file_actions = os.path.join(self.run_dir, "actions.json")         # 全部规范化动作（JSON）
-
-
-       
-       
-
 
     # 小工具：追加文本/JSONL
     def _append_text(self, path: str, text: str):
@@ -455,25 +451,15 @@ if __name__ == "__main__":
     data_base_dir = os.path.join(os.path.dirname(__file__), 'data')
     if not os.path.exists(data_base_dir):
         os.makedirs(data_base_dir)
-
-    # 读取任务列表
     task_json_path = os.path.join(os.path.dirname(__file__), "task.json")
-
-    #app_list = [  "美团","淘宝","网易云音乐","微博","小红书"]
-    #type_list = ["type1","type2","type3","type4","type5","type6","type7"]
-    #type_list = ["type8","type9","type10"]
-    #type_list = ["type4"]
-    #type_list = ["type6","type7"]
-    #app_list = [ "淘宝","美团","微博"]
-    #type_list = ["type1","type2","type3","type4"]
-    #app_list = [ "QQ"]
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base3.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
-    #type_list = ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"]
+
+
     datapath = args.datapath
     for app in alldata.keys():
         for tasktype in alldata[app]:
-            tasklist = get_tasks_1(app,tasktype)
+            tasklist = get_tasks(app,tasktype)
             envengine = StaticMobiAgentWorker(app,tasktype,datapath,grounder_client)
             for task in tasklist:
                 print(f"任务: {task}，应用: {app}，类型: {tasktype}")
@@ -501,8 +487,14 @@ if __name__ == "__main__":
                     fsm=envengine.fsm,
                     savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/runs/dev/env",
                 )
-                # print(f"Bench result: steps={result['steps']}, won={result['won']}, done={result['done']}")
+                from MobiBench.utils.score_proc import save_visited_result
+                save_visited_result(
+                    md="MobiMind",
+                    app=app,
+                    task=tasktype,
+                    fsm=envengine.fsm,
+                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/visited",
+                )
 
-    # print(task_list)
 
    

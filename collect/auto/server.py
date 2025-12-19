@@ -16,6 +16,10 @@ import argparse
 
 from collect.auto.draw_bounds import process_folder
 
+
+
+
+
 device = None  # 设备连接对象
 hierarchy = None  # 层次结构数据
 data_index = 1  # 数据索引

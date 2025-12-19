@@ -2,4 +2,17 @@
 /agents/Mobileagentv3/logs
 /collect/manual/data
 /agents/MobiMind/record
+/agents/UI_TARS/runs
+/agents/gemini/layers
+/agents/gemini/log
+/agents/gemini/layers1
+/agents/gemini/log1
+/agents/android_world
+/agents/claude/layers
+/agents/claude/log
+/agents/gpt-5/layers
+/agents/gpt-5/log
+/agents/claude/layers1
+/agents/claude/log1
+/agents/android_world
 /agents/UI_TARS/runsdata/rawdata.zip
