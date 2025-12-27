@@ -606,7 +606,7 @@ if __name__ == "__main__":
             api_key= "sk-rfCIGhxrzcdsMV4jC17e406bE56c47CbA5416068A62318D3",
             base_url=f"http://ipads.chat.gpt:3006/v1"
         )
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/follow1.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/noisy.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
     datapath = args.data_root
     data_log_dir = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/gpt-5/log"

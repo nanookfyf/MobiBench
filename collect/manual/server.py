@@ -428,5 +428,5 @@ async def set_task_description(task: TaskDescription):
 if __name__ == "__main__":
     device = u2.connect()
     print("启动服务器...")
-    print("访问 http://localhost:9000 查看前端页面")
-    uvicorn.run(app, port=9000)
+    print("访问 http://localhost:9999 查看前端页面")
+    uvicorn.run(app, port=9999)

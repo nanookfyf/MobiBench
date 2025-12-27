@@ -2,6 +2,7 @@
 import json
 from datetime import datetime
 from typing import Any, Callable
+from PIL import Image
 import base64
 import time
 from dataclasses import dataclass, field
@@ -19,8 +20,8 @@ class ModelConfig:
 
     base_url: str = f"http://123.60.91.241:9003/v1"
     api_key: str = "0"
-    model_name: str = "autoglm-phone-9b"
-    max_tokens: int = 3000
+    model_name: str = ""
+    max_tokens: int = 30000
     temperature: float = 0.0
     top_p: float = 0.85
     frequency_penalty: float = 0.2
@@ -513,7 +514,54 @@ def parse_action(response: str) -> dict[str, Any]:
         return action
     except Exception as e:
         raise ValueError(f"Failed to parse action: {e}")
+
+def get_img_w_h(img_path):
+    img = Image.open(img_path)
+    return img.width,img.height
+
+def get_std_act(action,width,height):
+    action_type = action.get("_metadata")
+    action_name = action.get("action")
+
+    if action_type != "do" and action_type != "finish":
+        return None
+    else:
+        if action_name in ["Tap"]:
+            element = action.get("element")
+            x = int(element[0] / 1000 * width)
+            y = int(element[1] / 1000 * height)
+
+            return Action(act_type="click", parameters={"position_x": x, "position_y": y})
+        elif action_name in ["Type"]:
+            text = action.get("text", "")
+
+            return Action(act_type="input", parameters={"text": text})
+        
+        elif action_name in ["Swipe"]:
+            start = action.get("start")
+            end = action.get("end")
+            x1, y1 = int(start[0] / 1000 * width),int(start[1] / 1000 * height)
+            x2, y2 = int(end[0] / 1000 * width),int(end[1] / 1000 * height)
+            if abs(x2 - x1) > abs(y2 - y1):
+                direction = "right" if x2 > x1 else "left"
+            else:
+                direction = "down" if y2 > y1 else "up"
+            dir_ = direction.lower()
+            std_action = Action(act_type="swipe", parameters={"direction":dir_,"start_x": x1, "start_y": y1, "end_x": x2, "end_y": y2})
+
+            return std_action
+        
+        elif action_name in ["Back"]:
+            return Action(act_type="back", parameters={})
+        elif action_name in ["Home"]:
+            return Action(act_type="home", parameters={})
+        elif action_name in ["Wait"]:
+            return Action(act_type="wait", parameters={})
+        else:
+            return None
+
     
+
 def run(
     fsm,
     args,
@@ -532,6 +580,8 @@ def run(
     for step in range(1,max_steps,1):
         cur = fsm.cur_state
         cur_img_b64 = encode_image_to_b64(cur.img_path)
+        img_w,img_h = get_img_w_h(cur.img_path)
+        print(f"w {img_w} {img_h}")
         if step == 1:
             _context.append(
                 MessageBuilder.create_system_message(SYSTEM_PROMPT)
@@ -585,45 +635,55 @@ def run(
 
         # Remove image from context to save space
         _context[-1] = MessageBuilder.remove_images_from_message(_context[-1])
-        print(action)
+        #print(action)
         # Execute action
-        # try:
-        #     result = self.action_handler.execute(
-        #         action, screenshot.width, screenshot.height
-        #     )
-        # except Exception as e:
-        #     if verbose:
-        #         traceback.print_exc()
-        #     result = self.action_handler.execute(
-        #         finish(message=str(e)), screenshot.width, screenshot.height
-        #     )
+        try:
+            std_act = get_std_act(
+                action, img_w, img_h
+            )
+        except Exception as e:
+            if verbose:
+                traceback.print_exc()
+            # result = self.action_handler.execute(
+            #     finish(message=str(e)), screenshot.width, screenshot.height
+            # )
 
-        # # Add assistant response to context
-        # _context.append(
-        #     MessageBuilder.create_assistant_message(
-        #         f"<think>{response.thinking}</think><answer>{response.action}</answer>"
-        #     )
-        # )
+        # Add assistant response to context
+        _context.append(
+            MessageBuilder.create_assistant_message(
+                f"<think>{response.thinking}</think><answer>{response.action}</answer>"
+            )
+        )
 
-        # # Check if finished
-        # finished = action.get("_metadata") == "finish" or result.should_finish
+        # Check if finished
+        finished = action.get("_metadata") == "finish" 
 
-        # if finished and verbose:
-        #     msgs = get_messages()
-        #     print("\n" + "🎉 " + "=" * 48)
-        #     print(
-        #         f"✅ {msgs['task_completed']}: {result.message or action.get('message', msgs['done'])}"
-        #     )
-        #     print("=" * 50 + "\n")
+        if finished and verbose:
+            msgs = get_messages()
+            print("\n" + "🎉 " + "=" * 48)
+            print(
+                f"✅ {msgs['task_completed']}"
+            )
+            print("=" * 50 + "\n")
+            break
 
-        # return StepResult(
-        #     success=result.success,
-        #     finished=finished,
-        #     action=action,
-        #     thinking=response.thinking,
-        #     message=result.message or action.get("message"),
-        # )
-            
+        elif std_act == None:
+            print("task failed !")
+            break
+        
+        prev_state = fsm.cur_state
+        fsm.action(std_act)
+        new_state = fsm.cur_state
+        if new_state.cluster_class in ("DONE", "Done", "done"):
+            print("到达 DONE 状态，任务完成！")
+           
+            break
+
+        if fsm.is_failed:
+            print("到达 FAILED 状态，任务失败！")
+            break
+    print("finished state",fsm.cur_state.img_path)
+
 
 
 
@@ -638,7 +698,7 @@ if __name__ == "__main__":
     parser.add_argument("--data_root", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="MobiBench data 根目录（包含 rawdata/）")
     parser.add_argument(
         "--runs_dir",
-        default=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/gemini/layers",  # ==== NEW: 所有运行结果的根目录 ====
+        default=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/autoglm/layers",  # ==== NEW: 所有运行结果的根目录 ====
         help="所有运行结果的根目录，用于保存轨迹和坐标",
     )
     args = parser.parse_args()
@@ -654,10 +714,10 @@ if __name__ == "__main__":
     #         api_key= "sk-rfCIGhxrzcdsMV4jC17e406bE56c47CbA5416068A62318D3",
     #         base_url=f"http://ipads.chat.gpt:3006/v1"
     #     )
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/follow.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
     datapath = args.data_root
-    data_log_dir = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/gemini/log"
+    data_log_dir = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/autoglm/log"
     for app in alldata.keys():
         for tasktype in alldata[app]:
             tasklist = get_tasks(app, tasktype)
@@ -673,7 +733,7 @@ if __name__ == "__main__":
                 
                 fsm._reset()
                 
-                #start = time.time()
+                start = time.time()
                 run(
                     fsm=fsm,
                     args=args,
@@ -682,27 +742,27 @@ if __name__ == "__main__":
                     instruction=task,
                     runs_dir=args.runs_dir,  # ==== NEW: 传入 runs 根目录 ====
                     
-                    model="gemini-2.5-flash",
+                    model="autoglm",
                     model_config=md_cfg
 
                 )
-                # end = time.time()
-                # from MobiBench.utils.score_proc import save_result
-                # save_result(
-                #     md="Gemini-2.5-flash",
-                #     app=app,
-                #     task=tasktype,
-                #     inst=task,
-                #     fsm=fsm,
-                #     time_use=end-start,
-                #     savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/GMN2.5-FLS.csv",
-                # )
-                # from MobiBench.utils.score_proc import save_visited_result
-                # save_visited_result(
-                #     md="Gemini-2.5-flash",
-                #     app=app,
-                #     task=tasktype,
-                #     fsm=fsm,
-                #     savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/visited",
-                # )
+                end = time.time()
+                from MobiBench.utils.score_proc import save_result
+                save_result(
+                    md="autoglm",
+                    app=app,
+                    task=tasktype,
+                    inst=task,
+                    fsm=fsm,
+                    time_use=end-start,
+                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev",
+                )
+                from MobiBench.utils.score_proc import save_visited_result
+                save_visited_result(
+                    md="autoglm",
+                    app=app,
+                    task=tasktype,
+                    fsm=fsm,
+                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/visited",
+                )
     
