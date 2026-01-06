@@ -591,7 +591,7 @@ if __name__ == "__main__":
             api_key= "sk-rfCIGhxrzcdsMV4jC17e406bE56c47CbA5416068A62318D3",
             base_url=f"http://ipads.chat.gpt:3006/v1"
         )
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/noisy.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/open.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
     datapath = args.data_root
     data_log_dir = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/gemini/log1"
@@ -619,13 +619,13 @@ if __name__ == "__main__":
                     instruction=task,
                     runs_dir=args.runs_dir,  # ==== NEW: 传入 runs 根目录 ====
                     client=client,
-                    model="google/gemini-3-pro-preview"
+                    model="gemini-2.5-pro"
 
                 )
                 end = time.time()
                 from MobiBench.utils.score_proc import save_result
                 save_result(
-                    md="gemini-3-pro",
+                    md="gemini-2.5-pro",
                     app=app,
                     task=tasktype,
                     inst=task,
@@ -635,7 +635,7 @@ if __name__ == "__main__":
                 )
                 from MobiBench.utils.score_proc import save_visited_result
                 save_visited_result(
-                    md="gemini-3-pro",
+                    md="gemini-2.5-pro",
                     app=app,
                     task=tasktype,
                     fsm=fsm,

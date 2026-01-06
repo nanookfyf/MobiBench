@@ -369,13 +369,13 @@ if __name__ == '__main__':
     }
     #app_list = [ "同城"]
     #type_list = ["type5"]
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/follow.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
     datapath = args.datapath
     for app in alldata.keys():
         for tasktype in alldata[app]:
-            tasklist = get_tasks(app,tasktype)
+            tasklist = get_tasks_1(app,tasktype)
             fsm = build_AppFSM(app=app,task=tasktype,data_path=datapath)
             ctl = StaticController(fsm=fsm)
             for task in tasklist:

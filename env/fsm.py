@@ -301,8 +301,7 @@ class AppFSM:
 
             self.visited_trace = []
             self.visited = {k: False for k in self.hash_map.keys()}
-            
-
+    
 
             # 保存缓存
             if use_cache:

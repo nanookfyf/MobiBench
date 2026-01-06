@@ -452,7 +452,7 @@ if __name__ == "__main__":
     if not os.path.exists(data_base_dir):
         os.makedirs(data_base_dir)
     task_json_path = os.path.join(os.path.dirname(__file__), "task.json")
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
 
