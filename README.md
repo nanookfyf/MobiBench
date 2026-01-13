@@ -9,8 +9,12 @@ MobiBench 是一个全面的移动应用自动化测试基准测试平台，用�
 - [项目结构](#项目结构)
 - [环境配置](#环境配置)
 - [快速开始](#快速开始)
+- [支持的 Agent](#支持的-agent)
 - [数据收集与标注](#数据收集与标注)
+- [评估机制](#评估机制)
 - [使用示例](#使用示例)
+- [结果分析](#结果分析)
+- [贡献指南](#贡献指南)
 
 ## 🎯 项目简介
 
@@ -23,7 +27,7 @@ MobiBench 提供了一个标准化的测试框架，用于评估各种 AI Agent�
 - **出行类**：高德、携程、同城
 - **娱乐类**：bilibili、网易云音乐
 
-每个应用支持多种任务类型（type1--type21），覆盖搜索、浏览、下单、评论、分享等常见操作场景。
+每个应用支持多种任务类型（type1-type21），覆盖搜索、浏览、下单、评论、分享等常见操作场景。
 
 ## ✨ 主要特性
 
@@ -131,10 +135,10 @@ python -m MobiBench.agents.autoglm.bench
 python -m MobiBench.agents.MobiMind.bench
 
 # 运行 MobileAgent v3
-python -m MobiBench.agents.Mobileagentv3.run_mobileagentv3
+python -m MobiBench.agents.Mobileagentv3.bench
 
 # 运行 UI-TARS Agent
-python -m MobiBench.agents.UI_TARS.ui_tars_adapter
+python -m MobiBench.agents.UI_TARS.bench
 ```
 
 ### 配置 Agent
@@ -172,6 +176,8 @@ python -m MobiBench.agents.UI_TARS.ui_tars_adapter
 ### 8. UI-TARS
 基于 UI-TARS 框架的智能体。
 
+
+
 ## 📝 数据收集与标注
 
 ### 手动数据收集
@@ -184,6 +190,13 @@ python -m collect.manual.server
 
 访问 `http://localhost:9000` 进行数据收集操作。
 
+### 自动数据收集
+
+配置任务列表后，使用 AI Agent 自动收集数据：
+
+```bash
+python -m collect.auto.server --model <模型名称> --api_key <API密钥> --base_url <API基础URL> [--max_steps <最大步数>]
+```
 
 
 详细的数据收集和标注说明请参考 [collect/README.md](collect/README.md)。
@@ -193,14 +206,6 @@ python -m collect.manual.server
 ### FSM 评估
 
 MobiBench 使用有限状态机（FSM）机制对任务完成情况进行评估：
-
-1. **状态构建**：从操作轨迹中提取关键状态
-2. **状态聚类**：将相似状态聚类，构建状态图
-3. **轨迹匹配**：将 Agent 的执行轨迹与标准轨迹进行匹配
-4. **评分计算**：
-   - **层级得分**（90分）：基于状态匹配的层级评分
-   - **完成得分**（10分）：任务完成情况评分
-   - **操作次数惩罚**（-5分/次）：对多余操作的惩罚
 
 ### 评估指标
 

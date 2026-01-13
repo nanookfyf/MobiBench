@@ -440,6 +440,9 @@ if __name__ == "__main__":
     parser.add_argument("--grounder_port", type=int, default=9002, help="Port for grounder service (default: 8001)")
     parser.add_argument("--planner_port", type=int, default=8000, help="Port for planner service (default: 8002)")
     parser.add_argument("--datapath", type=str, default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="path to data")
+    parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
+    parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
+    parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobiMind/log", help="log directory")
     args = parser.parse_args()
 
     # 使用命令行参数初始化
@@ -452,7 +455,7 @@ if __name__ == "__main__":
     if not os.path.exists(data_base_dir):
         os.makedirs(data_base_dir)
     task_json_path = os.path.join(os.path.dirname(__file__), "task.json")
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json', 'r', encoding='utf-8') as f:
+    with open(args.task_json, 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
 
@@ -473,7 +476,7 @@ if __name__ == "__main__":
                         grounder=grounder_client,
                         planner=planner_client,
                         max_steps=MAX_STEPS,
-                        record_dir="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobiMind/record",  
+                        record_dir=args.log_dir,  
                     )
                 start = time.time()
                 result = runner.bench()
@@ -485,7 +488,7 @@ if __name__ == "__main__":
                     app=app,
                     task=tasktype,
                     fsm=envengine.fsm,
-                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/runs/dev/env",
+                    savepath=args.result_dir + "/env",
                 )
                 from MobiBench.utils.score_proc import save_visited_result
                 save_visited_result(
@@ -493,7 +496,7 @@ if __name__ == "__main__":
                     app=app,
                     task=tasktype,
                     fsm=envengine.fsm,
-                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/visited",
+                    savepath=args.result_dir + "/visited",
                 )
 
 

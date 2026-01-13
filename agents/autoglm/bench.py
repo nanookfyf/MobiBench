@@ -701,6 +701,9 @@ if __name__ == "__main__":
         default=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/autoglm/layers",  # ==== NEW: 所有运行结果的根目录 ====
         help="所有运行结果的根目录，用于保存轨迹和坐标",
     )
+    parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
+    parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
+    parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/autoglm/log", help="log directory")
     args = parser.parse_args()
     
     # 设置全局配置
@@ -711,13 +714,13 @@ if __name__ == "__main__":
     md_cfg = ModelConfig()
     # 初始化OpenAI客户端
     # client = OpenAI(
-    #         api_key= "sk-rfCIGhxrzcdsMV4jC17e406bE56c47CbA5416068A62318D3",
+    #         api_key= "",
     #         base_url=f"http://ipads.chat.gpt:3006/v1"
     #     )
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
+    with open(args.task_json, 'r', encoding='utf-8') as f:
         alldata = json.load(f)
     datapath = args.data_root
-    data_log_dir = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/autoglm/log"
+    data_log_dir = args.log_dir
     for app in alldata.keys():
         for tasktype in alldata[app]:
             tasklist = get_tasks(app, tasktype)
@@ -755,7 +758,7 @@ if __name__ == "__main__":
                     inst=task,
                     fsm=fsm,
                     time_use=end-start,
-                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev",
+                    savepath=args.result_dir,
                 )
                 from MobiBench.utils.score_proc import save_visited_result
                 save_visited_result(
@@ -763,6 +766,6 @@ if __name__ == "__main__":
                     app=app,
                     task=tasktype,
                     fsm=fsm,
-                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/visited",
+                    savepath=args.result_dir + "/visited",
                 )
     

@@ -352,6 +352,9 @@ if __name__ == '__main__':
     parser.add_argument("--coor_type", type=str, default="abs")
     parser.add_argument("--datapath", type=str, default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="path to data")
     parser.add_argument("--notetaker", type=bool, default=False)
+    parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
+    parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
+    parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/Mobileagentv3/log", help="log directory")
     args = parser.parse_args()
     
     from MobiBench.agents.Mobileagentv3.utils.static_controller import StaticController
@@ -369,7 +372,7 @@ if __name__ == '__main__':
     }
     #app_list = [ "同城"]
     #type_list = ["type5"]
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/follow.json', 'r', encoding='utf-8') as f:
+    with open(args.task_json, 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
     datapath = args.datapath
@@ -393,7 +396,7 @@ if __name__ == '__main__':
                     app=app,
                     task=tasktype,
                     fsm=fsm,
-                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/visited",
+                    savepath=args.result_dir + "/visited",
                 )
 
 

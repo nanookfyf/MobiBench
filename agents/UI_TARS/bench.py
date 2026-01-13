@@ -422,7 +422,7 @@ def run(
 
 # ---------- 主流程 ----------
 
-def main():
+def bench():
     parser = argparse.ArgumentParser(description="Offline FSM evaluation with UI-TARS model")
     parser.add_argument("--data_root", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="MobiBench data 根目录（包含 rawdata/）")
     # parser.add_argument("--app", required=True, help="应用名称，例如 高德地图")
@@ -449,30 +449,16 @@ def main():
         default=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/UI_TARS/runs",  # ==== NEW: 所有运行结果的根目录 ====
         help="所有运行结果的根目录，用于保存轨迹和坐标",
     )
-
+    parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
+    parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
+    parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/UI_TARS/log", help="log directory")
     args = parser.parse_args()
     setup_logging()
 
     # 确保 runs_dir 存在
     os.makedirs(args.runs_dir, exist_ok=True)
 
-    app_list = ["bilibili"]
-    type_list = ["type2"]
-    app2tasklist = {
-        "饿了么":["type1","type2","type3","type4","type5","type6","type7"],
-        "高德": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"],
-        "京东": ["type1","type2","type3","type4","type5","type6","type7"],
-        "美团": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"],
-        "同城": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"],
-        "网易云音乐": ["type1","type2","type3","type4","type5","type6","type7"],
-        "微博": ["type1","type2","type3","type4","type5","type6","type7","type8","type9","type10"],
-        "小红书": ["type1","type2","type3","type4","type5","type6","type7"],
-        "携程": ["type1","type2","type3","type4","type5","type6","type7","type8"],
-        "知乎": ["type1","type2","type3","type4","type5","type6","type7","type8","type9"],
-        "bilibili": ["type1","type2","type3","type4","type5","type6","type7"],
-        "QQ":["type1","type2","type3","type4"],
-    }
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/follow.json', 'r', encoding='utf-8') as f:
+    with open(args.task_json, 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
     datapath = args.data_root
@@ -505,7 +491,7 @@ def main():
                     inst=task,
                     fsm=fsm,
                     time_use=end-start,
-                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/runs/dev/UI-TARS.csv",
+                    savepath=args.result_dir,
                 )
                 from MobiBench.utils.score_proc import save_visited_result
                 save_visited_result(
@@ -513,8 +499,8 @@ def main():
                     app=app,
                     task=tasktype,
                     fsm=fsm,
-                    savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/visited",
+                    savepath=args.result_dir + "/visited",
                 )
 
 if __name__ == "__main__":
-    main()
+    bench()
