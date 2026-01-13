@@ -9,7 +9,7 @@
 通过人工/自动收集工具，收集每个action前的手机截图，并记录每个action的信息，并汇总到一个actions.json文件中。action格式如下：
 
 ```
-{{
+{
     "app_name": str
     "task_description": ["The description of the task list."],
     "action_count": "The count of the actions.",
@@ -42,8 +42,12 @@
         {{
             "type": "wait"
         }},
+        {
+            "type": "tag",
+            "label": "xxx"
+        },
     ]
-}}
+}
 ```
 
 ### 手动数据收集
@@ -54,7 +58,7 @@
 python -m collect.manual.server
 ```
 
-启动成功后，访问 http://localhost:9000 进入Web操作界面。
+启动成功后，访问 http://localhost:9999 进入Web操作界面。
 
 **操作步骤**
 
@@ -74,6 +78,7 @@ python -m collect.manual.server
      - **点击操作**：直接点击截图上的目标位置
      - **滑动操作**：按住鼠标左键拖拽到目标位置后松开（注意保持在屏幕范围内）
      - **文本输入**：点击 **文本输入** 按钮，在弹出框中输入文本内容
+     - **状态标记**：点击 **标注截图** 按钮，在弹出的框中输入标记名称，开始标记START，和完成标记DONE为默认标记
 5. **保存数据**
 
    - 完成一个任务序列后，根据需要选择：
@@ -267,105 +272,3 @@ python -m collect.construct_sft --data_path <原始数据路径> --ss_data_path 
 - `--factor`：图片缩放因子，用于减小图片尺寸（默认：`0.5`）
 - `--train_ratio`：训练集与验证集的划分比例（默认：`0.9`）
 
-其中，`data_path`存放完整的、VLM标注后的操作轨迹，不可为空，示例目录结构为：
-
-```
-data/
-|-- some-subpath1
-|   |-- 1.jpg
-|   |-- 2.jpg
-|   |-- ...
-|   |-- actions.json
-|   `-- react.json
-`-- some-subpath2
-    |-- 1.jpg
-    |-- 2.jpg
-    |-- ...
-    |-- actions.json
-    `-- react.json
-```
-
-`some-subpath`代表任意深度的路径，可根据数据组织的需要任意指定，一个最深的子目录包含 `n` 个屏幕截图，以及长度为 `n` 的动作列表 `react.json` + `actions.json`，动作和截图按照下标一一对应，且这 `n` 个截图-动作对构成一个任务的完整操作轨迹。
-
-`ss_data_path`存放手动收集的单步动作数据，可为空，示例目录结构为：
-
-```
-ss_data/
-|-- decider
-|   `-- some-subpath
-|       |-- 1.jpg
-|       |-- 2.jpg
-|       |-- ...
-|       |-- react.json
-|       `-- tasks.json
-`-- grounder
-    `-- some-subpath
-        |-- 1.jpg
-        |-- 2.jpg
-        |-- ...
-        `-- react.json
-```
-
-`ss_data_path`内必须仅包含 `decider` 和 `grounder` 作为一级目录，分别代表用于训练 `decider` 和 `grounder` 模型的单步动作数据。`some-subpath` 的深度和命名均任意，一个最深的子目录包含 `n` 个屏幕截图，长度为 `n` 的动作列表 `react.json`，动作和截图按照下标一一对应，且这 `n` 个截图-动作对均为单步操作，彼此之间没有联系。子目录不包含 `actions.json`。
-
-* `ss_data/decider` 下的子目录还包含一个长度任意的任务列表 `tasks.json` ，构建训练数据集时会为每个截图-动作对，从列表中随机采样一个任务，用于填充训练时模型输入提示词中的任务描述部分
-* `ss_data/grounder` 下的子目录下的 `react.json` 中，每一个动作应为 `click`，且包含一个额外的 `bbox` 字段，代表此次点击的元素的边界框（绝对坐标），例如：
-
-```json
-[
-    {
-        "reasoning": "...",
-        "function": {
-            "name": "click",
-            "parameters": {
-                "target_element": "..."
-            }
-        },
-        "bbox": [100, 200, 300, 400]
-    }
-]
-```
-
-`unexpected_img_path`目录下存放广告弹窗等agent遇到时，需要终止任务执行的截图，可为空。
-
-### 数据扩增（可选）
-
-数据集构建过程中，支持通过 `augment_config.json` 配置文件，通过对每个动作（`react.json` 中的一项）进行正则表达式匹配，对数据分布进行重新调整。每条规则包含三个字段：
-
-* `dir`：匹配目标的json字段路径
-* `pattern`：匹配目标的字段值（可用正则表达式匹配）
-* `multiplier`：扩增倍数，`decider`、`decider_no_history`、`grounder` 分别代表在对应数据集中扩增的倍数，`default` 代表默认扩增倍数（当某个数据集未指定时，使用该值）。
-
-示例：
-
-1. 将所有 `swipe` 动作，在 `decider` 训练集中扩增5倍
-
-```json
-{
-    "dir": [
-        "function",
-        "name"
-    ],
-    "pattern": "swipe",
-    "multiplier": {
-        "decider": 5,
-        "decider_no_history": 5,
-        "grounder": 1,
-        "default": 1
-    }
-}
-```
-
-2. 将 `reasoning` 包含“删除”关键词的动作，在所有数据集中扩增3倍
-
-```json
-{
-    "dir": [
-        "reasoning"
-    ],
-    "pattern": "删除",
-    "multiplier": {
-        "default": 3
-    }
-}
-```

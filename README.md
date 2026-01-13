@@ -9,12 +9,8 @@ MobiBench 是一个全面的移动应用自动化测试基准测试平台，用�
 - [项目结构](#项目结构)
 - [环境配置](#环境配置)
 - [快速开始](#快速开始)
-- [支持的 Agent](#支持的-agent)
 - [数据收集与标注](#数据收集与标注)
-- [评估机制](#评估机制)
 - [使用示例](#使用示例)
-- [结果分析](#结果分析)
-- [贡献指南](#贡献指南)
 
 ## 🎯 项目简介
 
@@ -27,7 +23,7 @@ MobiBench 提供了一个标准化的测试框架，用于评估各种 AI Agent�
 - **出行类**：高德、携程、同城
 - **娱乐类**：bilibili、网易云音乐
 
-每个应用支持多种任务类型（type1-type21），覆盖搜索、浏览、下单、评论、分享等常见操作场景。
+每个应用支持多种任务类型（type1--type21），覆盖搜索、浏览、下单、评论、分享等常见操作场景。
 
 ## ✨ 主要特性
 
@@ -188,29 +184,7 @@ python -m collect.manual.server
 
 访问 `http://localhost:9000` 进行数据收集操作。
 
-### 自动数据收集
 
-配置任务列表后，使用 AI Agent 自动收集数据：
-
-```bash
-python -m collect.auto.server --model <模型名称> --api_key <API密钥> --base_url <API基础URL> [--max_steps <最大步数>]
-```
-
-### 数据标注
-
-对收集的数据进行标注，生成推理过程：
-
-```bash
-python -m collect.annotate --data_path <数据路径> --model <模型名称> --api_key <API密钥> --base_url <API基础URL>
-```
-
-### 构建训练数据
-
-将标注后的数据转换为训练格式：
-
-```bash
-python -m collect.construct_sft --data_path <原始数据路径> --out_path <输出路径> [--factor <缩放因子>] [--train_ratio <训练比例>]
-```
 
 详细的数据收集和标注说明请参考 [collect/README.md](collect/README.md)。
 
@@ -281,30 +255,4 @@ for app, task_types in alldata.items():
 - **日志文件**：详细的执行日志
 
 可以使用提供的工具进行结果分析和可视化。
-
-## 🤝 贡献指南
-
-欢迎贡献代码、报告问题或提出建议！
-
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
-
-## 📄 许可证
-
-本项目采用相应的开源许可证（请查看 LICENSE 文件）。
-
-## 🙏 致谢
-
-感谢所有为移动应用自动化测试领域做出贡献的研究者和开发者。
-
-## 📧 联系方式
-
-如有问题或建议，请通过 Issue 或 Pull Request 联系我们。
-
----
-
-**注意**：使用本工具进行移动应用自动化测试时，请遵守相关应用的服务条款和使用协议。
 
