@@ -19,6 +19,7 @@
 /agents/android_world
 /agents/UI_TARS/runsdata/rawdata.zip
 /data/rawdata
-/.DS_Store
-/.__pycache__
+.DS_Store
+.__pycache__
+
 

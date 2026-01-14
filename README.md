@@ -101,9 +101,10 @@ conda activate MobiBench
 pip install -r requirements.txt
 ```
 
-3. **下载模型权重**
+3. **下载依赖模型权重**
 
 ```bash
+cd MobiBench
 # 下载 OmniParser-v2.0 模型
 modelscope download --model AI-ModelScope/OmniParser-v2.0 --local_dir ./utils/models/weights/OmniParser-v2.0
 
