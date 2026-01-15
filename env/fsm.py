@@ -11,6 +11,12 @@ from MobiBench.env.type_spaces import *          # 依赖: State, Action 等
 from MobiBench.env.parsedata2link import *       # 依赖: TraceParser, TraceLink, merge_info ,set_scores
 from MobiBench.utils.models.text_match import semantic_similarity
 
+
+class ScoreDeclare:
+    level_score = 90
+    done_score =  10
+    op_times_penalty = 5
+ScoreDeclare = ScoreDeclare()
 # ----------------------------
 # 工具函数
 # ----------------------------
@@ -497,7 +503,7 @@ def build_AppFSM(app: str, task: str, data_path: str) -> AppFSM:
     """ 
     data_path = os.path.join(data_path,"rawdata")
     fsm = AppFSM(app, task, data_path, is_init=True,use_cache=False)
-    fsm.save_cache()
+    #fsm.save_cache()
     return fsm  
 
 def quick_build_AppFSM(app: str, task: str, data_path: str) -> AppFSM:

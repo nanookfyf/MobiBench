@@ -20,7 +20,7 @@ from datetime import datetime
 from MobiBench.env.type_spaces import Action
 AUTO_DECIDER = '''
 ## 角色定义
-你是一个手机操作AI助手，需要帮助用户完成以下任务："{task_description}"
+你是一个手机操作AI助手，需要帮助用户完成指定任务。
 
 ## 输入说明
 我会提供给你：
@@ -29,12 +29,6 @@ AUTO_DECIDER = '''
 3. **{layer_count}张标注截图**：基于屏幕截图生成的可点击元素标注图层。为避免元素重叠，将所有可点击元素分配到不同图层中显示，所有图层包含的元素合集即为全部可点击元素
    - 可点击元素用红色方框标出
    - 每个元素的编号(index)显示在红色方框的左上角内侧，红底白字数字
-
-## 操作历史
-{history}
-
-## 任务要求
-请仔细分析当前屏幕状态和操作历史，然后决定下一步最合适的操作。
 
 ## 可用操作
 1. **点击操作 (click)**
@@ -167,7 +161,16 @@ AUTO_DECIDER = '''
 - reasoning: "1）目标元素详细描述：需要点击带有'搜索'提示文字的白色输入框，该输入框呈长方形，有浅灰色边框。2）精确位置描述：该搜索框位于屏幕最上方，在状态栏下方约50像素处，占据屏幕宽度的80%左右，位置居中。3）标注图查找：在第2张标注图中，我找到了位于屏幕上方中央位置的红色方框。4）红色方框验证：该红色方框完全包围了搜索输入框，边界与输入框的边缘完全贴合，框内确实包含带有'搜索'文字的白色输入框。5）index读取：该红色方框的左上角内侧清晰显示数字'15'。6）最终确认：确认该方框没有包含其他无关元素，也不是相邻的其他UI元素，正是我要点击的搜索框。"
 - parameters: {{"index": 15, "target_element": "搜索输入框"}}
 
+
+## 你的任务为：
+{task_description}
+
+## 操作历史
+{history}
+
 **记住：每次点击操作都必须在reasoning中包含完整的6步验证过程，确保精确匹配而不是选择相邻元素！每次输入操作后都要考虑软键盘遮挡问题！**
+
+
 '''
 
 
@@ -622,13 +625,13 @@ if __name__ == "__main__":
                     instruction=task,
                     runs_dir=args.runs_dir,  # ==== NEW: 传入 runs 根目录 ====
                     client=client,
-                    model="gemini-2.5-pro"
+                    model="gemini-2.5-flash"
 
                 )
                 end = time.time()
                 from MobiBench.utils.score_proc import save_result
                 save_result(
-                    md="gemini-2.5-pro",
+                    md="gemini-2.5-flash",
                     app=app,
                     task=tasktype,
                     inst=task,
@@ -638,7 +641,7 @@ if __name__ == "__main__":
                 )
                 from MobiBench.utils.score_proc import save_visited_result
                 save_visited_result(
-                    md="gemini-2.5-pro",
+                    md="gemini-2.5-flash",
                     app=app,
                     task=tasktype,
                     fsm=fsm,
