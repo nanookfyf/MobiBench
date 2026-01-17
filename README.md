@@ -130,16 +130,19 @@ modelscope download --model AI-ModelScope/GroundingDINO --local_dir ./utils/mode
 
 ```bash
 # 运行 AutoGLM Agent
-python -m MobiBench.agents.autoglm.bench
+python -m MobiBench.agents.autoglm.bench --datapath /home/feh/mobibench/MobiBench/data  --task_json /home/feh/mobibench/MobiBench/data/base.json --result_dir /home/feh/mobibench/MobiBench/results/dev --log_dir /home/feh/mobibench/MobiBench/agents/MobiMind/data
+
 
 # 运行 MobiMind Agent
-python -m MobiBench.agents.MobiMind.bench
+python -m MobiBench.agents.MobiMind.bench --datapath /home/feh/mobibench/MobiBench/data  --task_json /home/feh/mobibench/MobiBench/data/base.json --result_dir /home/feh/mobibench/MobiBench/results/dev --log_dir /home/feh/mobibench/MobiBench/agents/MobiMind/data
 
 # 运行 MobileAgent v3
-python -m MobiBench.agents.Mobileagentv3.bench
+python -m MobiBench.agents.Mobileagentv3.bench --datapath /home/feh/mobibench/MobiBench/data  --task_json /home/feh/mobibench/MobiBench/data/base.json --result_dir /home/feh/mobibench/MobiBench/results/dev --log_dir /home/feh/mobibench/MobiBench/agents/MobiMind/data
+
 
 # 运行 UI-TARS Agent
-python -m MobiBench.agents.UI_TARS.bench
+python -m MobiBench.agents.UI_TARS.bench --datapath /home/feh/mobibench/MobiBench/data  --task_json /home/feh/mobibench/MobiBench/data/base.json --result_dir /home/feh/mobibench/MobiBench/results/dev --log_dir /home/feh/mobibench/MobiBench/agents/MobiMind/data
+
 ```
 
 ### 配置 Agent

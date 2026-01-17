@@ -30,7 +30,7 @@ instruction = ""
 API_url = "ipads.chat.gpt:3006/v1"
 
 # Your GPT-4o API Token
-token = "sk-rfCIGhxrzcdsMV4jC17e406bE56c47CbA5416068A62318D3"
+token = "xxxx"
 
 # Choose between "api" and "local". api: use the qwen api. local: use the local qwen checkpoint
 caption_call_method = "api"
