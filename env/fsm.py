@@ -390,6 +390,38 @@ class AppFSM:
                     return self.hash_map.get(v, self.cur_state)
             self.undefine_op_times += 1
             return self.cur_state
+
+        elif act.act_type == "click_input":
+            # stage-1 click
+            tmp_state = None 
+            for k, v in self.cur_state.map_info.get("click", {}).items():
+                print("[click-input] Checking click area:",k,"-->",v)
+                if k == "unknown":
+                    continue
+                # k 可能是 tuple(x1,y1,x2,y2)；若不是，跳过
+                if isinstance(k, (list, tuple)) and len(k) == 4:
+                    if point_in_rectangle(
+                        act.parameters.get('position_x', -1), act.parameters.get('position_y', -1),
+                        k[0], k[1], k[2], k[3]
+                    ):
+                        tmp_state =  self.hash_map.get(v, self.cur_state)
+            
+            if tmp_state == None :
+                self.undefine_op_times += 1
+
+                return self.cur_state
+            else:
+                # stage2 
+                for k, v in tmp_state.map_info.get("input", {}).items():
+                    print("[click-input] Checking input text:",k)
+                    if k == act.parameters.get("text"):
+                        self.undefine_op_times = 0
+                        return self.hash_map.get(v, self.cur_state)
+                    elif  semantic_similarity(k,act.parameters.get("text"))['cosine_similarity']>0.7:
+                        self.undefine_op_times = 0
+                        return self.hash_map.get(v, self.cur_state)
+                self.undefine_op_times += 1
+            return self.cur_state
         
         elif act.act_type == "home":
             print("Going home...")

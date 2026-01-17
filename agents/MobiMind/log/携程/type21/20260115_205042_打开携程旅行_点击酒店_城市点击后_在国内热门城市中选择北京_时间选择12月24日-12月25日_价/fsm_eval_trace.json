@@ -1,0 +1,148 @@
+{
+  "instruction": "打开携程旅行，点击酒店，城市点击后，在国内热门城市中选择北京，时间选择12月24日-12月25日，价格选择300-400后点击完成，点击查询酒店",
+  "app": "携程",
+  "task": "type21",
+  "success": false,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "当前位于携程旅行App的首页，页面上展示了多个服务入口，其中‘酒店’图标位于顶部功能区第一个位置。任务要求进入酒店预订流程，因此我需要点击‘酒店’入口。我将点击顶部功能区的‘酒店’图标。",
+      "raw_output": {
+        "reasoning": "当前位于携程旅行App的首页，页面上展示了多个服务入口，其中‘酒店’图标位于顶部功能区第一个位置。任务要求进入酒店预订流程，因此我需要点击‘酒店’入口。我将点击顶部功能区的‘酒店’图标。",
+        "action": "click",
+        "parameters": {
+          "target_element": "顶部功能区第一个‘酒店’图标"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 142,
+        "position_y": 376
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于酒店预订页面，我看到城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+      "raw_output": {
+        "reasoning": "当前位于酒店预订页面，我看到城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+        "action": "click",
+        "parameters": {
+          "target_element": "城市选择区域的“上海”文本"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 184,
+        "position_y": 774
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+      "raw_output": {
+        "reasoning": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+        "action": "click",
+        "parameters": {
+          "target_element": "城市选择区域的“上海”文本"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 184,
+        "position_y": 774
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+      "raw_output": {
+        "reasoning": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+        "action": "click",
+        "parameters": {
+          "target_element": "城市选择区域的“上海”文本"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 184,
+        "position_y": 774
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+      "raw_output": {
+        "reasoning": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+        "action": "click",
+        "parameters": {
+          "target_element": "城市选择区域的“上海”文本"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 184,
+        "position_y": 774
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+      "raw_output": {
+        "reasoning": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+        "action": "click",
+        "parameters": {
+          "target_element": "城市选择区域的“上海”文本"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 184,
+        "position_y": 774
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+      "raw_output": {
+        "reasoning": "当前位于酒店预订页面，城市选择区域显示为“上海”，并被红圈标注。任务要求将城市更改为“北京”，因此我需要点击当前城市“上海”来进入城市选择列表。我将点击城市选择区域的“上海”文本。",
+        "action": "click",
+        "parameters": {
+          "target_element": "城市选择区域的“上海”文本"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 184,
+        "position_y": 774
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    }
+  ]
+}

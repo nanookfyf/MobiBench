@@ -1,0 +1,51 @@
+[
+  {
+    "step": 1,
+    "position_x": 142,
+    "position_y": 376,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/1.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg"
+  },
+  {
+    "step": 2,
+    "position_x": 184,
+    "position_y": 774,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg"
+  },
+  {
+    "step": 3,
+    "position_x": 184,
+    "position_y": 774,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg"
+  },
+  {
+    "step": 4,
+    "position_x": 184,
+    "position_y": 774,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg"
+  },
+  {
+    "step": 5,
+    "position_x": 184,
+    "position_y": 774,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg"
+  },
+  {
+    "step": 6,
+    "position_x": 184,
+    "position_y": 774,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg"
+  },
+  {
+    "step": 7,
+    "position_x": 184,
+    "position_y": 774,
+    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg",
+    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/携程/type21/1/2.jpg"
+  }
+]

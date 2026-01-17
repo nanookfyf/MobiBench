@@ -1,3 +1,4 @@
+from ast import arg
 from openai import OpenAI
 import base64
 from PIL import Image
@@ -56,6 +57,46 @@ def init(service_ip, decider_port, grounder_port, planner_port):
         api_key = "sk-441155ebf2764ac78b36195e8a9978da",
         base_url = "https://api.deepseek.com",
     )
+
+e2e_qwen3_template_v1 = """
+<image>
+You are a phone-use AI agent.
+
+Please provide the next action based on the screenshot and your action history. You should do careful reasoning before providing the action.
+Your action space includes:
+- Name: click, Parameters: target_element (a high-level description of the UI element to click), bbox (an bounding box of the target element,[x1, y1, x2, y2]).
+- Name: swipe, Parameters: direction (one of UP, DOWN, LEFT, RIGHT), start_coords (the starting coordinate [x, y]), end_coords (the ending coordinate [x, y]).
+- Name: click_input, Parameters: target_element (a high-level description of the UI element to click), text (the text to input), bbox (an bounding box of the target element,[x1, y1, x2, y2]).
+- Name: input, Parameters: text (the text to input).
+- Name: wait, Parameters: (no parameters, will wait for 1 second).
+- Name: done, Parameters: status (the completion status of the current task, one of `success`, `suspended` and `failed`).
+Your output should be a JSON object with the following format:
+{{"reasoning": "Your reasoning here", "action": "The next action (one of click, input, swipe, wait, done)", "parameters": {{"param1": "value1", "param2": "value2", ...}}}}
+
+Now your task is "{task}".
+Your action history is:
+{history}
+"""
+e2e_qwen3_template_v2 = """
+You are a phone-use AI agent.
+
+Your action space includes:
+- Name: click, Parameters: target_element (a high-level description of the UI element to click), bbox (an bounding box of the target element,[x1, y1, x2, y2]).
+- Name: swipe, Parameters: direction (one of UP, DOWN, LEFT, RIGHT), start_coords (the starting coordinate [x, y]), end_coords (the ending coordinate [x, y]).
+- Name: click_input, Parameters: target_element (a high-level description of the UI element to click), text (the text to input), bbox (an bounding box of the target element,[x1, y1, x2, y2]).
+- Name: input, Parameters: text (the text to input).
+- Name: wait, Parameters: (no parameters, will wait for 1 second).
+- Name: done, Parameters: status (the completion status of the current task, one of `success`, `suspended` and `failed`).
+Your output should be a JSON object with the following format:
+{{"reasoning": "Your reasoning here", "action": "The next action (one of click, input, swipe, wait, done)", "parameters": {{"param1": "value1", "param2": "value2", ...}}}}
+
+Now your task is "{task}".
+Your action history is:
+{history}
+<image>
+Please provide the next action based on the screenshot and your action history. You should do careful reasoning before providing the action.
+"""
+
 
 decider_prompt_template = """
 You are a phone-use AI agent. Now your task is "{task}".
@@ -118,7 +159,7 @@ factor = 0.5
 prices = {}
 
 class BenchEnv:
-    def __init__(self, *,app,task_type, worker, task, decider, grounder, planner,
+    def __init__(self, *,app,task_type, worker, task, decider, grounder, planner,use_flag: str = "e2e_v1",
                  max_steps: int = MAX_STEPS, record_dir: str = "record",
                  run_root: str = "runs"):
         self.worker = worker
@@ -130,6 +171,7 @@ class BenchEnv:
         self.record_dir = record_dir
         self.app = app
         self.task_type = task_type
+        self.use_flag = use_flag
         
 
         # 运行期状态
@@ -182,11 +224,28 @@ class BenchEnv:
         img.save(save_path)
 
     def _call_decider(self, obs_bgr_base64: str) -> dict:
-        decider_prompt = decider_prompt_template.format(
-            task=self.task,
-            history=self._history_str()
-        )
-        logging.info("Decider prompt:\n%s", decider_prompt)
+
+        if self.use_flag == "e2e_v1":
+
+            decider_prompt = e2e_qwen3_template_v1.format(
+                task=self.task,
+                history=self._history_str()
+            )
+            logging.info("Decider prompt:\n%s", decider_prompt)
+
+        elif self.use_flag == "e2e_v2":
+            passdecider_prompt = e2e_qwen3_template_v2.format(
+                task=self.task,
+                history=self._history_str()
+            )
+            logging.info("Decider prompt:\n%s", decider_prompt)
+        else:
+            decider_prompt = decider_prompt_template.format(
+                task=self.task,
+                history=self._history_str()
+            )
+            logging.info("Decider prompt:\n%s", decider_prompt)
+
         self._append_text(self.file_prompts, f"--- step {len(self.actions)+1} ---\n{decider_prompt}\n")
 
         resp = self.decider.chat.completions.create(
@@ -270,6 +329,74 @@ class BenchEnv:
                 logging.warning("[decider] missing key for action=%s: %s in %s", a, k, p)
                 return False
         return True
+    
+    def validate_action_parameters(decider_response):
+        """
+        校验不同动作的字段完整性
+        
+        Args:
+            decider_response: 解析后的 JSON 响应字典
+        
+        Raises:
+            ValueError: 当必需字段缺失时
+        """
+
+        action = decider_response.get("action")
+        parameters = decider_response.get("parameters", {})
+        
+        if not action:
+            raise ValueError("Missing required field: 'action'")
+        
+        if not decider_response.get("reasoning"):
+            raise ValueError("Missing required field: 'reasoning'")
+        
+        # 根据不同动作类型校验必需参数
+        if action == "click":
+            if not parameters.get("target_element"):
+                raise ValueError("Click action missing required parameter: 'target_element'")
+            # e2e模式下需要校验bbox
+            # 注意：这里不直接检查bbox，因为可能在非e2e模式下不需要
+        elif action == "click_input":
+            if not parameters.get("target_element"):
+                raise ValueError("Click_input action missing required parameter: 'target_element'")
+            if not parameters.get("bbox"):
+                raise ValueError("Click_input action missing required parameter: 'bbox'")
+            if not parameters.get("text"):
+                raise ValueError("Click_input action missing required parameter: 'text'")
+            
+        elif action == "input":
+            if "text" not in parameters:
+                raise ValueError("Input action missing required parameter: 'text'")
+            # text可以为空字符串，所以只检查是否存在该字段
+        
+        elif action == "swipe":
+            direction = parameters.get("direction")
+            if not direction:
+                raise ValueError("Swipe action missing required parameter: 'direction'")
+            if direction.upper() not in ["UP", "DOWN", "LEFT", "RIGHT"]:
+                raise ValueError(f"Invalid swipe direction: '{direction}'. Must be one of: UP, DOWN, LEFT, RIGHT")
+        
+        elif action == "done":
+            status = parameters.get("status")
+            if not status:
+                raise ValueError("Done action missing required parameter: 'status'")
+        
+        elif action == "long_press":
+            if not parameters.get("target_element"):
+                raise ValueError("Long_press action missing required parameter: 'target_element'")
+        
+        elif action == "open_app":
+            if not parameters.get("app_name"):
+                raise ValueError("Open_app action missing required parameter: 'app_name'")
+        
+        elif action == "wait":
+            # wait动作通常不需要额外参数
+            pass
+        
+        else:
+            raise ValueError(f"Unknown action: '{action}'")
+        
+        return True
 
     def bench(self) -> dict:
         """
@@ -301,6 +428,9 @@ class BenchEnv:
                 break
             #print(dec_raw)
             dec = self._normalize_decision(dec_raw)
+            #dec = dec_raw
+            #self.validate_action_parameters(dec)
+
             self.actions.append(dec)
             
             self._append_jsonl(self.file_trace, {
@@ -443,6 +573,7 @@ if __name__ == "__main__":
     parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
     parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
     parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobiMind/log", help="log directory")
+    parser.add_argument("--use_flag", default="e2e_v1", help="using flag mode")
     args = parser.parse_args()
 
     # 使用命令行参数初始化
@@ -463,7 +594,7 @@ if __name__ == "__main__":
     for app in alldata.keys():
         for tasktype in alldata[app]:
             tasklist = get_tasks(app,tasktype)
-            envengine = StaticMobiAgentWorker(app,tasktype,datapath,grounder_client)
+            envengine = StaticMobiAgentWorker(app,tasktype,datapath,grounder_client,use_flag = args.use_flag)
             for task in tasklist:
                 print(f"任务: {task}，应用: {app}，类型: {tasktype}")
                 envengine.reset()
@@ -477,6 +608,7 @@ if __name__ == "__main__":
                         planner=planner_client,
                         max_steps=MAX_STEPS,
                         record_dir=args.log_dir,  
+                        use_flag=args.use_flag
                     )
                 start = time.time()
                 result = runner.bench()

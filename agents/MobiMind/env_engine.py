@@ -32,9 +32,24 @@ RESIZE_FACTOR = 0.5  # Resize factor for screenshots to reduce size
 
 use_qwen_3 = True
 
+def box2xy(bbox,width,height):
+    if use_qwen_3:
+        bbox[0] = bbox[0] / 1000 * width
+        bbox[2] = bbox[2] / 1000 * width
+        bbox[1] = bbox[1] / 1000 * height
+        bbox[3] = bbox[3] / 1000 * height
+        x1, y1, x2, y2 = bbox[0], bbox[1], bbox[2], bbox[3]
+        x, y = (x1 + x2) // 2, (y1 + y2) // 2
+    else:
+        x1, y1, x2, y2 = bbox[0], bbox[1], bbox[2], bbox[3]
+        x, y = (x1 + x2) // 2, (y1 + y2) // 2
+    x, y = int(x / RESIZE_FACTOR), int(y / RESIZE_FACTOR)
+    return x, y
+
+
 class StaticMobiAgentWorker:
     
-    def __init__(self,app,task_type,datapath,grounder, cur_state = None) -> None:
+    def __init__(self,app,task_type,datapath,grounder,use_flag = "e2e_v1",cur_state = None) -> None:
         self.fsm = build_AppFSM(app, task_type, datapath)
         self.fsm._reset()
         self.cur_state = self.fsm.cur_state
@@ -42,6 +57,7 @@ class StaticMobiAgentWorker:
         self.last_state = None   
         self.last_obs = None 
         self.cluster_class_keys = self.fsm.app_states.keys()
+        self.use_flag = use_flag
 
 
         
@@ -50,7 +66,16 @@ class StaticMobiAgentWorker:
         img = img.resize((int(img.width * RESIZE_FACTOR), int(img.height * RESIZE_FACTOR)), Image.Resampling.LANCZOS)
         self.last_obs = img
         return np.array(img)
-    
+    def _get_w_h(self):
+        buffer = io.BytesIO()
+        self.last_obs.save(buffer, format="JPEG")
+        last_obs_base64 = base64.b64encode(buffer.getvalue()).decode('utf-8')
+
+        pil_img = Image.open(io.BytesIO(base64.b64decode(last_obs_base64)))
+        width, height = pil_img.size
+
+        return width,height
+
     def _call_grounder(self, reasoning: str, target_element: str):
         prompt_fmt = GROUNDER_PROMPT if not use_qwen_3 else GROUNDER_PROMPT_QWEN3
         grounder_prompt = prompt_fmt.format(
@@ -142,8 +167,21 @@ class StaticMobiAgentWorker:
 
             
             if action_type == "click":
-                target_element = parameters["target_element"]
-                x, y = self._call_grounder(reasoning, target_element)
+                # 使用 Qwen3 模型进行坐标转换
+                if self.use_flag == "e2e_v1" or self.use_flag == "e2e_v2":
+                    
+                    width, height = self._get_w_h()
+                    bbox = parameters["bbox"]
+                    if bbox is None:
+                        logging.error("E2E mode: bbox not found in decider response")
+                        raise ValueError("E2E mode requires bbox in decider response")
+                    logging.info(f"E2E mode: Using bbox directly from decider: {bbox}")
+
+                    x,y = box2xy(bbox=bbox,width=width,height=height)
+                else:
+
+                    target_element = parameters["target_element"]
+                    x, y = self._call_grounder(reasoning, target_element)
                 stdact = Action(act_type="click",parameters={"position_x":x, "position_y": y})
                 self.cur_state = self.fsm.action(stdact)
                 
@@ -172,6 +210,17 @@ class StaticMobiAgentWorker:
             elif action_type == "wait":
                 
                 stdact = Action(act_type="wait", parameters={})
+                self.cur_state = self.fsm.action(stdact)
+                if self.cur_state.cluster_class=="DONE":
+                    done = True
+                    info["won"] = 1
+            elif action_type == "click_input":
+                text = parameters["text"]
+                bbox = parameters["bbox"]
+                width, height = self._get_w_h()
+                bbox = parameters["bbox"]
+                x,y = box2xy(bbox=bbox,width=width,height=height)
+                stdact = Action(act_type="click_input", parameters={"position_x":x, "position_y": y,"text":text})
                 self.cur_state = self.fsm.action(stdact)
                 if self.cur_state.cluster_class=="DONE":
                     done = True

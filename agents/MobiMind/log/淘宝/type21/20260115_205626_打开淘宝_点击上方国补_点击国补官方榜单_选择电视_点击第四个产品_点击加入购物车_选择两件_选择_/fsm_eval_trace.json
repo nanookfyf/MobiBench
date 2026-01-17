@@ -1,0 +1,148 @@
+{
+  "instruction": "打开淘宝，点击上方国补，点击国补官方榜单，选择电视，点击第四个产品，点击加入购物车，选择两件，选择【144Hz高刷 2+64GB大存储】REDMI AI X65",
+  "app": "淘宝",
+  "task": "type21",
+  "success": true,
+  "steps": [
+    {
+      "step": 1,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/1.jpg",
+      "prev_label": "START",
+      "thought": "当前位于淘宝首页，顶部导航栏中可见“国补”标签。任务要求进入“国补”页面，因此我需要点击该标签。我将点击顶部导航栏中的“国补”标签。",
+      "raw_output": {
+        "reasoning": "当前位于淘宝首页，顶部导航栏中可见“国补”标签。任务要求进入“国补”页面，因此我需要点击该标签。我将点击顶部导航栏中的“国补”标签。",
+        "action": "click",
+        "parameters": {
+          "target_element": "顶部导航栏中的“国补”标签"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 634,
+        "position_y": 174
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 2,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于淘宝国补页面，我看到页面中部有“国补官方榜单”入口。任务要求进入该榜单查看商品，因此我需要点击该入口。我将点击“国补官方榜单”入口。",
+      "raw_output": {
+        "reasoning": "当前位于淘宝国补页面，我看到页面中部有“国补官方榜单”入口。任务要求进入该榜单查看商品，因此我需要点击该入口。我将点击“国补官方榜单”入口。",
+        "action": "click",
+        "parameters": {
+          "target_element": "国补官方榜单"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 218,
+        "position_y": 1012
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/3.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 3,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/3.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于国补推荐榜单页面，顶部导航栏中可见多个商品分类标签，包括“推荐”、“家焕新”、“冬保暖”、“冰箱”、“电视”等。任务要求进入“电视”分类，因此我需要点击“电视”标签。我将点击顶部导航栏中的“电视”分类标签。",
+      "raw_output": {
+        "reasoning": "当前位于国补推荐榜单页面，顶部导航栏中可见多个商品分类标签，包括“推荐”、“家焕新”、“冬保暖”、“冰箱”、“电视”等。任务要求进入“电视”分类，因此我需要点击“电视”标签。我将点击顶部导航栏中的“电视”分类标签。",
+        "action": "click",
+        "parameters": {
+          "target_element": "顶部导航栏中的“电视”分类标签"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 772,
+        "position_y": 396
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/4.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 4,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/4.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于电视品类的热卖榜页面，我看到列表中第4名是“小米 Redmi A Pro65”电视。任务要求选择第4个商品，因此我需要点击该商品以进入详情页。我将点击列表中第4名的“小米 Redmi A Pro65”商品。",
+      "raw_output": {
+        "reasoning": "当前位于电视品类的热卖榜页面，我看到列表中第4名是“小米 Redmi A Pro65”电视。任务要求选择第4个商品，因此我需要点击该商品以进入详情页。我将点击列表中第4名的“小米 Redmi A Pro65”商品。",
+        "action": "click",
+        "parameters": {
+          "target_element": "列表中第4名的商品“小米 Redmi A Pro65”"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 90,
+        "position_y": 1710
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/5.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 5,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/5.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于小米REDMI A Pro 65 2025电视的商品详情页，页面底部显示了“加入购物车”按钮。任务要求将此商品加入购物车，因此我需要点击该按钮以进入规格选择页面。我将点击页面底部的“加入购物车”按钮。",
+      "raw_output": {
+        "reasoning": "当前位于小米REDMI A Pro 65 2025电视的商品详情页，页面底部显示了“加入购物车”按钮。任务要求将此商品加入购物车，因此我需要点击该按钮以进入规格选择页面。我将点击页面底部的“加入购物车”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "底部橙色的“加入购物车”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 624,
+        "position_y": 2518
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/6.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 6,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/6.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于商品规格选择页面，弹窗中显示了多个版本选项，其中【144Hz高刷 2+64GB大存储】REDMI AI X65是任务要求的型号。我需要选择该版本以继续下一步操作。我将点击【144Hz高刷 2+64GB大存储】REDMI AI X65选项。",
+      "raw_output": {
+        "reasoning": "当前位于商品规格选择页面，弹窗中显示了多个版本选项，其中【144Hz高刷 2+64GB大存储】REDMI AI X65是任务要求的型号。我需要选择该版本以继续下一步操作。我将点击【144Hz高刷 2+64GB大存储】REDMI AI X65选项。",
+        "action": "click",
+        "parameters": {
+          "target_element": "版本选项【144Hz高刷 2+64GB大存储】REDMI AI X65"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 500,
+        "position_y": 1358
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/7.jpg",
+      "new_label": "unlabeled"
+    },
+    {
+      "step": 7,
+      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/7.jpg",
+      "prev_label": "unlabeled",
+      "thought": "当前位于商品规格选择页面，已选择【144Hz高刷 2+64GB大存储】REDMI AI X65版本，数量已设置为2件。根据任务目标，我需要将该商品加入购物车。我将点击页面底部的“加入购物车”按钮。",
+      "raw_output": {
+        "reasoning": "当前位于商品规格选择页面，已选择【144Hz高刷 2+64GB大存储】REDMI AI X65版本，数量已设置为2件。根据任务目标，我需要将该商品加入购物车。我将点击页面底部的“加入购物车”按钮。",
+        "action": "click",
+        "parameters": {
+          "target_element": "底部橙色的“加入购物车”按钮"
+        }
+      },
+      "action_type": "click",
+      "action_params": {
+        "position_x": 594,
+        "position_y": 2504
+      },
+      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/8.jpg",
+      "new_label": "DONE"
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 from sentence_transformers import SentenceTransformer, util
-
+import os
+md_path = os.path.abspath(os.path.join(os.path.dirname(__file__),"weights/paraphrase-MiniLM-L6-v2"))
 # 轻量级模型选择
 models = {
-    'mini': "/Users/fengyunfei/Desktop/mobiagent/MobiBench/utils/models/weights/paraphrase-MiniLM-L6-v2",  # 80MB
+    'mini': md_path,  # 80MB
 }
 
 model = SentenceTransformer(models['mini'])

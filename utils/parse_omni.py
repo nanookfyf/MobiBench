@@ -1,10 +1,10 @@
 from MobiBench.utils.omni_utils import get_som_labeled_img, check_ocr_box, get_yolo_model
 from PIL import Image
 import torch
-
+import os
 device = "cuda" if torch.cuda.is_available() else "cpu"
-
-detect_model_path='/Users/fengyunfei/Desktop/mobiagent/MobiBench/utils/models/weights/OminParserv2/icon_detect/model.pt'
+detect_model_path = os.path.abspath(os.path.join(os.path.dirname(__file__),"models/weights/OminParserv2/icon_detect","model.pt"))
+#detect_model_path='/Users/fengyunfei/Desktop/mobiagent/MobiBench/utils/models/weights/OminParserv2/icon_detect/model.pt'
 caption_model_path='./weights/icon_caption_florence'
 
 som_model = get_yolo_model(detect_model_path)
