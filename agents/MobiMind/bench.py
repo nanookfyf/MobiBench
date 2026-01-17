@@ -614,7 +614,7 @@ if __name__ == "__main__":
                 result = runner.bench()
                 end = time.time()
                 from MobiBench.utils.score_proc import save_result
-                save_result(md="MobiMind",app=app,task=tasktype,inst=task,fsm=envengine.fsm,time_use=end-start,savepath="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev")
+                save_result(md="MobiMind",app=app,task=tasktype,inst=task,fsm=envengine.fsm,time_use=end-start,savepath=args.log_dir)
                 from MobiBench.utils.score_proc import save_env_result
                 save_env_result(
                     app=app,

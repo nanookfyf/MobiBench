@@ -5,7 +5,7 @@ import json
 import os
 from typing import List, Dict, Any, Optional
 from pathlib import Path
-from type_spaces  import *
+from MobiBench.env.type_spaces  import *
 import math
 from MobiBench.utils.parse_omni import extract_all_bounds, find_clicked_element
 import sys
