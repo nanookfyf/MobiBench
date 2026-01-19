@@ -88,8 +88,7 @@ python -m MobiBench.agents.MobiMind.bench \
     --task_json /path/to/MobiBench/data/base.json \
     --result_dir /path/to/MobiBench/results/dev \
     --log_dir /path/to/MobiBench/agents/MobiMind/data \
-    --e2e \
-    --prompt_mode e2e_v1
+    --e2e 
 
 # UI-TARS Agent
 python -m MobiBench.agents.UI_TARS.bench \
@@ -103,13 +102,13 @@ python -m MobiBench.agents.UI_TARS.bench \
 
 ### 参数说明
 
-- `--service_ip <str>`: Agent服务的IP地址，默认`123.60.91.241`
-- `--port <int>` / `--decider_port <int>`: 服务端口号，默认`9003`
-- `--datapath <path>`: 评估数据目录路径，默认`MobiBench/data`
-- `--task_json <path>`: 任务定义JSON文件 (`data`下的任务json文件)
-- `--result_dir <path>`: 评估结果保存目录，默认`MobiBench/results`
-- `--log_dir <path>`: 执行日志保存目录，默认`agents/MobiMind/log`
-- `--e2e <on|off>`: 是否端到端推理模式，减少grounder调用（默认：`on`）
+- `--service_ip <str>`: Agent服务的IP地址，默认`123.60.91.241`。
+- `--port <int>` / `--decider_port <int>`: 服务端口号，默认`9003`。
+- `--datapath <path>`: 评估数据目录路径，默认`MobiBench/data`。
+- `--task_json <path>`: 任务定义JSON文件 (`data`下的任务json文件)。
+- `--result_dir <path>`: 评估结果保存目录，默认`MobiBench/results`。
+- `--log_dir <path>`: 执行日志保存目录，默认`agents/MobiMind/log`。
+- `--e2e <on|off>`: 是否端到端推理模式，减少grounder调用（默认：`on`）。
 
 ## 📊 评估机制
 
