@@ -56,7 +56,7 @@ MobiBench/
 评测数据存储在 `data/rawdata/` 目录中，按以下层级结构组织：
 
 ```
-data/
+rawdata/
 ├── <应用名称>/
 │   ├── <任务类型>/
 │   │   ├── 1/
@@ -123,7 +123,7 @@ python -m MobiBench.agents.MobiMind.bench \
     --task_json /path/to/MobiBench/data/base.json \
     --result_dir /path/to/MobiBench/results/dev \
     --log_dir /path/to/MobiBench/agents/MobiMind/data \
-    --use_flag e2e_v1
+    --agent-mode e2e_v1
 
 # UI-TARS Agent
 python -m MobiBench.agents.UI_TARS.bench \
@@ -139,11 +139,14 @@ python -m MobiBench.agents.UI_TARS.bench \
 
 - `--service_ip`: Agent服务的IP地址
 - `--port` / `--decider_port`: 服务端口号
-- `--datapath`: 数据目录路径
+- `--datapath`: 评估数据目录路径
 - `--task_json`: 任务定义JSON文件
 - `--result_dir`: 评估结果保存目录
 - `--log_dir`: 执行日志保存目录
-- `--use_flag`: 特殊配置标志（如`e2e_v1`）
+- `--agent-mode`: Agent提示词模式选择
+  - `e2e_v1`: 端到端模式，决策和执行合并 （Agent直接接收观察信息并输出操作指令，决策和执行在同一流程中完成）
+  - `decider_en`: 决策与执行分离模式 （采用两阶段架构，先由决策模块分析当前状态并生成高层指令，再由执行模块转化为具体操作）（英文提示词）
+  - `decider_zh`: 决策与执行分离模式（中文提示词）
 
 ## 🤖 支持Agent
 

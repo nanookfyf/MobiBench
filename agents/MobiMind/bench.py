@@ -234,7 +234,19 @@ class BenchEnv:
             logging.info("Decider prompt:\n%s", decider_prompt)
 
         elif self.use_flag == "e2e_v2":
-            passdecider_prompt = e2e_qwen3_template_v2.format(
+            decider_prompt = e2e_qwen3_template_v2.format(
+                task=self.task,
+                history=self._history_str()
+            )
+            logging.info("Decider prompt:\n%s", decider_prompt)
+        elif self.use_flag == "decider_en":
+            decider_prompt = decider_prompt_template.format(
+                task=self.task,
+                history=self._history_str()
+            )
+            logging.info("Decider prompt:\n%s", decider_prompt)
+        elif self.use_flag == "decider_zh":
+            decider_prompt = decider_prompt_template_zh.format(
                 task=self.task,
                 history=self._history_str()
             )
@@ -577,7 +589,7 @@ if __name__ == "__main__":
     parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
     parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
     parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobiMind/log", help="log directory")
-    parser.add_argument("--use_flag", default="e2e_v1", help="using flag mode")
+    parser.add_argument("--agent-mode", default="e2e_v1", help="using flag mode")
     args = parser.parse_args()
 
     # 使用命令行参数初始化
@@ -586,10 +598,10 @@ if __name__ == "__main__":
     #device = AndroidDevice()
     #print(f"connect to device")
 
-    data_base_dir = os.path.join(os.path.dirname(__file__), 'data')
-    if not os.path.exists(data_base_dir):
-        os.makedirs(data_base_dir)
-    task_json_path = os.path.join(os.path.dirname(__file__), "task.json")
+    # data_base_dir = os.path.join(os.path.dirname(__file__), 'data')
+    # if not os.path.exists(data_base_dir):
+    #     os.makedirs(data_base_dir)
+    # task_json_path = os.path.join(os.path.dirname(__file__), "task.json")
     with open(args.task_json, 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
@@ -598,7 +610,7 @@ if __name__ == "__main__":
     for app in alldata.keys():
         for tasktype in alldata[app]:
             tasklist = get_tasks(app,tasktype)
-            envengine = StaticMobiAgentWorker(app,tasktype,datapath,grounder_client,use_flag = args.use_flag)
+            envengine = StaticMobiAgentWorker(app,tasktype,datapath,grounder_client,use_flag = args.agent_mode)
             for task in tasklist:
                 print(f"任务: {task}，应用: {app}，类型: {tasktype}")
                 envengine.reset()
@@ -612,7 +624,7 @@ if __name__ == "__main__":
                         planner=planner_client,
                         max_steps=MAX_STEPS,
                         record_dir=args.log_dir,  
-                        use_flag=args.use_flag
+                        use_flag=args.agent_mode
                     )
                 start = time.time()
                 result = runner.bench()
