@@ -88,7 +88,8 @@ python -m MobiBench.agents.MobiMind.bench \
     --task_json /path/to/MobiBench/data/base.json \
     --result_dir /path/to/MobiBench/results/dev \
     --log_dir /path/to/MobiBench/agents/MobiMind/data \
-    --agent-mode e2e_v1
+    --e2e \
+    --prompt_mode e2e_v1
 
 # UI-TARS Agent
 python -m MobiBench.agents.UI_TARS.bench \
@@ -108,8 +109,9 @@ python -m MobiBench.agents.UI_TARS.bench \
 - `--task_json`: 任务定义JSON文件
 - `--result_dir`: 评估结果保存目录
 - `--log_dir`: 执行日志保存目录
-- `--agent-mode`: Agent提示词模式选择
-  - `e2e_v1`: （默认）端到端模式，决策和执行合并，同时扩展动作空间，`click` 和 `input`操作融合为 `click_input`
+- `--e2e`：端到端推理模式，减少grounder调用（默认：`True`）
+- `--promot_mode`: Agent提示词选择（默认`e2e_v1`）
+  - `e2e_v1`: 决策和执行合并，扩展动作空间，增加`click` , `input`的融合操作 `click_input`
   - `decider_en`: 决策与执行分离模式 （采用两阶段架构，先由决策模块分析当前状态并生成高层指令，再由执行模块转化为具体操作）
 
 

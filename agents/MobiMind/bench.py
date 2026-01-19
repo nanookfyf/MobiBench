@@ -589,7 +589,8 @@ if __name__ == "__main__":
     parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
     parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
     parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobiMind/log", help="log directory")
-    parser.add_argument("--agent-mode", default="e2e_v1", help="using flag mode")
+    parser.add_argument("--prompt_mode", default="e2e_v1", help="chose prompt mode: e2e_v1/e2e_v2/decider_en/decider_zh")
+    parser.add_argument("--e2e", type=bool,default=True, help="whether use e2e mode")
     args = parser.parse_args()
 
     # 使用命令行参数初始化
