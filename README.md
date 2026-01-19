@@ -4,39 +4,11 @@
 
 [English Version](README_EN.md) | 中文版本
 
-## 📋 目录
-
-- [概述](#概述)
-- [核心特性](#核心特性)
-- [项目结构](#项目结构)
-- [数据存储格式](#数据存储格式)
-- [环境配置](#环境配置)
-- [快速开始](#快速开始)
-- [支持Agent](#支持agent)
-- [评估机制](#评估机制)
-- [使用示例](#使用示例)
 
 ## 🎯 概述
 
 MobiBench 提供了一个标准化的测试框架，用于评估各种 AI Agent（包括基于大语言模型的智能体）在移动应用上的自动化操作能力。支持购物、社交、出行、娱乐等多个类别的流行应用，采用有限状态机（FSM）进行客观的任务完成度评估。
 
-### 支持的应用
-
-- **购物类**：淘宝、京东、美团、饿了么
-- **社交类**：微博、小红书、知乎、QQ
-- **出行类**：高德、携程、同程
-- **娱乐类**：bilibili、网易云音乐
-
-每个应用支持 21 种任务类型，涵盖搜索、浏览、下单、评论、分享等常见操作场景。
-
-## ✨ 核心特性
-
-- 🤖 **多Agent支持**：集成多种基于大语言模型的智能体实现
-- 📱 **真实场景**：基于真实移动应用操作轨迹数据
-- 🔍 **FSM评估**：通过有限状态机进行客观任务评估
-- 📊 **完整流程**：数据收集、标注、评估一体化工具
-- 🎨 **可视化**：截图标注和轨迹可视化工具
-- 📈 **性能指标**：操作步数、成功率、响应时间等多维度分析
 
 ## 📁 项目结构
 
@@ -102,13 +74,6 @@ modelscope download --model AI-ModelScope/OmniParser-v2.0 --local_dir ./utils/mo
 modelscope download --model sentence-transformers/paraphrase-MiniLM-L6-v2 --local_dir ./utils/models/weights/paraphrase-MiniLM-L6-v2
 ```
 
-### 主要依赖
-
-- **深度学习框架**：torch, torchvision
-- **视觉/OCR**：paddlepaddle, paddleocr, ultralytics
-- **图像处理**：Pillow, opencv-python
-- **移动自动化**：uiautomator2
-- **API框架**：fastapi, langchain
 
 ## 🚀 快速开始
 
@@ -148,16 +113,6 @@ python -m MobiBench.agents.UI_TARS.bench \
   - `decider_en`: 决策与执行分离模式 （采用两阶段架构，先由决策模块分析当前状态并生成高层指令，再由执行模块转化为具体操作）（英文提示词）
   - `decider_zh`: 决策与执行分离模式（中文提示词）
 
-## 🤖 支持Agent
-
-1. **AutoGLM**: 基于AutoGLM模型
-2. **Claude**: 基于Anthropic Claude
-3. **Gemini**: 基于Google Gemini（支持2.5-flash、2.5-pro、3-flash-preview、3-pro版本）
-4. **GPT-5**: 基于OpenAI GPT-5
-5. **Grok-4**: 基于Grok-4模型
-6. **MobileAgent v2/v3**: 多Agent协作助手
-7. **MobiMind**: 分层决策架构Agent
-8. **UI-TARS**: 基于UI-TARS框架
 
 ## 📊 评估机制
 
@@ -202,15 +157,5 @@ for app, task_types in alldata.items():
         save_results(results, app, task_type)
 ```
 
-## 📈 结果输出
-
-`results/` 目录中的输出包括：
-
-- **CSV文件**: 详细评估表格
-- **轨迹记录**: Agent执行路径
-- **屏幕截图**: 各步骤截图
-- **日志文件**: 详细执行日志
-
-使用提供的工具进行结果分析和可视化。
 
 ---
