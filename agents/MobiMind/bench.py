@@ -495,6 +495,10 @@ class BenchEnv:
                 self.history.append(f'swipe -> {p.get("direction","")}')
             elif a == "wait":
                 self.history.append("wait")
+            elif a== "click_input":
+                self.history.append(f'click_input -> {p.get("bbox")} {p.get("text")}')
+            else:
+                self.history.append("None")
 
             self._append_text(self.file_history, self.history[-1])
             step += 1
@@ -566,8 +570,8 @@ if __name__ == "__main__":
     # 解析命令行参数
     parser = argparse.ArgumentParser(description="MobiMind Agent")
     parser.add_argument("--service_ip", type=str, default="123.60.91.241", help="Ip for the services (default: localhost)")
-    parser.add_argument("--decider_port", type=int, default=9002, help="Port for decider service (default: 8000)")
-    parser.add_argument("--grounder_port", type=int, default=9002, help="Port for grounder service (default: 8001)")
+    parser.add_argument("--decider_port", type=int, default=9003, help="Port for decider service (default: 8000)")
+    parser.add_argument("--grounder_port", type=int, default=9003, help="Port for grounder service (default: 8001)")
     parser.add_argument("--planner_port", type=int, default=8000, help="Port for planner service (default: 8002)")
     parser.add_argument("--datapath", type=str, default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="path to data")
     parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
