@@ -589,8 +589,9 @@ if __name__ == "__main__":
     parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
     parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
     parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobiMind/log", help="log directory")
-    parser.add_argument("--prompt_mode", default="e2e_v1", help="chose prompt mode: e2e_v1/e2e_v2/decider_en/decider_zh")
-    parser.add_argument("--e2e", type=bool,default=True, help="whether use e2e mode")
+    #parser.add_argument("--prompt_file", default="e2e_v1", help="chose prompt file")
+    parser.add_argument("--e2e", choices=["on", "off"], default="on", help="whether use e2e mode")
+    #parser.add_argument("--use_qwen3", choices=["on", "off"], default="on", help="Whether to use Qwen3VL-based model (default: on)")
     args = parser.parse_args()
 
     # 使用命令行参数初始化
@@ -606,6 +607,11 @@ if __name__ == "__main__":
     with open(args.task_json, 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
+    use_flag = "decider_en"
+    if args.e2e == "on":
+        use_flag = "e2e_v1"
+    elif args.e2e == "off":
+        use_flag = "decider_en"
 
     datapath = args.datapath
     for app in alldata.keys():
@@ -625,7 +631,7 @@ if __name__ == "__main__":
                         planner=planner_client,
                         max_steps=MAX_STEPS,
                         record_dir=args.log_dir,  
-                        use_flag=args.agent_mode
+                        use_flag=use_flag
                     )
                 start = time.time()
                 result = runner.bench()

@@ -103,18 +103,13 @@ python -m MobiBench.agents.UI_TARS.bench \
 
 ### 参数说明
 
-- `--service_ip`: Agent服务的IP地址
-- `--port` / `--decider_port`: 服务端口号
-- `--datapath`: 评估数据目录路径
-- `--task_json`: 任务定义JSON文件
-- `--result_dir`: 评估结果保存目录
-- `--log_dir`: 执行日志保存目录
-- `--e2e`：端到端推理模式，减少grounder调用（默认：`True`）
-- `--promot_mode`: Agent提示词选择（默认`e2e_v1`）
-  - `e2e_v1`: 决策和执行合并，扩展动作空间，增加`click` , `input`的融合操作 `click_input`
-  - `decider_en`: 决策与执行分离模式 （采用两阶段架构，先由决策模块分析当前状态并生成高层指令，再由执行模块转化为具体操作）
-
-
+- `--service_ip <str>`: Agent服务的IP地址，默认`123.60.91.241`
+- `--port <int>` / `--decider_port <int>`: 服务端口号，默认`9003`
+- `--datapath <path>`: 评估数据目录路径，默认`MobiBench/data`
+- `--task_json <path>`: 任务定义JSON文件 (`data`下的任务json文件)
+- `--result_dir <path>`: 评估结果保存目录，默认`MobiBench/results`
+- `--log_dir <path>`: 执行日志保存目录，默认`agents/MobiMind/log`
+- `--e2e <on|off>`: 是否端到端推理模式，减少grounder调用（默认：`on`）
 
 ## 📊 评估机制
 
