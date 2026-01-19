@@ -1,64 +1,64 @@
 # MobiBench
 
-A comprehensive benchmark for evaluating AI Agents' capabilities in mobile app automation testing.
+A comprehensive benchmark platform for evaluating AI Agents' capabilities in mobile application automation testing.
 
-## 📋 Contents
-
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Project Structure](#project-structure)
-- [Setup](#setup)
-- [Quick Start](#quick-start)
-- [Supported Agents](#supported-agents)
-- [Evaluation](#evaluation)
-- [Examples](#examples)
+[中文版本](README.md) | English Version
 
 ## 🎯 Overview
 
-MobiBench provides a standardized framework to evaluate AI Agents' (including LLM-based agents) automation capabilities on mobile apps. It supports popular apps across shopping, social, travel, and entertainment categories, using Finite State Machines (FSM) for objective task completion assessment.
-
-### Supported Apps
-
-- **Shopping**: Taobao, JD.com, Meituan, Ele.me
-- **Social**: Weibo, Xiaohongshu, Zhihu, QQ
-- **Travel**: Gaode, Ctrip, Tongcheng
-- **Entertainment**: Bilibili, NetEase Cloud Music
-
-Each app supports 21 task types covering common operations like search, browse, order, comment, and share.
-
-## ✨ Key Features
-
-- 🤖 **Multi-Agent Support**: Various LLM-based agent implementations
-- 📱 **Real Scenarios**: Based on actual mobile app operation trajectories
-- 🔍 **FSM Evaluation**: Objective assessment via Finite State Machines
-- 📊 **Complete Pipeline**: Data collection, annotation, and evaluation tools
-- 🎨 **Visualization**: Screenshot annotation and trajectory visualization
-- 📈 **Performance Metrics**: Steps, success rate, response time analysis
+MobiBench provides a standardized testing framework to evaluate the automation capabilities of various AI Agents (including LLM-based agents) on mobile applications. It supports popular applications across categories such as shopping, social networking, travel, and entertainment, utilizing Finite State Machines (FSM) for objective task completion assessment.
 
 ## 📁 Project Structure
 
 ```
 MobiBench/
 ├── agents/          # AI Agent implementations
-├── env/             # Environment & FSM logic
+├── env/             # Environment and FSM logic
 ├── collect/         # Data collection tools
-├── data/            # Test data & configurations
-├── utils/           # Utilities & models
-├── results/         # Evaluation outputs
+├── data/            # Test data and configurations
+├── utils/           # Utility functions and models
+├── results/         # Evaluation results
 └── requirements.txt # Dependencies
 ```
 
-## 🔧 Setup
+## 📊 Data Storage Format
 
-### Requirements
+Evaluation data is stored in the `data/rawdata/` directory, organized in the following hierarchical structure:
+
+```
+rawdata/
+├── <application_name>/
+│   ├── <task_type>/
+│   │   ├── 1/
+│   │   │   ├── 1.jpg          # Screenshot before the 1st operation
+│   │   │   ├── 2.jpg          # Screenshot before the 2nd operation
+│   │   │   ├── ...
+│   │   │   └── actions.json   # Operation records and task information
+│   │   ├── 2/
+│   │   │   └── ...            # 2nd data sample
+│   │   ├── task.json          # Task description
+│   │   └── ...
+│   └── <other_task_types>/
+└── <other_application_names>/
+```
+
+Each data sample contains:
+
+- **Screenshot Sequence**: Records the interface state before each operation step
+- **actions.json**: Contains complete operation sequences, task descriptions, and application information
+- **task.json**: Contains task descriptions and metadata
+
+## 🔧 Environment Configuration
+
+### System Requirements
 
 - Python 3.10.18
-- Android device/emulator (for actual testing)
+- Android device or emulator (for actual testing)
 
-### Installation
+### Installation Steps
 
 ```bash
-# Create environment
+# Create virtual environment
 conda create -n MobiBench python=3.10.18
 conda activate MobiBench
 
@@ -70,14 +70,6 @@ cd MobiBench
 modelscope download --model AI-ModelScope/OmniParser-v2.0 --local_dir ./utils/models/weights/OmniParser-v2.0
 modelscope download --model sentence-transformers/paraphrase-MiniLM-L6-v2 --local_dir ./utils/models/weights/paraphrase-MiniLM-L6-v2
 ```
-
-### Key Dependencies
-
-- **DL Frameworks**: torch, torchvision
-- **Vision/OCR**: paddlepaddle, paddleocr, ultralytics
-- **Image**: Pillow, opencv-python
-- **Mobile Automation**: uiautomator2
-- **API**: fastapi, langchain
 
 ## 🚀 Quick Start
 
@@ -92,7 +84,8 @@ python -m MobiBench.agents.MobiMind.bench \
     --task_json /path/to/MobiBench/data/base.json \
     --result_dir /path/to/MobiBench/results/dev \
     --log_dir /path/to/MobiBench/agents/MobiMind/data \
-    --use_flag e2e_v1
+    --e2e \
+    --prompt_mode e2e_v1
 
 # UI-TARS Agent
 python -m MobiBench.agents.UI_TARS.bench \
@@ -108,37 +101,29 @@ python -m MobiBench.agents.UI_TARS.bench \
 
 - `--service_ip`: IP address of the agent service
 - `--port` / `--decider_port`: Service port number
-- `--datapath` : Path to  data directory
+- `--datapath`: Path to evaluation data directory
 - `--task_json`: JSON file containing task definitions
 - `--result_dir`: Directory to save evaluation results
 - `--log_dir`: Directory to save execution logs
-- `--use_flag`: Special flag for agent configuration (e.g., `e2e_v1`)
+- `--e2e`: End-to-end inference mode, reduces grounder calls (default: `True`)
+- `--prompt_mode`: Agent prompt mode selection (default: `e2e_v1`)
+  - `e2e_v1`: Combined decision and execution mode, expands action space, adds fusion operations like `click_input` combining `click` and `input`
+  - `decider_en`: Decision-execution separation mode (uses two-stage architecture: decision module analyzes current state and generates high-level instructions, then execution module converts them to specific operations)
 
-## 🤖 Supported Agents
+## 📊 Evaluation Mechanism
 
-1. **AutoGLM**: Based on AutoGLM model
-2. **Claude**: Based on Anthropic Claude
-3. **Gemini**: Based on Google Gemini (2.5-flash, 2.5-pro, 3-flash-preview, 3-pro)
-4. **GPT-5**: Based on OpenAI GPT-5
-5. **Grok-4**: Based on Grok-4 model
-6. **MobileAgent v2/v3**: Multi-agent collaborative assistant
-7. **MobiMind**: Hierarchical decision-making agent
-8. **UI-TARS**: Based on UI-TARS framework
+### FSM Evaluation
 
-## 📊 Evaluation
+Uses Finite State Machines to track the agent's progress through predefined states to evaluate task completion.
 
-### FSM Assessment
+### Evaluation Metrics
 
-Tasks are evaluated using Finite State Machines that track the agent's progress through predefined states.
+- **Success Rate**: Proportion of completed tasks
+- **Average Steps**: Mean number of operations per task
+- **State Match Rate**: Degree of alignment with reference trajectories
+- **Response Time**: Agent reasoning and execution time
 
-### Metrics
-
-- **Success Rate**: Percentage of completed tasks
-- **Average Steps**: Mean operations per task
-- **State Match Rate**: Alignment with reference trajectories
-- **Response Time**: Agent reasoning + execution time
-
-## 💡 Examples
+## 💡 Usage Examples
 
 ### Evaluate Single Agent
 
@@ -168,13 +153,4 @@ for app, task_types in alldata.items():
         save_results(results, app, task_type)
 ```
 
-## 📈 Results
-
-Outputs in `results/` directory include:
-
-- **CSV files**: Detailed evaluation tables
-- **Trajectories**: Agent execution paths
-- **Screenshots**: Step-by-step screenshots
-- **Logs**: Detailed execution logs
-
-Use provided tools for analysis and visualization.
+---
