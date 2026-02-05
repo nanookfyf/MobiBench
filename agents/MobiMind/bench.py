@@ -77,9 +77,10 @@ Now your task is "{task}".
 Your action history is:
 {history}
 """
-e2e_qwen3_template_v2 = """
-You are a phone-use AI agent.
 
+
+DECIDER_SYSTEM_PROMPT = """You are a phone-use AI agent. 
+### Action Space
 Your action space includes:
 - Name: click, Parameters: target_element (a high-level description of the UI element to click), bbox (an bounding box of the target element,[x1, y1, x2, y2]).
 - Name: swipe, Parameters: direction (one of UP, DOWN, LEFT, RIGHT), start_coords (the starting coordinate [x, y]), end_coords (the ending coordinate [x, y]).
@@ -87,15 +88,26 @@ Your action space includes:
 - Name: input, Parameters: text (the text to input).
 - Name: wait, Parameters: (no parameters, will wait for 1 second).
 - Name: done, Parameters: status (the completion status of the current task, one of `success`, `suspended` and `failed`).
-Your output should be a JSON object with the following format:
-{{"reasoning": "Your reasoning here", "action": "The next action (one of click, input, swipe, wait, done)", "parameters": {{"param1": "value1", "param2": "value2", ...}}}}
 
-Now your task is "{task}".
-Your action history is:
-{history}
-<image>
-Please provide the next action based on the screenshot and your action history. You should do careful reasoning before providing the action.
+### Response Format
+Your output should be a JSON object with the following format:
+{"reasoning": "Your reasoning here", "action": "The next action (one of click, click_input, input, swipe, wait, done)", "parameters": {"param1": "value1","param2": "value2", ...}}
 """
+
+DECIDER_USER_PROMPT = """
+### Current Task
+"{task}"
+### Action History
+The sequence of actions you have already taken:
+{history}
+### Constraints
+- If the screen has not changed after your last action, do not repeat the exact same action. Try a different method or slightly adjust coordinates.
+- If the task is completed, verify the result before outputting 'done'.
+"""
+
+DECIDER_CURRENT_STEP_PROMPT = """
+Please provide the next action based on the screenshot and your action history. You should do careful reasoning before providing the action."""
+
 
 
 decider_prompt_template = """
@@ -112,47 +124,59 @@ Your action space includes:
 Your output should be a JSON object with the following format:
 {{"reasoning": "Your reasoning here", "action": "The next action (one of click, input, swipe, done)", "parameters": {{"param1": "value1", ...}}}}"""
 
-grounder_prompt_template_no_bbox = '''
-Based on the screenshot, user's intent and the description of the target UI element, provide the coordinates of the element using **absolute coordinates**.
-User's intent: {reasoning}
-Target element's description: {description}
-Your output should be a JSON object with the following format:
-{{"coordinates": [x, y]}}'''
+#copy from zx e2e
+def build_decider_messages(task, history, screenshot, e2e):
+    #from prompts.decider_qwen3_e2e import DECIDER_SYSTEM_PROMPT, DECIDER_USER_PROMPT, DECIDER_CURRENT_STEP_PROMPT
+    
+    # 1. 处理历史记录字符串
+    if len(history) == 0:
+        history_str = "(No history)"
+    else:
+        history_str = "\n".join(f"{idx}. {h}" for idx, h in enumerate(history, 1))
 
-grounder_prompt_template_bbox = '''
-Based on the screenshot, user's intent and the description of the target UI element, provide the bounding box of the element using **absolute coordinates**.
-User's intent: {reasoning}
-Target element's description: {description}
-Your output should be a JSON object with the following format:
-{{"bbox": [x1, y1, x2, y2]}}'''
+    # 2. 准备前半部分文本（对应训练数据中 <image> 之前的内容）
+    # 包含：Task, History, Constraints
+    context_text = DECIDER_USER_PROMPT.format(task=task, history=history_str)
+    
+    # 3. 准备后半部分文本（对应训练数据中 <image> 之后的内容）
+    # 包含：Instruction (Please provide the next action...)
+    instruction_text = DECIDER_CURRENT_STEP_PROMPT
 
-decider_prompt_template_zh = """
-你是一个手机使用AI代理。现在你的任务是“{task}”。
-你的操作历史如下：
-{history}
-请根据截图和你的操作历史提供下一步操作。在提供操作之前，你需要进行仔细的推理。
-你的操作范围包括：
-- 名称：点击（click），参数：目标元素（target_element，对要点击的UI元素的高级描述）。
-- 名称：滑动（swipe），参数：方向（direction，UP、DOWN、LEFT、RIGHT中的一个）。
-- 名称：输入（input），参数：文本（text，要输入的文本）。
-- 名称：等待（wait），参数：（无参数，将等待1秒）。
-- 名称：完成（done），参数：（无参数）。
-你的输出应该是一个如下格式的JSON对象：
-{{"reasoning": "你的推理分析过程在此", "action": "下一步操作（click、input、swipe、done中的一个）", "parameters": {{"param1": "value1", ...}}}}"""
+    # 4. 构建单一的 User Message
+    # 结构严格遵循：[前半段文本] -> [图片] -> [后半段指令]
+    # 这样模型看到的输入序列就是：Text(Context) + ImageToken + Text(Instruction)
+    messages = [
+        {
+            "role": "system",
+            "content": DECIDER_SYSTEM_PROMPT
+        },
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": context_text  # 对应 <image> 上方的文本
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:image/jpeg;base64,{screenshot}"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": instruction_text  # 对应 <image> 下方的文本
+                }
+            ]
+        }
+    ]
+    
+    # 打印用于调试（实际生产建议去掉）
+    print(json.dumps(messages, ensure_ascii=False, indent=2)[:1000] + "...")
+    
+    return messages
 
-grounder_prompt_template_no_bbox_zh = """
-根据截图、用户意图和目标UI元素的描述，使用**绝对坐标**提供该元素的坐标。
-用户意图：{reasoning}
-目标元素描述：{description}
-你的输出应该是一个如下格式的JSON对象：
-{{"coordinates": [x, y]}}"""
 
-grounder_prompt_template_bbox_zh = """"
-根据截图、用户意图和目标UI元素的描述，使用**绝对坐标**提供该元素的边界框。
-用户意图：{reasoning}
-目标元素描述：{description}
-你的输出应该是一个如下格式的JSON对象：
-{{"bbox": [x1, y1, x2, y2]}}"""
 
 screenshot_path = "screenshot.jpg"
 factor = 0.5
@@ -231,47 +255,33 @@ class BenchEnv:
                 task=self.task,
                 history=self._history_str()
             )
-            logging.info("Decider prompt:\n%s", decider_prompt)
-
-        elif self.use_flag == "e2e_v2":
-            decider_prompt = e2e_qwen3_template_v2.format(
-                task=self.task,
-                history=self._history_str()
-            )
-            logging.info("Decider prompt:\n%s", decider_prompt)
-        elif self.use_flag == "decider_en":
-            decider_prompt = decider_prompt_template.format(
-                task=self.task,
-                history=self._history_str()
-            )
-            logging.info("Decider prompt:\n%s", decider_prompt)
-        elif self.use_flag == "decider_zh":
-            decider_prompt = decider_prompt_template_zh.format(
-                task=self.task,
-                history=self._history_str()
-            )
-            logging.info("Decider prompt:\n%s", decider_prompt)
-        else:
-            decider_prompt = decider_prompt_template.format(
-                task=self.task,
-                history=self._history_str()
-            )
-            logging.info("Decider prompt:\n%s", decider_prompt)
-
-        self._append_text(self.file_prompts, f"--- step {len(self.actions)+1} ---\n{decider_prompt}\n")
-
-        resp = self.decider.chat.completions.create(
-            model="",
-            messages=[{
+            call_messages = [{
                 "role": "user",
                 "content": [
                     {"type": "image_url",
                     "image_url": {"url": f"data:image/jpeg;base64,{obs_bgr_base64}"}},
                     {"type": "text", "text": decider_prompt},
                 ]
-            }],
-            temperature=0
-        ).choices[0].message.content
+            }]
+
+        elif self.use_flag == "e2e_v2":
+            call_messages = build_decider_messages(self.task,self.actions,obs_bgr_base64)
+        else:
+            decider_prompt = decider_prompt.format(
+                task=self.task,
+                history=self._history_str()
+            )
+            call_messages = [{
+                "role": "user",
+                "content": [
+                    {"type": "image_url",
+                    "image_url": {"url": f"data:image/jpeg;base64,{obs_bgr_base64}"}},
+                    {"type": "text", "text": decider_prompt},
+                ]
+            }]
+
+        
+        resp = self.decider.chat.completions.create(model="",messages=call_messages,temperature=0).choices[0].message.content
         logging.info(f"Decider response:\n{resp}")
         
 
@@ -591,27 +601,21 @@ if __name__ == "__main__":
     parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobiMind/log", help="log directory")
     #parser.add_argument("--prompt_file", default="e2e_v1", help="chose prompt file")
     parser.add_argument("--e2e", choices=["on", "off"], default="on", help="whether use e2e mode")
+    parser.add_argument("--e2e_flag",type=str,default="e2e_v1",help="e2e_v1: no consider img position,e2e_v2:consider img position")
     #parser.add_argument("--use_qwen3", choices=["on", "off"], default="on", help="Whether to use Qwen3VL-based model (default: on)")
     args = parser.parse_args()
 
     # 使用命令行参数初始化
     init(args.service_ip, args.decider_port, args.grounder_port, args.planner_port)
-
-    #device = AndroidDevice()
-    #print(f"connect to device")
-
-    # data_base_dir = os.path.join(os.path.dirname(__file__), 'data')
-    # if not os.path.exists(data_base_dir):
-    #     os.makedirs(data_base_dir)
-    # task_json_path = os.path.join(os.path.dirname(__file__), "task.json")
     with open(args.task_json, 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
     use_flag = "decider_en"
-    if args.e2e == "on":
+
+    if args.e2e == "on" and args.e2e_flag == "e2e_v1":
         use_flag = "e2e_v1"
-    elif args.e2e == "off":
-        use_flag = "decider_en"
+    elif args.e2e == "on" and args.e2e_flag == "e2e_v2":
+        use_flag =  "e2e_v2"
 
     datapath = args.datapath
     for app in alldata.keys():

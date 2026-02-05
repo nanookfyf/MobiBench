@@ -109,6 +109,7 @@ python -m MobiBench.agents.UI_TARS.bench \
 - `--result_dir <path>`: 评估结果保存目录，默认`MobiBench/results`。
 - `--log_dir <path>`: 执行日志保存目录，默认`agents/MobiMind/log`。
 - `--e2e <on|off>`: 是否端到端推理模式，减少grounder调用（默认：`on`）。
+- `--e2e_flag`: 端到端推理模式选择，（默认：`e2e_v1`） v1:不考虑图像位置，v2：考虑图像上下文本，以及系统提示。
 
 ## 📊 评估机制
 

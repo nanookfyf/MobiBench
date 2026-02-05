@@ -1,0 +1,52 @@
+{
+    "app_name": "酷狗音乐",
+    "task_type": "type1",
+    "task_description": "打开酷狗音乐，查看听书中的排行榜",
+    "action_count": 6,
+    "actions": [
+        {
+            "type": "click",
+            "position_x": 1096,
+            "position_y": 204,
+            "bounds": [
+                1059,
+                120,
+                1200,
+                266
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "init"
+        },
+        {
+            "type": "click",
+            "position_x": 492,
+            "position_y": 195,
+            "bounds": [
+                423,
+                120,
+                603,
+                266
+            ]
+        },
+        {
+            "type": "tag",
+            "label": "1"
+        },
+        {
+            "type": "click",
+            "position_x": 121,
+            "position_y": 617,
+            "bounds": [
+                48,
+                578,
+                230,
+                721
+            ]
+        },
+        {
+            "type": "done"
+        }
+    ]
+}
