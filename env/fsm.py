@@ -412,6 +412,8 @@ class AppFSM:
                 return self.cur_state
             else:
                 # stage2 
+                # click_input的click能跳转 也跳转一半
+                self.cur_state = tmp_state # 【支持一半的转移】
                 for k, v in tmp_state.map_info.get("input", {}).items():
                     print("[click-input] Checking input text:",k)
                     if k == act.parameters.get("text"):

@@ -176,8 +176,6 @@ def build_decider_messages(task, history, screenshot, e2e):
     
     return messages
 
-
-
 screenshot_path = "screenshot.jpg"
 factor = 0.5
 prices = {}
