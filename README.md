@@ -43,7 +43,8 @@ rawdata/
 │   └── <其他任务类型>/
 └── <其他应用名称>/
 ```
-[数据集](https://huggingface.co/datasets/IPADS-SAI/MobiFlow/tree/main,"点击查看MobiFlow数据集")
+[数据集](https://huggingface.co/datasets/IPADS-SAI/MobiFlow)
+
 每个数据样本包含：
 
 - **截图序列**：记录每个操作步骤前的界面状态
