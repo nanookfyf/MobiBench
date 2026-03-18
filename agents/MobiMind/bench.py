@@ -533,10 +533,10 @@ class BenchEnv:
             "steps": trace_log,
         }
 
-        # ========= NEW: 把结果写到 runs_dir/app/task/时间戳_指令/ 下 =========
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        timestamp = datetime.now().strftime("%Y%m%d")
         safe_inst = _safe_name(self.task)
-        run_dir = os.path.join(self.record_dir, self.app, self.task_type, f"{timestamp}_{safe_inst}")
+        #run_dir = os.path.join(self.record_dir, self.app, self.task_type, f"{timestamp}_{safe_inst}")
+        run_dir = os.path.join(self.record_dir, f"{timestamp}",self.app, self.task_type)
         os.makedirs(run_dir, exist_ok=True)
 
         # 主 JSON（全量信息）
@@ -584,7 +584,6 @@ class BenchEnv:
         if trace_log:
             print("起点截图:", trace_log[0]["prev_img"])
             print("终点截图:", trace_log[-1]["new_img"])
-            
     
 if __name__ == "__main__":
     # 解析命令行参数

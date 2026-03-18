@@ -359,8 +359,14 @@ app_packages ={
     "QQ音乐": "com.tencent.qqmusic",
     "网易云音乐": "com.netease.cloudmusic",
     "酷狗音乐": "com.kugou.android",
+   
+    "高德地图": "com.autonavi.minimap",
+    "腾讯会议": "com.tencent.wemeet.app",
+    "抖音": "com.ss.android.ugc.aweme",
+    "豆包": "com.larus.nova.hm",
+    "飞书": "com.ss.android.lark",
+    "多邻国": "com.duolingo"
 
-    "高德地图": "com.autonavi.minimap"
 }
 
 @app.post("/set_task_description")

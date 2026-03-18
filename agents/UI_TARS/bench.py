@@ -367,10 +367,9 @@ def run(
         "steps": trace_log,
     }
 
-    # ========= NEW: 把结果写到 runs_dir/app/task/时间戳_指令/ 下 =========
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now().strftime("%Y%m%d")
     safe_inst = _safe_name(instruction)
-    run_dir = os.path.join(runs_dir, app, task, f"{timestamp}_{safe_inst}")
+    run_dir = os.path.join(runs_dir,f"{timestamp}", app, task)
     os.makedirs(run_dir, exist_ok=True)
 
     # 主 JSON（全量信息）
