@@ -132,7 +132,10 @@ def build_decider_messages(task, history, screenshot, e2e):
     if len(history) == 0:
         history_str = "(No history)"
     else:
-        history_str = "\n".join(f"{idx}. {h}" for idx, h in enumerate(history, 1))
+        lines = []
+        for i, a in enumerate(history, 1):
+            lines.append(f"{i}. " + json.dumps(a, ensure_ascii=False))
+        history_str = "\n".join(lines)
 
     # 2. 准备前半部分文本（对应训练数据中 <image> 之前的内容）
     # 包含：Task, History, Constraints
