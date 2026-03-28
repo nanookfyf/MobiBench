@@ -20,6 +20,7 @@ MobiBench/
 ├── data/            # 测试数据与配置
 ├── utils/           # 工具函数与模型
 ├── results/         # 评估结果
+├── log_eval_auto.py # 自动化评估分析脚本
 └── requirements.txt # 依赖包
 ```
 

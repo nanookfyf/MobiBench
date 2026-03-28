@@ -6,7 +6,7 @@ A comprehensive benchmark platform for evaluating AI Agents in mobile applicatio
 
 ## 🎯 Overview
 
-MobiBench provides a standardized testing framework for evaluating various AI Agents (including LLM-based agents) on mobile application automation capabilities. It supports popular applications across multiple categories such as shopping, social media, travel, and entertainment, employing a Finite State Machine (FSM) for objective task completion assessment.
+MobiGraph provides a standardized testing framework for evaluating various AI Agents (including LLM-based agents) on mobile application automation capabilities. It supports popular applications across multiple categories such as shopping, social media, travel, and entertainment, employing a Finite State Machine (FSM) for objective task completion assessment.
 
 ## 📁 Project Structure
 
@@ -18,6 +18,7 @@ MobiBench/
 ├── data/            # Test data and configurations
 ├── utils/           # Utility functions and models
 ├── results/         # Evaluation results
+├── log_eval_auto.py # Automated evaluation script
 └── requirements.txt # Dependencies
 ```
 
