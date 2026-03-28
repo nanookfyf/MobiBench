@@ -5,7 +5,7 @@ language:
 ---
 # Chinese-Mobile-Use
 
-For details, please refer to our [repo](https://github.com/IPADS-SAI/MobiAgent) 
+For details, please refer to our [repo](https://github.com/ipxx-SAI/MobiAgent) 
 
 ## Data Construction
 

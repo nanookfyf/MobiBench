@@ -27,7 +27,7 @@ adb_path = ""
 instruction = ""
 
 # Your GPT-4o API URL
-API_url = "ipads.chat.gpt:3006/v1"
+API_url = "ipxx.chat.gpt:3006/v1"
 
 # Your GPT-4o API Token
 token = "xxxx"
@@ -39,7 +39,7 @@ caption_call_method = "api"
 caption_model = "qwen-vl-plus"
 
 # If you choose the api caption call method, input your Qwen api here
-qwen_api = "ipads.chat.gpt:3006/v1"
+qwen_api = "ipxx.chat.gpt:3006/v1"
 
 # You can add operational knowledge to help Agent operate more accurately.
 add_info = "If you want to tap an icon of an app, use the action \"Open app\". If you want to exit an app, use the action \"Home\""

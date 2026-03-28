@@ -7,8 +7,8 @@
 4) LLM 以中文输出对比结论、特点与改进建议。
 
 默认目录：
-- UI_TARS: /home/feh/mobibench/MobiBench/agents/UI_TARS/runs/20260316
-- MobiMind: /home/feh/mobibench/MobiBench/agents/MobiMind/data/20260315
+- UI_TARS: /home/fff/mobibench/MobiBench/agents/UI_TARS/runs/20260316
+- MobiMind: /home/fff/mobibench/MobiBench/agents/MobiMind/data/20260315
 """
 
 import argparse
@@ -1234,13 +1234,13 @@ def run_chat(
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--ui_dir", default="/home/feh/mobibench/MobiBench/agents/UI_TARS/runs/20260316")
-    parser.add_argument("--mm_dir", default="/home/feh/mobibench/MobiBench/agents/MobiMind/data/20260315")
+    parser.add_argument("--ui_dir", default="/home/fff/mobibench/MobiBench/agents/UI_TARS/runs/20260316")
+    parser.add_argument("--mm_dir", default="/home/fff/mobibench/MobiBench/agents/MobiMind/data/20260315")
     parser.add_argument("--api_key", default='key')
-    parser.add_argument("--base_url", default='http://ipads.chat.gpt:3006/v1')
+    parser.add_argument("--base_url", default='http://ipxx.chat.gpt:3006/v1')
     parser.add_argument("--model", default='anthropic/claude-sonnet-4.6')
     parser.add_argument("--judge_model", default='google/gemini-3-flash-preview')
-    parser.add_argument("--output_dir", default="/home/feh/mobibench/MobiBench/eval_outputs")
+    parser.add_argument("--output_dir", default="/home/fff/mobibench/MobiBench/eval_outputs")
     parser.add_argument("--diag_log_file", default="")
     parser.add_argument("--markdown_out", default="")
     parser.add_argument("--audio_out", default="")

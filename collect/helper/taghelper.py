@@ -15,7 +15,7 @@ class OpenAIVisualTagger:
             raise ValueError("请设置 OPENAI_API_KEY 环境变量")
         
         self.client = OpenAI(api_key=api_key,
-                             base_url=f"http://ipads.chat.gpt:3006/v1")
+                             base_url=f"http://ipxx.chat.gpt:3006/v1")
         self.model = model
     
     def encode_image_to_base64(self, image_path: str) -> str:

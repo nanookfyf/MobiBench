@@ -1,84 +1,80 @@
-# MobiBench
+# MobiGraph
 
-一个用于评估 AI Agent 在移动应用自动化测试能力的综合性基准测试平台。
+A comprehensive benchmark platform for evaluating AI Agents in mobile application automation testing.
 
-[English Version](README_EN.md) | 中文版本
+[中文版本](README_CN.md) | English Version
 
+## 🎯 Overview
 
-## 🎯 概述
+MobiBench provides a standardized testing framework for evaluating various AI Agents (including LLM-based agents) on mobile application automation capabilities. It supports popular applications across multiple categories such as shopping, social media, travel, and entertainment, employing a Finite State Machine (FSM) for objective task completion assessment.
 
-MobiBench 提供了一个标准化的测试框架，用于评估各种 AI Agent（包括基于大语言模型的智能体）在移动应用上的自动化操作能力。支持购物、社交、出行、娱乐等多个类别的流行应用，采用有限状态机（FSM）进行客观的任务完成度评估。
-
-
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 MobiBench/
-├── agents/          # AI Agent实现
-├── env/             # 环境与FSM逻辑
-├── collect/         # 数据收集工具
-├── data/            # 测试数据与配置
-├── utils/           # 工具函数与模型
-├── results/         # 评估结果
-└── requirements.txt # 依赖包
+├── agents/          # AI Agent implementations
+├── env/             # Environment and FSM logic
+├── collect/         # Data collection tools
+├── data/            # Test data and configurations
+├── utils/           # Utility functions and models
+├── results/         # Evaluation results
+└── requirements.txt # Dependencies
 ```
 
-## 📊 数据存储格式
+## 📊 Data Storage Format
 
-评测数据存储在 `data/rawdata/` 目录中，按以下层级结构组织：
+Evaluation data is stored in the `data/rawdata/` directory, organized in the following hierarchical structure:
 
 ```
 rawdata/
-├── <应用名称>/
-│   ├── <任务类型>/
+├── <app_name>/
+│   ├── <task_type>/
 │   │   ├── 1/
-│   │   │   ├── 1.jpg          # 第1个操作前的截图
-│   │   │   ├── 2.jpg          # 第2个操作前的截图
+│   │   │   ├── 1.jpg          # Screenshot before the 1st action
+│   │   │   ├── 2.jpg          # Screenshot before the 2nd action
 │   │   │   ├── ...
-│   │   │   └── actions.json   # 操作记录和任务信息
+│   │   │   └── actions.json   # Action records and task information
 │   │   ├── 2/
-│   │   │   └── ...            # 第2条数据
-│   │   ├── task.json          # 任务描述
+│   │   │   └── ...            # 2nd data sample
+│   │   ├── task.json          # Task description
 │   │   └── ...
-│   └── <其他任务类型>/
-└── <其他应用名称>/
+│   └── <other_task_type>/
+└── <other_app_name>/
 ```
-[数据集](https://huggingface.co/datasets/IPADS-SAI/MobiFlow)
-
-每个数据样本包含：
-
-- **截图序列**：记录每个操作步骤前的界面状态
-- **actions.json**：包含完整的操作序列、任务描述和应用信息
-- **task.json**：包含任务描述和元数据
 
 
-## 🔧 环境配置
+Each data sample contains:
 
-### 系统要求
+- **Screenshot Sequence**: Records of the interface state before each action step
+- **actions.json**: Contains the complete action sequence, task description, and app information
+- **task.json**: Contains task description and metadata
+
+## 🔧 Environment Setup
+
+### System Requirements
 
 - Python 3.10.18
-- Android设备或模拟器（用于实际测试）
+- Android device or emulator (for actual testing)
 
-### 安装步骤
+### Installation Steps
 
 ```bash
-# 创建虚拟环境
+# Create virtual environment
 conda create -n MobiBench python=3.10.18
 conda activate MobiBench
 
-# 安装依赖
+# Install dependencies
 pip install -r requirements.txt
 
-# 下载模型
+# Download models
 cd MobiBench
 modelscope download --model AI-ModelScope/OmniParser-v2.0 --local_dir ./utils/models/weights/OmniParser-v2.0
 modelscope download --model sentence-transformers/paraphrase-MiniLM-L6-v2 --local_dir ./utils/models/weights/paraphrase-MiniLM-L6-v2
 ```
 
+## 🚀 Quick Start
 
-## 🚀 快速开始
-
-### 运行Agent评估
+### Running Agent Evaluation
 
 ```bash
 # MobiMind Agent
@@ -101,44 +97,44 @@ python -m MobiBench.agents.UI_TARS.bench \
     --log_dir /path/to/MobiBench/agents/UI_TARS/data
 ```
 
-### 参数说明
+### Parameter Description
 
-- `--service_ip <str>`: Agent服务的IP地址，默认`123.60.91.241`。
-- `--port <int>` / `--decider_port <int>`: 服务端口号，默认`9003`。
-- `--datapath <path>`: 评估数据目录路径，默认`MobiBench/data`。
-- `--task_json <path>`: 任务定义JSON文件 (`data`下的任务json文件)。
-- `--result_dir <path>`: 评估结果保存目录，默认`MobiBench/results`。
-- `--log_dir <path>`: 执行日志保存目录，默认`agents/MobiMind/log`。
-- `--e2e <on|off>`: 是否端到端推理模式，减少grounder调用（默认：`on`）。
-- `--e2e_flag`: 端到端推理模式选择，（默认：`e2e_v1`） v1:不考虑图像位置，v2：考虑图像上下文本，以及系统提示。
+- `--service_ip <str>`: IP address of the Agent service, default `123.60.91.241`.
+- `--port <int>` / `--decider_port <int>`: Service port number, default `9003`.
+- `--datapath <path>`: Path to the evaluation data directory, default `MobiBench/data`.
+- `--task_json <path>`: Task definition JSON file (task JSON file under `data`).
+- `--result_dir <path>`: Directory to save evaluation results, default `MobiBench/results`.
+- `--log_dir <path>`: Directory to save execution logs, default `agents/MobiMind/log`.
+- `--e2e <on|off>`: Whether to use end-to-end inference mode to reduce grounder calls (default: `on`).
+- `--e2e_flag`: End-to-end inference mode selection (default: `e2e_v1`). v1: does not consider image positions; v2: considers image context and system prompts.
 
-## 📊 评估机制
+## 📊 Evaluation Mechanism
 
-### FSM评估
+### FSM Evaluation
 
-使用有限状态机跟踪Agent在预定义状态中的进展来评估任务完成情况。
+Uses a Finite State Machine to track the Agent's progress through predefined states for task completion assessment.
 
-### 评估指标
+### Evaluation Metrics
 
-- **成功率**: 完成任务的比例
-- **平均步数**: 每任务平均操作次数
-- **状态匹配率**: 与参考轨迹的匹配程度
-- **响应时间**: Agent推理与执行时间
+- **Success Rate**: Proportion of successfully completed tasks
+- **Average Steps**: Average number of operations per task
+- **State Matching Rate**: Degree of matching with reference trajectories
+- **Response Time**: Agent inference and execution time
 
-## 💡 使用示例
+## 💡 Usage Examples
 
-### 评估单个Agent
+### Evaluating a Single Agent
 
 ```python
 from MobiBench.agents.autoglm.bench import bench
 from MobiBench.env.fsm import build_AppFSM
 
-fsm = build_AppFSM(app="淘宝", task="type1", data_path="./data")
-results = bench(fsm, app="淘宝", task="type1", instruction="在淘宝搜索iPhone手机")
+fsm = build_AppFSM(app="Taobao", task="type1", data_path="./data")
+results = bench(fsm, app="Taobao", task="type1", instruction="Search for iPhone on Taobao")
 print(results)
 ```
 
-### 批量评估
+### Batch Evaluation
 
 ```python
 import json
@@ -154,6 +150,5 @@ for app, task_types in alldata.items():
         results = bench(fsm, app=app, task=task_type, instruction="...")
         save_results(results, app, task_type)
 ```
-
 
 ---

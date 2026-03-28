@@ -715,7 +715,7 @@ if __name__ == "__main__":
     # 初始化OpenAI客户端
     # client = OpenAI(
     #         api_key= "",
-    #         base_url=f"http://ipads.chat.gpt:3006/v1"
+    #         base_url=f"http://ipxx.chat.gpt:3006/v1"
     #     )
     with open(args.task_json, 'r', encoding='utf-8') as f:
         alldata = json.load(f)
