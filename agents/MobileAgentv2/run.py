@@ -65,7 +65,7 @@ def draw_coordinates_on_image(image_path, coordinates):
     point_size = 10
     for coord in coordinates:
         draw.ellipse((coord[0] - point_size, coord[1] - point_size, coord[0] + point_size, coord[1] + point_size), fill='red')
-    output_image_path = '/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs/screenshot/output_image.png'
+    output_image_path = '/Users/fff/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs/screenshot/output_image.png'
     image.save(output_image_path)
     return output_image_path
 
@@ -76,7 +76,7 @@ def crop(image, box, i):
     if x1 >= x2-10 or y1 >= y2-10:
         return
     cropped_image = image.crop((x1, y1, x2, y2))
-    cropped_image.save(f"/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs//temp/{i}.jpg")
+    cropped_image.save(f"/Users/fff/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs//temp/{i}.jpg")
 
 
 def generate_local(tokenizer, model, image_file, query):
@@ -276,7 +276,7 @@ action = ""
 completed_requirements = ""
 memory = ""
 insight = ""
-temp_file = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs/temp"
+temp_file = "/Users/fff/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs/temp"
 screenshot = "screenshot"
 if not os.path.exists(temp_file):
     os.mkdir(temp_file)
@@ -455,15 +455,15 @@ def run(ctl,scrshot_path,last_shotpath):
         os.remove(last_screenshot_file)
 
 def bench():
-    screenshot_file = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs/screenshot/screenshot.jpg"
-    last_screenshot = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs/screenshot/last_screenshot.jpg"
-    datapath = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data"
+    screenshot_file = "/Users/fff/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs/screenshot/screenshot.jpg"
+    last_screenshot = "/Users/fff/Desktop/mobiagent/MobiBench/agents/MobileAgentv2/logs/screenshot/last_screenshot.jpg"
+    datapath = "/Users/fff/Desktop/mobiagent/MobiBench/data"
     from MobiBench.agents.Mobileagentv3.utils.static_controller import StaticController
     from MobiBench.env.fsm import build_AppFSM
     from MobiBench.utils.task_get import get_tasks
     app_list = ["高德地图"]
     type_list = ["type2"]
-    datapath = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data"
+    datapath = "/Users/fff/Desktop/mobiagent/MobiBench/data"
     for app in app_list:
         for tasktype in type_list:
             tasklist = get_tasks(app,tasktype)

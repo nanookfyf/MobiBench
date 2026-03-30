@@ -363,7 +363,7 @@ def build_AppFSM(app: str, task: str, data_path: str) -> AppFSM:
 if __name__ == "__main__":
     # 示例：改成你的实际路径
     # data_path 指向“应用父目录”，不要把 app 拼进去
-    data_path = r"/Users/fengyunfei/Desktop/mobiagent/Mobibench/data"
+    data_path = r"/Users/fff/Desktop/mobiagent/Mobibench/data"
     app = "美团"
     task = "type1"
 

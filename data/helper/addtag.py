@@ -88,6 +88,6 @@ def help_insert_tag(base_dir,tag_id,tag_label):
 if __name__ == "__main__":
 
 
-    folder = r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4"
+    folder = r"/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/京东/type4"
     #tag_id : 1,2,3...
     help_insert_tag(folder,tag_id=2,tag_label="call_init")

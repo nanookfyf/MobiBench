@@ -7,11 +7,7 @@ language:
 
 For details, please refer to our [repo](https://github.com/ipxx-SAI/MobiAgent) 
 
-## Data Construction
-
-```bash
-python -m collect.construct_sft --data_path sft/ --ss_data_path single_step/ --unexpected_img_path unexpected_img/ --out_path <output_path> [--factor <scale_factor>] [--train_ratio <train_ratio>]
-```
+You need to decompress `rawdat.tar.gz` and place it in the `rawdata` directory, as shown in the example given.
 
 ## Data Format
 

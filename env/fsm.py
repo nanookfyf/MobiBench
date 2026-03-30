@@ -554,10 +554,10 @@ def quick_build_AppFSM(app: str, task: str, data_path: str) -> AppFSM:
 # ----------------------------
 
 if __name__ == "__main__":
-    with open('/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
+    with open('/Users/fff/Desktop/mobiagent/MobiBench/data/base.json', 'r', encoding='utf-8') as f:
         alldata = json.load(f)
 
-    datapath = '/Users/fengyunfei/Desktop/mobiagent/MobiBench/data'
+    datapath = '/Users/fff/Desktop/mobiagent/MobiBench/data'
     for app in alldata.keys():
         for tasktype in alldata[app]:
             #tasklist = get_tasks(app, tasktype)
@@ -568,7 +568,7 @@ if __name__ == "__main__":
                 app=app,
                 task=tasktype,
                 fsm=fsm,
-                savepath=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/runs/dev/env",
+                savepath=r"/Users/fff/Desktop/mobiagent/MobiBench/runs/dev/env",
             )
             # 让 FSM 内部的 max_op_times 和 CLI 一致
     # fsm.save_traces() 

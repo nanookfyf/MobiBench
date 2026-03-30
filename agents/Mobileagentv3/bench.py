@@ -17,7 +17,7 @@ from MobiBench.agents.Mobileagentv3.utils.mobile_agent_e import (
 import MobiBench.agents.Mobileagentv3.utils.controller as controller
 from MobiBench.agents.Mobileagentv3.utils.call_mobile_agent_e import GUIOwlWrapper
 from MobiBench.utils.score_proc import save_result,dict2csv
-def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_type, if_notetaker, max_step=25, log_path="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/Mobileagentv3/logs"):
+def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_type, if_notetaker, max_step=25, log_path="/Users/fff/Desktop/mobiagent/MobiBench/agents/Mobileagentv3/logs"):
     controller = ctl 
     now = datetime.now()
     time_str = now.strftime("%Y%m%d_%H%M%S")
@@ -334,7 +334,7 @@ def run_instruction(ctl,api_key,base_url, model, instruction, add_info, coor_typ
         "avg_reflector_d_toks":[reflector_num_d_toks/step]
 
     }
-    dict2csv(dict_data,"/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev/v3toks.csv")
+    dict2csv(dict_data,"/Users/fff/Desktop/mobiagent/MobiBench/results/dev/v3toks.csv")
 
 
 
@@ -350,11 +350,11 @@ if __name__ == '__main__':
     parser.add_argument("--instruction", type=str)
     parser.add_argument("--add_info", type=str, default="")
     parser.add_argument("--coor_type", type=str, default="abs")
-    parser.add_argument("--datapath", type=str, default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="path to data")
+    parser.add_argument("--datapath", type=str, default="/Users/fff/Desktop/mobiagent/MobiBench/data", help="path to data")
     parser.add_argument("--notetaker", type=bool, default=False)
-    parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
-    parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
-    parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/Mobileagentv3/log", help="log directory")
+    parser.add_argument("--task_json", default="/Users/fff/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
+    parser.add_argument("--result_dir", default="/Users/fff/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
+    parser.add_argument("--log_dir", default="/Users/fff/Desktop/mobiagent/MobiBench/agents/Mobileagentv3/log", help="log directory")
     args = parser.parse_args()
     
     from MobiBench.agents.Mobileagentv3.utils.static_controller import StaticController
@@ -389,7 +389,7 @@ if __name__ == '__main__':
                 print("finished state",fsm.cur_state.img_path)
                 end = time.time()
                 
-                save_result(md="MobiAgentv3",app=app,task=tasktype,inst=task,fsm=ctl.fsm,time_use=end-start,savepath="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev")
+                save_result(md="MobiAgentv3",app=app,task=tasktype,inst=task,fsm=ctl.fsm,time_use=end-start,savepath="/Users/fff/Desktop/mobiagent/MobiBench/results/dev")
                 from MobiBench.utils.score_proc import save_visited_result
                 save_visited_result(
                     md="MobiAgentv3",

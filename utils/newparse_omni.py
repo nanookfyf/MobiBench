@@ -9,7 +9,7 @@ from PIL import Image
 import torch
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-detect_model_path='/Users/fengyunfei/Desktop/mobiagent/MobiBench/utils/models/weights/OminParserv2/icon_detect/model.pt'
+detect_model_path='/Users/fff/Desktop/mobiagent/MobiBench/utils/models/weights/OminParserv2/icon_detect/model.pt'
 caption_model_path='./weights/icon_caption_florence'
 
 som_model = get_yolo_model(detect_model_path)

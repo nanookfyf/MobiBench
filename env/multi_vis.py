@@ -280,7 +280,7 @@ def _build_argparser():
     p = argparse.ArgumentParser(description="FSM 可视化（标签级）")
     p.add_argument("--mode", choices=["live", "json"], default="live",
                    help="数据来源：live=即时解析；json=从 fsm_traces.json 读")
-    p.add_argument("--data_path", type=str, default=r"/Users/fengyunfei/Desktop/mobiagent/Mobibench/data",
+    p.add_argument("--data_path", type=str, default=r"/Users/fff/Desktop/mobiagent/Mobibench/data",
                    help="数据根目录（live 模式必填）")
     p.add_argument("--app", type=str, default="高德地图", help="应用名（live 模式）")
     p.add_argument("--task", type=str, default="type1", help="任务名（live 模式）")

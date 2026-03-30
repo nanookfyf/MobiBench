@@ -9,7 +9,7 @@ from PIL import Image
 import torch
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-detect_model_path='/Users/fengyunfei/Desktop/mobiagent/Mobibench/static_bench/models/weights/OminParserv2/icon_detect/model.pt'
+detect_model_path='/Users/fff/Desktop/mobiagent/Mobibench/static_bench/models/weights/OminParserv2/icon_detect/model.pt'
 caption_model_path='./weights/icon_caption_florence'
 
 som_model = get_yolo_model(detect_model_path)
@@ -235,7 +235,7 @@ def test_click_detection(screenshot_path, click_x, click_y):
 # 使用示例
 if __name__ == "__main__":
     # 测试你的代码
-    screenshot_path = "/Users/fengyunfei/Desktop/mobiagent/Mobibench/data/美团/type1/4/5.jpg"  # 替换为你的截图路径
+    screenshot_path = "/Users/fff/Desktop/mobiagent/Mobibench/data/美团/type1/4/5.jpg"  # 替换为你的截图路径
     click_x, click_y = 100, 200  # 替换为你的点击坐标
     
     # 运行测试

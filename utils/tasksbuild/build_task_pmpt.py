@@ -146,7 +146,7 @@ B9 = [
     "在小潮院长的垃圾人视频下方用评论表达赞",
     "点开小潮院长的垃圾人视频并在下面评论赞"
 ]
-path = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type9/task.json"
+path = "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/bilibili/type9/task.json"
 
 with open(path, "w", encoding="utf-8") as f:
     json.dump(B9,f,ensure_ascii=False, indent=2)

@@ -6,7 +6,7 @@
   "steps": [
     {
       "step": 1,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/1.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/1.jpg",
       "prev_label": "START",
       "thought": "当前位于微博的推荐页面，底部导航栏中“我”标签被高亮选中。为了进入个人中心以管理关注内容，我需要点击底部导航栏的“我”标签。我将点击底部导航栏的“我”标签。",
       "raw_output": {
@@ -21,12 +21,12 @@
         "position_x": 1098,
         "position_y": 2522
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "new_label": "1"
     },
     {
       "step": 2,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "prev_label": "1",
       "thought": "当前位于个人中心页面，页面中显示了“关注”数量为138。任务目标是关注“杨奇超话”，因此我需要进入关注列表查找相关超话。我将点击“关注”数字区域，进入关注列表页面。",
       "raw_output": {
@@ -41,12 +41,12 @@
         "position_x": 598,
         "position_y": 822
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "new_label": "1"
     },
     {
       "step": 3,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "prev_label": "1",
       "thought": "当前位于个人中心页面，我看到页面中部有“关注”区域，显示关注数量为138。任务目标是关注“杨奇超话”，因此我需要进入关注列表查找相关内容。我将点击“关注”区域以进入关注列表页面。",
       "raw_output": {
@@ -61,12 +61,12 @@
         "position_x": 596,
         "position_y": 822
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "new_label": "1"
     },
     {
       "step": 4,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "prev_label": "1",
       "thought": "当前我看到的是微博的个人中心页面，页面中显示了“关注”区域，其中包含一个带有数字“138”的“关注”按钮。任务目标是关注“杨奇超话”，因此我需要进入关注列表来查找相关内容。我将点击“关注”按钮以进入关注列表页面。",
       "raw_output": {
@@ -81,12 +81,12 @@
         "position_x": 598,
         "position_y": 822
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "new_label": "1"
     },
     {
       "step": 5,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "prev_label": "1",
       "thought": "当前位于微博的“我”页面，页面中显示了“关注”区域，其中包含一个带有数字“138”的“关注”按钮。任务目标是关注“杨奇超话”，因此我需要进入关注列表来查找相关内容。我将点击“关注”按钮以进入关注列表页面。",
       "raw_output": {
@@ -101,12 +101,12 @@
         "position_x": 598,
         "position_y": 822
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "new_label": "1"
     },
     {
       "step": 6,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "prev_label": "1",
       "thought": "当前位于微博的“我”页面，页面中显示了“关注”区域，其中包含一个带有数字“138”的“关注”按钮。任务目标是关注“杨奇超话”，因此我需要进入关注列表来查找相关内容。我将点击“关注”按钮以进入关注列表页面。",
       "raw_output": {
@@ -121,12 +121,12 @@
         "position_x": 598,
         "position_y": 822
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "new_label": "1"
     },
     {
       "step": 7,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "prev_label": "1",
       "thought": "当前位于微博的“我”页面，页面中显示了“关注”区域，其中包含一个带有数字“138”的“关注”按钮。任务目标是关注“杨奇超话”，因此我需要进入关注列表来查找相关内容。我将点击“关注”按钮以进入关注列表页面。",
       "raw_output": {
@@ -141,7 +141,7 @@
         "position_x": 598,
         "position_y": 822
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/微博/type21/1/3.jpg",
       "new_label": "1"
     }
   ]

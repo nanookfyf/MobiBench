@@ -6,7 +6,7 @@
   "steps": [
     {
       "step": 1,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/1.jpg",
       "prev_label": "START",
       "thought": "当前位于高德地图主界面，底部功能栏中有一个‘更多工具’按钮。任务要求进入‘更多工具’页面，因此我需要点击该按钮。我将点击底部功能栏中的‘更多工具’按钮。",
       "raw_output": {
@@ -21,12 +21,12 @@
         "position_x": 1044,
         "position_y": 1966
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "new_label": "unlabeled"
     },
     {
       "step": 2,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "prev_label": "unlabeled",
       "thought": "当前位于高德地图的‘更多工具’页面，页面顶部有一个搜索框，用于查找特定工具。任务要求查找‘语音包’，而当前页面已显示‘语音包’图标，但为确保准确性，我需要通过搜索功能进行查找。我将点击顶部的搜索框，以便输入关键词进行精确查找。",
       "raw_output": {
@@ -41,12 +41,12 @@
         "position_x": 670,
         "position_y": 188
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "new_label": "unlabeled"
     },
     {
       "step": 3,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "prev_label": "unlabeled",
       "thought": "当前位于高德地图的‘更多工具’页面，顶部有一个搜索框，用于查找特定工具。任务要求查找‘语音包’，为了快速定位，我需要使用搜索功能。我将点击顶部的搜索框，以便输入关键词进行查找。",
       "raw_output": {
@@ -61,12 +61,12 @@
         "position_x": 670,
         "position_y": 188
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "new_label": "unlabeled"
     },
     {
       "step": 4,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "prev_label": "unlabeled",
       "thought": "当前位于高德地图的“更多工具”页面，顶部有一个搜索框，用于查找特定工具。任务要求查找“语音包”，为了快速定位，我需要使用搜索功能。我将点击顶部的搜索框，以便输入关键词进行查找。",
       "raw_output": {
@@ -81,12 +81,12 @@
         "position_x": 670,
         "position_y": 188
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "new_label": "unlabeled"
     },
     {
       "step": 5,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "prev_label": "unlabeled",
       "thought": "当前位于高德地图的“更多工具”页面，顶部有一个搜索框，用于查找特定功能。任务要求查找“语音包”，我需要通过搜索框输入关键词。我将点击顶部的搜索框，以便输入“语音包”进行查找。",
       "raw_output": {
@@ -101,12 +101,12 @@
         "position_x": 670,
         "position_y": 188
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "new_label": "unlabeled"
     },
     {
       "step": 6,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "prev_label": "unlabeled",
       "thought": "当前位于高德地图的“更多工具”页面，顶部有一个搜索框，用于查找特定功能。任务要求查找“语音包”，我需要通过搜索框输入关键词。我将点击顶部的搜索框，以便输入“语音包”进行查找。",
       "raw_output": {
@@ -121,12 +121,12 @@
         "position_x": 670,
         "position_y": 188
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "new_label": "unlabeled"
     },
     {
       "step": 7,
-      "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "prev_label": "unlabeled",
       "thought": "当前位于高德地图的“更多工具”页面，顶部有一个搜索框，用于查找特定功能。任务要求查找“语音包”，我需要通过搜索框输入关键词。我将点击顶部的搜索框，以便输入“语音包”进行查找。",
       "raw_output": {
@@ -141,7 +141,7 @@
         "position_x": 670,
         "position_y": 188
       },
-      "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
+      "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/高德/type21/1/2.jpg",
       "new_label": "unlabeled"
     }
   ]

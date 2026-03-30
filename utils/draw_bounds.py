@@ -8,7 +8,7 @@ from MobiBench.utils.parse_omni import extract_all_bounds
 # 获取项目根目录的字体文件路径
 current_file_path = Path(__file__).resolve()
 project_root = current_file_path.parent.parent.parent
-font_path = "/Users/fengyunfei/Desktop/mobiagent/MobiBench/utils/msyh.ttf"
+font_path = "/Users/fff/Desktop/mobiagent/MobiBench/utils/msyh.ttf"
 
 def check_text_overlap(text_rect1, text_rect2):
     """检查两个文本矩形是否重叠"""

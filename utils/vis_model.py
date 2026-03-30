@@ -18,7 +18,7 @@ python model_path_annotate.py ^
 
 更新 批量处理 main1
 使用示例
-python vis_model.py --run_dir /Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/UI_TARS/runs
+python vis_model.py --run_dir /Users/fff/Desktop/mobiagent/MobiBench/agents/UI_TARS/runs
 """
 
 import os

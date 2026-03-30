@@ -423,7 +423,7 @@ def run(
 
 def bench():
     parser = argparse.ArgumentParser(description="Offline FSM evaluation with UI-TARS model")
-    parser.add_argument("--data_root", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="MobiBench data 根目录（包含 rawdata/）")
+    parser.add_argument("--data_root", default="/Users/fff/Desktop/mobiagent/MobiBench/data", help="MobiBench data 根目录（包含 rawdata/）")
     # parser.add_argument("--app", required=True, help="应用名称，例如 高德地图")
     # parser.add_argument("--task", required=True, help="任务名称，例如 type1")
     # parser.add_argument("--instruction", required=True, help="任务描述文本")
@@ -445,12 +445,12 @@ def bench():
     )
     parser.add_argument(
         "--runs_dir",
-        default=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/UI_TARS/runs",  # ==== NEW: 所有运行结果的根目录 ====
+        default=r"/Users/fff/Desktop/mobiagent/MobiBench/agents/UI_TARS/runs",  # ==== NEW: 所有运行结果的根目录 ====
         help="所有运行结果的根目录，用于保存轨迹和坐标",
     )
-    parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
-    parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
-    parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/UI_TARS/log", help="log directory")
+    parser.add_argument("--task_json", default="/Users/fff/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
+    parser.add_argument("--result_dir", default="/Users/fff/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
+    parser.add_argument("--log_dir", default="/Users/fff/Desktop/mobiagent/MobiBench/agents/UI_TARS/log", help="log directory")
     args = parser.parse_args()
     setup_logging()
 

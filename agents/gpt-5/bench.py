@@ -587,15 +587,15 @@ if __name__ == "__main__":
     parser.add_argument('--api_key', type=str,  help='API key for the LLM model')
     parser.add_argument('--base_url', type=str, help='base URL for the LLM model API')
     parser.add_argument('--max_steps', type=int, default=15, help='maximum steps per task (default: 15)')
-    parser.add_argument("--data_root", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data", help="MobiBench data 根目录（包含 rawdata/）")
+    parser.add_argument("--data_root", default="/Users/fff/Desktop/mobiagent/MobiBench/data", help="MobiBench data 根目录（包含 rawdata/）")
     parser.add_argument(
         "--runs_dir",
-        default=r"/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/gpt-5/layers",  # ==== NEW: 所有运行结果的根目录 ====
+        default=r"/Users/fff/Desktop/mobiagent/MobiBench/agents/gpt-5/layers",  # ==== NEW: 所有运行结果的根目录 ====
         help="所有运行结果的根目录，用于保存轨迹和坐标",
     )
-    parser.add_argument("--task_json", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
-    parser.add_argument("--result_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
-    parser.add_argument("--log_dir", default="/Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/gpt-5/log", help="log directory")
+    parser.add_argument("--task_json", default="/Users/fff/Desktop/mobiagent/MobiBench/data/test.json", help="task json file")
+    parser.add_argument("--result_dir", default="/Users/fff/Desktop/mobiagent/MobiBench/results/dev", help="result directory")
+    parser.add_argument("--log_dir", default="/Users/fff/Desktop/mobiagent/MobiBench/agents/gpt-5/log", help="log directory")
     args = parser.parse_args()
     
     # 设置全局配置

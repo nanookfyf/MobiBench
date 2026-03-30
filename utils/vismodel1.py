@@ -18,7 +18,7 @@ python model_path_annotate.py ^
   --output D:\cdl\code\MobiBench\runs\bilibili_type2_starcraft_path.png
 
 # 批量处理
-python model_path_annotate.py --run_dir /Users/fengyunfei/Desktop/mobiagent/MobiBench/agents/UI_TARS/runs
+python model_path_annotate.py --run_dir /Users/fff/Desktop/mobiagent/MobiBench/agents/UI_TARS/runs
 """
 
 import os

@@ -6,8 +6,8 @@
       "position_x": 634,
       "position_y": 174
     },
-    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/1.jpg",
-    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg"
+    "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/1.jpg",
+    "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg"
   },
   {
     "step": 2,
@@ -16,8 +16,8 @@
       "position_x": 218,
       "position_y": 1012
     },
-    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
-    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/3.jpg"
+    "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/2.jpg",
+    "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/3.jpg"
   },
   {
     "step": 3,
@@ -26,8 +26,8 @@
       "position_x": 772,
       "position_y": 396
     },
-    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/3.jpg",
-    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/4.jpg"
+    "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/3.jpg",
+    "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/4.jpg"
   },
   {
     "step": 4,
@@ -36,8 +36,8 @@
       "position_x": 90,
       "position_y": 1710
     },
-    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/4.jpg",
-    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/5.jpg"
+    "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/4.jpg",
+    "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/5.jpg"
   },
   {
     "step": 5,
@@ -46,8 +46,8 @@
       "position_x": 624,
       "position_y": 2518
     },
-    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/5.jpg",
-    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/6.jpg"
+    "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/5.jpg",
+    "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/6.jpg"
   },
   {
     "step": 6,
@@ -56,8 +56,8 @@
       "position_x": 500,
       "position_y": 1358
     },
-    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/6.jpg",
-    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/7.jpg"
+    "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/6.jpg",
+    "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/7.jpg"
   },
   {
     "step": 7,
@@ -66,7 +66,7 @@
       "position_x": 594,
       "position_y": 2504
     },
-    "prev_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/7.jpg",
-    "new_img": "/Users/fengyunfei/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/8.jpg"
+    "prev_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/7.jpg",
+    "new_img": "/Users/fff/Desktop/mobiagent/MobiBench/data/rawdata/淘宝/type21/1/8.jpg"
   }
 ]
